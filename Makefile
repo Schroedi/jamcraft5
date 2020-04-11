@@ -12,5 +12,5 @@ html:
 	mkdir -p $(BUILD_ROOT)/web
 	$(GODOT) $(EXPORT) "HTML5" $(BUILD_ROOT)/web/index.html
 
-publish:
-	$(BUTTLER) --if-changed push $(BUILD_ROOT)/web $(ITCHIO_USERNAME)/$(ITCHIO_GAME):web
+publish: html
+	$(BUTTLER) push $(BUILD_ROOT)/web $(ITCHIO_USERNAME)/$(ITCHIO_GAME):web
