@@ -1,481 +1,34 @@
-[gd_scene load_steps=57 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/Tree.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://World/GrassBackground.png" type="Texture" id=3]
-[ext_resource path="res://World/DirtPathTileset.tres" type="TileSet" id=4]
-[ext_resource path="res://World/CliffTileset.png" type="Texture" id=5]
+[ext_resource path="res://World/Stone.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World/Gegenstaende_grob/grob_Bruecke.png" type="Texture" id=4]
+[ext_resource path="res://World/Gegenstaende_grob/grob_Tuemple_Bachlauf.png" type="Texture" id=5]
 [ext_resource path="res://World/Grass.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Enemies/Bat.tscn" type="PackedScene" id=7]
+[ext_resource path="res://World/Gegenstaende_grob/grob_Teich.png" type="Texture" id=8]
 [ext_resource path="res://Pet/Pet.tscn" type="PackedScene" id=9]
-
-[sub_resource type="ConvexPolygonShape2D" id=1]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=2]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=3]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=4]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=5]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=6]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=7]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=8]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=9]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=10]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=11]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=12]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=13]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=14]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=15]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=16]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=17]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=18]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=19]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=20]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=21]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=22]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=23]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=24]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=25]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=26]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=27]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=28]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=29]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=30]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=31]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=32]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=33]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=34]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=35]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=36]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=37]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=38]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=39]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=40]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=41]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=42]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=43]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=44]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=45]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=46]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=47]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="TileSet" id=48]
-0/name = "CliffTileset.png 0"
-0/texture = ExtResource( 5 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 352, 160 )
-0/tile_mode = 1
-0/autotile/bitmask_mode = 1
-0/autotile/bitmask_flags = [ Vector2( 0, 0 ), 432, Vector2( 0, 1 ), 438, Vector2( 0, 2 ), 54, Vector2( 0, 3 ), 48, Vector2( 1, 0 ), 504, Vector2( 1, 1 ), 511, Vector2( 1, 2 ), 63, Vector2( 1, 3 ), 56, Vector2( 2, 0 ), 216, Vector2( 2, 1 ), 219, Vector2( 2, 2 ), 27, Vector2( 2, 3 ), 24, Vector2( 3, 0 ), 144, Vector2( 3, 1 ), 146, Vector2( 3, 2 ), 18, Vector2( 3, 3 ), 16, Vector2( 4, 0 ), 176, Vector2( 4, 1 ), 182, Vector2( 4, 2 ), 434, Vector2( 4, 3 ), 50, Vector2( 4, 4 ), 178, Vector2( 5, 0 ), 248, Vector2( 5, 1 ), 255, Vector2( 5, 2 ), 507, Vector2( 5, 3 ), 59, Vector2( 5, 4 ), 251, Vector2( 6, 0 ), 440, Vector2( 6, 1 ), 447, Vector2( 6, 2 ), 510, Vector2( 6, 3 ), 62, Vector2( 6, 4 ), 446, Vector2( 7, 0 ), 152, Vector2( 7, 1 ), 155, Vector2( 7, 2 ), 218, Vector2( 7, 3 ), 26, Vector2( 7, 4 ), 154, Vector2( 8, 0 ), 184, Vector2( 8, 1 ), 191, Vector2( 8, 2 ), 506, Vector2( 8, 3 ), 58, Vector2( 8, 4 ), 186, Vector2( 9, 0 ), 443, Vector2( 9, 1 ), 254, Vector2( 9, 2 ), 442, Vector2( 9, 3 ), 190, Vector2( 10, 2 ), 250, Vector2( 10, 3 ), 187 ]
-0/autotile/icon_coordinate = Vector2( 3, 3 )
-0/autotile/tile_size = Vector2( 32, 32 )
-0/autotile/spacing = 0
-0/autotile/occluder_map = [  ]
-0/autotile/navpoly_map = [  ]
-0/autotile/priority_map = [  ]
-0/autotile/z_index_map = [  ]
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 1, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 2 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 2, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 3 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 0, 1 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 4 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 10, 2 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 5 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 10, 3 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 6 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 9, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 7 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 9, 1 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 8 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 9, 2 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 9 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 9, 3 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 10 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 8, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 11 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 8, 1 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 12 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 8, 2 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 13 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 8, 3 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 14 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 8, 4 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 15 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 7, 4 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 16 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 6, 4 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 17 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 5, 4 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 18 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 4, 4 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 19 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 7, 3 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 20 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 7, 2 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 21 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 7, 1 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 22 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 7, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 23 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 6, 3 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 24 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 6, 2 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 25 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 6, 1 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 26 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 6, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 27 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 5, 3 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 28 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 5, 2 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 29 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 5, 1 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 30 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 5, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 31 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 4, 3 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 32 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 3, 3 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 33 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 2, 3 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 34 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 1, 3 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 35 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 0, 3 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 36 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 0, 2 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 37 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 1, 1 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 38 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 1, 2 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 39 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 4, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 40 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 4, 1 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 41 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 4, 2 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 42 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 3, 2 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 43 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 3, 1 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 44 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 3, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 45 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 2, 2 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 46 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 2, 1 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 47 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-0/z_index = 0
 
 [node name="World" type="Node2D"]
 
-[node name="Background" type="Sprite" parent="."]
-position = Vector2( -523.579, -79.3036 )
-scale = Vector2( 5, 5 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 0, 0, 500, 400 )
+[node name="grob_Tuemple_Bachlauf" type="Sprite" parent="."]
+position = Vector2( -169.276, 88.91 )
+texture = ExtResource( 5 )
 
-[node name="DirtPathTileMap" type="TileMap" parent="."]
-position = Vector2( -185.698, -45.7827 )
-tile_set = ExtResource( 4 )
-cell_size = Vector2( 16, 16 )
-format = 1
-tile_data = PoolIntArray( -393198, 0, 0, -393197, 0, 1, -393196, 0, 1, -393195, 0, 1, -393194, 0, 1, -393193, 0, 5, -393192, 0, 196609, -393191, 0, 196610, -327662, 0, 65536, -327661, 0, 65537, -327660, 0, 65537, -327659, 0, 65537, -327658, 0, 65537, -327657, 0, 65538, -262126, 0, 65536, -262125, 0, 65537, -262124, 0, 65537, -262123, 0, 65537, -262122, 0, 65537, -262121, 0, 65538, -196590, 0, 65536, -196589, 0, 65537, -196588, 0, 65537, -196587, 0, 65537, -196586, 0, 65537, -196585, 0, 65538, -196579, 0, 196608, -196578, 0, 7, -131056, 0, 0, -131055, 0, 1, -131054, 0, 131078, -131053, 0, 65537, -131052, 0, 65537, -131051, 0, 65537, -131050, 0, 65537, -131049, 0, 131077, -131048, 0, 1, -131047, 0, 2, -131042, 0, 131075, -65528, 0, 0, -65527, 0, 2, -65520, 0, 131072, -65519, 0, 131073, -65518, 0, 131073, -65517, 0, 65542, -65516, 0, 65537, -65515, 0, 65537, -65514, 0, 65537, -65513, 0, 65537, -65512, 0, 65537, -65511, 0, 65538, 8, 0, 65536, 9, 0, 65538, 19, 0, 131072, 20, 0, 65542, 21, 0, 65537, 22, 0, 65537, 23, 0, 65537, 24, 0, 65537, 25, 0, 131077, 26, 0, 2, 65544, 0, 131072, 65545, 0, 9, 65546, 0, 1, 65547, 0, 1, 65548, 0, 1, 65549, 0, 2, 65556, 0, 65536, 65557, 0, 65537, 65558, 0, 65537, 65559, 0, 65537, 65560, 0, 65537, 65561, 0, 65537, 65562, 0, 65538, 65565, 0, 0, 65566, 0, 0, 131081, 0, 65536, 131082, 0, 65537, 131083, 0, 65537, 131084, 0, 65537, 131085, 0, 65538, 131092, 0, 65536, 131093, 0, 65537, 131094, 0, 65537, 131095, 0, 65537, 131096, 0, 65537, 131097, 0, 65537, 131098, 0, 65538, 131101, 0, 0, 131102, 0, 0, 196614, 0, 0, 196615, 0, 1, 196616, 0, 1, 196617, 0, 131078, 196618, 0, 65537, 196619, 0, 65537, 196620, 0, 65537, 196621, 0, 65538, 196628, 0, 65536, 196629, 0, 65537, 196630, 0, 65537, 196631, 0, 65537, 196632, 0, 65537, 196633, 0, 65537, 196634, 0, 65538, 327679, 0, 0, 262144, 0, 1, 262145, 0, 1, 262146, 0, 1, 262147, 0, 1, 262148, 0, 5, 262149, 0, 196609, 262150, 0, 196614, 262151, 0, 131073, 262152, 0, 131073, 262153, 0, 131073, 262154, 0, 131073, 262155, 0, 65542, 262156, 0, 65537, 262157, 0, 131077, 262158, 0, 1, 262159, 0, 1, 262160, 0, 1, 262161, 0, 1, 262162, 0, 1, 262163, 0, 1, 262164, 0, 131078, 262165, 0, 65537, 262166, 0, 65537, 262167, 0, 65537, 262168, 0, 65537, 262169, 0, 65537, 262170, 0, 131077, 262171, 0, 1, 262172, 0, 2, 393215, 0, 65536, 327680, 0, 65537, 327681, 0, 65537, 327682, 0, 65537, 327683, 0, 65541, 327684, 0, 131074, 327691, 0, 131072, 327692, 0, 131073, 327693, 0, 131073, 327694, 0, 131073, 327695, 0, 131073, 327696, 0, 131073, 327697, 0, 131073, 327698, 0, 131073, 327699, 0, 131073, 327700, 0, 131073, 327701, 0, 131073, 327702, 0, 65542, 327703, 0, 65537, 327704, 0, 65537, 327705, 0, 65537, 327706, 0, 65541, 327707, 0, 131073, 327708, 0, 131074, 458751, 0, 131072, 393216, 0, 131073, 393217, 0, 131073, 393218, 0, 131073, 393219, 0, 131074, 393238, 0, 65536, 393239, 0, 65537, 393240, 0, 65537, 393241, 0, 65541, 393242, 0, 131074, 458774, 0, 65536, 458775, 0, 65537, 458776, 0, 65537, 458777, 0, 65538, 524310, 0, 131072, 524311, 0, 131073, 524312, 0, 131073, 524313, 0, 131074, 655374, 0, 0, 655375, 0, 1, 655376, 0, 1, 655377, 0, 2, 720903, 0, 196608, 720904, 0, 196610, 720908, 0, 196608, 720909, 0, 196609, 720910, 0, 196614, 720911, 0, 131073, 720912, 0, 131073, 720913, 0, 196613, 720914, 0, 196610 )
+[node name="StaticBody2D" type="StaticBody2D" parent="grob_Tuemple_Bachlauf"]
 
-[node name="DirtCliffTileMap" type="TileMap" parent="."]
-position = Vector2( -185.698, -45.7827 )
-tile_set = SubResource( 48 )
-cell_size = Vector2( 32, 32 )
-collision_mask = 0
-format = 1
-tile_data = PoolIntArray( -196599, 0, 0, -196598, 0, 1, -196597, 0, 5, -196596, 0, 196610, -131063, 0, 65536, -131062, 0, 65537, -131061, 0, 65538, -1, 0, 0, -65536, 0, 1, -65535, 0, 1, -65534, 0, 1, -65533, 0, 2, -65528, 0, 0, -65527, 0, 131078, -65526, 0, 65537, -65525, 0, 131077, -65524, 0, 2, 65535, 0, 65536, 0, 0, 65541, 1, 0, 131073, 2, 0, 131073, 3, 0, 131074, 8, 0, 131072, 9, 0, 65544, 10, 0, 131073, 11, 0, 65542, 12, 0, 65538, 131071, 0, 131072, 65536, 0, 131074, 65545, 0, 131075, 65547, 0, 131072, 65548, 0, 131074, 196612, 0, 3, 196617, 0, 0, 196618, 0, 5, 196619, 0, 196610, 262146, 0, 0, 262147, 0, 1, 262148, 0, 131079, 262152, 0, 196608, 262153, 0, 196617, 262154, 0, 131074, 327680, 0, 196608, 327681, 0, 196609, 327682, 0, 196614, 327683, 0, 131073, 327684, 0, 131074, 327689, 0, 131075 )
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grob_Tuemple_Bachlauf/StaticBody2D"]
+polygon = PoolVector2Array( -39.5787, 7.82751, -329.698, 25.038, -470.823, 36.8394, -487.542, 69.7852, -389.688, 100.272, -464.431, 131.743, -576.053, 162.23, -709.803, 178.457, -778.645, 198.126, -774.219, 235.989, -326.256, 124.859, -194.965, 125.842, -63.6733, 132.726, 69.093, 100.272, 203.334, 93.8798, 128.1, 38.3146, 44.9984, 27.9883, 134.001, 7.82751, 116.791, -16.7589 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="grob_Tuemple_Bachlauf/StaticBody2D"]
+position = Vector2( 1022.3, -290.611 )
+polygon = PoolVector2Array( -318.388, 63.8844, -502.786, 105.681, -680.299, 213.369, -828.309, 250.249, -784.545, 276.311, -633.585, 248.282, -541.14, 180.915, -239.712, 92.8963 )
+
+[node name="grob_Bruecke" type="Sprite" parent="."]
+position = Vector2( 0.120438, 72.2318 )
+scale = Vector2( 0.212794, 0.212794 )
+texture = ExtResource( 4 )
 
 [node name="YSort" type="YSort" parent="."]
 position = Vector2( -185.698, -45.7827 )
@@ -485,63 +38,1142 @@ position = Vector2( -185.698, -45.7827 )
 ] instance=ExtResource( 2 )]
 position = Vector2( -289.211, 10.7116 )
 
+[node name="Pet" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( -525.391, 144.697 )
+
+[node name="Bat" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 192.256, -60.2186 )
+
 [node name="Bushes" type="YSort" parent="YSort"]
 
 [node name="Bush" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 72, 56 )
+position = Vector2( -153.742, -132.093 )
 
 [node name="Bush2" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 104, 104 )
+position = Vector2( -201.449, 437.254 )
 
 [node name="Bush3" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 264, 56 )
+position = Vector2( 419.012, -205.638 )
 
 [node name="Bush4" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 216, 120 )
+position = Vector2( 496.607, 200.404 )
 
 [node name="Bush5" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 240, 144 )
+position = Vector2( 140.097, -23.5192 )
 
 [node name="Bush6" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 176, 152 )
+position = Vector2( 242.085, 550.315 )
+
+[node name="Stone" parent="YSort/Bushes" instance=ExtResource( 3 )]
+position = Vector2( -76.9658, -56.8067 )
 
 [node name="Grass" type="YSort" parent="YSort"]
 
 [node name="Grass" parent="YSort/Grass" instance=ExtResource( 6 )]
-position = Vector2( 48, 144 )
+position = Vector2( 164.019, 163.015 )
 
 [node name="Grass2" parent="YSort/Grass" instance=ExtResource( 6 )]
-position = Vector2( 32, 144 )
+position = Vector2( 69.9161, 105.131 )
 
 [node name="Grass3" parent="YSort/Grass" instance=ExtResource( 6 )]
-position = Vector2( 16, 144 )
+position = Vector2( 18.5005, 110.514 )
 
 [node name="Grass4" parent="YSort/Grass" instance=ExtResource( 6 )]
 position = Vector2( 48, 128 )
 
 [node name="Grass5" parent="YSort/Grass" instance=ExtResource( 6 )]
-position = Vector2( 32, 32 )
+position = Vector2( 126.874, 16.2585 )
 
 [node name="Grass6" parent="YSort/Grass" instance=ExtResource( 6 )]
-position = Vector2( 240, 0 )
+position = Vector2( 203.543, 195.001 )
 
 [node name="Grass7" parent="YSort/Grass" instance=ExtResource( 6 )]
-position = Vector2( 224, 0 )
+position = Vector2( 176.35, 15.7415 )
 
 [node name="Grass8" parent="YSort/Grass" instance=ExtResource( 6 )]
-position = Vector2( 272, 112 )
+position = Vector2( 331.491, 126.203 )
 
 [node name="Grass9" parent="YSort/Grass" instance=ExtResource( 6 )]
-position = Vector2( 256, 112 )
+position = Vector2( 295.015, 136.413 )
 
 [node name="Grass10" parent="YSort/Grass" instance=ExtResource( 6 )]
-position = Vector2( 272, 96 )
+position = Vector2( 265.608, 68.955 )
 
 [node name="Grass11" parent="YSort/Grass" instance=ExtResource( 6 )]
-position = Vector2( 160, 112 )
+position = Vector2( 232.776, 66.7611 )
 
-[node name="Bat" parent="YSort" instance=ExtResource( 7 )]
+[node name="grob_Teich" type="Sprite" parent="YSort"]
+position = Vector2( -423.878, 659.938 )
+texture = ExtResource( 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="YSort/grob_Teich"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="YSort/grob_Teich/StaticBody2D"]
+position = Vector2( 0.550293, -2.20117 )
+polygon = PoolVector2Array( -477.416, 11.4897, -351.952, -25.9294, -82.8635, -186.612, 207.685, -185.511, 371.119, -107.371, 531.802, -84.2593, 546.659, -46.2899, 480.075, 14.7914, 330.949, 56.0626, 142.202, 200.237, -13.5281, 179.326, -79.0116, 156.764, -394.323, 160.616, -510.433, 144.658, -555.006, 103.387, -515.936, 62.666, -370.111, 45.0569, -382.217, 26.3474 )
+
+[node name="grob_Tuemple_Bachlauf2" type="Sprite" parent="."]
+position = Vector2( 1313.68, -332.702 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grob_Tuemple_Bachlauf2"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grob_Tuemple_Bachlauf2/StaticBody2D"]
+polygon = PoolVector2Array( -39.5787, 7.82751, -329.698, 25.038, -470.823, 36.8394, -487.542, 69.7852, -389.688, 100.272, -464.431, 131.743, -576.053, 162.23, -709.803, 178.457, -778.645, 198.126, -774.219, 235.989, -326.256, 124.859, -194.965, 125.842, -63.6733, 132.726, 69.093, 100.272, 203.334, 93.8798, 128.1, 38.3146, 44.9984, 27.9883, 134.001, 7.82751, 116.791, -16.7589 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="grob_Tuemple_Bachlauf2/StaticBody2D"]
+position = Vector2( 1022.3, -290.611 )
+polygon = PoolVector2Array( -318.388, 63.8844, -502.786, 105.681, -680.299, 213.369, -828.309, 250.249, -784.545, 276.311, -633.585, 248.282, -541.14, 180.915, -239.712, 92.8963 )
+
+[node name="grob_Bruecke2" type="Sprite" parent="."]
+position = Vector2( 1483.08, -349.38 )
+scale = Vector2( 0.212794, 0.212794 )
+texture = ExtResource( 4 )
+
+[node name="YSort2" type="YSort" parent="."]
+position = Vector2( 1297.26, -467.395 )
+
+[node name="Bat" parent="YSort2" instance=ExtResource( 7 )]
 position = Vector2( 192.256, -60.2186 )
 
-[node name="Pet" parent="YSort/Bat" instance=ExtResource( 9 )]
-position = Vector2( 39.6396, 139.011 )
+[node name="Bushes" type="YSort" parent="YSort2"]
+
+[node name="Bush" parent="YSort2/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -153.742, -132.093 )
+
+[node name="Bush2" parent="YSort2/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -201.449, 437.254 )
+
+[node name="Bush3" parent="YSort2/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 419.012, -205.638 )
+
+[node name="Bush4" parent="YSort2/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 496.607, 200.404 )
+
+[node name="Bush5" parent="YSort2/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 140.097, -23.5192 )
+
+[node name="Bush6" parent="YSort2/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 242.085, 550.315 )
+
+[node name="Stone" parent="YSort2/Bushes" instance=ExtResource( 3 )]
+position = Vector2( -76.9658, -56.8067 )
+
+[node name="Grass" type="YSort" parent="YSort2"]
+
+[node name="Grass" parent="YSort2/Grass" instance=ExtResource( 6 )]
+position = Vector2( 164.019, 163.015 )
+
+[node name="Grass2" parent="YSort2/Grass" instance=ExtResource( 6 )]
+position = Vector2( 69.9161, 105.131 )
+
+[node name="Grass3" parent="YSort2/Grass" instance=ExtResource( 6 )]
+position = Vector2( 18.5005, 110.514 )
+
+[node name="Grass4" parent="YSort2/Grass" instance=ExtResource( 6 )]
+position = Vector2( 48, 128 )
+
+[node name="Grass5" parent="YSort2/Grass" instance=ExtResource( 6 )]
+position = Vector2( 126.874, 16.2585 )
+
+[node name="Grass6" parent="YSort2/Grass" instance=ExtResource( 6 )]
+position = Vector2( 203.543, 195.001 )
+
+[node name="Grass7" parent="YSort2/Grass" instance=ExtResource( 6 )]
+position = Vector2( 176.35, 15.7415 )
+
+[node name="Grass8" parent="YSort2/Grass" instance=ExtResource( 6 )]
+position = Vector2( 331.491, 126.203 )
+
+[node name="Grass9" parent="YSort2/Grass" instance=ExtResource( 6 )]
+position = Vector2( 295.015, 136.413 )
+
+[node name="Grass10" parent="YSort2/Grass" instance=ExtResource( 6 )]
+position = Vector2( 265.608, 68.955 )
+
+[node name="Grass11" parent="YSort2/Grass" instance=ExtResource( 6 )]
+position = Vector2( 232.776, 66.7611 )
+
+[node name="grob_Tuemple_Bachlauf3" type="Sprite" parent="."]
+position = Vector2( -1676.18, 515.842 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grob_Tuemple_Bachlauf3"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grob_Tuemple_Bachlauf3/StaticBody2D"]
+polygon = PoolVector2Array( -39.5787, 7.82751, -329.698, 25.038, -470.823, 36.8394, -487.542, 69.7852, -389.688, 100.272, -464.431, 131.743, -576.053, 162.23, -709.803, 178.457, -778.645, 198.126, -774.219, 235.989, -326.256, 124.859, -194.965, 125.842, -63.6733, 132.726, 69.093, 100.272, 203.334, 93.8798, 128.1, 38.3146, 44.9984, 27.9883, 134.001, 7.82751, 116.791, -16.7589 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="grob_Tuemple_Bachlauf3/StaticBody2D"]
+position = Vector2( 1022.3, -290.611 )
+polygon = PoolVector2Array( -318.388, 63.8844, -502.786, 105.681, -680.299, 213.369, -828.309, 250.249, -784.545, 276.311, -633.585, 248.282, -541.14, 180.915, -239.712, 92.8963 )
+
+[node name="grob_Bruecke3" type="Sprite" parent="."]
+position = Vector2( -1506.78, 499.164 )
+scale = Vector2( 0.212794, 0.212794 )
+texture = ExtResource( 4 )
+
+[node name="YSort3" type="YSort" parent="."]
+position = Vector2( -1692.6, 381.15 )
+
+[node name="Bat" parent="YSort3" instance=ExtResource( 7 )]
+position = Vector2( 192.256, -60.2186 )
+
+[node name="Bushes" type="YSort" parent="YSort3"]
+
+[node name="Bush" parent="YSort3/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -153.742, -132.093 )
+
+[node name="Bush2" parent="YSort3/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -201.449, 437.254 )
+
+[node name="Bush3" parent="YSort3/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 419.012, -205.638 )
+
+[node name="Bush4" parent="YSort3/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 496.607, 200.404 )
+
+[node name="Bush5" parent="YSort3/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 140.097, -23.5192 )
+
+[node name="Bush6" parent="YSort3/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 242.085, 550.315 )
+
+[node name="Stone" parent="YSort3/Bushes" instance=ExtResource( 3 )]
+position = Vector2( -76.9658, -56.8067 )
+
+[node name="Grass" type="YSort" parent="YSort3"]
+
+[node name="Grass" parent="YSort3/Grass" instance=ExtResource( 6 )]
+position = Vector2( 164.019, 163.015 )
+
+[node name="Grass2" parent="YSort3/Grass" instance=ExtResource( 6 )]
+position = Vector2( 69.9161, 105.131 )
+
+[node name="Grass3" parent="YSort3/Grass" instance=ExtResource( 6 )]
+position = Vector2( 18.5005, 110.514 )
+
+[node name="Grass4" parent="YSort3/Grass" instance=ExtResource( 6 )]
+position = Vector2( 48, 128 )
+
+[node name="Grass5" parent="YSort3/Grass" instance=ExtResource( 6 )]
+position = Vector2( 126.874, 16.2585 )
+
+[node name="Grass6" parent="YSort3/Grass" instance=ExtResource( 6 )]
+position = Vector2( 203.543, 195.001 )
+
+[node name="Grass7" parent="YSort3/Grass" instance=ExtResource( 6 )]
+position = Vector2( 176.35, 15.7415 )
+
+[node name="Grass8" parent="YSort3/Grass" instance=ExtResource( 6 )]
+position = Vector2( 331.491, 126.203 )
+
+[node name="Grass9" parent="YSort3/Grass" instance=ExtResource( 6 )]
+position = Vector2( 295.015, 136.413 )
+
+[node name="Grass10" parent="YSort3/Grass" instance=ExtResource( 6 )]
+position = Vector2( 265.608, 68.955 )
+
+[node name="Grass11" parent="YSort3/Grass" instance=ExtResource( 6 )]
+position = Vector2( 232.776, 66.7611 )
+
+[node name="grob_Tuemple_Bachlauf4" type="Sprite" parent="."]
+position = Vector2( 362.226, -923.247 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grob_Tuemple_Bachlauf4"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grob_Tuemple_Bachlauf4/StaticBody2D"]
+polygon = PoolVector2Array( -39.5787, 7.82751, -329.698, 25.038, -470.823, 36.8394, -487.542, 69.7852, -389.688, 100.272, -464.431, 131.743, -576.053, 162.23, -709.803, 178.457, -778.645, 198.126, -774.219, 235.989, -326.256, 124.859, -194.965, 125.842, -63.6733, 132.726, 69.093, 100.272, 203.334, 93.8798, 128.1, 38.3146, 44.9984, 27.9883, 134.001, 7.82751, 116.791, -16.7589 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="grob_Tuemple_Bachlauf4/StaticBody2D"]
+position = Vector2( 1022.3, -290.611 )
+polygon = PoolVector2Array( -318.388, 63.8844, -502.786, 105.681, -680.299, 213.369, -828.309, 250.249, -784.545, 276.311, -633.585, 248.282, -541.14, 180.915, -239.712, 92.8963 )
+
+[node name="grob_Bruecke4" type="Sprite" parent="."]
+position = Vector2( 531.623, -939.925 )
+scale = Vector2( 0.212794, 0.212794 )
+texture = ExtResource( 4 )
+
+[node name="YSort4" type="YSort" parent="."]
+position = Vector2( 345.804, -1057.94 )
+
+[node name="Bat" parent="YSort4" instance=ExtResource( 7 )]
+position = Vector2( 192.256, -60.2186 )
+
+[node name="Bushes" type="YSort" parent="YSort4"]
+
+[node name="Bush" parent="YSort4/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -153.742, -132.093 )
+
+[node name="Bush2" parent="YSort4/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -201.449, 437.254 )
+
+[node name="Bush3" parent="YSort4/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 419.012, -205.638 )
+
+[node name="Bush4" parent="YSort4/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 496.607, 200.404 )
+
+[node name="Bush5" parent="YSort4/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 140.097, -23.5192 )
+
+[node name="Bush6" parent="YSort4/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 242.085, 550.315 )
+
+[node name="Stone" parent="YSort4/Bushes" instance=ExtResource( 3 )]
+position = Vector2( -76.9658, -56.8067 )
+
+[node name="Grass" type="YSort" parent="YSort4"]
+
+[node name="Grass" parent="YSort4/Grass" instance=ExtResource( 6 )]
+position = Vector2( 164.019, 163.015 )
+
+[node name="Grass2" parent="YSort4/Grass" instance=ExtResource( 6 )]
+position = Vector2( 69.9161, 105.131 )
+
+[node name="Grass3" parent="YSort4/Grass" instance=ExtResource( 6 )]
+position = Vector2( 18.5005, 110.514 )
+
+[node name="Grass4" parent="YSort4/Grass" instance=ExtResource( 6 )]
+position = Vector2( 48, 128 )
+
+[node name="Grass5" parent="YSort4/Grass" instance=ExtResource( 6 )]
+position = Vector2( 126.874, 16.2585 )
+
+[node name="Grass6" parent="YSort4/Grass" instance=ExtResource( 6 )]
+position = Vector2( 203.543, 195.001 )
+
+[node name="Grass7" parent="YSort4/Grass" instance=ExtResource( 6 )]
+position = Vector2( 176.35, 15.7415 )
+
+[node name="Grass8" parent="YSort4/Grass" instance=ExtResource( 6 )]
+position = Vector2( 331.491, 126.203 )
+
+[node name="Grass9" parent="YSort4/Grass" instance=ExtResource( 6 )]
+position = Vector2( 295.015, 136.413 )
+
+[node name="Grass10" parent="YSort4/Grass" instance=ExtResource( 6 )]
+position = Vector2( 265.608, 68.955 )
+
+[node name="Grass11" parent="YSort4/Grass" instance=ExtResource( 6 )]
+position = Vector2( 232.776, 66.7611 )
+
+[node name="grob_Tuemple_Bachlauf5" type="Sprite" parent="."]
+position = Vector2( -1149, -495.959 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grob_Tuemple_Bachlauf5"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grob_Tuemple_Bachlauf5/StaticBody2D"]
+polygon = PoolVector2Array( -39.5787, 7.82751, -329.698, 25.038, -470.823, 36.8394, -487.542, 69.7852, -389.688, 100.272, -464.431, 131.743, -576.053, 162.23, -709.803, 178.457, -778.645, 198.126, -774.219, 235.989, -326.256, 124.859, -194.965, 125.842, -63.6733, 132.726, 69.093, 100.272, 203.334, 93.8798, 128.1, 38.3146, 44.9984, 27.9883, 134.001, 7.82751, 116.791, -16.7589 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="grob_Tuemple_Bachlauf5/StaticBody2D"]
+position = Vector2( 1022.3, -290.611 )
+polygon = PoolVector2Array( -318.388, 63.8844, -502.786, 105.681, -680.299, 213.369, -828.309, 250.249, -784.545, 276.311, -633.585, 248.282, -541.14, 180.915, -239.712, 92.8963 )
+
+[node name="grob_Bruecke5" type="Sprite" parent="."]
+position = Vector2( -979.606, -512.638 )
+scale = Vector2( 0.212794, 0.212794 )
+texture = ExtResource( 4 )
+
+[node name="YSort5" type="YSort" parent="."]
+position = Vector2( -1165.42, -630.652 )
+
+[node name="Bat" parent="YSort5" instance=ExtResource( 7 )]
+position = Vector2( 192.256, -60.2186 )
+
+[node name="Bushes" type="YSort" parent="YSort5"]
+
+[node name="Bush" parent="YSort5/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -153.742, -132.093 )
+
+[node name="Bush2" parent="YSort5/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -201.449, 437.254 )
+
+[node name="Bush3" parent="YSort5/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 419.012, -205.638 )
+
+[node name="Bush4" parent="YSort5/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 496.607, 200.404 )
+
+[node name="Bush5" parent="YSort5/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 140.097, -23.5192 )
+
+[node name="Bush6" parent="YSort5/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 242.085, 550.315 )
+
+[node name="Stone" parent="YSort5/Bushes" instance=ExtResource( 3 )]
+position = Vector2( -76.9658, -56.8067 )
+
+[node name="Grass" type="YSort" parent="YSort5"]
+
+[node name="Grass" parent="YSort5/Grass" instance=ExtResource( 6 )]
+position = Vector2( 164.019, 163.015 )
+
+[node name="Grass2" parent="YSort5/Grass" instance=ExtResource( 6 )]
+position = Vector2( 69.9161, 105.131 )
+
+[node name="Grass3" parent="YSort5/Grass" instance=ExtResource( 6 )]
+position = Vector2( 18.5005, 110.514 )
+
+[node name="Grass4" parent="YSort5/Grass" instance=ExtResource( 6 )]
+position = Vector2( 48, 128 )
+
+[node name="Grass5" parent="YSort5/Grass" instance=ExtResource( 6 )]
+position = Vector2( 126.874, 16.2585 )
+
+[node name="Grass6" parent="YSort5/Grass" instance=ExtResource( 6 )]
+position = Vector2( 203.543, 195.001 )
+
+[node name="Grass7" parent="YSort5/Grass" instance=ExtResource( 6 )]
+position = Vector2( 176.35, 15.7415 )
+
+[node name="Grass8" parent="YSort5/Grass" instance=ExtResource( 6 )]
+position = Vector2( 331.491, 126.203 )
+
+[node name="Grass9" parent="YSort5/Grass" instance=ExtResource( 6 )]
+position = Vector2( 295.015, 136.413 )
+
+[node name="Grass10" parent="YSort5/Grass" instance=ExtResource( 6 )]
+position = Vector2( 265.608, 68.955 )
+
+[node name="Grass11" parent="YSort5/Grass" instance=ExtResource( 6 )]
+position = Vector2( 232.776, 66.7611 )
+
+[node name="grob_Tuemple_Bachlauf6" type="Sprite" parent="."]
+position = Vector2( -2343.93, -947.293 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grob_Tuemple_Bachlauf6"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grob_Tuemple_Bachlauf6/StaticBody2D"]
+polygon = PoolVector2Array( -39.5787, 7.82751, -329.698, 25.038, -470.823, 36.8394, -487.542, 69.7852, -389.688, 100.272, -464.431, 131.743, -576.053, 162.23, -709.803, 178.457, -778.645, 198.126, -774.219, 235.989, -326.256, 124.859, -194.965, 125.842, -63.6733, 132.726, 69.093, 100.272, 203.334, 93.8798, 128.1, 38.3146, 44.9984, 27.9883, 134.001, 7.82751, 116.791, -16.7589 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="grob_Tuemple_Bachlauf6/StaticBody2D"]
+position = Vector2( 1022.3, -290.611 )
+polygon = PoolVector2Array( -318.388, 63.8844, -502.786, 105.681, -680.299, 213.369, -828.309, 250.249, -784.545, 276.311, -633.585, 248.282, -541.14, 180.915, -239.712, 92.8963 )
+
+[node name="grob_Bruecke6" type="Sprite" parent="."]
+position = Vector2( -2174.53, -963.971 )
+scale = Vector2( 0.212794, 0.212794 )
+texture = ExtResource( 4 )
+
+[node name="YSort6" type="YSort" parent="."]
+position = Vector2( -2360.35, -1081.99 )
+
+[node name="Bat" parent="YSort6" instance=ExtResource( 7 )]
+position = Vector2( 192.256, -60.2186 )
+
+[node name="Bushes" type="YSort" parent="YSort6"]
+
+[node name="Bush" parent="YSort6/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -153.742, -132.093 )
+
+[node name="Bush2" parent="YSort6/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -201.449, 437.254 )
+
+[node name="Bush3" parent="YSort6/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 419.012, -205.638 )
+
+[node name="Bush4" parent="YSort6/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 496.607, 200.404 )
+
+[node name="Bush5" parent="YSort6/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 140.097, -23.5192 )
+
+[node name="Bush6" parent="YSort6/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 242.085, 550.315 )
+
+[node name="Stone" parent="YSort6/Bushes" instance=ExtResource( 3 )]
+position = Vector2( -76.9658, -56.8067 )
+
+[node name="Grass" type="YSort" parent="YSort6"]
+
+[node name="Grass" parent="YSort6/Grass" instance=ExtResource( 6 )]
+position = Vector2( 164.019, 163.015 )
+
+[node name="Grass2" parent="YSort6/Grass" instance=ExtResource( 6 )]
+position = Vector2( 69.9161, 105.131 )
+
+[node name="Grass3" parent="YSort6/Grass" instance=ExtResource( 6 )]
+position = Vector2( 18.5005, 110.514 )
+
+[node name="Grass4" parent="YSort6/Grass" instance=ExtResource( 6 )]
+position = Vector2( 48, 128 )
+
+[node name="Grass5" parent="YSort6/Grass" instance=ExtResource( 6 )]
+position = Vector2( 126.874, 16.2585 )
+
+[node name="Grass6" parent="YSort6/Grass" instance=ExtResource( 6 )]
+position = Vector2( 203.543, 195.001 )
+
+[node name="Grass7" parent="YSort6/Grass" instance=ExtResource( 6 )]
+position = Vector2( 176.35, 15.7415 )
+
+[node name="Grass8" parent="YSort6/Grass" instance=ExtResource( 6 )]
+position = Vector2( 331.491, 126.203 )
+
+[node name="Grass9" parent="YSort6/Grass" instance=ExtResource( 6 )]
+position = Vector2( 295.015, 136.413 )
+
+[node name="Grass10" parent="YSort6/Grass" instance=ExtResource( 6 )]
+position = Vector2( 265.608, 68.955 )
+
+[node name="Grass11" parent="YSort6/Grass" instance=ExtResource( 6 )]
+position = Vector2( 232.776, 66.7611 )
+
+[node name="grob_Tuemple_Bachlauf7" type="Sprite" parent="."]
+position = Vector2( 2135.4, 678.743 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grob_Tuemple_Bachlauf7"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grob_Tuemple_Bachlauf7/StaticBody2D"]
+polygon = PoolVector2Array( -39.5787, 7.82751, -329.698, 25.038, -470.823, 36.8394, -487.542, 69.7852, -389.688, 100.272, -464.431, 131.743, -576.053, 162.23, -709.803, 178.457, -778.645, 198.126, -774.219, 235.989, -326.256, 124.859, -194.965, 125.842, -63.6733, 132.726, 69.093, 100.272, 203.334, 93.8798, 128.1, 38.3146, 44.9984, 27.9883, 134.001, 7.82751, 116.791, -16.7589 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="grob_Tuemple_Bachlauf7/StaticBody2D"]
+position = Vector2( 1022.3, -290.611 )
+polygon = PoolVector2Array( -318.388, 63.8844, -502.786, 105.681, -680.299, 213.369, -828.309, 250.249, -784.545, 276.311, -633.585, 248.282, -541.14, 180.915, -239.712, 92.8963 )
+
+[node name="grob_Bruecke7" type="Sprite" parent="."]
+position = Vector2( 2304.8, 662.064 )
+scale = Vector2( 0.212794, 0.212794 )
+texture = ExtResource( 4 )
+
+[node name="YSort7" type="YSort" parent="."]
+position = Vector2( 2118.98, 544.05 )
+
+[node name="Bat" parent="YSort7" instance=ExtResource( 7 )]
+position = Vector2( 192.256, -60.2186 )
+
+[node name="Bushes" type="YSort" parent="YSort7"]
+
+[node name="Bush" parent="YSort7/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -153.742, -132.093 )
+
+[node name="Bush2" parent="YSort7/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -201.449, 437.254 )
+
+[node name="Bush3" parent="YSort7/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 419.012, -205.638 )
+
+[node name="Bush4" parent="YSort7/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 496.607, 200.404 )
+
+[node name="Bush5" parent="YSort7/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 140.097, -23.5192 )
+
+[node name="Bush6" parent="YSort7/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 242.085, 550.315 )
+
+[node name="Stone" parent="YSort7/Bushes" instance=ExtResource( 3 )]
+position = Vector2( -76.9658, -56.8067 )
+
+[node name="Grass" type="YSort" parent="YSort7"]
+
+[node name="Grass" parent="YSort7/Grass" instance=ExtResource( 6 )]
+position = Vector2( 164.019, 163.015 )
+
+[node name="Grass2" parent="YSort7/Grass" instance=ExtResource( 6 )]
+position = Vector2( 69.9161, 105.131 )
+
+[node name="Grass3" parent="YSort7/Grass" instance=ExtResource( 6 )]
+position = Vector2( 18.5005, 110.514 )
+
+[node name="Grass4" parent="YSort7/Grass" instance=ExtResource( 6 )]
+position = Vector2( 48, 128 )
+
+[node name="Grass5" parent="YSort7/Grass" instance=ExtResource( 6 )]
+position = Vector2( 126.874, 16.2585 )
+
+[node name="Grass6" parent="YSort7/Grass" instance=ExtResource( 6 )]
+position = Vector2( 203.543, 195.001 )
+
+[node name="Grass7" parent="YSort7/Grass" instance=ExtResource( 6 )]
+position = Vector2( 176.35, 15.7415 )
+
+[node name="Grass8" parent="YSort7/Grass" instance=ExtResource( 6 )]
+position = Vector2( 331.491, 126.203 )
+
+[node name="Grass9" parent="YSort7/Grass" instance=ExtResource( 6 )]
+position = Vector2( 295.015, 136.413 )
+
+[node name="Grass10" parent="YSort7/Grass" instance=ExtResource( 6 )]
+position = Vector2( 265.608, 68.955 )
+
+[node name="Grass11" parent="YSort7/Grass" instance=ExtResource( 6 )]
+position = Vector2( 232.776, 66.7611 )
+
+[node name="grob_Tuemple_Bachlauf8" type="Sprite" parent="."]
+position = Vector2( 302.245, 1111.53 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grob_Tuemple_Bachlauf8"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grob_Tuemple_Bachlauf8/StaticBody2D"]
+polygon = PoolVector2Array( -39.5787, 7.82751, -329.698, 25.038, -470.823, 36.8394, -487.542, 69.7852, -389.688, 100.272, -464.431, 131.743, -576.053, 162.23, -709.803, 178.457, -778.645, 198.126, -774.219, 235.989, -326.256, 124.859, -194.965, 125.842, -63.6733, 132.726, 69.093, 100.272, 203.334, 93.8798, 128.1, 38.3146, 44.9984, 27.9883, 134.001, 7.82751, 116.791, -16.7589 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="grob_Tuemple_Bachlauf8/StaticBody2D"]
+position = Vector2( 1022.3, -290.611 )
+polygon = PoolVector2Array( -318.388, 63.8844, -502.786, 105.681, -680.299, 213.369, -828.309, 250.249, -784.545, 276.311, -633.585, 248.282, -541.14, 180.915, -239.712, 92.8963 )
+
+[node name="grob_Bruecke8" type="Sprite" parent="."]
+position = Vector2( 471.641, 1094.85 )
+scale = Vector2( 0.212794, 0.212794 )
+texture = ExtResource( 4 )
+
+[node name="YSort8" type="YSort" parent="."]
+position = Vector2( 285.823, 976.835 )
+
+[node name="Bat" parent="YSort8" instance=ExtResource( 7 )]
+position = Vector2( 192.256, -60.2186 )
+
+[node name="Bushes" type="YSort" parent="YSort8"]
+
+[node name="Bush" parent="YSort8/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -153.742, -132.093 )
+
+[node name="Bush2" parent="YSort8/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -201.449, 437.254 )
+
+[node name="Bush3" parent="YSort8/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 419.012, -205.638 )
+
+[node name="Bush4" parent="YSort8/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 496.607, 200.404 )
+
+[node name="Bush5" parent="YSort8/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 140.097, -23.5192 )
+
+[node name="Bush6" parent="YSort8/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 242.085, 550.315 )
+
+[node name="Stone" parent="YSort8/Bushes" instance=ExtResource( 3 )]
+position = Vector2( -76.9658, -56.8067 )
+
+[node name="Grass" type="YSort" parent="YSort8"]
+
+[node name="Grass" parent="YSort8/Grass" instance=ExtResource( 6 )]
+position = Vector2( 164.019, 163.015 )
+
+[node name="Grass2" parent="YSort8/Grass" instance=ExtResource( 6 )]
+position = Vector2( 69.9161, 105.131 )
+
+[node name="Grass3" parent="YSort8/Grass" instance=ExtResource( 6 )]
+position = Vector2( 18.5005, 110.514 )
+
+[node name="Grass4" parent="YSort8/Grass" instance=ExtResource( 6 )]
+position = Vector2( 48, 128 )
+
+[node name="Grass5" parent="YSort8/Grass" instance=ExtResource( 6 )]
+position = Vector2( 126.874, 16.2585 )
+
+[node name="Grass6" parent="YSort8/Grass" instance=ExtResource( 6 )]
+position = Vector2( 203.543, 195.001 )
+
+[node name="Grass7" parent="YSort8/Grass" instance=ExtResource( 6 )]
+position = Vector2( 176.35, 15.7415 )
+
+[node name="Grass8" parent="YSort8/Grass" instance=ExtResource( 6 )]
+position = Vector2( 331.491, 126.203 )
+
+[node name="Grass9" parent="YSort8/Grass" instance=ExtResource( 6 )]
+position = Vector2( 295.015, 136.413 )
+
+[node name="Grass10" parent="YSort8/Grass" instance=ExtResource( 6 )]
+position = Vector2( 265.608, 68.955 )
+
+[node name="Grass11" parent="YSort8/Grass" instance=ExtResource( 6 )]
+position = Vector2( 232.776, 66.7611 )
+
+[node name="grob_Tuemple_Bachlauf9" type="Sprite" parent="."]
+position = Vector2( -1435.08, 1603.05 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grob_Tuemple_Bachlauf9"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grob_Tuemple_Bachlauf9/StaticBody2D"]
+polygon = PoolVector2Array( -39.5787, 7.82751, -329.698, 25.038, -470.823, 36.8394, -487.542, 69.7852, -389.688, 100.272, -464.431, 131.743, -576.053, 162.23, -709.803, 178.457, -778.645, 198.126, -774.219, 235.989, -326.256, 124.859, -194.965, 125.842, -63.6733, 132.726, 69.093, 100.272, 203.334, 93.8798, 128.1, 38.3146, 44.9984, 27.9883, 134.001, 7.82751, 116.791, -16.7589 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="grob_Tuemple_Bachlauf9/StaticBody2D"]
+position = Vector2( 1022.3, -290.611 )
+polygon = PoolVector2Array( -318.388, 63.8844, -502.786, 105.681, -680.299, 213.369, -828.309, 250.249, -784.545, 276.311, -633.585, 248.282, -541.14, 180.915, -239.712, 92.8963 )
+
+[node name="grob_Bruecke9" type="Sprite" parent="."]
+position = Vector2( -1265.68, 1586.37 )
+scale = Vector2( 0.212794, 0.212794 )
+texture = ExtResource( 4 )
+
+[node name="YSort9" type="YSort" parent="."]
+position = Vector2( -1451.5, 1468.36 )
+
+[node name="Bat" parent="YSort9" instance=ExtResource( 7 )]
+position = Vector2( 192.256, -60.2186 )
+
+[node name="Bushes" type="YSort" parent="YSort9"]
+
+[node name="Bush" parent="YSort9/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -153.742, -132.093 )
+
+[node name="Bush2" parent="YSort9/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -201.449, 437.254 )
+
+[node name="Bush3" parent="YSort9/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 293.548, -233.152 )
+
+[node name="Bush4" parent="YSort9/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 496.607, 200.404 )
+
+[node name="Bush5" parent="YSort9/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 140.097, -23.5192 )
+
+[node name="Bush6" parent="YSort9/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 242.085, 550.315 )
+
+[node name="Stone" parent="YSort9/Bushes" instance=ExtResource( 3 )]
+position = Vector2( -76.9658, -56.8067 )
+
+[node name="Grass" type="YSort" parent="YSort9"]
+
+[node name="Grass" parent="YSort9/Grass" instance=ExtResource( 6 )]
+position = Vector2( 164.019, 163.015 )
+
+[node name="Grass2" parent="YSort9/Grass" instance=ExtResource( 6 )]
+position = Vector2( 69.9161, 105.131 )
+
+[node name="Grass3" parent="YSort9/Grass" instance=ExtResource( 6 )]
+position = Vector2( 18.5005, 110.514 )
+
+[node name="Grass4" parent="YSort9/Grass" instance=ExtResource( 6 )]
+position = Vector2( 48, 128 )
+
+[node name="Grass5" parent="YSort9/Grass" instance=ExtResource( 6 )]
+position = Vector2( 126.874, 16.2585 )
+
+[node name="Grass6" parent="YSort9/Grass" instance=ExtResource( 6 )]
+position = Vector2( 203.543, 195.001 )
+
+[node name="Grass7" parent="YSort9/Grass" instance=ExtResource( 6 )]
+position = Vector2( 176.35, 15.7415 )
+
+[node name="Grass8" parent="YSort9/Grass" instance=ExtResource( 6 )]
+position = Vector2( 331.491, 126.203 )
+
+[node name="Grass9" parent="YSort9/Grass" instance=ExtResource( 6 )]
+position = Vector2( 295.015, 136.413 )
+
+[node name="Grass10" parent="YSort9/Grass" instance=ExtResource( 6 )]
+position = Vector2( 265.608, 68.955 )
+
+[node name="Grass11" parent="YSort9/Grass" instance=ExtResource( 6 )]
+position = Vector2( 232.776, 66.7611 )
+
+[node name="grob_Tuemple_Bachlauf10" type="Sprite" parent="."]
+position = Vector2( -2838.54, 295.419 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grob_Tuemple_Bachlauf10"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grob_Tuemple_Bachlauf10/StaticBody2D"]
+polygon = PoolVector2Array( -39.5787, 7.82751, -329.698, 25.038, -470.823, 36.8394, -487.542, 69.7852, -389.688, 100.272, -464.431, 131.743, -576.053, 162.23, -709.803, 178.457, -778.645, 198.126, -774.219, 235.989, -326.256, 124.859, -194.965, 125.842, -63.6733, 132.726, 69.093, 100.272, 203.334, 93.8798, 128.1, 38.3146, 44.9984, 27.9883, 134.001, 7.82751, 116.791, -16.7589 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="grob_Tuemple_Bachlauf10/StaticBody2D"]
+position = Vector2( 1022.3, -290.611 )
+polygon = PoolVector2Array( -318.388, 63.8844, -502.786, 105.681, -680.299, 213.369, -828.309, 250.249, -784.545, 276.311, -633.585, 248.282, -541.14, 180.915, -239.712, 92.8963 )
+
+[node name="grob_Bruecke10" type="Sprite" parent="."]
+position = Vector2( -2669.14, 278.74 )
+scale = Vector2( 0.212794, 0.212794 )
+texture = ExtResource( 4 )
+
+[node name="YSort10" type="YSort" parent="."]
+position = Vector2( -2854.96, 160.726 )
+
+[node name="Bat" parent="YSort10" instance=ExtResource( 7 )]
+position = Vector2( 192.256, -60.2186 )
+
+[node name="Bushes" type="YSort" parent="YSort10"]
+
+[node name="Bush" parent="YSort10/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -153.742, -132.093 )
+
+[node name="Bush2" parent="YSort10/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -201.449, 437.254 )
+
+[node name="Bush3" parent="YSort10/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 419.012, -205.638 )
+
+[node name="Bush4" parent="YSort10/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 496.607, 200.404 )
+
+[node name="Bush5" parent="YSort10/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 140.097, -23.5192 )
+
+[node name="Bush6" parent="YSort10/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 242.085, 550.315 )
+
+[node name="Stone" parent="YSort10/Bushes" instance=ExtResource( 3 )]
+position = Vector2( -76.9658, -56.8067 )
+
+[node name="Grass" type="YSort" parent="YSort10"]
+
+[node name="Grass" parent="YSort10/Grass" instance=ExtResource( 6 )]
+position = Vector2( 164.019, 163.015 )
+
+[node name="Grass2" parent="YSort10/Grass" instance=ExtResource( 6 )]
+position = Vector2( 69.9161, 105.131 )
+
+[node name="Grass3" parent="YSort10/Grass" instance=ExtResource( 6 )]
+position = Vector2( 18.5005, 110.514 )
+
+[node name="Grass4" parent="YSort10/Grass" instance=ExtResource( 6 )]
+position = Vector2( 48, 128 )
+
+[node name="Grass5" parent="YSort10/Grass" instance=ExtResource( 6 )]
+position = Vector2( 126.874, 16.2585 )
+
+[node name="Grass6" parent="YSort10/Grass" instance=ExtResource( 6 )]
+position = Vector2( 203.543, 195.001 )
+
+[node name="Grass7" parent="YSort10/Grass" instance=ExtResource( 6 )]
+position = Vector2( 176.35, 15.7415 )
+
+[node name="Grass8" parent="YSort10/Grass" instance=ExtResource( 6 )]
+position = Vector2( 331.491, 126.203 )
+
+[node name="Grass9" parent="YSort10/Grass" instance=ExtResource( 6 )]
+position = Vector2( 295.015, 136.413 )
+
+[node name="Grass10" parent="YSort10/Grass" instance=ExtResource( 6 )]
+position = Vector2( 265.608, 68.955 )
+
+[node name="Grass11" parent="YSort10/Grass" instance=ExtResource( 6 )]
+position = Vector2( 232.776, 66.7611 )
+
+[node name="grob_Tuemple_Bachlauf11" type="Sprite" parent="."]
+position = Vector2( -3088.94, 1565.95 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grob_Tuemple_Bachlauf11"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grob_Tuemple_Bachlauf11/StaticBody2D"]
+polygon = PoolVector2Array( -39.5787, 7.82751, -329.698, 25.038, -470.823, 36.8394, -487.542, 69.7852, -389.688, 100.272, -464.431, 131.743, -576.053, 162.23, -709.803, 178.457, -778.645, 198.126, -774.219, 235.989, -326.256, 124.859, -194.965, 125.842, -63.6733, 132.726, 69.093, 100.272, 203.334, 93.8798, 128.1, 38.3146, 44.9984, 27.9883, 134.001, 7.82751, 116.791, -16.7589 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="grob_Tuemple_Bachlauf11/StaticBody2D"]
+position = Vector2( 1022.3, -290.611 )
+polygon = PoolVector2Array( -318.388, 63.8844, -502.786, 105.681, -680.299, 213.369, -828.309, 250.249, -784.545, 276.311, -633.585, 248.282, -541.14, 180.915, -239.712, 92.8963 )
+
+[node name="grob_Bruecke11" type="Sprite" parent="."]
+position = Vector2( -2919.54, 1549.27 )
+scale = Vector2( 0.212794, 0.212794 )
+texture = ExtResource( 4 )
+
+[node name="YSort11" type="YSort" parent="."]
+position = Vector2( -3105.36, 1431.26 )
+
+[node name="Bat" parent="YSort11" instance=ExtResource( 7 )]
+position = Vector2( 192.256, -60.2186 )
+
+[node name="Bushes" type="YSort" parent="YSort11"]
+
+[node name="Bush" parent="YSort11/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -153.742, -132.093 )
+
+[node name="Bush2" parent="YSort11/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -201.449, 437.254 )
+
+[node name="Bush3" parent="YSort11/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 419.012, -205.638 )
+
+[node name="Bush4" parent="YSort11/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 496.607, 200.404 )
+
+[node name="Bush5" parent="YSort11/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 140.097, -23.5192 )
+
+[node name="Bush6" parent="YSort11/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 242.085, 550.315 )
+
+[node name="Stone" parent="YSort11/Bushes" instance=ExtResource( 3 )]
+position = Vector2( -76.9658, -56.8067 )
+
+[node name="Grass" type="YSort" parent="YSort11"]
+
+[node name="Grass" parent="YSort11/Grass" instance=ExtResource( 6 )]
+position = Vector2( 164.019, 163.015 )
+
+[node name="Grass2" parent="YSort11/Grass" instance=ExtResource( 6 )]
+position = Vector2( 69.9161, 105.131 )
+
+[node name="Grass3" parent="YSort11/Grass" instance=ExtResource( 6 )]
+position = Vector2( 18.5005, 110.514 )
+
+[node name="Grass4" parent="YSort11/Grass" instance=ExtResource( 6 )]
+position = Vector2( 48, 128 )
+
+[node name="Grass5" parent="YSort11/Grass" instance=ExtResource( 6 )]
+position = Vector2( 126.874, 16.2585 )
+
+[node name="Grass6" parent="YSort11/Grass" instance=ExtResource( 6 )]
+position = Vector2( 203.543, 195.001 )
+
+[node name="Grass7" parent="YSort11/Grass" instance=ExtResource( 6 )]
+position = Vector2( 176.35, 15.7415 )
+
+[node name="Grass8" parent="YSort11/Grass" instance=ExtResource( 6 )]
+position = Vector2( 331.491, 126.203 )
+
+[node name="Grass9" parent="YSort11/Grass" instance=ExtResource( 6 )]
+position = Vector2( 295.015, 136.413 )
+
+[node name="Grass10" parent="YSort11/Grass" instance=ExtResource( 6 )]
+position = Vector2( 265.608, 68.955 )
+
+[node name="Grass11" parent="YSort11/Grass" instance=ExtResource( 6 )]
+position = Vector2( 232.776, 66.7611 )
+
+[node name="grob_Tuemple_Bachlauf12" type="Sprite" parent="."]
+position = Vector2( -4276, -526.873 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grob_Tuemple_Bachlauf12"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grob_Tuemple_Bachlauf12/StaticBody2D"]
+polygon = PoolVector2Array( -39.5787, 7.82751, -329.698, 25.038, -470.823, 36.8394, -487.542, 69.7852, -389.688, 100.272, -464.431, 131.743, -576.053, 162.23, -709.803, 178.457, -778.645, 198.126, -774.219, 235.989, -326.256, 124.859, -194.965, 125.842, -63.6733, 132.726, 69.093, 100.272, 203.334, 93.8798, 128.1, 38.3146, 44.9984, 27.9883, 134.001, 7.82751, 116.791, -16.7589 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="grob_Tuemple_Bachlauf12/StaticBody2D"]
+position = Vector2( 1022.3, -290.611 )
+polygon = PoolVector2Array( -318.388, 63.8844, -502.786, 105.681, -680.299, 213.369, -828.309, 250.249, -784.545, 276.311, -633.585, 248.282, -541.14, 180.915, -239.712, 92.8963 )
+
+[node name="grob_Bruecke12" type="Sprite" parent="."]
+position = Vector2( -4106.61, -543.552 )
+scale = Vector2( 0.212794, 0.212794 )
+texture = ExtResource( 4 )
+
+[node name="YSort12" type="YSort" parent="."]
+position = Vector2( -4292.43, -661.566 )
+
+[node name="Bat" parent="YSort12" instance=ExtResource( 7 )]
+position = Vector2( 192.256, -60.2186 )
+
+[node name="Bushes" type="YSort" parent="YSort12"]
+
+[node name="Bush" parent="YSort12/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -153.742, -132.093 )
+
+[node name="Bush2" parent="YSort12/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -201.449, 437.254 )
+
+[node name="Bush3" parent="YSort12/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 419.012, -205.638 )
+
+[node name="Bush4" parent="YSort12/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 496.607, 200.404 )
+
+[node name="Bush5" parent="YSort12/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 140.097, -23.5192 )
+
+[node name="Bush6" parent="YSort12/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 242.085, 550.315 )
+
+[node name="Stone" parent="YSort12/Bushes" instance=ExtResource( 3 )]
+position = Vector2( -76.9658, -56.8067 )
+
+[node name="Grass" type="YSort" parent="YSort12"]
+
+[node name="Grass" parent="YSort12/Grass" instance=ExtResource( 6 )]
+position = Vector2( 164.019, 163.015 )
+
+[node name="Grass2" parent="YSort12/Grass" instance=ExtResource( 6 )]
+position = Vector2( 69.9161, 105.131 )
+
+[node name="Grass3" parent="YSort12/Grass" instance=ExtResource( 6 )]
+position = Vector2( 18.5005, 110.514 )
+
+[node name="Grass4" parent="YSort12/Grass" instance=ExtResource( 6 )]
+position = Vector2( 48, 128 )
+
+[node name="Grass5" parent="YSort12/Grass" instance=ExtResource( 6 )]
+position = Vector2( 126.874, 16.2585 )
+
+[node name="Grass6" parent="YSort12/Grass" instance=ExtResource( 6 )]
+position = Vector2( 203.543, 195.001 )
+
+[node name="Grass7" parent="YSort12/Grass" instance=ExtResource( 6 )]
+position = Vector2( 176.35, 15.7415 )
+
+[node name="Grass8" parent="YSort12/Grass" instance=ExtResource( 6 )]
+position = Vector2( 331.491, 126.203 )
+
+[node name="Grass9" parent="YSort12/Grass" instance=ExtResource( 6 )]
+position = Vector2( 295.015, 136.413 )
+
+[node name="Grass10" parent="YSort12/Grass" instance=ExtResource( 6 )]
+position = Vector2( 265.608, 68.955 )
+
+[node name="Grass11" parent="YSort12/Grass" instance=ExtResource( 6 )]
+position = Vector2( 232.776, 66.7611 )
+
+[node name="grob_Tuemple_Bachlauf13" type="Sprite" parent="."]
+position = Vector2( -4631.51, 1263 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grob_Tuemple_Bachlauf13"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grob_Tuemple_Bachlauf13/StaticBody2D"]
+polygon = PoolVector2Array( -39.5787, 7.82751, -329.698, 25.038, -470.823, 36.8394, -487.542, 69.7852, -389.688, 100.272, -464.431, 131.743, -576.053, 162.23, -709.803, 178.457, -778.645, 198.126, -774.219, 235.989, -326.256, 124.859, -194.965, 125.842, -63.6733, 132.726, 69.093, 100.272, 203.334, 93.8798, 128.1, 38.3146, 44.9984, 27.9883, 134.001, 7.82751, 116.791, -16.7589 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="grob_Tuemple_Bachlauf13/StaticBody2D"]
+position = Vector2( 1022.3, -290.611 )
+polygon = PoolVector2Array( -318.388, 63.8844, -502.786, 105.681, -680.299, 213.369, -828.309, 250.249, -784.545, 276.311, -633.585, 248.282, -541.14, 180.915, -239.712, 92.8963 )
+
+[node name="grob_Bruecke13" type="Sprite" parent="."]
+position = Vector2( -4462.11, 1246.32 )
+scale = Vector2( 0.212794, 0.212794 )
+texture = ExtResource( 4 )
+
+[node name="YSort13" type="YSort" parent="."]
+position = Vector2( -4647.93, 1128.31 )
+
+[node name="Bat" parent="YSort13" instance=ExtResource( 7 )]
+position = Vector2( 192.256, -60.2186 )
+
+[node name="Bushes" type="YSort" parent="YSort13"]
+
+[node name="Bush" parent="YSort13/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -153.742, -132.093 )
+
+[node name="Bush2" parent="YSort13/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -201.449, 437.254 )
+
+[node name="Bush3" parent="YSort13/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 419.012, -205.638 )
+
+[node name="Bush4" parent="YSort13/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 496.607, 200.404 )
+
+[node name="Bush5" parent="YSort13/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 140.097, -23.5192 )
+
+[node name="Bush6" parent="YSort13/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 242.085, 550.315 )
+
+[node name="Stone" parent="YSort13/Bushes" instance=ExtResource( 3 )]
+position = Vector2( -76.9658, -56.8067 )
+
+[node name="Grass" type="YSort" parent="YSort13"]
+
+[node name="Grass" parent="YSort13/Grass" instance=ExtResource( 6 )]
+position = Vector2( 164.019, 163.015 )
+
+[node name="Grass2" parent="YSort13/Grass" instance=ExtResource( 6 )]
+position = Vector2( 69.9161, 105.131 )
+
+[node name="Grass3" parent="YSort13/Grass" instance=ExtResource( 6 )]
+position = Vector2( 18.5005, 110.514 )
+
+[node name="Grass4" parent="YSort13/Grass" instance=ExtResource( 6 )]
+position = Vector2( 48, 128 )
+
+[node name="Grass5" parent="YSort13/Grass" instance=ExtResource( 6 )]
+position = Vector2( 126.874, 16.2585 )
+
+[node name="Grass6" parent="YSort13/Grass" instance=ExtResource( 6 )]
+position = Vector2( 203.543, 195.001 )
+
+[node name="Grass7" parent="YSort13/Grass" instance=ExtResource( 6 )]
+position = Vector2( 176.35, 15.7415 )
+
+[node name="Grass8" parent="YSort13/Grass" instance=ExtResource( 6 )]
+position = Vector2( 331.491, 126.203 )
+
+[node name="Grass9" parent="YSort13/Grass" instance=ExtResource( 6 )]
+position = Vector2( 295.015, 136.413 )
+
+[node name="Grass10" parent="YSort13/Grass" instance=ExtResource( 6 )]
+position = Vector2( 265.608, 68.955 )
+
+[node name="Grass11" parent="YSort13/Grass" instance=ExtResource( 6 )]
+position = Vector2( 232.776, 66.7611 )
+
+[node name="grob_Tuemple_Bachlauf14" type="Sprite" parent="."]
+position = Vector2( 129.13, 2329.51 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grob_Tuemple_Bachlauf14"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grob_Tuemple_Bachlauf14/StaticBody2D"]
+polygon = PoolVector2Array( -39.5787, 7.82751, -329.698, 25.038, -470.823, 36.8394, -487.542, 69.7852, -389.688, 100.272, -464.431, 131.743, -576.053, 162.23, -709.803, 178.457, -778.645, 198.126, -774.219, 235.989, -326.256, 124.859, -194.965, 125.842, -63.6733, 132.726, 69.093, 100.272, 203.334, 93.8798, 128.1, 38.3146, 44.9984, 27.9883, 134.001, 7.82751, 116.791, -16.7589 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="grob_Tuemple_Bachlauf14/StaticBody2D"]
+position = Vector2( 1022.3, -290.611 )
+polygon = PoolVector2Array( -318.388, 63.8844, -502.786, 105.681, -680.299, 213.369, -828.309, 250.249, -784.545, 276.311, -633.585, 248.282, -541.14, 180.915, -239.712, 92.8963 )
+
+[node name="grob_Bruecke14" type="Sprite" parent="."]
+position = Vector2( 298.526, 2312.83 )
+scale = Vector2( 0.212794, 0.212794 )
+texture = ExtResource( 4 )
+
+[node name="YSort14" type="YSort" parent="."]
+position = Vector2( 112.708, 2194.82 )
+
+[node name="Bat" parent="YSort14" instance=ExtResource( 7 )]
+position = Vector2( 192.256, -60.2186 )
+
+[node name="Bushes" type="YSort" parent="YSort14"]
+
+[node name="Bush" parent="YSort14/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -153.742, -132.093 )
+
+[node name="Bush2" parent="YSort14/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -201.449, 437.254 )
+
+[node name="Bush3" parent="YSort14/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 419.012, -205.638 )
+
+[node name="Bush4" parent="YSort14/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 496.607, 200.404 )
+
+[node name="Bush5" parent="YSort14/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 140.097, -23.5192 )
+
+[node name="Bush6" parent="YSort14/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 242.085, 550.315 )
+
+[node name="Stone" parent="YSort14/Bushes" instance=ExtResource( 3 )]
+position = Vector2( -76.9658, -56.8067 )
+
+[node name="Grass" type="YSort" parent="YSort14"]
+
+[node name="Grass" parent="YSort14/Grass" instance=ExtResource( 6 )]
+position = Vector2( 164.019, 163.015 )
+
+[node name="Grass2" parent="YSort14/Grass" instance=ExtResource( 6 )]
+position = Vector2( 69.9161, 105.131 )
+
+[node name="Grass3" parent="YSort14/Grass" instance=ExtResource( 6 )]
+position = Vector2( 18.5005, 110.514 )
+
+[node name="Grass4" parent="YSort14/Grass" instance=ExtResource( 6 )]
+position = Vector2( 48, 128 )
+
+[node name="Grass5" parent="YSort14/Grass" instance=ExtResource( 6 )]
+position = Vector2( 126.874, 16.2585 )
+
+[node name="Grass6" parent="YSort14/Grass" instance=ExtResource( 6 )]
+position = Vector2( 203.543, 195.001 )
+
+[node name="Grass7" parent="YSort14/Grass" instance=ExtResource( 6 )]
+position = Vector2( 176.35, 15.7415 )
+
+[node name="Grass8" parent="YSort14/Grass" instance=ExtResource( 6 )]
+position = Vector2( 331.491, 126.203 )
+
+[node name="Grass9" parent="YSort14/Grass" instance=ExtResource( 6 )]
+position = Vector2( 295.015, 136.413 )
+
+[node name="Grass10" parent="YSort14/Grass" instance=ExtResource( 6 )]
+position = Vector2( 265.608, 68.955 )
+
+[node name="Grass11" parent="YSort14/Grass" instance=ExtResource( 6 )]
+position = Vector2( 232.776, 66.7611 )

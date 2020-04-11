@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bush.png-d93cca107fd3c67cf3a69a32232496ae.stex"
+path="res://.import/grob_Teich.png-dc976ee48716069fb812ce82c90b0836.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/Bush.png"
-dest_files=[ "res://.import/Bush.png-d93cca107fd3c67cf3a69a32232496ae.stex" ]
+source_file="res://World/Gegenstaende_grob/grob_Teich.png"
+dest_files=[ "res://.import/grob_Teich.png-dc976ee48716069fb812ce82c90b0836.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

@@ -601,7 +601,8 @@ graph_offset = Vector2( -74, 57.4416 )
 [sub_resource type="AnimationNodeStateMachinePlayback" id=45]
 
 [sub_resource type="CapsuleShape2D" id=46]
-height = 12.0
+radius = 20.0
+height = 24.0
 
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 2
@@ -614,6 +615,7 @@ drag_margin_v_enabled = true
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -9 )
+scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 hframes = 60
 frame = 36

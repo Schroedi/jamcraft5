@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tree.png-14ac646b55f931abf82a3d71f0acdb7a.stex"
+path="res://.import/grob_Knochenhaufen.png-53b1d774318be079641993b95e4c7c3d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/Tree.png"
-dest_files=[ "res://.import/Tree.png-14ac646b55f931abf82a3d71f0acdb7a.stex" ]
+source_file="res://World/Gegenstaende_grob/grob_Knochenhaufen.png"
+dest_files=[ "res://.import/grob_Knochenhaufen.png-53b1d774318be079641993b95e4c7c3d.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
