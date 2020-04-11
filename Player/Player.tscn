@@ -611,7 +611,6 @@ script = ExtResource( 2 )
 current = true
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
-smoothing_enabled = true
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -9 )
