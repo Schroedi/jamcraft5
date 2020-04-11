@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://World/Tree.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -7,10 +7,63 @@
 [ext_resource path="res://World/Gegenstaende_grob/grob_Tuemple_Bachlauf.png" type="Texture" id=5]
 [ext_resource path="res://World/Grass.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Enemies/Bat.tscn" type="PackedScene" id=7]
-[ext_resource path="res://World/Gegenstaende_grob/grob_Teich.png" type="Texture" id=8]
+[ext_resource path="res://World/Teich.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Pet/Pet.tscn" type="PackedScene" id=9]
+[ext_resource path="res://World/BG_grob/BG4.png" type="Texture" id=10]
+[ext_resource path="res://World/BG_grob/BG2.png" type="Texture" id=11]
+[ext_resource path="res://World/BG_grob/BG1.png" type="Texture" id=12]
+[ext_resource path="res://World/BG_grob/BG5.png" type="Texture" id=13]
+[ext_resource path="res://World/BG_grob/BG3.png" type="Texture" id=14]
+
+[sub_resource type="CanvasItemMaterial" id=1]
 
 [node name="World" type="Node2D"]
+position = Vector2( 25.9153, 49.3624 )
+
+[node name="BG1" type="Sprite" parent="."]
+position = Vector2( -1065.75, 153.865 )
+texture = ExtResource( 12 )
+
+[node name="BG2" type="Sprite" parent="."]
+position = Vector2( 984.666, 277.638 )
+texture = ExtResource( 11 )
+
+[node name="BG8" type="Sprite" parent="."]
+position = Vector2( -1307.44, -818.258 )
+texture = ExtResource( 11 )
+
+[node name="BG9" type="Sprite" parent="."]
+position = Vector2( 899.493, -765.261 )
+texture = ExtResource( 11 )
+
+[node name="BG10" type="Sprite" parent="."]
+position = Vector2( 899.493, -765.261 )
+texture = ExtResource( 11 )
+
+[node name="BG11" type="Sprite" parent="."]
+position = Vector2( -3389.45, -812.58 )
+texture = ExtResource( 11 )
+
+[node name="BG4" type="Sprite" parent="."]
+position = Vector2( -1264.48, 1600.78 )
+texture = ExtResource( 10 )
+
+[node name="BG5" type="Sprite" parent="."]
+material = SubResource( 1 )
+position = Vector2( -1342.51, 412.957 )
+texture = ExtResource( 13 )
+
+[node name="BG3" type="Sprite" parent="."]
+position = Vector2( 817.809, 1614.9 )
+texture = ExtResource( 14 )
+
+[node name="BG7" type="Sprite" parent="."]
+position = Vector2( -3461.67, 384.617 )
+texture = ExtResource( 14 )
+
+[node name="BG6" type="Sprite" parent="."]
+position = Vector2( -3272.67, 1617.81 )
+texture = ExtResource( 10 )
 
 [node name="grob_Tuemple_Bachlauf" type="Sprite" parent="."]
 position = Vector2( -169.276, 88.91 )
@@ -102,15 +155,7 @@ position = Vector2( 265.608, 68.955 )
 [node name="Grass11" parent="YSort/Grass" instance=ExtResource( 6 )]
 position = Vector2( 232.776, 66.7611 )
 
-[node name="grob_Teich" type="Sprite" parent="YSort"]
-position = Vector2( -423.878, 659.938 )
-texture = ExtResource( 8 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="YSort/grob_Teich"]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="YSort/grob_Teich/StaticBody2D"]
-position = Vector2( 0.550293, -2.20117 )
-polygon = PoolVector2Array( -477.416, 11.4897, -351.952, -25.9294, -82.8635, -186.612, 207.685, -185.511, 371.119, -107.371, 531.802, -84.2593, 546.659, -46.2899, 480.075, 14.7914, 330.949, 56.0626, 142.202, 200.237, -13.5281, 179.326, -79.0116, 156.764, -394.323, 160.616, -510.433, 144.658, -555.006, 103.387, -515.936, 62.666, -370.111, 45.0569, -382.217, 26.3474 )
+[node name="grob_Teich" parent="YSort" instance=ExtResource( 8 )]
 
 [node name="grob_Tuemple_Bachlauf2" type="Sprite" parent="."]
 position = Vector2( 1313.68, -332.702 )
