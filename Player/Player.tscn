@@ -1,9 +1,81 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=142 format=2]
 
 [ext_resource path="res://Player/Player.png" type="Texture" id=1]
 [ext_resource path="res://Player/Player.gd" type="Script" id=2]
 [ext_resource path="res://Overlap/Hitbox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Player/SwordHitbox.gd" type="Script" id=4]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_armR_0_front.png" type="Texture" id=5]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_antennaR_0_front.png" type="Texture" id=6]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_armL_0_front.png" type="Texture" id=7]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_legR_0_front.png" type="Texture" id=8]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_body_0_front.png" type="Texture" id=9]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_antennaF_0_front.png" type="Texture" id=10]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_face_0_front.png" type="Texture" id=11]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_antennaL_0_front.png" type="Texture" id=12]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_legL_0_front.png" type="Texture" id=13]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_antennaF_1_frontleft.png" type="Texture" id=14]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_antennaL_1_frontleft.png" type="Texture" id=15]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_armL_1_frontleft.png" type="Texture" id=16]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_legR_1_frontleft.png" type="Texture" id=17]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_legL_1_frontleft.png" type="Texture" id=18]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_face_1_frontleft.png" type="Texture" id=19]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_body_1_frontleft.png" type="Texture" id=20]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_antennaR_1_frontleft.png" type="Texture" id=21]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_armR_1_frontleft.png" type="Texture" id=22]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_armL_2_left.png" type="Texture" id=23]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_body_2_left.png" type="Texture" id=24]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_face_2_left.png" type="Texture" id=25]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_antennaF_2_left.png" type="Texture" id=26]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_antennaR_2_left.png" type="Texture" id=27]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_antennaL_2_left.png" type="Texture" id=28]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_armR_2_left.png" type="Texture" id=29]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_legL_2_left.png" type="Texture" id=30]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_legR_2_left.png" type="Texture" id=31]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_armR_3_backleft.png" type="Texture" id=32]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_legR_3_backleft.png" type="Texture" id=33]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_body_3_backleft.png" type="Texture" id=34]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_antennaF_3_backleft.png" type="Texture" id=35]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_armL_3_backleft.png" type="Texture" id=36]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_face_3_backleft.png" type="Texture" id=37]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_legL_3_backleft.png" type="Texture" id=38]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_antennaR_3_backleft.png" type="Texture" id=39]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_antennaL_3_backleft.png" type="Texture" id=40]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_body_4_back.png" type="Texture" id=41]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_face_4_back.png" type="Texture" id=42]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_antennaR_4_back.png" type="Texture" id=43]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_antennaF_4_back.png" type="Texture" id=44]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_armL_4_back.png" type="Texture" id=45]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_armR_4_back.png" type="Texture" id=46]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_legL_4_back.png" type="Texture" id=47]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_legR_4_back.png" type="Texture" id=48]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_antennaL_4_back.png" type="Texture" id=49]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_armL_5_rightback.png" type="Texture" id=50]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_body_5_rightback.png" type="Texture" id=51]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_legL_5_rightback.png" type="Texture" id=52]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_antennaF_5_rightback.png" type="Texture" id=53]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_armR_5_rightback.png" type="Texture" id=54]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_legR_5_rightback.png" type="Texture" id=55]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_antennaL_5_rightback.png" type="Texture" id=56]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_face_5_rightback.png" type="Texture" id=57]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_antennaR_5_rightback.png" type="Texture" id=58]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_legL_6_right.png" type="Texture" id=59]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_antennaR_6_right.png" type="Texture" id=60]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_antennaF_6_right.png" type="Texture" id=61]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_armL_6_right.png" type="Texture" id=62]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_antennaL_6_right.png" type="Texture" id=63]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_armR_6_right.png" type="Texture" id=64]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_legR_6_right.png" type="Texture" id=65]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_face_6_right.png" type="Texture" id=66]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_body_6_right.png" type="Texture" id=67]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_face_7_frontright.png" type="Texture" id=68]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_antennaF_7_frontright.png" type="Texture" id=69]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_antennaR_7_frontright.png" type="Texture" id=70]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_armL_7_frontright.png" type="Texture" id=71]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_armR_7_frontright.png" type="Texture" id=72]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_legR_7_frontright.png" type="Texture" id=73]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_body_7_frontright.png" type="Texture" id=74]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_legL_7_frontright.png" type="Texture" id=75]
+[ext_resource path="res://Smurp/skeleton assets/Smurp_antennaL_7_frontright.png" type="Texture" id=76]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 4.0
@@ -596,13 +668,365 @@ states/Run/node = SubResource( 37 )
 states/Run/position = Vector2( 619, 153 )
 transitions = [ "Idle", "Run", SubResource( 38 ), "Run", "Idle", SubResource( 39 ), "Idle", "Attack", SubResource( 40 ), "Attack", "Idle", SubResource( 41 ), "Idle", "Roll", SubResource( 42 ), "Roll", "Idle", SubResource( 43 ) ]
 start_node = "Idle"
-graph_offset = Vector2( -74, 57.4416 )
+graph_offset = Vector2( -677.944, -133.55 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=45]
 
 [sub_resource type="CapsuleShape2D" id=46]
 radius = 20.0
 height = 24.0
+
+[sub_resource type="Animation" id=49]
+resource_name = "Idle 1 Frontleft"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Cutout 0 front:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Cutout 0 front/body:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.6, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 0.435275, 2.63902 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -10 ), Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Cutout 0 front/body/anennaF:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.5, 0.7, 0.9, 1.1 ),
+"transitions": PoolRealArray( 1, 0.406126, 0.482968, 1 ),
+"update": 0,
+"values": [ 0.0, -20.0, 20.0, 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Cutout 0 front/body/antennaR:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 2.7, 2.9, 3.1, 3.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -15.0, 15.0, 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Cutout 0 front/body/antennaL:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 3.2, 3.4, 3.6, 3.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 15.0, -15.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=50]
+resource_name = "Idle 1 Frontleft"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Cutout 1 frontleft:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Cutout 1 frontleft/body:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.6, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 0.435275, 2.63902 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -10 ), Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Cutout 1 frontleft/body/anennaF:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.5, 0.7, 0.9, 1.1 ),
+"transitions": PoolRealArray( 1, 0.406126, 0.482968, 1 ),
+"update": 0,
+"values": [ 0.0, -20.0, 20.0, 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Cutout 0 front/body/antennaR:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 2.7, 2.9, 3.1, 3.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -15.0, 15.0, 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Cutout 1 frontleft/body/antennaL:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 3.2, 3.4, 3.6, 3.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 15.0, -15.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=51]
+resource_name = "Idle 2 Left"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Cutout 2 left:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Cutout 2 left/body:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.6, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 0.435275, 2.63902 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -10 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=52]
+resource_name = "Idle 3 Backleft"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Cutout 3 backleft:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Cutout 3 backleft/body:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.6, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 0.435275, 2.63902 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -10 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=53]
+resource_name = "Idle 4 Back"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Cutout 4 back:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Cutout 4 back/body:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.6, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 0.435275, 2.63902 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -10 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=54]
+resource_name = "Idle 5 Backright"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Cutout 5 backright:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Cutout 5 backright/body:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.6, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 0.435275, 2.63902 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -10 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=55]
+resource_name = "Idle 6 Right"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Cutout 6 right:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Cutout 1 right/body:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.6, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 0.435275, 2.63902 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -10 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=56]
+resource_name = "Idle 7 Frontright"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Cutout 7 frontright:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Cutout 7 frontright/body:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.6, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 0.435275, 2.63902 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -10 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=57]
+animation = "Idle 0 Front"
+
+[sub_resource type="AnimationNodeAnimation" id=58]
+animation = "Idle 1 Frontleft"
+
+[sub_resource type="AnimationNodeAnimation" id=59]
+animation = "Idle 2 Left"
+
+[sub_resource type="AnimationNodeAnimation" id=60]
+animation = "Idle 3 Backleft"
+
+[sub_resource type="AnimationNodeAnimation" id=61]
+animation = "Idle 4 Back"
+
+[sub_resource type="AnimationNodeAnimation" id=62]
+animation = "Idle 5 Backright"
+
+[sub_resource type="AnimationNodeAnimation" id=63]
+animation = "Idle 6 Right"
+
+[sub_resource type="AnimationNodeAnimation" id=64]
+animation = "Idle 7 Frontright"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=65]
+blend_point_0/node = SubResource( 57 )
+blend_point_0/pos = Vector2( 0, -1 )
+blend_point_1/node = SubResource( 58 )
+blend_point_1/pos = Vector2( -0.7, -0.7 )
+blend_point_2/node = SubResource( 59 )
+blend_point_2/pos = Vector2( -1, 0 )
+blend_point_3/node = SubResource( 60 )
+blend_point_3/pos = Vector2( -0.7, 0.7 )
+blend_point_4/node = SubResource( 61 )
+blend_point_4/pos = Vector2( 0, 1 )
+blend_point_5/node = SubResource( 62 )
+blend_point_5/pos = Vector2( 0.7, 0.7 )
+blend_point_6/node = SubResource( 63 )
+blend_point_6/pos = Vector2( 1, 0 )
+blend_point_7/node = SubResource( 64 )
+blend_point_7/pos = Vector2( 0.7, -0.7 )
+
+[sub_resource type="AnimationNodeStateMachine" id=47]
+states/Idle/node = SubResource( 65 )
+states/Idle/position = Vector2( 534, 203 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=48]
 
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 2
@@ -618,7 +1042,7 @@ position = Vector2( 0, -9 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 hframes = 60
-frame = 36
+frame = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = -1.5708
@@ -666,5 +1090,395 @@ script = ExtResource( 4 )
 [node name="CollisionShape2D" parent="HitboxPivot/SwordHitbox" index="0"]
 shape = SubResource( 46 )
 disabled = true
+
+[node name="Assembled 8 Directions" type="Node2D" parent="."]
+position = Vector2( 0, -20 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Cutout 0 front" type="Node2D" parent="Assembled 8 Directions"]
+visible = false
+
+[node name="body" type="Sprite" parent="Assembled 8 Directions/Cutout 0 front"]
+texture = ExtResource( 9 )
+
+[node name="face" type="Sprite" parent="Assembled 8 Directions/Cutout 0 front/body"]
+position = Vector2( 0.0207214, 34.5662 )
+texture = ExtResource( 11 )
+offset = Vector2( -0.0207214, -34.5662 )
+
+[node name="anennaF" type="Sprite" parent="Assembled 8 Directions/Cutout 0 front/body"]
+position = Vector2( 0.195541, -29.7694 )
+texture = ExtResource( 10 )
+offset = Vector2( -0.195541, 29.7694 )
+
+[node name="antennaR" type="Sprite" parent="Assembled 8 Directions/Cutout 0 front/body"]
+position = Vector2( -21.8324, -57.0421 )
+texture = ExtResource( 6 )
+offset = Vector2( 21.8324, 57.0421 )
+
+[node name="antennaL" type="Sprite" parent="Assembled 8 Directions/Cutout 0 front/body"]
+position = Vector2( 22.2235, -56.8672 )
+texture = ExtResource( 12 )
+offset = Vector2( -22.2235, 56.8672 )
+
+[node name="armR" type="Sprite" parent="Assembled 8 Directions/Cutout 0 front/body"]
+position = Vector2( -68.6855, -0.748428 )
+texture = ExtResource( 5 )
+offset = Vector2( 68.6855, 0.748428 )
+
+[node name="armL" type="Sprite" parent="Assembled 8 Directions/Cutout 0 front/body"]
+position = Vector2( 66.629, -0.748428 )
+texture = ExtResource( 7 )
+offset = Vector2( -66.629, 0.748428 )
+
+[node name="legR" type="Sprite" parent="Assembled 8 Directions/Cutout 0 front/body"]
+position = Vector2( 100.545, 90.1606 )
+texture = ExtResource( 8 )
+offset = Vector2( -100.545, -90.1606 )
+
+[node name="legL" type="Sprite" parent="Assembled 8 Directions/Cutout 0 front/body"]
+position = Vector2( -101.378, 86.1396 )
+texture = ExtResource( 13 )
+offset = Vector2( 101.378, -86.1396 )
+
+[node name="Cutout 1 frontleft" type="Node2D" parent="Assembled 8 Directions"]
+visible = false
+
+[node name="body" type="Sprite" parent="Assembled 8 Directions/Cutout 1 frontleft"]
+texture = ExtResource( 20 )
+
+[node name="face" type="Sprite" parent="Assembled 8 Directions/Cutout 1 frontleft/body"]
+position = Vector2( -45.4338, 9.74107 )
+texture = ExtResource( 19 )
+offset = Vector2( 45.4338, -9.74107 )
+
+[node name="anennaF" type="Sprite" parent="Assembled 8 Directions/Cutout 1 frontleft/body"]
+position = Vector2( -17.9863, -48.6505 )
+texture = ExtResource( 14 )
+offset = Vector2( 17.9863, 48.6505 )
+
+[node name="antennaR" type="Sprite" parent="Assembled 8 Directions/Cutout 1 frontleft/body"]
+position = Vector2( -4.69955, -73.4756 )
+texture = ExtResource( 21 )
+offset = Vector2( 4.69955, 73.4756 )
+
+[node name="antennaL" type="Sprite" parent="Assembled 8 Directions/Cutout 1 frontleft/body"]
+position = Vector2( 26.2445, -53.8952 )
+texture = ExtResource( 15 )
+offset = Vector2( -26.2445, 53.8952 )
+
+[node name="armR" type="Sprite" parent="Assembled 8 Directions/Cutout 1 frontleft/body"]
+position = Vector2( -39.8394, -18.7554 )
+texture = ExtResource( 22 )
+offset = Vector2( 39.8394, 18.7554 )
+
+[node name="armL" type="Sprite" parent="Assembled 8 Directions/Cutout 1 frontleft/body"]
+position = Vector2( 48.9717, 23.5522 )
+texture = ExtResource( 16 )
+offset = Vector2( -48.9717, -23.5522 )
+
+[node name="legR" type="Sprite" parent="Assembled 8 Directions/Cutout 1 frontleft/body"]
+position = Vector2( -33.0212, 13.762 )
+texture = ExtResource( 17 )
+offset = Vector2( 33.0212, -13.762 )
+
+[node name="legL" type="Sprite" parent="Assembled 8 Directions/Cutout 1 frontleft/body"]
+position = Vector2( 28.1675, 56.0697 )
+texture = ExtResource( 18 )
+offset = Vector2( -28.1675, -56.0697 )
+
+[node name="Cutout 2 left" type="Node2D" parent="Assembled 8 Directions"]
+visible = false
+
+[node name="body" type="Sprite" parent="Assembled 8 Directions/Cutout 2 left"]
+texture = ExtResource( 24 )
+
+[node name="face" type="Sprite" parent="Assembled 8 Directions/Cutout 2 left/body"]
+position = Vector2( -59.4198, -12.1121 )
+texture = ExtResource( 25 )
+offset = Vector2( 59.4198, 12.1121 )
+
+[node name="anennaF" type="Sprite" parent="Assembled 8 Directions/Cutout 2 left/body"]
+position = Vector2( -23.7556, -52.3218 )
+texture = ExtResource( 26 )
+offset = Vector2( 23.7556, 52.3218 )
+
+[node name="antennaR" type="Sprite" parent="Assembled 8 Directions/Cutout 2 left/body"]
+position = Vector2( 17.5031, -68.5806 )
+texture = ExtResource( 27 )
+offset = Vector2( -17.5031, 68.5806 )
+
+[node name="antennaL" type="Sprite" parent="Assembled 8 Directions/Cutout 2 left/body"]
+position = Vector2( 18.2024, -35.5387 )
+texture = ExtResource( 28 )
+offset = Vector2( -18.2024, 35.5387 )
+
+[node name="armR" type="Sprite" parent="Assembled 8 Directions/Cutout 2 left/body"]
+position = Vector2( -3.12622, -8.96527 )
+texture = ExtResource( 29 )
+offset = Vector2( 3.12622, 8.96527 )
+
+[node name="armL" type="Sprite" parent="Assembled 8 Directions/Cutout 2 left/body"]
+position = Vector2( 1.2444, 38.5871 )
+texture = ExtResource( 23 )
+offset = Vector2( -1.2444, -38.5871 )
+
+[node name="legR" type="Sprite" parent="Assembled 8 Directions/Cutout 2 left/body"]
+position = Vector2( -0.32901, 16.3843 )
+texture = ExtResource( 31 )
+offset = Vector2( 0.32901, -16.3843 )
+
+[node name="legL" type="Sprite" parent="Assembled 8 Directions/Cutout 2 left/body"]
+position = Vector2( 0.71994, 30.5452 )
+texture = ExtResource( 30 )
+offset = Vector2( -0.71994, -30.5452 )
+
+[node name="Cutout 3 backleft" type="Node2D" parent="Assembled 8 Directions"]
+visible = false
+
+[node name="body" type="Sprite" parent="Assembled 8 Directions/Cutout 3 backleft"]
+texture = ExtResource( 34 )
+
+[node name="face" type="Sprite" parent="Assembled 8 Directions/Cutout 3 backleft/body"]
+position = Vector2( -45.4338, 9.74107 )
+texture = ExtResource( 37 )
+offset = Vector2( 45.4338, -9.74107 )
+
+[node name="anennaF" type="Sprite" parent="Assembled 8 Directions/Cutout 3 backleft/body"]
+position = Vector2( -17.8115, -69.4547 )
+texture = ExtResource( 35 )
+offset = Vector2( 17.8115, 69.4547 )
+
+[node name="antennaR" type="Sprite" parent="Assembled 8 Directions/Cutout 3 backleft/body"]
+position = Vector2( 27.4681, -59.4897 )
+texture = ExtResource( 39 )
+offset = Vector2( -27.4681, 59.4897 )
+
+[node name="antennaL" type="Sprite" parent="Assembled 8 Directions/Cutout 3 backleft/body"]
+position = Vector2( -3.82552, -43.2309 )
+texture = ExtResource( 40 )
+offset = Vector2( 3.82552, 43.2309 )
+
+[node name="armR" type="Sprite" parent="Assembled 8 Directions/Cutout 3 backleft/body"]
+position = Vector2( 33.0625, 7.46826 )
+texture = ExtResource( 32 )
+offset = Vector2( -33.0625, -7.46826 )
+
+[node name="armL" type="Sprite" parent="Assembled 8 Directions/Cutout 3 backleft/body"]
+position = Vector2( -50.8534, 26.1745 )
+texture = ExtResource( 36 )
+offset = Vector2( 50.8534, -26.1745 )
+
+[node name="legR" type="Sprite" parent="Assembled 8 Directions/Cutout 3 backleft/body"]
+show_behind_parent = true
+position = Vector2( 21.1744, 24.4263 )
+texture = ExtResource( 33 )
+offset = Vector2( -21.1744, -24.4263 )
+
+[node name="legL" type="Sprite" parent="Assembled 8 Directions/Cutout 3 backleft/body"]
+position = Vector2( -30.9234, 37.5381 )
+texture = ExtResource( 38 )
+offset = Vector2( 30.9234, -37.5381 )
+
+[node name="Cutout 4 back" type="Node2D" parent="Assembled 8 Directions"]
+visible = false
+
+[node name="body" type="Sprite" parent="Assembled 8 Directions/Cutout 4 back"]
+texture = ExtResource( 41 )
+
+[node name="face" type="Sprite" parent="Assembled 8 Directions/Cutout 4 back/body"]
+position = Vector2( 0.195465, 2.748 )
+texture = ExtResource( 42 )
+offset = Vector2( -0.195465, -2.748 )
+
+[node name="anennaF" type="Sprite" parent="Assembled 8 Directions/Cutout 4 back/body"]
+position = Vector2( 0.195465, -61.5876 )
+texture = ExtResource( 44 )
+offset = Vector2( -0.195465, 61.5876 )
+
+[node name="antennaR" type="Sprite" parent="Assembled 8 Directions/Cutout 4 back/body"]
+position = Vector2( 24.1465, -33.6156 )
+texture = ExtResource( 43 )
+offset = Vector2( -24.1465, 33.6156 )
+
+[node name="antennaL" type="Sprite" parent="Assembled 8 Directions/Cutout 4 back/body"]
+position = Vector2( -20.9584, -36.4128 )
+texture = ExtResource( 49 )
+offset = Vector2( 20.9584, 36.4128 )
+
+[node name="armR" type="Sprite" parent="Assembled 8 Directions/Cutout 4 back/body"]
+position = Vector2( 26.2444, 0.999741 )
+texture = ExtResource( 46 )
+offset = Vector2( -26.2444, -0.999741 )
+
+[node name="armL" type="Sprite" parent="Assembled 8 Directions/Cutout 4 back/body"]
+position = Vector2( -26.5527, 9.741 )
+texture = ExtResource( 45 )
+offset = Vector2( 26.5527, -9.741 )
+
+[node name="legR" type="Sprite" parent="Assembled 8 Directions/Cutout 4 back/body"]
+position = Vector2( -39.1401, 63.0626 )
+texture = ExtResource( 48 )
+offset = Vector2( 39.1401, -63.0626 )
+
+[node name="legL" type="Sprite" parent="Assembled 8 Directions/Cutout 4 back/body"]
+position = Vector2( 43.2024, 55.7199 )
+texture = ExtResource( 47 )
+offset = Vector2( -43.2024, -55.7199 )
+
+[node name="Cutout 5 backright" type="Node2D" parent="Assembled 8 Directions"]
+visible = false
+
+[node name="body" type="Sprite" parent="Assembled 8 Directions/Cutout 5 backright"]
+texture = ExtResource( 51 )
+
+[node name="face" type="Sprite" parent="Assembled 8 Directions/Cutout 5 backright/body"]
+position = Vector2( 11.5591, -8.96527 )
+texture = ExtResource( 57 )
+offset = Vector2( -11.5591, 8.96527 )
+
+[node name="anennaF" type="Sprite" parent="Assembled 8 Directions/Cutout 5 backright/body"]
+position = Vector2( 16.4542, -69.2799 )
+texture = ExtResource( 53 )
+offset = Vector2( -16.4542, 69.2799 )
+
+[node name="antennaR" type="Sprite" parent="Assembled 8 Directions/Cutout 5 backright/body"]
+position = Vector2( -25.5038, -42.182 )
+texture = ExtResource( 58 )
+offset = Vector2( 25.5038, 42.182 )
+
+[node name="antennaL" type="Sprite" parent="Assembled 8 Directions/Cutout 5 backright/body"]
+position = Vector2( -27.6017, -60.0141 )
+texture = ExtResource( 56 )
+offset = Vector2( 27.6017, 60.0141 )
+
+[node name="armR" type="Sprite" parent="Assembled 8 Directions/Cutout 5 backright/body"]
+position = Vector2( 52.1184, 23.2025 )
+texture = ExtResource( 54 )
+offset = Vector2( -52.1184, -23.2025 )
+
+[node name="armL" type="Sprite" parent="Assembled 8 Directions/Cutout 5 backright/body"]
+position = Vector2( -27.9513, -10.3639 )
+texture = ExtResource( 50 )
+offset = Vector2( 27.9513, 10.3639 )
+
+[node name="legR" type="Sprite" parent="Assembled 8 Directions/Cutout 5 backright/body"]
+position = Vector2( 24.4961, 47.8528 )
+texture = ExtResource( 55 )
+offset = Vector2( -24.4961, -47.8528 )
+
+[node name="legL" type="Sprite" parent="Assembled 8 Directions/Cutout 5 backright/body"]
+position = Vector2( -37.2171, 30.0207 )
+texture = ExtResource( 52 )
+offset = Vector2( 37.2171, -30.0207 )
+
+[node name="Cutout 6 right" type="Node2D" parent="Assembled 8 Directions"]
+visible = false
+
+[node name="body" type="Sprite" parent="Assembled 8 Directions/Cutout 6 right"]
+texture = ExtResource( 67 )
+
+[node name="face" type="Sprite" parent="Assembled 8 Directions/Cutout 6 right/body"]
+position = Vector2( 59.4611, -15.259 )
+texture = ExtResource( 66 )
+offset = Vector2( -59.4611, 15.259 )
+
+[node name="anennaF" type="Sprite" parent="Assembled 8 Directions/Cutout 6 right/body"]
+position = Vector2( 22.9227, -52.4967 )
+texture = ExtResource( 61 )
+offset = Vector2( -22.9227, 52.4967 )
+
+[node name="antennaR" type="Sprite" parent="Assembled 8 Directions/Cutout 6 right/body"]
+position = Vector2( -17.6367, -36.5876 )
+texture = ExtResource( 60 )
+offset = Vector2( 17.6367, 36.5876 )
+
+[node name="antennaL" type="Sprite" parent="Assembled 8 Directions/Cutout 6 right/body"]
+position = Vector2( -18.6856, -68.5806 )
+texture = ExtResource( 63 )
+offset = Vector2( 18.6856, 68.5806 )
+
+[node name="armR" type="Sprite" parent="Assembled 8 Directions/Cutout 6 right/body"]
+position = Vector2( -1.90244, 44.5311 )
+texture = ExtResource( 64 )
+offset = Vector2( 1.90244, -44.5311 )
+
+[node name="armL" type="Sprite" parent="Assembled 8 Directions/Cutout 6 right/body"]
+position = Vector2( -3.47586, -15.259 )
+texture = ExtResource( 62 )
+offset = Vector2( 3.47586, 15.259 )
+
+[node name="legR" type="Sprite" parent="Assembled 8 Directions/Cutout 6 right/body"]
+position = Vector2( 0.71994, 46.1046 )
+texture = ExtResource( 65 )
+offset = Vector2( -0.71994, -46.1046 )
+
+[node name="legL" type="Sprite" parent="Assembled 8 Directions/Cutout 6 right/body"]
+position = Vector2( -1.02832, -22.4268 )
+texture = ExtResource( 59 )
+offset = Vector2( 1.02832, 22.4268 )
+
+[node name="Cutout 7 frontright" type="Node2D" parent="Assembled 8 Directions"]
+visible = false
+
+[node name="body" type="Sprite" parent="Assembled 8 Directions/Cutout 7 frontright"]
+texture = ExtResource( 74 )
+
+[node name="face" type="Sprite" parent="Assembled 8 Directions/Cutout 7 frontright/body"]
+position = Vector2( 45.4751, 8.86687 )
+texture = ExtResource( 68 )
+offset = Vector2( -45.4751, -8.86687 )
+
+[node name="anennaF" type="Sprite" parent="Assembled 8 Directions/Cutout 7 frontright/body"]
+position = Vector2( 16.8038, -47.6016 )
+texture = ExtResource( 69 )
+offset = Vector2( -16.8038, 47.6016 )
+
+[node name="antennaR" type="Sprite" parent="Assembled 8 Directions/Cutout 7 frontright/body"]
+position = Vector2( -26.3779, -52.4967 )
+texture = ExtResource( 70 )
+offset = Vector2( 26.3779, 52.4967 )
+
+[node name="antennaL" type="Sprite" parent="Assembled 8 Directions/Cutout 7 frontright/body"]
+position = Vector2( 2.81783, -73.3008 )
+texture = ExtResource( 76 )
+offset = Vector2( -2.81783, 73.3008 )
+
+[node name="armR" type="Sprite" parent="Assembled 8 Directions/Cutout 7 frontright/body"]
+position = Vector2( -46.1331, 28.0976 )
+texture = ExtResource( 72 )
+offset = Vector2( 46.1331, -28.0976 )
+
+[node name="armL" type="Sprite" parent="Assembled 8 Directions/Cutout 7 frontright/body"]
+position = Vector2( 45.9996, -26.6226 )
+texture = ExtResource( 71 )
+offset = Vector2( -45.9996, 26.6226 )
+
+[node name="legR" type="Sprite" parent="Assembled 8 Directions/Cutout 7 frontright/body"]
+position = Vector2( -33.5457, 41.9088 )
+texture = ExtResource( 73 )
+offset = Vector2( 33.5457, -41.9088 )
+
+[node name="legL" type="Sprite" parent="Assembled 8 Directions/Cutout 7 frontright/body"]
+position = Vector2( 39.7059, -1.79745 )
+texture = ExtResource( 75 )
+offset = Vector2( -39.7059, 1.79745 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Assembled 8 Directions"]
+autoplay = "Idle 0 Front"
+"anims/Idle 0 Front" = SubResource( 49 )
+"anims/Idle 1 Frontleft" = SubResource( 50 )
+"anims/Idle 2 Left" = SubResource( 51 )
+"anims/Idle 3 Backleft" = SubResource( 52 )
+"anims/Idle 4 Back" = SubResource( 53 )
+"anims/Idle 5 Backright" = SubResource( 54 )
+"anims/Idle 6 Right" = SubResource( 55 )
+"anims/Idle 7 Frontright" = SubResource( 56 )
+
+[node name="AnimationTree" type="AnimationTree" parent="Assembled 8 Directions"]
+tree_root = SubResource( 47 )
+anim_player = NodePath("../AnimationPlayer")
+parameters/playback = SubResource( 48 )
+parameters/Idle/blend_position = Vector2( -0.0274828, -0.29623 )
 
 [editable path="HitboxPivot/SwordHitbox"]
