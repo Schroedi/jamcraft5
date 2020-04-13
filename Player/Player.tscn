@@ -219,7 +219,7 @@ graph_offset = Vector2( 130.056, -67.55 )
 length = 4.0
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Cutout 0 front/body:position")
+tracks/0/path = NodePath("S Cutout 0 front/S body:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -231,7 +231,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -10 ), Vector2( 0, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Cutout 0 front/body/anennaF:rotation_degrees")
+tracks/1/path = NodePath("S Cutout 0 front/S body/S anennaF:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -243,7 +243,7 @@ tracks/1/keys = {
 "values": [ 0.0, -20.0, 20.0, 0.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Cutout 0 front/body/antennaR:rotation_degrees")
+tracks/2/path = NodePath("S Cutout 0 front/S body/S antennaR:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -255,7 +255,7 @@ tracks/2/keys = {
 "values": [ 0.0, -15.0, 15.0, 0.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Cutout 0 front/body/antennaL:rotation_degrees")
+tracks/3/path = NodePath("S Cutout 0 front/S body/S antennaL:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -267,7 +267,7 @@ tracks/3/keys = {
 "values": [ 0.0, 15.0, -15.0, 0.0 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Cutout 1 frontleft/body:position")
+tracks/4/path = NodePath("SW Cutout 1 frontleft/SW body:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -279,7 +279,7 @@ tracks/4/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -10 ), Vector2( 0, 0 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Cutout 1 frontleft/body/anennaF:rotation_degrees")
+tracks/5/path = NodePath("SW Cutout 1 frontleft/SW body/SW anennaF:rotation_degrees")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -291,7 +291,7 @@ tracks/5/keys = {
 "values": [ 0.0, -20.0, 20.0, 0.0 ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Cutout 0 front/body/antennaR:rotation_degrees")
+tracks/6/path = NodePath("S Cutout 0 front/S body/S antennaR:rotation_degrees")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -303,7 +303,7 @@ tracks/6/keys = {
 "values": [ 0.0, -15.0, 15.0, 0.0 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Cutout 1 frontleft/body/antennaL:rotation_degrees")
+tracks/7/path = NodePath("SW Cutout 1 frontleft/SW body/SW antennaL:rotation_degrees")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -315,7 +315,7 @@ tracks/7/keys = {
 "values": [ 0.0, 15.0, -15.0, 0.0 ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("Cutout 2 left/body:position")
+tracks/8/path = NodePath("W Cutout 2 left/W body:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -327,7 +327,7 @@ tracks/8/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -10 ), Vector2( 0, 0 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("Cutout 3 backleft/body:position")
+tracks/9/path = NodePath("NW Cutout 3 backleft/NW body:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -339,7 +339,7 @@ tracks/9/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -10 ), Vector2( 0, 0 ) ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("Cutout 4 back/body:position")
+tracks/10/path = NodePath("N Cutout 4 back/N body:position")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
@@ -351,7 +351,7 @@ tracks/10/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -10 ), Vector2( 0, 0 ) ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("Cutout 5 backright/body:position")
+tracks/11/path = NodePath("NE Cutout 5 backright/NE body:position")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
@@ -363,7 +363,7 @@ tracks/11/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -10 ), Vector2( 0, 0 ) ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("Cutout 7 frontright/body:position")
+tracks/12/path = NodePath("SE Cutout 7 frontright/SE body:position")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
@@ -480,7 +480,7 @@ graph_offset = Vector2( 164, 64 )
 [sub_resource type="Animation" id=41]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Cutout 0 front:visible")
+tracks/0/path = NodePath("S Cutout 0 front:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -492,7 +492,7 @@ tracks/0/keys = {
 "values": [ false ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Cutout 1 frontleft:visible")
+tracks/1/path = NodePath("SW Cutout 1 frontleft:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -504,7 +504,7 @@ tracks/1/keys = {
 "values": [ false ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Cutout 2 left:visible")
+tracks/2/path = NodePath("W Cutout 2 left:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -516,7 +516,7 @@ tracks/2/keys = {
 "values": [ false ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Cutout 3 backleft:visible")
+tracks/3/path = NodePath("NW Cutout 3 backleft:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -528,7 +528,7 @@ tracks/3/keys = {
 "values": [ false ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Cutout 4 back:visible")
+tracks/4/path = NodePath("N Cutout 4 back:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -540,7 +540,7 @@ tracks/4/keys = {
 "values": [ false ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Cutout 5 backright:visible")
+tracks/5/path = NodePath("NE Cutout 5 backright:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -552,7 +552,7 @@ tracks/5/keys = {
 "values": [ false ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Cutout 6 right:visible")
+tracks/6/path = NodePath("E Cutout 6 right:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -564,7 +564,7 @@ tracks/6/keys = {
 "values": [ true ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Cutout 7 frontright:visible")
+tracks/7/path = NodePath("SE Cutout 7 frontright:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -579,7 +579,7 @@ tracks/7/keys = {
 [sub_resource type="Animation" id=42]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Cutout 0 front:visible")
+tracks/0/path = NodePath("S Cutout 0 front:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -591,7 +591,7 @@ tracks/0/keys = {
 "values": [ false ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Cutout 1 frontleft:visible")
+tracks/1/path = NodePath("SW Cutout 1 frontleft:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -603,7 +603,7 @@ tracks/1/keys = {
 "values": [ false ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Cutout 2 left:visible")
+tracks/2/path = NodePath("W Cutout 2 left:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -615,7 +615,7 @@ tracks/2/keys = {
 "values": [ false ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Cutout 3 backleft:visible")
+tracks/3/path = NodePath("NW Cutout 3 backleft:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -627,7 +627,7 @@ tracks/3/keys = {
 "values": [ false ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Cutout 4 back:visible")
+tracks/4/path = NodePath("N Cutout 4 back:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -639,7 +639,7 @@ tracks/4/keys = {
 "values": [ true ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Cutout 5 backright:visible")
+tracks/5/path = NodePath("NE Cutout 5 backright:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -651,7 +651,7 @@ tracks/5/keys = {
 "values": [ false ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Cutout 6 right:visible")
+tracks/6/path = NodePath("E Cutout 6 right:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -663,7 +663,7 @@ tracks/6/keys = {
 "values": [ false ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Cutout 7 frontright:visible")
+tracks/7/path = NodePath("SE Cutout 7 frontright:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -678,7 +678,7 @@ tracks/7/keys = {
 [sub_resource type="Animation" id=43]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Cutout 0 front:visible")
+tracks/0/path = NodePath("S Cutout 0 front:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -690,7 +690,7 @@ tracks/0/keys = {
 "values": [ false ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Cutout 1 frontleft:visible")
+tracks/1/path = NodePath("SW Cutout 1 frontleft:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -702,7 +702,7 @@ tracks/1/keys = {
 "values": [ false ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Cutout 2 left:visible")
+tracks/2/path = NodePath("W Cutout 2 left:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -714,7 +714,7 @@ tracks/2/keys = {
 "values": [ false ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Cutout 3 backleft:visible")
+tracks/3/path = NodePath("NW Cutout 3 backleft:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -726,7 +726,7 @@ tracks/3/keys = {
 "values": [ false ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Cutout 4 back:visible")
+tracks/4/path = NodePath("N Cutout 4 back:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -738,7 +738,7 @@ tracks/4/keys = {
 "values": [ false ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Cutout 5 backright:visible")
+tracks/5/path = NodePath("NE Cutout 5 backright:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -750,7 +750,7 @@ tracks/5/keys = {
 "values": [ true ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Cutout 6 right:visible")
+tracks/6/path = NodePath("E Cutout 6 right:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -762,7 +762,7 @@ tracks/6/keys = {
 "values": [ false ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Cutout 7 frontright:visible")
+tracks/7/path = NodePath("SE Cutout 7 frontright:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -777,7 +777,7 @@ tracks/7/keys = {
 [sub_resource type="Animation" id=44]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Cutout 0 front:visible")
+tracks/0/path = NodePath("S Cutout 0 front:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -789,7 +789,7 @@ tracks/0/keys = {
 "values": [ false ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Cutout 1 frontleft:visible")
+tracks/1/path = NodePath("SW Cutout 1 frontleft:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -801,7 +801,7 @@ tracks/1/keys = {
 "values": [ false ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Cutout 2 left:visible")
+tracks/2/path = NodePath("W Cutout 2 left:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -813,7 +813,7 @@ tracks/2/keys = {
 "values": [ false ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Cutout 3 backleft:visible")
+tracks/3/path = NodePath("NW Cutout 3 backleft:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -825,7 +825,7 @@ tracks/3/keys = {
 "values": [ true ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Cutout 4 back:visible")
+tracks/4/path = NodePath("N Cutout 4 back:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -837,7 +837,7 @@ tracks/4/keys = {
 "values": [ false ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Cutout 5 backright:visible")
+tracks/5/path = NodePath("NE Cutout 5 backright:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -849,7 +849,7 @@ tracks/5/keys = {
 "values": [ false ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Cutout 6 right:visible")
+tracks/6/path = NodePath("E Cutout 6 right:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -861,7 +861,7 @@ tracks/6/keys = {
 "values": [ false ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Cutout 7 frontright:visible")
+tracks/7/path = NodePath("SE Cutout 7 frontright:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -876,7 +876,7 @@ tracks/7/keys = {
 [sub_resource type="Animation" id=45]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Cutout 0 front:visible")
+tracks/0/path = NodePath("S Cutout 0 front:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -888,7 +888,7 @@ tracks/0/keys = {
 "values": [ true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Cutout 1 frontleft:visible")
+tracks/1/path = NodePath("SW Cutout 1 frontleft:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -900,7 +900,7 @@ tracks/1/keys = {
 "values": [ false ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Cutout 2 left:visible")
+tracks/2/path = NodePath("W Cutout 2 left:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -912,7 +912,7 @@ tracks/2/keys = {
 "values": [ false ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Cutout 3 backleft:visible")
+tracks/3/path = NodePath("NW Cutout 3 backleft:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -924,7 +924,7 @@ tracks/3/keys = {
 "values": [ false ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Cutout 4 back:visible")
+tracks/4/path = NodePath("N Cutout 4 back:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -936,7 +936,7 @@ tracks/4/keys = {
 "values": [ false ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Cutout 5 backright:visible")
+tracks/5/path = NodePath("NE Cutout 5 backright:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -948,7 +948,7 @@ tracks/5/keys = {
 "values": [ false ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Cutout 6 right:visible")
+tracks/6/path = NodePath("E Cutout 6 right:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -960,7 +960,7 @@ tracks/6/keys = {
 "values": [ false ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Cutout 7 frontright:visible")
+tracks/7/path = NodePath("SE Cutout 7 frontright:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -975,7 +975,7 @@ tracks/7/keys = {
 [sub_resource type="Animation" id=46]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Cutout 0 front:visible")
+tracks/0/path = NodePath("S Cutout 0 front:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -987,7 +987,7 @@ tracks/0/keys = {
 "values": [ false ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Cutout 1 frontleft:visible")
+tracks/1/path = NodePath("SW Cutout 1 frontleft:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -999,7 +999,7 @@ tracks/1/keys = {
 "values": [ false ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Cutout 2 left:visible")
+tracks/2/path = NodePath("W Cutout 2 left:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -1011,7 +1011,7 @@ tracks/2/keys = {
 "values": [ false ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Cutout 3 backleft:visible")
+tracks/3/path = NodePath("NW Cutout 3 backleft:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -1023,7 +1023,7 @@ tracks/3/keys = {
 "values": [ false ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Cutout 4 back:visible")
+tracks/4/path = NodePath("N Cutout 4 back:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -1035,7 +1035,7 @@ tracks/4/keys = {
 "values": [ false ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Cutout 5 backright:visible")
+tracks/5/path = NodePath("NE Cutout 5 backright:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -1047,7 +1047,7 @@ tracks/5/keys = {
 "values": [ false ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Cutout 6 right:visible")
+tracks/6/path = NodePath("E Cutout 6 right:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -1059,7 +1059,7 @@ tracks/6/keys = {
 "values": [ false ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Cutout 7 frontright:visible")
+tracks/7/path = NodePath("SE Cutout 7 frontright:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -1074,7 +1074,7 @@ tracks/7/keys = {
 [sub_resource type="Animation" id=47]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Cutout 0 front:visible")
+tracks/0/path = NodePath("S Cutout 0 front:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -1086,7 +1086,7 @@ tracks/0/keys = {
 "values": [ false ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Cutout 1 frontleft:visible")
+tracks/1/path = NodePath("SW Cutout 1 frontleft:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -1098,7 +1098,7 @@ tracks/1/keys = {
 "values": [ true ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Cutout 2 left:visible")
+tracks/2/path = NodePath("W Cutout 2 left:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -1110,7 +1110,7 @@ tracks/2/keys = {
 "values": [ false ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Cutout 3 backleft:visible")
+tracks/3/path = NodePath("NW Cutout 3 backleft:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -1122,7 +1122,7 @@ tracks/3/keys = {
 "values": [ false ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Cutout 4 back:visible")
+tracks/4/path = NodePath("N Cutout 4 back:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -1134,7 +1134,7 @@ tracks/4/keys = {
 "values": [ false ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Cutout 5 backright:visible")
+tracks/5/path = NodePath("NE Cutout 5 backright:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -1146,7 +1146,7 @@ tracks/5/keys = {
 "values": [ false ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Cutout 6 right:visible")
+tracks/6/path = NodePath("E Cutout 6 right:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -1158,7 +1158,7 @@ tracks/6/keys = {
 "values": [ false ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Cutout 7 frontright:visible")
+tracks/7/path = NodePath("SE Cutout 7 frontright:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -1173,7 +1173,7 @@ tracks/7/keys = {
 [sub_resource type="Animation" id=48]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Cutout 0 front:visible")
+tracks/0/path = NodePath("S Cutout 0 front:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -1185,7 +1185,7 @@ tracks/0/keys = {
 "values": [ false ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Cutout 1 frontleft:visible")
+tracks/1/path = NodePath("SW Cutout 1 frontleft:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -1197,7 +1197,7 @@ tracks/1/keys = {
 "values": [ false ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Cutout 2 left:visible")
+tracks/2/path = NodePath("W Cutout 2 left:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -1209,7 +1209,7 @@ tracks/2/keys = {
 "values": [ true ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Cutout 3 backleft:visible")
+tracks/3/path = NodePath("NW Cutout 3 backleft:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -1221,7 +1221,7 @@ tracks/3/keys = {
 "values": [ false ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Cutout 4 back:visible")
+tracks/4/path = NodePath("N Cutout 4 back:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -1233,7 +1233,7 @@ tracks/4/keys = {
 "values": [ false ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Cutout 5 backright:visible")
+tracks/5/path = NodePath("NE Cutout 5 backright:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -1245,7 +1245,7 @@ tracks/5/keys = {
 "values": [ false ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Cutout 6 right:visible")
+tracks/6/path = NodePath("E Cutout 6 right:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -1257,7 +1257,7 @@ tracks/6/keys = {
 "values": [ false ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Cutout 7 frontright:visible")
+tracks/7/path = NodePath("SE Cutout 7 frontright:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -1308,370 +1308,370 @@ __meta__ = {
 position = Vector2( 0, -20 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Cutout 0 front" type="Node2D" parent="Assembled 8 Directions"]
+[node name="S Cutout 0 front" type="Node2D" parent="Assembled 8 Directions"]
 visible = false
 
-[node name="body" type="Sprite" parent="Assembled 8 Directions/Cutout 0 front"]
+[node name="S body" type="Sprite" parent="Assembled 8 Directions/S Cutout 0 front"]
 texture = ExtResource( 9 )
 
-[node name="face" type="Sprite" parent="Assembled 8 Directions/Cutout 0 front/body"]
+[node name="S face" type="Sprite" parent="Assembled 8 Directions/S Cutout 0 front/S body"]
 position = Vector2( 0.0207214, 34.5662 )
 texture = ExtResource( 11 )
 offset = Vector2( -0.0207214, -34.5662 )
 
-[node name="anennaF" type="Sprite" parent="Assembled 8 Directions/Cutout 0 front/body"]
+[node name="S anennaF" type="Sprite" parent="Assembled 8 Directions/S Cutout 0 front/S body"]
 position = Vector2( 0.195541, -29.7694 )
 texture = ExtResource( 10 )
 offset = Vector2( -0.195541, 29.7694 )
 
-[node name="antennaR" type="Sprite" parent="Assembled 8 Directions/Cutout 0 front/body"]
-position = Vector2( -21.8324, -57.0421 )
+[node name="S antennaR" type="Sprite" parent="Assembled 8 Directions/S Cutout 0 front/S body"]
+position = Vector2( -21.7319, -54.4379 )
 texture = ExtResource( 6 )
-offset = Vector2( 21.8324, 57.0421 )
+offset = Vector2( 21.7319, 54.4379 )
 
-[node name="antennaL" type="Sprite" parent="Assembled 8 Directions/Cutout 0 front/body"]
-position = Vector2( 22.2235, -56.8672 )
+[node name="S antennaL" type="Sprite" parent="Assembled 8 Directions/S Cutout 0 front/S body"]
+position = Vector2( 22.4344, -53.6631 )
 texture = ExtResource( 12 )
-offset = Vector2( -22.2235, 56.8672 )
+offset = Vector2( -22.4344, 53.6631 )
 
-[node name="armR" type="Sprite" parent="Assembled 8 Directions/Cutout 0 front/body"]
+[node name="S armR" type="Sprite" parent="Assembled 8 Directions/S Cutout 0 front/S body"]
 position = Vector2( -68.6855, -0.748428 )
 texture = ExtResource( 5 )
 offset = Vector2( 68.6855, 0.748428 )
 
-[node name="armL" type="Sprite" parent="Assembled 8 Directions/Cutout 0 front/body"]
+[node name="S armL" type="Sprite" parent="Assembled 8 Directions/S Cutout 0 front/S body"]
 position = Vector2( 66.629, -0.748428 )
 texture = ExtResource( 7 )
 offset = Vector2( -66.629, 0.748428 )
 
-[node name="legR" type="Sprite" parent="Assembled 8 Directions/Cutout 0 front/body"]
-position = Vector2( 100.545, 90.1606 )
+[node name="S legR" type="Sprite" parent="Assembled 8 Directions/S Cutout 0 front/S body"]
+position = Vector2( -33.7421, 62.9516 )
 texture = ExtResource( 8 )
-offset = Vector2( -100.545, -90.1606 )
+offset = Vector2( 33.7421, -62.9516 )
 
-[node name="legL" type="Sprite" parent="Assembled 8 Directions/Cutout 0 front/body"]
-position = Vector2( -101.378, 86.1396 )
+[node name="S legL" type="Sprite" parent="Assembled 8 Directions/S Cutout 0 front/S body"]
+position = Vector2( 26.6961, 64.5013 )
 texture = ExtResource( 13 )
-offset = Vector2( 101.378, -86.1396 )
+offset = Vector2( -26.6961, -64.5013 )
 
-[node name="Cutout 1 frontleft" type="Node2D" parent="Assembled 8 Directions"]
+[node name="SW Cutout 1 frontleft" type="Node2D" parent="Assembled 8 Directions"]
 visible = false
 
-[node name="body" type="Sprite" parent="Assembled 8 Directions/Cutout 1 frontleft"]
+[node name="SW body" type="Sprite" parent="Assembled 8 Directions/SW Cutout 1 frontleft"]
 texture = ExtResource( 20 )
 
-[node name="face" type="Sprite" parent="Assembled 8 Directions/Cutout 1 frontleft/body"]
+[node name="SW face" type="Sprite" parent="Assembled 8 Directions/SW Cutout 1 frontleft/SW body"]
 position = Vector2( -45.4338, 9.74107 )
 texture = ExtResource( 19 )
 offset = Vector2( 45.4338, -9.74107 )
 
-[node name="anennaF" type="Sprite" parent="Assembled 8 Directions/Cutout 1 frontleft/body"]
-position = Vector2( -17.9863, -48.6505 )
+[node name="SW anennaF" type="Sprite" parent="Assembled 8 Directions/SW Cutout 1 frontleft/SW body"]
+position = Vector2( -17.4702, -45.9146 )
 texture = ExtResource( 14 )
-offset = Vector2( 17.9863, 48.6505 )
+offset = Vector2( 17.4702, 45.9146 )
 
-[node name="antennaR" type="Sprite" parent="Assembled 8 Directions/Cutout 1 frontleft/body"]
-position = Vector2( -4.69955, -73.4756 )
+[node name="SW antennaR" type="Sprite" parent="Assembled 8 Directions/SW Cutout 1 frontleft/SW body"]
+position = Vector2( -13.596, -71.872 )
 texture = ExtResource( 21 )
-offset = Vector2( 4.69955, 73.4756 )
+offset = Vector2( 13.596, 71.872 )
 
-[node name="antennaL" type="Sprite" parent="Assembled 8 Directions/Cutout 1 frontleft/body"]
-position = Vector2( 26.2445, -53.8952 )
+[node name="SW antennaL" type="Sprite" parent="Assembled 8 Directions/SW Cutout 1 frontleft/SW body"]
+position = Vector2( 25.1464, -52.1134 )
 texture = ExtResource( 15 )
-offset = Vector2( -26.2445, 53.8952 )
+offset = Vector2( -25.1464, 52.1134 )
 
-[node name="armR" type="Sprite" parent="Assembled 8 Directions/Cutout 1 frontleft/body"]
+[node name="SW armR" type="Sprite" parent="Assembled 8 Directions/SW Cutout 1 frontleft/SW body"]
 position = Vector2( -39.8394, -18.7554 )
 texture = ExtResource( 22 )
 offset = Vector2( 39.8394, 18.7554 )
 
-[node name="armL" type="Sprite" parent="Assembled 8 Directions/Cutout 1 frontleft/body"]
+[node name="SW armL" type="Sprite" parent="Assembled 8 Directions/SW Cutout 1 frontleft/SW body"]
 position = Vector2( 48.9717, 23.5522 )
 texture = ExtResource( 16 )
 offset = Vector2( -48.9717, -23.5522 )
 
-[node name="legR" type="Sprite" parent="Assembled 8 Directions/Cutout 1 frontleft/body"]
+[node name="SW legR" type="Sprite" parent="Assembled 8 Directions/SW Cutout 1 frontleft/SW body"]
 position = Vector2( -33.0212, 13.762 )
 texture = ExtResource( 17 )
 offset = Vector2( 33.0212, -13.762 )
 
-[node name="legL" type="Sprite" parent="Assembled 8 Directions/Cutout 1 frontleft/body"]
+[node name="SW legL" type="Sprite" parent="Assembled 8 Directions/SW Cutout 1 frontleft/SW body"]
 position = Vector2( 28.1675, 56.0697 )
 texture = ExtResource( 18 )
 offset = Vector2( -28.1675, -56.0697 )
 
-[node name="Cutout 2 left" type="Node2D" parent="Assembled 8 Directions"]
+[node name="W Cutout 2 left" type="Node2D" parent="Assembled 8 Directions"]
 visible = false
 
-[node name="body" type="Sprite" parent="Assembled 8 Directions/Cutout 2 left"]
+[node name="W body" type="Sprite" parent="Assembled 8 Directions/W Cutout 2 left"]
 texture = ExtResource( 24 )
 
-[node name="face" type="Sprite" parent="Assembled 8 Directions/Cutout 2 left/body"]
+[node name="W face" type="Sprite" parent="Assembled 8 Directions/W Cutout 2 left/W body"]
 position = Vector2( -59.4198, -12.1121 )
 texture = ExtResource( 25 )
 offset = Vector2( 59.4198, 12.1121 )
 
-[node name="anennaF" type="Sprite" parent="Assembled 8 Directions/Cutout 2 left/body"]
-position = Vector2( -23.7556, -52.3218 )
+[node name="W anennaF" type="Sprite" parent="Assembled 8 Directions/W Cutout 2 left/W body"]
+position = Vector2( -21.9897, -51.2036 )
 texture = ExtResource( 26 )
-offset = Vector2( 23.7556, 52.3218 )
+offset = Vector2( 21.9897, 51.2036 )
 
-[node name="antennaR" type="Sprite" parent="Assembled 8 Directions/Cutout 2 left/body"]
-position = Vector2( 17.5031, -68.5806 )
+[node name="W antennaR" type="Sprite" parent="Assembled 8 Directions/W Cutout 2 left/W body"]
+position = Vector2( 17.7601, -66.6618 )
 texture = ExtResource( 27 )
-offset = Vector2( -17.5031, 68.5806 )
+offset = Vector2( -17.7601, 66.6618 )
 
-[node name="antennaL" type="Sprite" parent="Assembled 8 Directions/Cutout 2 left/body"]
-position = Vector2( 18.2024, -35.5387 )
+[node name="W antennaL" type="Sprite" parent="Assembled 8 Directions/W Cutout 2 left/W body"]
+position = Vector2( 18.4962, -34.2731 )
 texture = ExtResource( 28 )
-offset = Vector2( -18.2024, 35.5387 )
+offset = Vector2( -18.4962, 34.2731 )
 
-[node name="armR" type="Sprite" parent="Assembled 8 Directions/Cutout 2 left/body"]
+[node name="W armR" type="Sprite" parent="Assembled 8 Directions/W Cutout 2 left/W body"]
 position = Vector2( -3.12622, -8.96527 )
 texture = ExtResource( 29 )
 offset = Vector2( 3.12622, 8.96527 )
 
-[node name="armL" type="Sprite" parent="Assembled 8 Directions/Cutout 2 left/body"]
+[node name="W armL" type="Sprite" parent="Assembled 8 Directions/W Cutout 2 left/W body"]
 position = Vector2( 1.2444, 38.5871 )
 texture = ExtResource( 23 )
 offset = Vector2( -1.2444, -38.5871 )
 
-[node name="legR" type="Sprite" parent="Assembled 8 Directions/Cutout 2 left/body"]
+[node name="W legR" type="Sprite" parent="Assembled 8 Directions/W Cutout 2 left/W body"]
 position = Vector2( -0.32901, 16.3843 )
 texture = ExtResource( 31 )
 offset = Vector2( 0.32901, -16.3843 )
 
-[node name="legL" type="Sprite" parent="Assembled 8 Directions/Cutout 2 left/body"]
+[node name="W legL" type="Sprite" parent="Assembled 8 Directions/W Cutout 2 left/W body"]
 position = Vector2( 0.71994, 30.5452 )
 texture = ExtResource( 30 )
 offset = Vector2( -0.71994, -30.5452 )
 
-[node name="Cutout 3 backleft" type="Node2D" parent="Assembled 8 Directions"]
+[node name="NW Cutout 3 backleft" type="Node2D" parent="Assembled 8 Directions"]
 visible = false
 
-[node name="body" type="Sprite" parent="Assembled 8 Directions/Cutout 3 backleft"]
+[node name="NW body" type="Sprite" parent="Assembled 8 Directions/NW Cutout 3 backleft"]
 texture = ExtResource( 34 )
 
-[node name="face" type="Sprite" parent="Assembled 8 Directions/Cutout 3 backleft/body"]
+[node name="NW face" type="Sprite" parent="Assembled 8 Directions/NW Cutout 3 backleft/NW body"]
 position = Vector2( -45.4338, 9.74107 )
 texture = ExtResource( 37 )
 offset = Vector2( 45.4338, -9.74107 )
 
-[node name="anennaF" type="Sprite" parent="Assembled 8 Directions/Cutout 3 backleft/body"]
+[node name="NW anennaF" type="Sprite" parent="Assembled 8 Directions/NW Cutout 3 backleft/NW body"]
 position = Vector2( -17.8115, -69.4547 )
 texture = ExtResource( 35 )
 offset = Vector2( 17.8115, 69.4547 )
 
-[node name="antennaR" type="Sprite" parent="Assembled 8 Directions/Cutout 3 backleft/body"]
-position = Vector2( 27.4681, -59.4897 )
+[node name="NW antennaR" type="Sprite" parent="Assembled 8 Directions/NW Cutout 3 backleft/NW body"]
+position = Vector2( 25.1211, -58.1966 )
 texture = ExtResource( 39 )
-offset = Vector2( -27.4681, 59.4897 )
+offset = Vector2( -25.1211, 58.1966 )
 
-[node name="antennaL" type="Sprite" parent="Assembled 8 Directions/Cutout 3 backleft/body"]
-position = Vector2( -3.82552, -43.2309 )
+[node name="NW antennaL" type="Sprite" parent="Assembled 8 Directions/NW Cutout 3 backleft/NW body"]
+position = Vector2( -3.95508, -40.53 )
 texture = ExtResource( 40 )
-offset = Vector2( 3.82552, 43.2309 )
+offset = Vector2( 3.95508, 40.53 )
 
-[node name="armR" type="Sprite" parent="Assembled 8 Directions/Cutout 3 backleft/body"]
+[node name="NW armR" type="Sprite" parent="Assembled 8 Directions/NW Cutout 3 backleft/NW body"]
 position = Vector2( 33.0625, 7.46826 )
 texture = ExtResource( 32 )
 offset = Vector2( -33.0625, -7.46826 )
 
-[node name="armL" type="Sprite" parent="Assembled 8 Directions/Cutout 3 backleft/body"]
+[node name="NW armL" type="Sprite" parent="Assembled 8 Directions/NW Cutout 3 backleft/NW body"]
 position = Vector2( -50.8534, 26.1745 )
 texture = ExtResource( 36 )
 offset = Vector2( 50.8534, -26.1745 )
 
-[node name="legR" type="Sprite" parent="Assembled 8 Directions/Cutout 3 backleft/body"]
+[node name="NW legR" type="Sprite" parent="Assembled 8 Directions/NW Cutout 3 backleft/NW body"]
 show_behind_parent = true
 position = Vector2( 21.1744, 24.4263 )
 texture = ExtResource( 33 )
 offset = Vector2( -21.1744, -24.4263 )
 
-[node name="legL" type="Sprite" parent="Assembled 8 Directions/Cutout 3 backleft/body"]
-position = Vector2( -30.9234, 37.5381 )
+[node name="NW legL" type="Sprite" parent="Assembled 8 Directions/NW Cutout 3 backleft/NW body"]
+position = Vector2( -24.198, 51.8513 )
 texture = ExtResource( 38 )
-offset = Vector2( 30.9234, -37.5381 )
+offset = Vector2( 24.198, -51.8513 )
 
-[node name="Cutout 4 back" type="Node2D" parent="Assembled 8 Directions"]
+[node name="N Cutout 4 back" type="Node2D" parent="Assembled 8 Directions"]
+visible = false
 
-[node name="body" type="Sprite" parent="Assembled 8 Directions/Cutout 4 back"]
+[node name="N body" type="Sprite" parent="Assembled 8 Directions/N Cutout 4 back"]
 texture = ExtResource( 41 )
 
-[node name="face" type="Sprite" parent="Assembled 8 Directions/Cutout 4 back/body"]
+[node name="N face" type="Sprite" parent="Assembled 8 Directions/N Cutout 4 back/N body"]
 position = Vector2( 0.195465, 2.748 )
 texture = ExtResource( 42 )
 offset = Vector2( -0.195465, -2.748 )
 
-[node name="anennaF" type="Sprite" parent="Assembled 8 Directions/Cutout 4 back/body"]
+[node name="N anennaF" type="Sprite" parent="Assembled 8 Directions/N Cutout 4 back/N body"]
 position = Vector2( 0.195465, -61.5876 )
 texture = ExtResource( 44 )
 offset = Vector2( -0.195465, 61.5876 )
 
-[node name="antennaR" type="Sprite" parent="Assembled 8 Directions/Cutout 4 back/body"]
+[node name="N antennaR" type="Sprite" parent="Assembled 8 Directions/N Cutout 4 back/N body"]
 position = Vector2( 24.1465, -33.6156 )
 texture = ExtResource( 43 )
 offset = Vector2( -24.1465, 33.6156 )
 
-[node name="antennaL" type="Sprite" parent="Assembled 8 Directions/Cutout 4 back/body"]
+[node name="N antennaL" type="Sprite" parent="Assembled 8 Directions/N Cutout 4 back/N body"]
 position = Vector2( -20.9584, -36.4128 )
 texture = ExtResource( 49 )
 offset = Vector2( 20.9584, 36.4128 )
 
-[node name="armR" type="Sprite" parent="Assembled 8 Directions/Cutout 4 back/body"]
-position = Vector2( 26.2444, 0.999741 )
+[node name="N armR" type="Sprite" parent="Assembled 8 Directions/N Cutout 4 back/N body"]
+position = Vector2( 61.9264, 0.323883 )
 texture = ExtResource( 46 )
-offset = Vector2( -26.2444, -0.999741 )
+offset = Vector2( -61.9264, -0.323883 )
 
-[node name="armL" type="Sprite" parent="Assembled 8 Directions/Cutout 4 back/body"]
-position = Vector2( -26.5527, 9.741 )
+[node name="N armL" type="Sprite" parent="Assembled 8 Directions/N Cutout 4 back/N body"]
+position = Vector2( -61.3713, 1.42804 )
 texture = ExtResource( 45 )
-offset = Vector2( 26.5527, -9.741 )
+offset = Vector2( 61.3713, -1.42804 )
 
-[node name="legR" type="Sprite" parent="Assembled 8 Directions/Cutout 4 back/body"]
-position = Vector2( -39.1401, 63.0626 )
+[node name="N legR" type="Sprite" parent="Assembled 8 Directions/N Cutout 4 back/N body"]
+position = Vector2( 24.7531, 67.6776 )
 texture = ExtResource( 48 )
-offset = Vector2( 39.1401, -63.0626 )
+offset = Vector2( -24.7531, -67.6776 )
 
-[node name="legL" type="Sprite" parent="Assembled 8 Directions/Cutout 4 back/body"]
-position = Vector2( 43.2024, 55.7199 )
+[node name="N legL" type="Sprite" parent="Assembled 8 Directions/N Cutout 4 back/N body"]
+position = Vector2( -34.1354, 62.5248 )
 texture = ExtResource( 47 )
-offset = Vector2( -43.2024, -55.7199 )
+offset = Vector2( 34.1354, -62.5248 )
 
-[node name="Cutout 5 backright" type="Node2D" parent="Assembled 8 Directions"]
+[node name="NE Cutout 5 backright" type="Node2D" parent="Assembled 8 Directions"]
 visible = false
 
-[node name="body" type="Sprite" parent="Assembled 8 Directions/Cutout 5 backright"]
+[node name="NE body" type="Sprite" parent="Assembled 8 Directions/NE Cutout 5 backright"]
 texture = ExtResource( 51 )
 
-[node name="face" type="Sprite" parent="Assembled 8 Directions/Cutout 5 backright/body"]
+[node name="NE face" type="Sprite" parent="Assembled 8 Directions/NE Cutout 5 backright/NE body"]
 position = Vector2( 11.5591, -8.96527 )
 texture = ExtResource( 57 )
 offset = Vector2( -11.5591, 8.96527 )
 
-[node name="anennaF" type="Sprite" parent="Assembled 8 Directions/Cutout 5 backright/body"]
-position = Vector2( 16.4542, -69.2799 )
+[node name="NE anennaF" type="Sprite" parent="Assembled 8 Directions/NE Cutout 5 backright/NE body"]
+position = Vector2( 17.392, -67.0298 )
 texture = ExtResource( 53 )
-offset = Vector2( -16.4542, 69.2799 )
+offset = Vector2( -17.392, 67.0298 )
 
-[node name="antennaR" type="Sprite" parent="Assembled 8 Directions/Cutout 5 backright/body"]
-position = Vector2( -25.5038, -42.182 )
+[node name="NE antennaR" type="Sprite" parent="Assembled 8 Directions/NE Cutout 5 backright/NE body"]
+position = Vector2( 3.40601, -40.162 )
 texture = ExtResource( 58 )
-offset = Vector2( 25.5038, 42.182 )
+offset = Vector2( -3.40601, 40.162 )
 
-[node name="antennaL" type="Sprite" parent="Assembled 8 Directions/Cutout 5 backright/body"]
-position = Vector2( -27.6017, -60.0141 )
+[node name="NE antennaL" type="Sprite" parent="Assembled 8 Directions/NE Cutout 5 backright/NE body"]
+position = Vector2( -26.0382, -58.5646 )
 texture = ExtResource( 56 )
-offset = Vector2( 27.6017, 60.0141 )
+offset = Vector2( 26.0382, 58.5646 )
 
-[node name="armR" type="Sprite" parent="Assembled 8 Directions/Cutout 5 backright/body"]
+[node name="NE armR" type="Sprite" parent="Assembled 8 Directions/NE Cutout 5 backright/NE body"]
 position = Vector2( 52.1184, 23.2025 )
 texture = ExtResource( 54 )
 offset = Vector2( -52.1184, -23.2025 )
 
-[node name="armL" type="Sprite" parent="Assembled 8 Directions/Cutout 5 backright/body"]
+[node name="NE armL" type="Sprite" parent="Assembled 8 Directions/NE Cutout 5 backright/NE body"]
 position = Vector2( -27.9513, -10.3639 )
 texture = ExtResource( 50 )
 offset = Vector2( 27.9513, 10.3639 )
 
-[node name="legR" type="Sprite" parent="Assembled 8 Directions/Cutout 5 backright/body"]
+[node name="NE legR" type="Sprite" parent="Assembled 8 Directions/NE Cutout 5 backright/NE body"]
 position = Vector2( 24.4961, 47.8528 )
 texture = ExtResource( 55 )
 offset = Vector2( -24.4961, -47.8528 )
 
-[node name="legL" type="Sprite" parent="Assembled 8 Directions/Cutout 5 backright/body"]
+[node name="NE legL" type="Sprite" parent="Assembled 8 Directions/NE Cutout 5 backright/NE body"]
 position = Vector2( -37.2171, 30.0207 )
 texture = ExtResource( 52 )
 offset = Vector2( 37.2171, -30.0207 )
 
-[node name="Cutout 6 right" type="Node2D" parent="Assembled 8 Directions"]
+[node name="E Cutout 6 right" type="Node2D" parent="Assembled 8 Directions"]
 visible = false
 
-[node name="body" type="Sprite" parent="Assembled 8 Directions/Cutout 6 right"]
+[node name="E body" type="Sprite" parent="Assembled 8 Directions/E Cutout 6 right"]
 texture = ExtResource( 67 )
 
-[node name="face" type="Sprite" parent="Assembled 8 Directions/Cutout 6 right/body"]
+[node name="E face" type="Sprite" parent="Assembled 8 Directions/E Cutout 6 right/E body"]
 position = Vector2( 59.4611, -15.259 )
 texture = ExtResource( 66 )
 offset = Vector2( -59.4611, 15.259 )
 
-[node name="anennaF" type="Sprite" parent="Assembled 8 Directions/Cutout 6 right/body"]
-position = Vector2( 22.9227, -52.4967 )
+[node name="E anennaF" type="Sprite" parent="Assembled 8 Directions/E Cutout 6 right/E body"]
+position = Vector2( 22.5447, -51.2035 )
 texture = ExtResource( 61 )
-offset = Vector2( -22.9227, 52.4967 )
+offset = Vector2( -22.5447, 51.2035 )
 
-[node name="antennaR" type="Sprite" parent="Assembled 8 Directions/Cutout 6 right/body"]
-position = Vector2( -17.6367, -36.5876 )
+[node name="E antennaR" type="Sprite" parent="Assembled 8 Directions/E Cutout 6 right/E body"]
+position = Vector2( -18.3091, -35.7453 )
 texture = ExtResource( 60 )
-offset = Vector2( 17.6367, 36.5876 )
+offset = Vector2( 18.3091, 35.7453 )
 
-[node name="antennaL" type="Sprite" parent="Assembled 8 Directions/Cutout 6 right/body"]
-position = Vector2( -18.6856, -68.5806 )
+[node name="E antennaL" type="Sprite" parent="Assembled 8 Directions/E Cutout 6 right/E body"]
+position = Vector2( -21.2535, -65.9257 )
 texture = ExtResource( 63 )
-offset = Vector2( 18.6856, 68.5806 )
+offset = Vector2( 21.2535, 65.9257 )
 
-[node name="armR" type="Sprite" parent="Assembled 8 Directions/Cutout 6 right/body"]
+[node name="E armR" type="Sprite" parent="Assembled 8 Directions/E Cutout 6 right/E body"]
 position = Vector2( -1.90244, 44.5311 )
 texture = ExtResource( 64 )
 offset = Vector2( 1.90244, -44.5311 )
 
-[node name="armL" type="Sprite" parent="Assembled 8 Directions/Cutout 6 right/body"]
+[node name="E armL" type="Sprite" parent="Assembled 8 Directions/E Cutout 6 right/E body"]
 position = Vector2( -3.47586, -15.259 )
 texture = ExtResource( 62 )
 offset = Vector2( 3.47586, 15.259 )
 
-[node name="legR" type="Sprite" parent="Assembled 8 Directions/Cutout 6 right/body"]
+[node name="E legR" type="Sprite" parent="Assembled 8 Directions/E Cutout 6 right/E body"]
 position = Vector2( 0.71994, 46.1046 )
 texture = ExtResource( 65 )
 offset = Vector2( -0.71994, -46.1046 )
 
-[node name="legL" type="Sprite" parent="Assembled 8 Directions/Cutout 6 right/body"]
+[node name="E legL" type="Sprite" parent="Assembled 8 Directions/E Cutout 6 right/E body"]
 position = Vector2( -1.02832, -22.4268 )
 texture = ExtResource( 59 )
 offset = Vector2( 1.02832, 22.4268 )
 
-[node name="Cutout 7 frontright" type="Node2D" parent="Assembled 8 Directions"]
-visible = false
+[node name="SE Cutout 7 frontright" type="Node2D" parent="Assembled 8 Directions"]
 
-[node name="body" type="Sprite" parent="Assembled 8 Directions/Cutout 7 frontright"]
+[node name="SE body" type="Sprite" parent="Assembled 8 Directions/SE Cutout 7 frontright"]
 texture = ExtResource( 74 )
 
-[node name="face" type="Sprite" parent="Assembled 8 Directions/Cutout 7 frontright/body"]
+[node name="SE face" type="Sprite" parent="Assembled 8 Directions/SE Cutout 7 frontright/SE body"]
 position = Vector2( 45.4751, 8.86687 )
 texture = ExtResource( 68 )
 offset = Vector2( -45.4751, -8.86687 )
 
-[node name="anennaF" type="Sprite" parent="Assembled 8 Directions/Cutout 7 frontright/body"]
+[node name="SE anennaF" type="Sprite" parent="Assembled 8 Directions/SE Cutout 7 frontright/SE body"]
 position = Vector2( 16.8038, -47.6016 )
 texture = ExtResource( 69 )
 offset = Vector2( -16.8038, 47.6016 )
 
-[node name="antennaR" type="Sprite" parent="Assembled 8 Directions/Cutout 7 frontright/body"]
+[node name="SE antennaR" type="Sprite" parent="Assembled 8 Directions/SE Cutout 7 frontright/SE body"]
 position = Vector2( -26.3779, -52.4967 )
 texture = ExtResource( 70 )
 offset = Vector2( 26.3779, 52.4967 )
 
-[node name="antennaL" type="Sprite" parent="Assembled 8 Directions/Cutout 7 frontright/body"]
+[node name="SE antennaL" type="Sprite" parent="Assembled 8 Directions/SE Cutout 7 frontright/SE body"]
 position = Vector2( 2.81783, -73.3008 )
 texture = ExtResource( 76 )
 offset = Vector2( -2.81783, 73.3008 )
 
-[node name="armR" type="Sprite" parent="Assembled 8 Directions/Cutout 7 frontright/body"]
-position = Vector2( -46.1331, 28.0976 )
+[node name="SE armR" type="Sprite" parent="Assembled 8 Directions/SE Cutout 7 frontright/SE body"]
+position = Vector2( -42.2326, 23.1432 )
 texture = ExtResource( 72 )
-offset = Vector2( 46.1331, -28.0976 )
+offset = Vector2( 42.2326, -23.1432 )
 
-[node name="armL" type="Sprite" parent="Assembled 8 Directions/Cutout 7 frontright/body"]
+[node name="SE armL" type="Sprite" parent="Assembled 8 Directions/SE Cutout 7 frontright/SE body"]
 position = Vector2( 45.9996, -26.6226 )
 texture = ExtResource( 71 )
 offset = Vector2( -45.9996, 26.6226 )
 
-[node name="legR" type="Sprite" parent="Assembled 8 Directions/Cutout 7 frontright/body"]
+[node name="SE legR" type="Sprite" parent="Assembled 8 Directions/SE Cutout 7 frontright/SE body"]
 position = Vector2( -33.5457, 41.9088 )
 texture = ExtResource( 73 )
 offset = Vector2( 33.5457, -41.9088 )
 
-[node name="legL" type="Sprite" parent="Assembled 8 Directions/Cutout 7 frontright/body"]
+[node name="SE legL" type="Sprite" parent="Assembled 8 Directions/SE Cutout 7 frontright/SE body"]
 position = Vector2( 39.7059, -1.79745 )
 texture = ExtResource( 75 )
 offset = Vector2( -39.7059, 1.79745 )
