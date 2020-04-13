@@ -20,7 +20,10 @@ onready var sprite = $AnimatedSprite
 onready var stats = $Stats
 onready var playerDetectionZone = $PlayerDetectionZone
 onready var player = get_tree().get_nodes_in_group("player")[0]
+onready var animationTree_dirs = $"Pet 8 Directions/AnimationTree_dirs"
 
+func _ready() -> void:
+	animationTree_dirs.active = true
 
 func _physics_process(delta):
 	
@@ -35,6 +38,7 @@ func _physics_process(delta):
 		CHASE:
 			var direction = (player.global_position - global_position).normalized()
 			velocity = velocity.move_toward(direction * MAX_SPEED, ACCELERATION * delta)
+			animationTree_dirs.set("parameters/BlendSpace/blend_position", velocity)
 			sprite.flip_h = velocity.x < 0
 			if playerDetectionZone.player:
 				state = IDLE

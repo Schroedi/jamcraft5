@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://Enemies/PlayerDetectionZone.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Overlap/Hurtbox.tscn" type="PackedScene" id=2]
@@ -82,58 +82,59 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, -25 ), Vector2( 0, 25 ), Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=18]
+[sub_resource type="AnimationNodeAnimation" id=11]
 animation = "W"
 
-[sub_resource type="AnimationNodeAnimation" id=19]
-animation = "N"
-
-[sub_resource type="AnimationNodeAnimation" id=20]
-animation = "E"
-
-[sub_resource type="AnimationNodeAnimation" id=21]
+[sub_resource type="AnimationNodeAnimation" id=12]
 animation = "S"
 
-[sub_resource type="AnimationNodeAnimation" id=22]
+[sub_resource type="AnimationNodeAnimation" id=13]
+animation = "E"
+
+[sub_resource type="AnimationNodeAnimation" id=14]
+animation = "N"
+
+[sub_resource type="AnimationNodeAnimation" id=15]
+animation = "NW"
+
+[sub_resource type="AnimationNodeAnimation" id=16]
 animation = "SW"
 
-[sub_resource type="AnimationNodeAnimation" id=23]
-animation = "NE"
-
-[sub_resource type="AnimationNodeAnimation" id=24]
-animation = "NE"
-
-[sub_resource type="AnimationNodeAnimation" id=25]
+[sub_resource type="AnimationNodeAnimation" id=17]
 animation = "SE"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=26]
-blend_point_0/node = SubResource( 18 )
+[sub_resource type="AnimationNodeAnimation" id=18]
+animation = "NE"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=19]
+blend_point_0/node = SubResource( 11 )
 blend_point_0/pos = Vector2( -0.9, 0 )
-blend_point_1/node = SubResource( 19 )
+blend_point_1/node = SubResource( 12 )
 blend_point_1/pos = Vector2( 0, 0.9 )
-blend_point_2/node = SubResource( 20 )
-blend_point_2/pos = Vector2( 0.9, 0 )
-blend_point_3/node = SubResource( 21 )
+blend_point_2/node = SubResource( 13 )
+blend_point_2/pos = Vector2( 0.8, 0 )
+blend_point_3/node = SubResource( 14 )
 blend_point_3/pos = Vector2( 0, -0.9 )
-blend_point_4/node = SubResource( 22 )
+blend_point_4/node = SubResource( 15 )
 blend_point_4/pos = Vector2( -0.5, -0.6 )
-blend_point_5/node = SubResource( 23 )
+blend_point_5/node = SubResource( 16 )
 blend_point_5/pos = Vector2( -0.5, 0.6 )
-blend_point_6/node = SubResource( 24 )
+blend_point_6/node = SubResource( 17 )
 blend_point_6/pos = Vector2( 0.5, 0.6 )
-blend_point_7/node = SubResource( 25 )
+blend_point_7/node = SubResource( 18 )
 blend_point_7/pos = Vector2( 0.5, -0.6 )
+blend_mode = 1
 
-[sub_resource type="AnimationNodeStateMachine" id=27]
-states/BlendSpace2D/node = SubResource( 26 )
-states/BlendSpace2D/position = Vector2( -2514, -425 )
-graph_offset = Vector2( -2907, -727 )
+[sub_resource type="AnimationNodeStateMachine" id=20]
+states/BlendSpace/node = SubResource( 19 )
+states/BlendSpace/position = Vector2( -2513.5, -425 )
+start_node = "BlendSpace"
+graph_offset = Vector2( -3259, -581 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=28]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=21]
 
-[sub_resource type="Animation" id=12]
-resource_name = "E"
-length = 0.5
+[sub_resource type="Animation" id=22]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("Pet/S Pet:visible")
 tracks/0/interp = 1
@@ -231,9 +232,8 @@ tracks/7/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=13]
-resource_name = "N"
-length = 0.5
+[sub_resource type="Animation" id=23]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("Pet/S Pet:visible")
 tracks/0/interp = 1
@@ -331,9 +331,8 @@ tracks/7/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=14]
-resource_name = "NE"
-length = 0.5
+[sub_resource type="Animation" id=24]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("Pet/S Pet:visible")
 tracks/0/interp = 1
@@ -431,9 +430,8 @@ tracks/7/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=15]
-resource_name = "NW"
-length = 0.5
+[sub_resource type="Animation" id=25]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("Pet/S Pet:visible")
 tracks/0/interp = 1
@@ -531,9 +529,207 @@ tracks/7/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=26]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Pet/S Pet:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Pet/SW Pet:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Pet/W Pet:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Pet/E Pet:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Pet/N Pet:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Pet/NW Pet:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Pet/NE Pet:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Pet/SE Pet:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=27]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Pet/S Pet:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Pet/SW Pet:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Pet/W Pet:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Pet/E Pet:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Pet/N Pet:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Pet/NW Pet:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Pet/NE Pet:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Pet/SE Pet:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=29]
 resource_name = "SW"
-length = 0.5
+length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("Pet/S Pet:visible")
 tracks/0/interp = 1
@@ -631,109 +827,8 @@ tracks/7/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=16]
-resource_name = "SE"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("Pet/S Pet:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Pet/SW Pet:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Pet/W Pet:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("Pet/E Pet:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("Pet/N Pet:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("Pet/NW Pet:visible")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("Pet/NE Pet:visible")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("Pet/SE Pet:visible")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-
-[sub_resource type="Animation" id=17]
-resource_name = "W"
-length = 0.5
+[sub_resource type="Animation" id=28]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("Pet/S Pet:visible")
 tracks/0/interp = 1
@@ -873,10 +968,9 @@ position = Vector2( 0, -200 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Pet" type="Node2D" parent="Pet 8 Directions"]
-position = Vector2( 0, 5.01377 )
-rotation = 0.0112009
 
 [node name="S Pet" type="Node2D" parent="Pet 8 Directions/Pet"]
+visible = false
 position = Vector2( 0, 2.94578 )
 rotation = 0.0571384
 
@@ -904,7 +998,6 @@ texture = ExtResource( 10 )
 [node name="W Bodypart2" type="Sprite" parent="Pet 8 Directions/Pet/W Pet/W Body"]
 
 [node name="NW Pet" type="Node2D" parent="Pet 8 Directions/Pet"]
-visible = false
 
 [node name="NW Body" type="Sprite" parent="Pet 8 Directions/Pet/NW Pet"]
 texture = ExtResource( 14 )
@@ -944,24 +1037,25 @@ texture = ExtResource( 11 )
 [node name="SE Bodypart" type="Sprite" parent="Pet 8 Directions/Pet/SE Pet/SE Body"]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Pet 8 Directions"]
+autoplay = "Idle"
 anims/Idle = SubResource( 10 )
 
 [node name="AnimationTree_dirs" type="AnimationTree" parent="Pet 8 Directions"]
-tree_root = SubResource( 27 )
+tree_root = SubResource( 20 )
 anim_player = NodePath("../AnimationPlayer_dirs")
 active = true
-parameters/playback = SubResource( 28 )
-parameters/BlendSpace2D/blend_position = Vector2( -0.183587, 0.351852 )
+parameters/playback = SubResource( 21 )
+parameters/BlendSpace/blend_position = Vector2( 0, 0 )
 
 [node name="AnimationPlayer_dirs" type="AnimationPlayer" parent="Pet 8 Directions"]
-anims/E = SubResource( 12 )
-anims/N = SubResource( 13 )
-anims/NE = SubResource( 14 )
-anims/NW = SubResource( 15 )
-anims/S = SubResource( 11 )
-anims/SE = SubResource( 16 )
-anims/SW = SubResource( 11 )
-anims/W = SubResource( 17 )
+anims/E = SubResource( 22 )
+anims/N = SubResource( 23 )
+anims/NE = SubResource( 24 )
+anims/NW = SubResource( 25 )
+anims/S = SubResource( 26 )
+anims/SE = SubResource( 27 )
+anims/SW = SubResource( 29 )
+anims/W = SubResource( 28 )
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="no_health" from="Stats" to="." method="_on_Stats_no_health"]
 
