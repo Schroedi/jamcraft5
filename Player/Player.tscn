@@ -1,4 +1,4 @@
-[gd_scene load_steps=124 format=2]
+[gd_scene load_steps=125 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=2]
 [ext_resource path="res://Smurp/skeleton assets/Smurp_armR_0_front.png" type="Texture" id=5]
@@ -375,206 +375,110 @@ tracks/12/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -10 ), Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=19]
-animation = "S"
+[sub_resource type="Animation" id=19]
+resource_name = "Walk"
 
 [sub_resource type="AnimationNodeAnimation" id=20]
-animation = "Idle 1 Frontleft"
-
-[sub_resource type="AnimationNodeAnimation" id=21]
-animation = "W"
-
-[sub_resource type="AnimationNodeAnimation" id=22]
-animation = "NE"
-
-[sub_resource type="AnimationNodeAnimation" id=23]
-animation = "N"
-
-[sub_resource type="AnimationNodeAnimation" id=24]
-animation = "Idle 5 Backright"
-
-[sub_resource type="AnimationNodeAnimation" id=25]
-animation = "Idle 6 Right"
-
-[sub_resource type="AnimationNodeAnimation" id=26]
-animation = "Idle 7 Frontright"
-
-[sub_resource type="AnimationNodeBlendSpace2D" id=27]
-blend_point_0/node = SubResource( 19 )
-blend_point_0/pos = Vector2( 0, -1 )
-blend_point_1/node = SubResource( 20 )
-blend_point_1/pos = Vector2( -0.7, -0.7 )
-blend_point_2/node = SubResource( 21 )
-blend_point_2/pos = Vector2( -1, 0 )
-blend_point_3/node = SubResource( 22 )
-blend_point_3/pos = Vector2( -0.7, 0.7 )
-blend_point_4/node = SubResource( 23 )
-blend_point_4/pos = Vector2( 0, 1 )
-blend_point_5/node = SubResource( 24 )
-blend_point_5/pos = Vector2( 0.7, 0.7 )
-blend_point_6/node = SubResource( 25 )
-blend_point_6/pos = Vector2( 1, 0 )
-blend_point_7/node = SubResource( 26 )
-blend_point_7/pos = Vector2( 0.7, -0.7 )
-blend_mode = 1
-
-[sub_resource type="AnimationNodeStateMachine" id=28]
-states/Idle/node = SubResource( 27 )
-states/Idle/position = Vector2( 534, 204 )
-start_node = "Idle"
-graph_offset = Vector2( 164, 64 )
-
-[sub_resource type="AnimationNodeStateMachinePlayback" id=29]
-
-[sub_resource type="AnimationNodeAnimation" id=30]
-animation = "N"
-
-[sub_resource type="AnimationNodeAnimation" id=31]
-animation = "NW"
-
-[sub_resource type="AnimationNodeAnimation" id=32]
-animation = "W"
-
-[sub_resource type="AnimationNodeAnimation" id=33]
-animation = "SW"
-
-[sub_resource type="AnimationNodeAnimation" id=34]
 animation = "S"
 
-[sub_resource type="AnimationNodeAnimation" id=35]
-animation = "SE"
+[sub_resource type="AnimationNodeAnimation" id=21]
+animation = "Idle 1 Frontleft"
 
-[sub_resource type="AnimationNodeAnimation" id=36]
-animation = "E"
+[sub_resource type="AnimationNodeAnimation" id=22]
+animation = "W"
 
-[sub_resource type="AnimationNodeAnimation" id=37]
+[sub_resource type="AnimationNodeAnimation" id=23]
 animation = "NE"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=38]
-blend_point_0/node = SubResource( 30 )
+[sub_resource type="AnimationNodeAnimation" id=24]
+animation = "N"
+
+[sub_resource type="AnimationNodeAnimation" id=25]
+animation = "Idle 5 Backright"
+
+[sub_resource type="AnimationNodeAnimation" id=26]
+animation = "Idle 6 Right"
+
+[sub_resource type="AnimationNodeAnimation" id=27]
+animation = "Idle 7 Frontright"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=28]
+blend_point_0/node = SubResource( 20 )
 blend_point_0/pos = Vector2( 0, -1 )
-blend_point_1/node = SubResource( 31 )
+blend_point_1/node = SubResource( 21 )
 blend_point_1/pos = Vector2( -0.7, -0.7 )
-blend_point_2/node = SubResource( 32 )
+blend_point_2/node = SubResource( 22 )
 blend_point_2/pos = Vector2( -1, 0 )
-blend_point_3/node = SubResource( 33 )
+blend_point_3/node = SubResource( 23 )
 blend_point_3/pos = Vector2( -0.7, 0.7 )
-blend_point_4/node = SubResource( 34 )
+blend_point_4/node = SubResource( 24 )
 blend_point_4/pos = Vector2( 0, 1 )
-blend_point_5/node = SubResource( 35 )
+blend_point_5/node = SubResource( 25 )
 blend_point_5/pos = Vector2( 0.7, 0.7 )
-blend_point_6/node = SubResource( 36 )
+blend_point_6/node = SubResource( 26 )
 blend_point_6/pos = Vector2( 1, 0 )
-blend_point_7/node = SubResource( 37 )
+blend_point_7/node = SubResource( 27 )
 blend_point_7/pos = Vector2( 0.7, -0.7 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeStateMachine" id=39]
-states/Idle/node = SubResource( 38 )
+[sub_resource type="AnimationNodeStateMachine" id=29]
+states/Idle/node = SubResource( 28 )
 states/Idle/position = Vector2( 534, 204 )
 start_node = "Idle"
 graph_offset = Vector2( 164, 64 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=40]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=30]
 
-[sub_resource type="Animation" id=41]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("S Cutout 0 front:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("SW Cutout 1 frontleft:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("W Cutout 2 left:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("NW Cutout 3 backleft:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("N Cutout 4 back:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("NE Cutout 5 backright:visible")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("E Cutout 6 right:visible")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("SE Cutout 7 frontright:visible")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
+[sub_resource type="AnimationNodeAnimation" id=31]
+animation = "N"
+
+[sub_resource type="AnimationNodeAnimation" id=32]
+animation = "NW"
+
+[sub_resource type="AnimationNodeAnimation" id=33]
+animation = "W"
+
+[sub_resource type="AnimationNodeAnimation" id=34]
+animation = "SW"
+
+[sub_resource type="AnimationNodeAnimation" id=35]
+animation = "S"
+
+[sub_resource type="AnimationNodeAnimation" id=36]
+animation = "SE"
+
+[sub_resource type="AnimationNodeAnimation" id=37]
+animation = "E"
+
+[sub_resource type="AnimationNodeAnimation" id=38]
+animation = "NE"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=39]
+blend_point_0/node = SubResource( 31 )
+blend_point_0/pos = Vector2( 0, -1 )
+blend_point_1/node = SubResource( 32 )
+blend_point_1/pos = Vector2( -0.7, -0.7 )
+blend_point_2/node = SubResource( 33 )
+blend_point_2/pos = Vector2( -1, 0 )
+blend_point_3/node = SubResource( 34 )
+blend_point_3/pos = Vector2( -0.7, 0.7 )
+blend_point_4/node = SubResource( 35 )
+blend_point_4/pos = Vector2( 0, 1 )
+blend_point_5/node = SubResource( 36 )
+blend_point_5/pos = Vector2( 0.7, 0.7 )
+blend_point_6/node = SubResource( 37 )
+blend_point_6/pos = Vector2( 1, 0 )
+blend_point_7/node = SubResource( 38 )
+blend_point_7/pos = Vector2( 0.7, -0.7 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachine" id=40]
+states/Idle/node = SubResource( 39 )
+states/Idle/position = Vector2( 534, 204 )
+start_node = "Idle"
+graph_offset = Vector2( 164, 64 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=41]
 
 [sub_resource type="Animation" id=42]
 length = 0.001
@@ -636,7 +540,7 @@ tracks/4/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ true ]
+"values": [ false ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("NE Cutout 5 backright:visible")
@@ -660,7 +564,7 @@ tracks/6/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ false ]
+"values": [ true ]
 }
 tracks/7/type = "value"
 tracks/7/path = NodePath("SE Cutout 7 frontright:visible")
@@ -735,7 +639,7 @@ tracks/4/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ false ]
+"values": [ true ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("NE Cutout 5 backright:visible")
@@ -747,7 +651,7 @@ tracks/5/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ true ]
+"values": [ false ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("E Cutout 6 right:visible")
@@ -822,7 +726,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ true ]
+"values": [ false ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("N Cutout 4 back:visible")
@@ -846,7 +750,7 @@ tracks/5/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ false ]
+"values": [ true ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("E Cutout 6 right:visible")
@@ -885,7 +789,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ true ]
+"values": [ false ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("SW Cutout 1 frontleft:visible")
@@ -921,7 +825,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ false ]
+"values": [ true ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("N Cutout 4 back:visible")
@@ -984,6 +888,105 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SW Cutout 1 frontleft:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("W Cutout 2 left:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("NW Cutout 3 backleft:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("N Cutout 4 back:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("NE Cutout 5 backright:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("E Cutout 6 right:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("SE Cutout 7 frontright:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=47]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("S Cutout 0 front:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
 "values": [ false ]
 }
 tracks/1/type = "value"
@@ -1071,7 +1074,7 @@ tracks/7/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=47]
+[sub_resource type="Animation" id=48]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("S Cutout 0 front:visible")
@@ -1170,7 +1173,7 @@ tracks/7/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=48]
+[sub_resource type="Animation" id=49]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("S Cutout 0 front:visible")
@@ -1586,7 +1589,6 @@ texture = ExtResource( 52 )
 offset = Vector2( 37.2171, -30.0207 )
 
 [node name="E Cutout 6 right" type="Node2D" parent="Assembled 8 Directions"]
-visible = false
 
 [node name="E body" type="Sprite" parent="Assembled 8 Directions/E Cutout 6 right"]
 texture = ExtResource( 67 )
@@ -1632,6 +1634,7 @@ texture = ExtResource( 59 )
 offset = Vector2( 1.02832, 22.4268 )
 
 [node name="SE Cutout 7 frontright" type="Node2D" parent="Assembled 8 Directions"]
+visible = false
 
 [node name="SE body" type="Sprite" parent="Assembled 8 Directions/SE Cutout 7 frontright"]
 texture = ExtResource( 74 )
@@ -1679,25 +1682,26 @@ offset = Vector2( -39.7059, 1.79745 )
 [node name="AnimationPlayer" parent="Assembled 8 Directions" instance=ExtResource( 78 )]
 autoplay = "Idle"
 anims/Idle = SubResource( 18 )
+anims/Walk = SubResource( 19 )
 
 [node name="AnimationTree" type="AnimationTree" parent="Assembled 8 Directions"]
-tree_root = SubResource( 28 )
+tree_root = SubResource( 29 )
 anim_player = NodePath("../AnimationPlayer")
-parameters/playback = SubResource( 29 )
+parameters/playback = SubResource( 30 )
 parameters/Idle/blend_position = Vector2( -0.999596, -0.00836325 )
 
 [node name="AnimationTree_dirs" type="AnimationTree" parent="Assembled 8 Directions"]
-tree_root = SubResource( 39 )
+tree_root = SubResource( 40 )
 anim_player = NodePath("../AnimationPlayer_dirs")
-parameters/playback = SubResource( 40 )
+parameters/playback = SubResource( 41 )
 parameters/Idle/blend_position = Vector2( -0.736024, 0.400853 )
 
 [node name="AnimationPlayer_dirs" type="AnimationPlayer" parent="Assembled 8 Directions"]
-anims/E = SubResource( 41 )
-anims/N = SubResource( 42 )
-anims/NE = SubResource( 43 )
-anims/NW = SubResource( 44 )
-anims/S = SubResource( 45 )
-anims/SE = SubResource( 46 )
-anims/SW = SubResource( 47 )
-anims/W = SubResource( 48 )
+anims/E = SubResource( 42 )
+anims/N = SubResource( 43 )
+anims/NE = SubResource( 44 )
+anims/NW = SubResource( 45 )
+anims/S = SubResource( 46 )
+anims/SE = SubResource( 47 )
+anims/SW = SubResource( 48 )
+anims/W = SubResource( 49 )
