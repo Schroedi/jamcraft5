@@ -46,7 +46,6 @@ func seek_player():
 		state = IDLE
 	else:
 		state = CHASE
-		print("chase")
 
 func _on_Hurtbox_area_entered(area):
 	stats.health -= area.damage

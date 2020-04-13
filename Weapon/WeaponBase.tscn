@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Overlap/Hitbox.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player/SwordHitbox.gd" type="Script" id=2]
+[ext_resource path="res://Weapon/WeaponBase.gd" type="Script" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 4.45027
+height = 144.957
+
+[node name="Weapon" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Hitbox" parent="." instance=ExtResource( 1 )]
+position = Vector2( -0.224396, -20.1958 )
+monitorable = false
+collision_mask = 8
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2( 0.905457, -57.648 )
+shape = SubResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+rotation = 0.00229273
+polygon = PoolVector2Array( -4.04668, -3.82168, -4.17201, -58.4867, -4.71109, -123.303, -0.102512, -156.893, 4.85932, -121.568, 4.81268, -56.7502, 5.12968, -3.64748 )
+
+[editable path="Hitbox"]
