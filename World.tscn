@@ -40,7 +40,6 @@ ROLL_SPEED = 5
 [node name="StaticBody" type="StaticBody" parent="."]
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0002, 0 )
 shape = SubResource( 1 )
 
 [node name="Floor" type="MeshInstance" parent="StaticBody"]
@@ -54,7 +53,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.856, 0.163511, -0.0455623 )
 transform = Transform( 0.871188, -0.32605, 0.367046, 0, 0.747624, 0.664122, -0.490949, -0.578575, 0.651321, 0, 2.14761, 0 )
 light_energy = 0.47
 shadow_enabled = true
-directional_shadow_normal_bias = 0.4
+shadow_bias = 0.2
 directional_shadow_depth_range = 1
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
