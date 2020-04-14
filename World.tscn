@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://World/Tree.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World/Stone.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World/autumn_forest_01_1k.hdr" type="Texture" id=4]
+[ext_resource path="res://Enemies/Bat.tscn" type="PackedScene" id=5]
 [ext_resource path="res://World/Grass.tscn" type="PackedScene" id=6]
 [ext_resource path="res://World/BG_grob/BG3.png" type="Texture" id=14]
 
@@ -51,7 +52,7 @@ material/0 = SubResource( 3 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.856, 0.163511, -0.0455623 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 0.871188, -0.32605, 0.367046, 0, 0.747624, 0.664122, -0.490949, -0.578575, 0.651321, 0, 2.14761, 0 )
+transform = Transform( 0.871188, -0.32605, 0.367045, 0, 0.747624, 0.664122, -0.490949, -0.578575, 0.651321, 0, 2.14761, 0 )
 light_energy = 0.47
 shadow_enabled = true
 shadow_bias = 0.2
@@ -109,3 +110,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.04369, 0.148597, 2.62889 )
 
 [node name="Tree6" parent="Forest" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.04369, 0.148597, 5.98977 )
+
+[node name="Bat" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1102, 0.0204264, 0.826481 )

@@ -10,6 +10,7 @@ extents = Vector3( 0.673, 1, 0.1 )
 [node name="Sprite" type="Sprite3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.74305, 0 )
 shaded = true
+double_sided = false
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape" parent="."]

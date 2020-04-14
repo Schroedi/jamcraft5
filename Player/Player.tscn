@@ -129,12 +129,13 @@ graph_offset = Vector2( -165.944, 12.45 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=16]
 
-[sub_resource type="CapsuleShape" id=49]
-radius = 0.475387
+[sub_resource type="CapsuleShape" id=17]
+radius = 0.493648
 height = 0.46643
 
 [node name="Player" type="KinematicBody"]
 collision_layer = 2
+collision_mask = 17
 script = ExtResource( 2 )
 ACCELERATION = 5
 MAX_SPEED = 2
@@ -155,7 +156,7 @@ parameters/playback = SubResource( 16 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0.728319, 0 )
-shape = SubResource( 49 )
+shape = SubResource( 17 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.756002, 0.654569, 0, -0.654569, 0.756002, 0, 3.72882, 5.327 )

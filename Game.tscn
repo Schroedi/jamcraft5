@@ -117,7 +117,7 @@ __meta__ = {
 [node name="Viewport" type="Viewport" parent="GameWorld"]
 size = Vector2( 1920, 1080 )
 handle_input_locally = false
-msaa = 1
+msaa = 2
 render_target_update_mode = 3
 
 [node name="World" parent="GameWorld/Viewport" instance=ExtResource( 1 )]

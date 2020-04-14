@@ -35,40 +35,43 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[sub_resource type="CircleShape2D" id=7]
-radius = 9.70915
+[sub_resource type="CapsuleShape" id=10]
+radius = 0.231635
+height = 0.002
 
-[sub_resource type="CapsuleShape2D" id=8]
-radius = 14.699
-height = 30.9562
+[sub_resource type="SphereShape" id=11]
+radius = 2.8121
 
-[sub_resource type="CircleShape2D" id=9]
-radius = 443.597
+[sub_resource type="SphereShape" id=12]
+radius = 0.239771
 
-[node name="Bat" type="KinematicBody2D"]
+[node name="Bat" type="KinematicBody"]
 collision_layer = 16
+collision_mask = 3
 script = ExtResource( 4 )
+ACCELERATION = 1
+MAX_SPEED = 2
+FRICTION = 5
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-self_modulate = Color( 1, 0.00784314, 0.00784314, 1 )
-scale = Vector2( 2, 2 )
+[node name="AnimatedSprite" type="AnimatedSprite3D" parent="."]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.0862018, 0 )
+double_sided = false
 frames = SubResource( 6 )
 animation = "Fly"
+frame = 1
 playing = true
-offset = Vector2( 0, -12 )
 
-[node name="ShadowSprite" type="Sprite" parent="."]
+[node name="ShadowSprite" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 0, 0 )
+double_sided = false
 texture = ExtResource( 2 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 7 )
 
 [node name="Hurtbox" parent="." instance=ExtResource( 3 )]
 collision_layer = 8
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
-position = Vector2( 0, -13 )
-shape = SubResource( 8 )
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0.232964, 0 )
+shape = SubResource( 10 )
 
 [node name="Stats" parent="." instance=ExtResource( 5 )]
 max_health = 5
@@ -76,8 +79,11 @@ max_health = 5
 [node name="PlayerDetectionZone" parent="." instance=ExtResource( 6 )]
 
 [node name="CollisionShape2D" parent="PlayerDetectionZone" index="0"]
-modulate = Color( 1, 1, 1, 0.454902 )
-shape = SubResource( 9 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.238997, 0 )
+shape = SubResource( 12 )
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="no_health" from="Stats" to="." method="_on_Stats_no_health"]
 

@@ -92,8 +92,8 @@ func attack_state(delta):
 	animationState.travel("Attack")
 
 func move(delta):
-	#velocity = move_and_slide_with_snap(Vector3(velocity.x, 0, velocity.z), Vector3.DOWN)
-	velocity = move_and_slide(Vector3(velocity.x, 0, velocity.z))
+	velocity = move_and_slide_with_snap(Vector3(velocity.x, 0, velocity.z), Vector3.DOWN)
+	#velocity = move_and_slide(Vector3(velocity.x, 0, velocity.z))
 
 func roll_animation_finished():
 	velocity = velocity * 0.8
