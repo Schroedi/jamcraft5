@@ -13,20 +13,18 @@ enum {
 
 var state = MOVE
 var velocity = Vector3.ZERO
-var facing_dir = Vector3.DOWN
+var facing_dir = Vector3.BACK
 
 export var weapon_wobble_offset = 0.0
 
 onready var animationPlayer = $AnimationPlayer
-onready var animationTree_dirs = $"Assembled 8 Directions/AnimationTree_dirs"
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
-onready var weapon_pivot = $HitboxPivot
-onready var weapon = $HitboxPivot/Weapon
+onready var weapon_pivot = $Feeny/HitboxPivot
+onready var weapon = $Feeny/HitboxPivot/Weapon
+onready var feeny = $Feeny
 
 func _ready():
-	Globals.curr_cam = $Camera2D
-	animationTree_dirs.active = true
 	animationTree.active = true
 	weapon.facing_dir = facing_dir
 
@@ -45,17 +43,11 @@ func wobble_weapon():
 	weapon_pivot.rotation = lerp_angle(weapon_pivot.rotation, target_angle, .1)
 
 func move_state(delta):
-	process_move(delta)
-	# rotate weapon back to start after an attack
-	#weapon.rotation = lerp_angle(weapon.rotation, 0, .03)
-	
-	# bring wepon behind player
-#	var target_angle = facing_dir.angle() - .7
-#	weapon_pivot.rotation = lerp_angle(weapon_pivot.rotation, target_angle, .1)
-#
+	process_input(delta)
 #	wobble_weapon()
+	move(delta)
 	
-func process_move(delta):
+func process_input(delta):
 	var input_vector = Vector3.ZERO
 	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	input_vector.z = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
@@ -64,19 +56,23 @@ func process_move(delta):
 	if input_vector != Vector3.ZERO:
 		facing_dir = input_vector
 		weapon.facing_dir = input_vector
-		animationTree_dirs.set("parameters/Idle/blend_position", input_vector)
 		
 		animationTree.set("parameters/Idle/blend_position", input_vector)
 		animationTree.set("parameters/Run/blend_position", input_vector)
 		animationTree.set("parameters/Attack/blend_position", input_vector)
 		animationTree.set("parameters/Roll/blend_position", input_vector)
+		
+		# rotate feeny
+		var rotTransform = feeny.transform.looking_at(-input_vector, Vector3.UP)
+		var thisRotation = Quat(feeny.transform.basis).slerp(rotTransform.basis, .1)
+		feeny.transform = Transform(thisRotation,feeny.transform.origin)
+		
 		animationState.travel("Run")
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 	else:
 		animationState.travel("Idle")
 		velocity = velocity.move_toward(Vector3.ZERO, FRICTION * delta)
 	
-	move()
 	
 	if Input.is_action_just_pressed("roll"):
 		state = ROLL
@@ -84,16 +80,18 @@ func process_move(delta):
 	if Input.is_action_just_pressed("attack"):
 		state = ATTACK
 
-func roll_state(_delta):
+func roll_state(delta):
 	velocity = facing_dir * ROLL_SPEED
 	animationState.travel("Roll")
-	move()
+	#process_input(delta) # this will not stop the roll as we override the animation state directly
+	move(delta)
 
 func attack_state(delta):
-	process_move(delta)
+	process_input(delta)
+	move(delta)
 	animationState.travel("Attack")
 
-func move():
+func move(delta):
 	#velocity = move_and_slide_with_snap(Vector3(velocity.x, 0, velocity.z), Vector3.DOWN)
 	velocity = move_and_slide(Vector3(velocity.x, 0, velocity.z))
 
