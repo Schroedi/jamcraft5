@@ -1,4 +1,4 @@
-[gd_scene load_steps=125 format=2]
+[gd_scene load_steps=128 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=2]
 [ext_resource path="res://Smurp/skeleton assets/Smurp_armR_0_front.png" type="Texture" id=5]
@@ -174,6 +174,18 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ -0.1, 0.1, -0.1 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("MeshInstance:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 10 ), Vector3( 0, 0, 0 ) ]
 }
 
 [sub_resource type="AnimationNodeAnimation" id=6]
@@ -476,7 +488,7 @@ blend_mode = 1
 states/Idle/node = SubResource( 39 )
 states/Idle/position = Vector2( 534, 204 )
 start_node = "Idle"
-graph_offset = Vector2( 164, 64 )
+graph_offset = Vector2( -176, -102 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=41]
 
@@ -1272,19 +1284,31 @@ tracks/7/keys = {
 "values": [ false ]
 }
 
-[node name="Player" type="KinematicBody2D"]
+[sub_resource type="CapsuleShape" id=53]
+radius = 0.237078
+height = 0.46643
+
+[sub_resource type="CubeMesh" id=50]
+size = Vector3( 0.5, 1, 0.5 )
+
+[sub_resource type="SpatialMaterial" id=52]
+
+[node name="Player" type="KinematicBody"]
 collision_layer = 2
 script = ExtResource( 2 )
-MAX_SPEED = 150
-ROLL_SPEED = 200
-weapon_wobble_offset = -0.5
+ACCELERATION = 5
+MAX_SPEED = 2
+ROLL_SPEED = 3
+FRICTION = 5
+weapon_wobble_offset = 0.1
 
 [node name="Camera2D" type="Camera2D" parent="."]
-current = true
+visible = false
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 rotation = -1.5708
 shape = SubResource( 1 )
 
@@ -1300,6 +1324,7 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 17 )
 
 [node name="HitboxPivot" type="Position2D" parent="."]
+visible = false
 position = Vector2( 0, -4 )
 __meta__ = {
 "_gizmo_extents_": 8.0
@@ -1308,6 +1333,7 @@ __meta__ = {
 [node name="Weapon" parent="HitboxPivot" instance=ExtResource( 77 )]
 
 [node name="Assembled 8 Directions" type="Node2D" parent="."]
+visible = false
 position = Vector2( 0, -20 )
 scale = Vector2( 0.5, 0.5 )
 
@@ -1705,3 +1731,16 @@ anims/S = SubResource( 46 )
 anims/SE = SubResource( 47 )
 anims/SW = SubResource( 48 )
 anims/W = SubResource( 49 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0.473412, 0 )
+shape = SubResource( 53 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.503152, 0 )
+mesh = SubResource( 50 )
+material/0 = SubResource( 52 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.756002, 0.654569, 0, -0.654569, 0.756002, 0, 3.72882, 5.327 )
+current = true

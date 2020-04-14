@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Weapon/WeaponBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Weapon/WeaponComponent.tscn" type="PackedScene" id=2]
+
+[node name="Crafting" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+margin_right = 667.0
+margin_bottom = 615.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Weapon" parent="PanelContainer" instance=ExtResource( 1 )]
+position = Vector2( 346.068, 339.314 )
+
+[node name="WeaponComponent" parent="PanelContainer" instance=ExtResource( 2 )]
+position = Vector2( 476.783, 408.382 )
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 660.0
+margin_bottom = 608.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer"]
+margin_right = 653.0
+margin_bottom = 601.0
+mouse_filter = 2
+bbcode_enabled = true
+bbcode_text = "Some 
+Stats"
+text = "Some 
+Stats"
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer"]
+margin_right = 653.0
+margin_bottom = 601.0

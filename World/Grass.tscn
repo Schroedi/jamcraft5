@@ -7,14 +7,8 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 15.396, 7.28862 )
 
-[node name="Grass" type="Node2D"]
+[node name="Grass" type="Spatial"]
 script = ExtResource( 2 )
-
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -9.8317, -1.80398 )
-texture = ExtResource( 1 )
-centered = false
-offset = Vector2( -8, -8 )
 
 [node name="Hurtbox" parent="." instance=ExtResource( 3 )]
 position = Vector2( -8.38852, -8.07282 )
@@ -24,6 +18,11 @@ show_hit = false
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
 position = Vector2( 8.3157, 8.0451 )
 shape = SubResource( 1 )
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0 )
+shaded = true
+texture = ExtResource( 1 )
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 
 [editable path="Hurtbox"]

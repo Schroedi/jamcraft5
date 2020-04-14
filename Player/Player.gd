@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends KinematicBody
 
 export var ACCELERATION = 500
 export var MAX_SPEED = 80
@@ -12,8 +12,8 @@ enum {
 }
 
 var state = MOVE
-var velocity = Vector2.ZERO
-var facing_dir = Vector2.DOWN
+var velocity = Vector3.ZERO
+var facing_dir = Vector3.DOWN
 
 export var weapon_wobble_offset = 0.0
 
@@ -50,18 +50,18 @@ func move_state(delta):
 	weapon.rotation = lerp_angle(weapon.rotation, 0, .03)
 	
 	# bring wepon behind player
-	var target_angle = facing_dir.angle() - .7
-	weapon_pivot.rotation = lerp_angle(weapon_pivot.rotation, target_angle, .1)
-	
-	wobble_weapon()
+#	var target_angle = facing_dir.angle() - .7
+#	weapon_pivot.rotation = lerp_angle(weapon_pivot.rotation, target_angle, .1)
+#
+#	wobble_weapon()
 	
 func process_move(delta):
-	var input_vector = Vector2.ZERO
+	var input_vector = Vector3.ZERO
 	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
-	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
+	input_vector.z = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 	input_vector = input_vector.normalized()
 	
-	if input_vector != Vector2.ZERO:
+	if input_vector != Vector3.ZERO:
 		facing_dir = input_vector
 		weapon.facing_dir = input_vector
 		animationTree_dirs.set("parameters/Idle/blend_position", input_vector)
@@ -74,7 +74,7 @@ func process_move(delta):
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 	else:
 		animationState.travel("Idle")
-		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
+		velocity = velocity.move_toward(Vector3.ZERO, FRICTION * delta)
 	
 	move()
 	
@@ -94,7 +94,8 @@ func attack_state(delta):
 	animationState.travel("Attack")
 
 func move():
-	velocity = move_and_slide(velocity)
+	#velocity = move_and_slide_with_snap(Vector3(velocity.x, 0, velocity.z), Vector3.DOWN)
+	velocity = move_and_slide(Vector3(velocity.x, 0, velocity.z))
 
 func roll_animation_finished():
 	velocity = velocity * 0.8

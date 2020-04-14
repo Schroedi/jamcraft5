@@ -111,13 +111,20 @@ roll={
 [layer_names]
 
 2d_physics/layer_1="World"
+3d_physics/layer_1="World"
 2d_physics/layer_2="Player"
+3d_physics/layer_2="Player"
 2d_physics/layer_3="PlayerHurtbox"
+3d_physics/layer_3="PlayerHurtbox"
 2d_physics/layer_4="EnemyHurtbox"
+3d_physics/layer_4="EnemyHurtbox"
 2d_physics/layer_5="Enemy"
+3d_physics/layer_5="Enemy"
 
 [rendering]
 
 quality/driver/driver_name="GLES2"
+quality/depth_prepass/enable=false
 environment/default_clear_color=Color( 0.745098, 0.54902, 0.827451, 1 )
+quality/filters/msaa=1
 environment/default_environment="res://default_env.tres"
