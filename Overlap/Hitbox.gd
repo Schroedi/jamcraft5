@@ -1,3 +1,3 @@
-extends Area2D
+extends Area
 
 export var damage = 1

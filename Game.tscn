@@ -53,7 +53,7 @@ void fragment() {
 	COLOR = mix(texelColor, final, discovered);
 	
 	// disable fog
-	COLOR = texelColor;
+	//COLOR = texelColor;
 }"
 
 [sub_resource type="ViewportTexture" id=2]

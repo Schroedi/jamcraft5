@@ -1,4 +1,4 @@
-extends Node2D
+extends Spatial
 
 
 var facing_dir = Vector2.ZERO setget set_facing

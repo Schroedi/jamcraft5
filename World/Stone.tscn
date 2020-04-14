@@ -8,6 +8,7 @@ extents = Vector3( 0.186439, 1, 1.51569 )
 [node name="Stone" type="StaticBody"]
 
 [node name="Sprite" type="Sprite3D" parent="."]
+shaded = true
 texture = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]

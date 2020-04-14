@@ -47,10 +47,11 @@ mesh = SubResource( 2 )
 material/0 = SubResource( 4 )
 
 [node name="Grass" parent="." instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.629, 0.1, 2.714 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.856, 0.163511, -0.0455623 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.871188, -0.32605, 0.367046, 0, 0.747624, 0.664122, -0.490949, -0.578575, 0.651321, 0, 2.14761, 0 )
+light_energy = 0.47
 shadow_enabled = true
 directional_shadow_normal_bias = 0.4
 directional_shadow_depth_range = 1

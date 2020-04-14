@@ -47,7 +47,7 @@ func wobble_weapon():
 func move_state(delta):
 	process_move(delta)
 	# rotate weapon back to start after an attack
-	weapon.rotation = lerp_angle(weapon.rotation, 0, .03)
+	#weapon.rotation = lerp_angle(weapon.rotation, 0, .03)
 	
 	# bring wepon behind player
 #	var target_angle = facing_dir.angle() - .7
@@ -102,7 +102,7 @@ func roll_animation_finished():
 	state = MOVE
 
 func attack_animation_started():
-	weapon_pivot.rotation = facing_dir.angle()
+	#weapon_pivot.rotation = facing_dir.angle()
 	weapon.start_attack()
 
 func attack_animation_finished():
