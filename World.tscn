@@ -40,6 +40,7 @@ ROLL_SPEED = 5
 [node name="StaticBody" type="StaticBody" parent="."]
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0002, 0 )
 shape = SubResource( 1 )
 
 [node name="Floor" type="MeshInstance" parent="StaticBody"]
