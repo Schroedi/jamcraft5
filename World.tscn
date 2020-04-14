@@ -113,3 +113,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.04369, 0.148597, 5.98977 )
 
 [node name="Bat" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1102, 0.0204264, 0.826481 )
+
+[node name="AnimatedSprite" parent="Bat" index="0"]
+frame = 1
+
+[node name="Stats" parent="Bat" index="3"]
+max_health = 100
+
+[editable path="Bat"]

@@ -51,7 +51,7 @@ func seek_player():
 
 func _on_Hurtbox_area_entered(area):
 	stats.health -= area.damage
-	knockback = area.transform.origin.direction_to(transform.origin) * area.knockback_strength
+	knockback = transform.origin.direction_to(area.transform.origin) * area.knockback_strength
 
 func _on_Stats_no_health():
 	queue_free()

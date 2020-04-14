@@ -58,7 +58,7 @@ transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.0862018, 0 )
 double_sided = false
 frames = SubResource( 6 )
 animation = "Fly"
-frame = 1
+frame = 3
 playing = true
 
 [node name="ShadowSprite" type="Sprite3D" parent="."]

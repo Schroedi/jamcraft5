@@ -67,10 +67,10 @@ func process_input(delta):
 		var thisRotation = Quat(feeny.transform.basis).slerp(rotTransform.basis, .1)
 		feeny.transform = Transform(thisRotation,feeny.transform.origin)
 		
-		animationState.travel("Run")
+		#animationState.travel("Run")
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 	else:
-		animationState.travel("Idle")
+		#animationState.travel("Idle")
 		velocity = velocity.move_toward(Vector3.ZERO, FRICTION * delta)
 	
 	
@@ -78,7 +78,11 @@ func process_input(delta):
 		state = ROLL
 	
 	if Input.is_action_just_pressed("attack"):
+		animationState.travel("Attack_charge")
+		
+	if Input.is_action_just_released("attack"):
 		state = ATTACK
+		animationState.travel("Attack")
 
 func roll_state(delta):
 	velocity = facing_dir * ROLL_SPEED
@@ -89,7 +93,7 @@ func roll_state(delta):
 func attack_state(delta):
 	process_input(delta)
 	move(delta)
-	animationState.travel("Attack")
+	
 
 func move(delta):
 	velocity = move_and_slide_with_snap(Vector3(velocity.x, 0, velocity.z), Vector3.DOWN)
@@ -106,3 +110,9 @@ func attack_animation_started():
 func attack_animation_finished():
 	state = MOVE
 	weapon.end_attack()
+
+func charged():
+	print("charged")
+
+func charge_start():
+	print("charge start")
