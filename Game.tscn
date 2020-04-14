@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://World.tscn" type="PackedScene" id=1]
 [ext_resource path="res://PostProcess.gd" type="Script" id=2]
@@ -81,6 +81,9 @@ shader_param/noise_color = Color( 0, 0.215686, 0.470588, 1 )
 shader_param/fog_of_war_texture = SubResource( 2 )
 shader_param/noise_texture = SubResource( 4 )
 
+[sub_resource type="ViewportTexture" id=6]
+viewport_path = NodePath("FogOfWarViewport")
+
 [node name="Game" type="Node2D"]
 
 [node name="FogOfWarViewport" type="Viewport" parent="."]
@@ -136,3 +139,23 @@ margin_left = 563.07
 margin_top = 372.411
 margin_right = 563.07
 margin_bottom = 372.411
+
+[node name="Minimap" type="PanelContainer" parent="."]
+margin_left = 30.3436
+margin_top = 850.57
+margin_right = 251.344
+margin_bottom = 1044.57
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Minimap"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 214.0
+margin_bottom = 187.0
+texture = SubResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
