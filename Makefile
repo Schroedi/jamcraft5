@@ -4,7 +4,7 @@ EXPORT=--export
 #EXPORT=--export-debug
 BUILD_ROOT=../JamCraft5Export
 ITCHIO_USERNAME=keksdev
-ITCHIO_GAME=jamcraft5
+ITCHIO_GAME=smurp
 
 all: html
 
