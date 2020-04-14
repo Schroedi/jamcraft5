@@ -1,0 +1,23 @@
+00 sky, 1920x1080 centered
+
+01 trees, 1920x720 centered, top
+
+02 cliff, 480x720 topleft
+
+03 valley, 1920x1080 centered
+
+04 cliff, 720x720 bottom left
+
+05 cliff, 960x1080 left
+
+	06 armdad, 480x480, position from topleft: 480x480
+06 dadfeeny, 720x270, position 240x0
+	06 armfeeny, 360x360, position 360x360
+
+07 cliff, 1920x480 bottom
+
+08 cliff,1280x480 bottom right
+
+09 mom, 480x1090 right
+
+10 light, 1920x1080 centered
