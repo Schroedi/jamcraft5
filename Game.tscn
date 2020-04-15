@@ -1,12 +1,10 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://World.tscn" type="PackedScene" id=1]
 [ext_resource path="res://PostProcess.gd" type="Script" id=2]
 [ext_resource path="res://FPSLabel.gd" type="Script" id=3]
 [ext_resource path="res://UI/MainUI.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Fog/player_vis.gd" type="Script" id=5]
-[ext_resource path="res://UI/Crafting/Crafting.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Weapon/WeaponComponent.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Fog/minimap_paint.png" type="Texture" id=10]
 
 [sub_resource type="Shader" id=1]
@@ -128,17 +126,6 @@ script = ExtResource( 3 )
 [node name="UILayer" type="CanvasLayer" parent="."]
 
 [node name="MainUI" parent="UILayer" instance=ExtResource( 4 )]
-
-[node name="WeaponComponent" parent="." instance=ExtResource( 7 )]
-visible = false
-position = Vector2( 756.22, 482.651 )
-
-[node name="Crafting" parent="." instance=ExtResource( 6 )]
-visible = false
-margin_left = 563.07
-margin_top = 372.411
-margin_right = 563.07
-margin_bottom = 372.411
 
 [node name="Minimap" type="PanelContainer" parent="."]
 margin_left = 30.3436
