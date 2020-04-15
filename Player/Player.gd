@@ -20,9 +20,9 @@ export var weapon_wobble_offset = 0.0
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
-onready var weapon_pivot = $Feeny/HitboxPivot
-onready var weapon = $Feeny/HitboxPivot/Weapon
-onready var feeny = $Feeny
+onready var weapon_pivot = $Smurp/HitboxPivot
+onready var weapon = $Smurp/HitboxPivot/Weapon
+onready var Smurp = $Smurp
 
 func _ready():
 	animationTree.active = true
@@ -62,10 +62,10 @@ func process_input(delta):
 		animationTree.set("parameters/Attack/blend_position", input_vector)
 		animationTree.set("parameters/Roll/blend_position", input_vector)
 		
-		# rotate feeny
-		var rotTransform = feeny.transform.looking_at(-input_vector, Vector3.UP)
-		var thisRotation = Quat(feeny.transform.basis).slerp(rotTransform.basis, .1)
-		feeny.transform = Transform(thisRotation,feeny.transform.origin)
+		# rotate smurp
+		var rotTransform = Smurp.transform.looking_at(-input_vector, Vector3.UP)
+		var thisRotation = Quat(Smurp.transform.basis).slerp(rotTransform.basis, .1)
+		Smurp.transform = Transform(thisRotation,Smurp.transform.origin)
 		
 		#animationState.travel("Run")
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
