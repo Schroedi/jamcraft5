@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://World/Tree.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -9,7 +9,7 @@
 [ext_resource path="res://World/BG_grob/BG3.png" type="Texture" id=14]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 100, 0.237274, 100 )
+extents = Vector3( 100, 0.1, 100 )
 
 [sub_resource type="PlaneMesh" id=2]
 size = Vector2( 100, 100 )
@@ -30,6 +30,10 @@ ambient_light_energy = 0.5
 
 [sub_resource type="CubeMesh" id=6]
 
+[sub_resource type="BoxShape" id=7]
+
+[sub_resource type="CubeMesh" id=8]
+
 [node name="World" type="Spatial"]
 
 [node name="Player" parent="." groups=[
@@ -41,7 +45,7 @@ ROLL_SPEED = 5
 [node name="StaticBody" type="StaticBody" parent="."]
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.235523, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0 )
 shape = SubResource( 1 )
 
 [node name="Floor" type="MeshInstance" parent="StaticBody"]
@@ -115,9 +119,60 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.04369, 0.148597, 5.98977 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1102, 0.0204264, 0.826481 )
 
 [node name="AnimatedSprite" parent="Bat" index="0"]
-frame = 1
+frame = 0
 
 [node name="Stats" parent="Bat" index="3"]
 max_health = 100
+
+[node name="Swarm" type="Spatial" parent="."]
+
+[node name="Bat2" parent="Swarm" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.65793, 0.0204264, -3.39025 )
+
+[node name="Bat3" parent="Swarm" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.70636, 0.0204264, -3.39025 )
+
+[node name="Bat4" parent="Swarm" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3023, 0.0204264, -3.39025 )
+
+[node name="Bat5" parent="Swarm" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.88217, 0.0204264, -4.53874 )
+
+[node name="Bat6" parent="Swarm" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.67404, 0.0204264, -4.53874 )
+
+[node name="Bat7" parent="Swarm" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.70252, 0.0204264, -4.53874 )
+
+[node name="Swarm2" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6129, 0, 0 )
+
+[node name="Bat2" parent="Swarm2" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.65793, 0.0204264, -3.39025 )
+
+[node name="Bat3" parent="Swarm2" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.70636, 0.0204264, -3.39025 )
+
+[node name="Bat4" parent="Swarm2" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3023, 0.0204264, -3.39025 )
+
+[node name="Bat5" parent="Swarm2" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.88217, 0.0204264, -4.53874 )
+
+[node name="Bat6" parent="Swarm2" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.67404, 0.0204264, -4.53874 )
+
+[node name="Bat7" parent="Swarm2" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.70252, 0.0204264, -4.53874 )
+
+[node name="StaticBody2" type="StaticBody" parent="."]
+transform = Transform( 0.546599, -0.837395, 0, 0.837395, 0.546599, 0, 0, 0, 1, -6.07407, -0.322172, 0.990052 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody2"]
+shape = SubResource( 7 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody2"]
+mesh = SubResource( 8 )
+material/0 = null
 
 [editable path="Bat"]

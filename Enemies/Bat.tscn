@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Enemies/Bat.png" type="Texture" id=1]
 [ext_resource path="res://Shadows/SmallShadow.png" type="Texture" id=2]
@@ -35,15 +35,25 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[sub_resource type="CapsuleShape" id=10]
+[sub_resource type="CapsuleShape" id=7]
 radius = 0.231635
-height = 0.002
+height = 1.06484
 
-[sub_resource type="SphereShape" id=11]
-radius = 2.8121
+[sub_resource type="SphereShape" id=8]
+radius = 5.0
 
-[sub_resource type="SphereShape" id=12]
+[sub_resource type="SphereShape" id=9]
 radius = 0.239771
+
+[sub_resource type="SpatialMaterial" id=11]
+vertex_color_use_as_albedo = true
+
+[sub_resource type="QuadMesh" id=10]
+size = Vector2( 0.1, 0.1 )
+
+[sub_resource type="Gradient" id=12]
+offsets = PoolRealArray( 0.00896861, 0.524664, 1 )
+colors = PoolColorArray( 1, 0.443763, 0.725744, 1, 0.826678, 0.70571, 0.204556, 1, 0.106339, 0.740901, 1, 1 )
 
 [node name="Bat" type="KinematicBody"]
 collision_layer = 16
@@ -58,7 +68,7 @@ transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.0862018, 0 )
 double_sided = false
 frames = SubResource( 6 )
 animation = "Fly"
-frame = 3
+frame = 1
 playing = true
 
 [node name="ShadowSprite" type="Sprite3D" parent="."]
@@ -70,8 +80,8 @@ texture = ExtResource( 2 )
 collision_layer = 8
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
-transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0.232964, 0 )
-shape = SubResource( 10 )
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0.763757, 0 )
+shape = SubResource( 7 )
 
 [node name="Stats" parent="." instance=ExtResource( 5 )]
 max_health = 5
@@ -79,11 +89,22 @@ max_health = 5
 [node name="PlayerDetectionZone" parent="." instance=ExtResource( 6 )]
 
 [node name="CollisionShape2D" parent="PlayerDetectionZone" index="0"]
-shape = SubResource( 11 )
+shape = SubResource( 8 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.238997, 0 )
-shape = SubResource( 12 )
+shape = SubResource( 9 )
+
+[node name="CPUParticles" type="CPUParticles" parent="."]
+material_override = SubResource( 11 )
+cast_shadow = 0
+local_coords = false
+mesh = SubResource( 10 )
+gravity = Vector3( 0, 0, 0 )
+angle_random = 0.68
+scale_amount = 0.5
+scale_amount_random = 1.0
+color_ramp = SubResource( 12 )
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="no_health" from="Stats" to="." method="_on_Stats_no_health"]
 

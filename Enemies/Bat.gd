@@ -23,7 +23,7 @@ onready var playerDetectionZone = $PlayerDetectionZone
 
 func _physics_process(delta):
 	knockback = knockback.move_toward(Vector3.ZERO, FRICTION * delta)
-	knockback = move_and_slide(knockback)
+	knockback = move_and_slide_with_snap(knockback, Vector3.DOWN * 100, Vector3.UP, true, 4, PI/2.0)
 	
 	match state:
 		IDLE:
@@ -43,7 +43,7 @@ func _physics_process(delta):
 				state = IDLE
 			sprite.flip_h = velocity.x < 0
 
-	velocity = move_and_slide_with_snap(velocity, Vector3.DOWN)
+	velocity = move_and_slide_with_snap(velocity, Vector3.DOWN * 100, Vector3.UP, true, 4, PI/2.0)
 
 func seek_player():
 	if playerDetectionZone.can_see_player():
