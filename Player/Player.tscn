@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://Feeny/Feeny.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.gd" type="Script" id=2]
@@ -6,40 +6,7 @@
 
 [sub_resource type="Animation" id=1]
 resource_name = "Attack"
-length = 0.3
-tracks/0/type = "method"
-tracks/0/path = NodePath(".")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"values": [ {
-"args": [  ],
-"method": "attack_animation_started"
-}, {
-"args": [  ],
-"method": "attack_animation_finished"
-} ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Feeny/HitboxPivot/Weapon:rotation_degrees")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.1, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector3( 0, 43.946, 0 ), Vector3( 0, 20, 0 ) ]
-}
-
-[sub_resource type="Animation" id=18]
-resource_name = "Attack_charge"
-length = 2.0
+length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("Feeny/HitboxPivot/Weapon:rotation_degrees")
 tracks/0/interp = 2
@@ -47,10 +14,26 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.6, 2 ),
+"times": PoolRealArray( 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 43.946, 0 ), Vector3( 0, 20, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Attack_charge"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Feeny/HitboxPivot/Weapon:rotation_degrees")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector3( 0, 20, 0 ), Vector3( 0, -30, 0 ), Vector3( 0, -60, 0 ) ]
+"values": [ Vector3( 0, -22.32, 0 ), Vector3( 0, -50, 0 ), Vector3( 0, -142.503, 0 ) ]
 }
 tracks/1/type = "method"
 tracks/1/path = NodePath(".")
@@ -59,7 +42,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 2 ),
+"times": PoolRealArray( 0, 0.6 ),
 "transitions": PoolRealArray( 1, 1 ),
 "values": [ {
 "args": [  ],
@@ -70,8 +53,9 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=22]
+[sub_resource type="Animation" id=3]
 resource_name = "Attack_charged_full"
+length = 0.2
 loop = true
 tracks/0/type = "method"
 tracks/0/path = NodePath(".")
@@ -88,8 +72,73 @@ tracks/0/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "Idle"
+[sub_resource type="Animation" id=25]
+resource_name = "Attack_end"
+length = 0.001
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "attack_animation_finished"
+} ]
+}
+
+[sub_resource type="Animation" id=26]
+resource_name = "Attack_start"
+length = 0.001
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "attack_animation_started"
+} ]
+}
+
+[sub_resource type="Animation" id=34]
+resource_name = "Cyclone"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Feeny:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 180, 0 ), Vector3( 0, 360, 0 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "attack_animation_started"
+} ]
+}
+
+[sub_resource type="Animation" id=4]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -105,8 +154,7 @@ tracks/0/keys = {
 "values": [ -0.05, 0.05, -0.05 ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "Roll"
+[sub_resource type="Animation" id=5]
 length = 0.5
 tracks/0/type = "method"
 tracks/0/path = NodePath(".")
@@ -123,8 +171,7 @@ tracks/0/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "Run"
+[sub_resource type="Animation" id=6]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:weapon_wobble_offset")
@@ -139,68 +186,94 @@ tracks/0/keys = {
 "values": [ -0.1, 0.1, -0.1 ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=5]
+[sub_resource type="AnimationNodeAnimation" id=7]
 animation = "Attack"
 
-[sub_resource type="AnimationNodeAnimation" id=19]
+[sub_resource type="AnimationNodeAnimation" id=8]
 animation = "Attack_charge"
 
-[sub_resource type="AnimationNodeAnimation" id=23]
+[sub_resource type="AnimationNodeAnimation" id=9]
 animation = "Attack_charged_full"
 
-[sub_resource type="AnimationNodeAnimation" id=6]
+[sub_resource type="AnimationNodeAnimation" id=27]
+animation = "Attack_end"
+
+[sub_resource type="AnimationNodeAnimation" id=28]
+animation = "Attack_start"
+
+[sub_resource type="AnimationNodeAnimation" id=35]
+animation = "Cyclone"
+
+[sub_resource type="AnimationNodeAnimation" id=10]
 animation = "Idle"
 
-[sub_resource type="AnimationNodeAnimation" id=7]
+[sub_resource type="AnimationNodeAnimation" id=11]
 animation = "Roll"
 
-[sub_resource type="AnimationNodeAnimation" id=8]
+[sub_resource type="AnimationNodeAnimation" id=12]
 animation = "Run"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=9]
+[sub_resource type="AnimationNodeStateMachineTransition" id=13]
 switch_mode = 2
 auto_advance = true
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=10]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=11]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=12]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=14]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=15]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=16]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=18]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=29]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=30]
 switch_mode = 2
 auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=31]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=32]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=20]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=21]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=24]
 switch_mode = 2
 auto_advance = true
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=25]
+[sub_resource type="AnimationNodeStateMachineTransition" id=33]
 
-[sub_resource type="AnimationNodeStateMachine" id=15]
-states/Attack/node = SubResource( 5 )
-states/Attack/position = Vector2( 261.304, 322.95 )
-states/Attack_charge/node = SubResource( 19 )
-states/Attack_charge/position = Vector2( 474.056, 323.95 )
-states/Attack_charged_full/node = SubResource( 23 )
-states/Attack_charged_full/position = Vector2( 408.056, 426.95 )
-states/Idle/node = SubResource( 6 )
+[sub_resource type="AnimationNodeStateMachineTransition" id=36]
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=37]
+
+[sub_resource type="AnimationNodeStateMachine" id=22]
+states/Attack/node = SubResource( 7 )
+states/Attack/position = Vector2( 265.68, 310.95 )
+states/Attack_charge/node = SubResource( 8 )
+states/Attack_charge/position = Vector2( 653.556, 310.95 )
+states/Attack_charged_full/node = SubResource( 9 )
+states/Attack_charged_full/position = Vector2( 544.556, 394.95 )
+states/Attack_end/node = SubResource( 27 )
+states/Attack_end/position = Vector2( 265.368, 213.45 )
+states/Attack_start/node = SubResource( 28 )
+states/Attack_start/position = Vector2( 454.056, 309.95 )
+states/Cyclone/node = SubResource( 35 )
+states/Cyclone/position = Vector2( 106.056, 395.575 )
+states/Idle/node = SubResource( 10 )
 states/Idle/position = Vector2( 422.211, 169.212 )
-states/Roll/node = SubResource( 7 )
+states/Roll/node = SubResource( 11 )
 states/Roll/position = Vector2( 422.398, 45.45 )
-states/Run/node = SubResource( 8 )
+states/Run/node = SubResource( 12 )
 states/Run/position = Vector2( 602.056, 168.594 )
-transitions = [ "Roll", "Idle", SubResource( 9 ), "Idle", "Roll", SubResource( 10 ), "Idle", "Run", SubResource( 11 ), "Run", "Idle", SubResource( 12 ), "Attack", "Idle", SubResource( 14 ), "Idle", "Attack_charge", SubResource( 20 ), "Attack_charge", "Attack", SubResource( 21 ), "Attack_charge", "Attack_charged_full", SubResource( 24 ), "Attack_charged_full", "Attack", SubResource( 25 ) ]
+transitions = [ "Roll", "Idle", SubResource( 13 ), "Idle", "Roll", SubResource( 14 ), "Idle", "Run", SubResource( 15 ), "Run", "Idle", SubResource( 16 ), "Idle", "Attack_charge", SubResource( 18 ), "Attack", "Attack_end", SubResource( 29 ), "Attack_end", "Idle", SubResource( 30 ), "Attack_charge", "Attack_start", SubResource( 31 ), "Attack_start", "Attack", SubResource( 32 ), "Attack_charge", "Attack_charged_full", SubResource( 20 ), "Attack_charged_full", "Attack_start", SubResource( 33 ), "Attack_charged_full", "Cyclone", SubResource( 36 ), "Cyclone", "Attack", SubResource( 37 ) ]
 start_node = "Idle"
-graph_offset = Vector2( -469.944, 156.45 )
+graph_offset = Vector2( -513.944, 128.45 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=16]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=23]
 
-[sub_resource type="CapsuleShape" id=17]
+[sub_resource type="CapsuleShape" id=24]
 radius = 0.493648
 height = 0.46643
 
@@ -216,30 +289,33 @@ weapon_wobble_offset = -0.1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Attack = SubResource( 1 )
-anims/Attack_charge = SubResource( 18 )
-anims/Attack_charged_full = SubResource( 22 )
-anims/Idle = SubResource( 2 )
-anims/Roll = SubResource( 3 )
-anims/Run = SubResource( 4 )
+anims/Attack_charge = SubResource( 2 )
+anims/Attack_charged_full = SubResource( 3 )
+anims/Attack_end = SubResource( 25 )
+anims/Attack_start = SubResource( 26 )
+anims/Cyclone = SubResource( 34 )
+anims/Idle = SubResource( 4 )
+anims/Roll = SubResource( 5 )
+anims/Run = SubResource( 6 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 15 )
+tree_root = SubResource( 22 )
 anim_player = NodePath("../AnimationPlayer")
-parameters/playback = SubResource( 16 )
+parameters/playback = SubResource( 23 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0.728319, 0 )
-shape = SubResource( 17 )
+shape = SubResource( 24 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.756002, 0.654569, 0, -0.654569, 0.756002, 0, 3.72882, 5.327 )
 current = true
 
 [node name="Feeny" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform = Transform( 1, 0, 6.51683e-07, 0, 1, 0, -6.51683e-07, 0, 1, 0, 0, 0 )
 
 [node name="HitboxPivot" type="Position3D" parent="Feeny"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.545094, 0.362885, 0.085575 )
 
 [node name="Weapon" parent="Feeny/HitboxPivot" instance=ExtResource( 77 )]
-transform = Transform( 0.719994, 0, 0.69398, 0, 1, 0, -0.69398, 0, 0.719994, 0, 0, -1.49012e-08 )
+transform = Transform( 0.925077, 0, -0.379779, 0, 1, 0, 0.379779, 0, 0.925077, 0, 0, -1.49012e-08 )

@@ -82,7 +82,7 @@ func process_input(delta):
 		
 	if Input.is_action_just_released("attack"):
 		state = ATTACK
-		animationState.travel("Attack")
+		animationState.travel("Attack_end")
 
 func roll_state(delta):
 	velocity = facing_dir * ROLL_SPEED
@@ -106,10 +106,12 @@ func roll_animation_finished():
 func attack_animation_started():
 	#weapon_pivot.rotation = facing_dir.angle()
 	weapon.start_attack()
+	print("dmg start")
 
 func attack_animation_finished():
 	state = MOVE
 	weapon.end_attack()
+	print("dmg end")
 
 func charged():
 	print("charged")
