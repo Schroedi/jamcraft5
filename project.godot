@@ -121,6 +121,11 @@ roll={
 3d_physics/layer_4="EnemyHurtbox"
 2d_physics/layer_5="Enemy"
 3d_physics/layer_5="Enemy"
+3d_physics/layer_6="Pickable"
+
+[physics]
+
+3d/active_soft_world=false
 
 [rendering]
 

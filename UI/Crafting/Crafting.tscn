@@ -1,12 +1,15 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Weapon/WeaponBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Weapon/WeaponComponent.tscn" type="PackedScene" id=2]
 
+[sub_resource type="ViewportTexture" id=1]
+viewport_path = NodePath("Viewport")
+
 [node name="Crafting" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-mouse_filter = 1
+mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -19,9 +22,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Weapon" parent="PanelContainer" instance=ExtResource( 1 )]
-position = Vector2( 346.068, 339.314 )
-
 [node name="WeaponComponent" parent="PanelContainer" instance=ExtResource( 2 )]
 position = Vector2( 476.783, 408.382 )
 
@@ -30,6 +30,7 @@ margin_left = 7.0
 margin_top = 7.0
 margin_right = 660.0
 margin_bottom = 608.0
+mouse_filter = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer"]
 margin_right = 653.0
@@ -41,6 +42,20 @@ Stats"
 text = "Some 
 Stats"
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer"]
-margin_right = 653.0
-margin_bottom = 601.0
+[node name="TextureRect" type="TextureRect" parent="PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 660.0
+margin_bottom = 608.0
+texture = SubResource( 1 )
+
+[node name="Viewport" type="Viewport" parent="."]
+size = Vector2( 640, 480 )
+transparent_bg = true
+
+[node name="Weapon" parent="Viewport" instance=ExtResource( 1 )]
+transform = Transform( -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="Camera" type="Camera" parent="Viewport"]
+transform = Transform( 1, 0, 0, 0, -0.00856954, 0.999963, 0, -0.999963, -0.00856954, 0, 1.67318, 0.604 )
+current = true
