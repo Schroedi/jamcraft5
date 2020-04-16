@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/sword.dae-173cae8a7abc9a1da6a06ec7a5b233c2.scn"
+path="res://.import/sword.glb-0d841082790a94418543b25c412a59c3.scn"
 
 [deps]
 
-source_file="res://Weapon/sword.dae"
-dest_files=[ "res://.import/sword.dae-173cae8a7abc9a1da6a06ec7a5b233c2.scn" ]
+source_file="res://Weapon/sword.glb"
+dest_files=[ "res://.import/sword.glb-0d841082790a94418543b25c412a59c3.scn" ]
 
 [params]
 
