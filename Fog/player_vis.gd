@@ -5,7 +5,7 @@ onready var fog_size = get_parent().size
 
 var last_pos = Vector2()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var pos = player.transform.origin
 	pos = Vector2(pos.x, pos.z)
 	

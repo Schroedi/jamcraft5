@@ -89,7 +89,7 @@ func attack_state(delta):
 	move(delta)
 	
 
-func move(delta):
+func move(_delta):
 	velocity = move_and_slide_with_snap(velocity, Vector3.DOWN * 100, Vector3.UP, true, 4, PI/2.0)
 
 func roll_animation_finished():
