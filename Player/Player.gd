@@ -20,8 +20,7 @@ export var weapon_wobble_offset = 0.0
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
-onready var weapon_pivot = $Smurp/HitboxPivot
-onready var weapon = $Smurp/HitboxPivot/Weapon
+onready var weapon = $"Smurp/Armature/Skeleton/BoneAttachment/HitboxPivot/Weapon/"
 onready var Smurp = $Smurp
 
 func _ready():
@@ -36,11 +35,6 @@ func _physics_process(delta):
 			roll_state(delta)
 		ATTACK:
 			attack_state(delta)
-
-func wobble_weapon():
-	var target_angle = weapon_pivot.rotation
-	target_angle += weapon_wobble_offset
-	weapon_pivot.rotation = lerp_angle(weapon_pivot.rotation, target_angle, .1)
 
 func move_state(delta):
 	process_input(delta)
@@ -103,7 +97,6 @@ func roll_animation_finished():
 	state = MOVE
 
 func attack_animation_started():
-	#weapon_pivot.rotation = facing_dir.angle()
 	weapon.start_attack()
 	print("dmg start")
 
