@@ -40,7 +40,6 @@ ambient_light_energy = 0.5
 "player",
 ] instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0135235, 0 )
-ROLL_SPEED = 5
 
 [node name="StaticBody" type="StaticBody" parent="."]
 
