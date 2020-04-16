@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/pompom.dae-c1b19996800b1ab03437fddeed493bf7.scn"
+path="res://.import/pompom.glb-0145b694cd14eff32f9485c66e985d09.scn"
 
 [deps]
 
-source_file="res://Pet/pompom.dae"
-dest_files=[ "res://.import/pompom.dae-c1b19996800b1ab03437fddeed493bf7.scn" ]
+source_file="res://Pet/pompom.glb"
+dest_files=[ "res://.import/pompom.glb-0145b694cd14eff32f9485c66e985d09.scn" ]
 
 [params]
 
