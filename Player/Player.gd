@@ -15,7 +15,6 @@ var state = MOVE
 var velocity = Vector3.ZERO
 var facing_dir = Vector3.BACK
 
-export var weapon_wobble_offset = 0.0
 
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
@@ -38,7 +37,6 @@ func _physics_process(delta):
 
 func move_state(delta):
 	process_input(delta)
-#	wobble_weapon()
 	move(delta)
 	
 func process_input(delta):
@@ -72,11 +70,7 @@ func process_input(delta):
 		state = ROLL
 	
 	if Input.is_action_just_pressed("attack"):
-		animationState.travel("Attack_charge")
-		
-	if Input.is_action_just_released("attack"):
-		state = ATTACK
-		animationState.travel("Attack_end")
+		animationState.travel("Attack")
 
 func roll_state(delta):
 	velocity = facing_dir * ROLL_SPEED
@@ -105,8 +99,3 @@ func attack_animation_finished():
 	weapon.end_attack()
 	print("dmg end")
 
-func charged():
-	print("charged")
-
-func charge_start():
-	print("charge start")
