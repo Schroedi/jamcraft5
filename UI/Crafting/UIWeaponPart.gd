@@ -41,3 +41,6 @@ func _on_UIWeaponPart_mouse_entered() -> void:
 
 func _on_UIWeaponPart_mouse_exited() -> void:
 	pass # Replace with function body.
+
+func get_component():
+	return weapon_model.get_child(0)

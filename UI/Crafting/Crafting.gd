@@ -3,8 +3,13 @@ extends Popup
 const weapon_part = preload("res://UI/Crafting/UIWeaponPart.tscn")
 
 onready var inv_grid = $PanelContainer/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer
+onready var weapon_slots = $PanelContainer/MarginContainer/VBoxContainer/Weapon
 
 func _ready() -> void:
+	# start weapon
+	var wp = weapon_part.instance()
+	wp.part_name = "Handle"
+	try_add_item(wp)
 	call_deferred("popup")
 
 static func rand_array(array): # -> [int, object]
@@ -45,7 +50,46 @@ func _on_Crafting_about_to_show() -> void:
 	# TODO load current sword
 	pass # Replace with function body.
 
+func is_weapon_valid():
+	var count_handles = 0
+	var count_tips = 0
+	var first_item = weapon_slots.get_child(0).get_item()
+	var first_is_handle = first_item and first_item.part_name.begins_with("Handle")
+	var last_is_tip = false
+	for s in weapon_slots.get_children():
+		var item = s.get_item()
+		if not item:
+			# skip free slots
+			continue
+		last_is_tip = item.part_name.begins_with("Tip")
+		if last_is_tip:
+			count_tips += 1
+		if item.part_name.begins_with("Handle"):
+			count_handles += 1
+		
+	return count_handles == 1 and count_tips == 1 and first_is_handle and last_is_tip
+
 
 func save_craft():
 	# make 3d sword again
+	if not is_weapon_valid():
+		return
+	
+	var components = []
+	for s in weapon_slots.get_children():
+		var item = s.get_item()
+		if not item:
+			# skip free slots
+			continue
+		components.append(item)
+	Globals.player_weapon.build_from_components(components)
 	pass
+
+
+func _on_Button_pressed() -> void:
+	save_craft()
+
+
+func _on_CheckItem_timeout() -> void:
+	print("is weapon valid: " + str(is_weapon_valid()))
+	pass # Replace with function body.

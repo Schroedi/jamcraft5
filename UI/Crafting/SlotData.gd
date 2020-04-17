@@ -6,3 +6,6 @@ func is_free():
 func set_item(item):
 	assert(is_free())
 	$CenterContainer.add_child(item)
+
+func get_item():
+	return null if $CenterContainer.get_child_count() == 0 else $CenterContainer.get_child(0)

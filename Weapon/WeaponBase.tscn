@@ -1,32 +1,13 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Overlap/Hitbox.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/SwordHitbox.gd" type="Script" id=2]
 [ext_resource path="res://Weapon/WeaponBase.gd" type="Script" id=3]
-[ext_resource path="res://Weapon/sword.glb" type="PackedScene" id=4]
-[ext_resource path="res://Weapon/Slot.gd" type="Script" id=5]
+[ext_resource path="res://Weapon/Handle.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.1
 height = 1.40504
-
-[sub_resource type="SphereShape" id=5]
-radius = 0.15
-
-[sub_resource type="SpatialMaterial" id=6]
-flags_transparent = true
-albedo_color = Color( 1, 1, 1, 0.576471 )
-
-[sub_resource type="SphereMesh" id=7]
-material = SubResource( 6 )
-radius = 0.15
-height = 0.3
-radial_segments = 23
-rings = 16
-
-[sub_resource type="SpatialMaterial" id=8]
-flags_transparent = true
-albedo_color = Color( 1, 1, 1, 0.592157 )
 
 [node name="Weapon" type="Spatial"]
 script = ExtResource( 3 )
@@ -42,27 +23,10 @@ script = ExtResource( 2 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.246035 )
 shape = SubResource( 1 )
 
-[node name="sword" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0 )
+[node name="Visual" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.166502 )
 
-[node name="Slot" type="Area" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00217772, 1.65194 )
-collision_layer = 32
-collision_mask = 32
-script = ExtResource( 5 )
-hoverColor = Color( 0.301961, 0.8, 0.101961, 0.8 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Slot"]
-shape = SubResource( 5 )
-
-[node name="MeshInstance" type="MeshInstance" parent="Slot"]
-mesh = SubResource( 7 )
-material/0 = SubResource( 8 )
+[node name="Handle" parent="Visual" instance=ExtResource( 5 )]
 [connection signal="input_event" from="Hitbox" to="." method="_on_Hitbox_input_event"]
-[connection signal="input_event" from="Slot" to="Slot" method="_on_Slot_input_event"]
-[connection signal="mouse_entered" from="Slot" to="Slot" method="_on_Slot_mouse_entered"]
-[connection signal="mouse_exited" from="Slot" to="Slot" method="_on_Slot_mouse_exited"]
 
 [editable path="Hitbox"]
-
-[editable path="sword"]

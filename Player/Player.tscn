@@ -221,7 +221,7 @@ nodes/Transition/position = Vector2( 480, -70 )
 "nodes/Transition 2/node" = SubResource( 18 )
 "nodes/Transition 2/position" = Vector2( 280, 210 )
 nodes/output/position = Vector2( 1150, 150 )
-node_connections = [ "output", 0, "OneShot", "Transition 2", 0, "None", "Transition 2", 1, "Animation 4", "Add2", 0, "Transition", "Add2", 1, "Transition 2", "OneShot", 0, "Add2", "OneShot", 1, "Animation", "Transition", 0, "Animation 2", "Transition", 1, "Animation 3" ]
+node_connections = [ "output", 0, "OneShot", "Add2", 0, "Transition", "Add2", 1, "Transition 2", "OneShot", 0, "Add2", "OneShot", 1, "Animation", "Transition 2", 0, "None", "Transition 2", 1, "Animation 4", "Transition", 0, "Animation 2", "Transition", 1, "Animation 3" ]
 
 [sub_resource type="AnimationNodeAnimation" id=21]
 animation = "Attack_end"
@@ -303,7 +303,7 @@ anims/Run = SubResource( 10 )
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 34 )
 anim_player = NodePath("../AnimationPlayer")
-
+parameters/playback = SubResource( 35 )
 parameters/Attack/Add2/add_amount = 1.0
 parameters/Attack/OneShot/active = false
 parameters/Attack/Transition/current = 0
@@ -325,7 +325,7 @@ size = 10.0
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.520166, 0 )
 
 [node name="BoneAttachment" type="BoneAttachment" parent="Smurp/Armature/Skeleton" index="1"]
-transform = Transform( 0.186791, -0.433777, 0.881446, 0.929899, 0.367457, -0.0162259, -0.316855, 0.822687, 0.472006, -0.423182, 0.349516, 0.168588 )
+transform = Transform( 1, 0.000662878, -1.3411e-07, -0.000660002, 0.995709, -0.0925318, -6.12214e-05, 0.0925317, 0.99571, -0.434536, 0.193354, 0.482593 )
 bone_name = "sword"
 
 [node name="HitboxPivot" type="Position3D" parent="Smurp/Armature/Skeleton/BoneAttachment"]

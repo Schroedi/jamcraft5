@@ -21,3 +21,14 @@ func _on_Hitbox_input_event(camera: Node, event: InputEvent, click_position: Vec
 	elif event is InputEventMouseButton:
 		dragMouse = event.is_pressed()
 
+func build_from_components(components):
+	# clear first
+	for coll in $Hitbox.get_children():
+		coll.queue_free()
+	for vis in $Visual.get_children():
+		vis.queue_free()
+	
+	# add new
+	for comp in components:
+		var wp = comp.get_component()
+		$Visual.add_child(wp.duplicate())

@@ -25,6 +25,7 @@ onready var Smurp = $Smurp
 func _ready():
 	animationTree.active = true
 	weapon.facing_dir = facing_dir
+	Globals.player_weapon = weapon
 
 func _physics_process(delta):
 	match state:
