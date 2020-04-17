@@ -1,12 +1,25 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Smurp/Smurp.glb" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.gd" type="Script" id=2]
 [ext_resource path="res://Weapon/WeaponBase.tscn" type="PackedScene" id=77]
 
 [sub_resource type="Animation" id=1]
-resource_name = "Attack"
-length = 0.7
+resource_name = "Attack Heavy"
+length = 1.126
+tracks/0/type = "animation"
+tracks/0/path = NodePath("Smurp/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": PoolStringArray( "Attack Heavy" ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=2]
+length = 0.374
 loop = true
 tracks/0/type = "animation"
 tracks/0/path = NodePath("Smurp/AnimationPlayer")
@@ -15,51 +28,39 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"clips": PoolStringArray( "Attack" ),
+"clips": PoolStringArray( "Attack Light" ),
 "times": PoolRealArray( 0 )
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "Attack_charge"
-length = 0.6
-tracks/0/type = "method"
-tracks/0/path = NodePath(".")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.6 ),
-"transitions": PoolRealArray( 1, 1 ),
-"values": [ {
-"args": [  ],
-"method": "charge_start"
-}, {
-"args": [  ],
-"method": "charged"
-} ]
-}
-
 [sub_resource type="Animation" id=3]
-resource_name = "Attack_charged_full"
-length = 0.2
+resource_name = "Attack Medium"
+length = 0.752
 loop = true
-tracks/0/type = "method"
-tracks/0/path = NodePath(".")
+tracks/0/type = "animation"
+tracks/0/path = NodePath("Smurp/AnimationPlayer")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "charged"
-} ]
+"clips": PoolStringArray( "Attack Medium" ),
+"times": PoolRealArray( 0 )
 }
 
 [sub_resource type="Animation" id=4]
+length = 0.628
+tracks/0/type = "animation"
+tracks/0/path = NodePath("Smurp/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": PoolStringArray( "Attack Semilight" ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=5]
 length = 0.001
 tracks/0/type = "method"
 tracks/0/path = NodePath(".")
@@ -76,7 +77,7 @@ tracks/0/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=6]
 length = 0.001
 tracks/0/type = "method"
 tracks/0/path = NodePath(".")
@@ -93,7 +94,7 @@ tracks/0/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=7]
 loop = true
 tracks/0/type = "method"
 tracks/0/path = NodePath(".")
@@ -110,36 +111,22 @@ tracks/0/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=7]
-length = 2.0
+[sub_resource type="Animation" id=8]
+length = 3.332
 loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:weapon_wobble_offset")
-tracks/0/interp = 2
+tracks/0/type = "animation"
+tracks/0/path = NodePath("Smurp/AnimationPlayer")
+tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 2 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ -0.05, 0.05, -0.05 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Smurp/Armature/Skeleton/BoneAttachment/HitboxPivot/Weapon:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 1.1, 2 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector3( 0, 20, 0 ), Vector3( 0, 15, 0 ), Vector3( 0, 20, 0 ) ]
+"clips": PoolStringArray( "Idle" ),
+"times": PoolRealArray( 0 )
 }
 
-[sub_resource type="Animation" id=8]
-length = 0.7
+[sub_resource type="Animation" id=9]
+length = 1.458
 tracks/0/type = "method"
 tracks/0/path = NodePath(".")
 tracks/0/interp = 1
@@ -147,184 +134,184 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0.7 ),
+"times": PoolRealArray( 1.458 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
 "method": "roll_animation_finished"
 } ]
 }
+tracks/1/type = "animation"
+tracks/1/path = NodePath("Smurp/AnimationPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": PoolStringArray( "Roll" ),
+"times": PoolRealArray( 0 )
+}
 
-[sub_resource type="Animation" id=9]
-length = 0.8
+[sub_resource type="Animation" id=10]
+length = 0.833
 loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:weapon_wobble_offset")
-tracks/0/interp = 2
+tracks/0/type = "animation"
+tracks/0/path = NodePath("Smurp/AnimationPlayer")
+tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.4, 0.8 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ -0.1, 0.1, -0.1 ]
+"clips": PoolStringArray( "Walk" ),
+"times": PoolRealArray( 0 )
 }
 
-[sub_resource type="AnimationNodeAnimation" id=10]
-animation = "Attack"
-
-[sub_resource type="AnimationNodeAnimation" id=11]
-animation = "Attack_charge"
+[sub_resource type="AnimationNodeAdd2" id=11]
+sync = true
 
 [sub_resource type="AnimationNodeAnimation" id=12]
-animation = "Attack_charged_full"
-
-[sub_resource type="AnimationNodeAnimation" id=13]
-animation = "Attack_end"
-
-[sub_resource type="AnimationNodeAnimation" id=14]
-animation = "Attack_start"
-
-[sub_resource type="AnimationNodeBlendTree" id=15]
-
-[sub_resource type="AnimationNodeAnimation" id=16]
-animation = "Cyclone"
-
-[sub_resource type="AnimationNodeAnimation" id=17]
-animation = "Idle"
-
-[sub_resource type="AnimationNodeAnimation" id=18]
-animation = "Roll"
-
-[sub_resource type="AnimationNodeAnimation" id=19]
 animation = "Run"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=20]
-switch_mode = 2
-auto_advance = true
+[sub_resource type="AnimationNodeAnimation" id=13]
+animation = "Idle"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=21]
+[sub_resource type="AnimationNodeAnimation" id=14]
+animation = "Attack Light"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=22]
+[sub_resource type="AnimationNodeAnimation" id=15]
+animation = "Roll"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=23]
+[sub_resource type="AnimationNodeAnimation" id=16]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=24]
-switch_mode = 2
+[sub_resource type="AnimationNodeOneShot" id=17]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=25]
-switch_mode = 2
-auto_advance = true
+[sub_resource type="AnimationNodeTransition" id=18]
+input_count = 2
+input_0/name = "state 0"
+input_0/auto_advance = false
+input_1/name = "state 1"
+input_1/auto_advance = false
+
+[sub_resource type="AnimationNodeTransition" id=19]
+input_count = 2
+xfade_time = 0.3
+input_0/name = "run"
+input_0/auto_advance = false
+input_1/name = "idle"
+input_1/auto_advance = false
+
+[sub_resource type="AnimationNodeBlendTree" id=20]
+graph_offset = Vector2( 0, -153.25 )
+nodes/Add2/node = SubResource( 11 )
+nodes/Add2/position = Vector2( 720, 90 )
+nodes/Animation/node = SubResource( 15 )
+nodes/Animation/position = Vector2( 790, 330 )
+"nodes/Animation 2/node" = SubResource( 12 )
+"nodes/Animation 2/position" = Vector2( 280, -100 )
+"nodes/Animation 3/node" = SubResource( 13 )
+"nodes/Animation 3/position" = Vector2( 270, 10 )
+"nodes/Animation 4/node" = SubResource( 14 )
+"nodes/Animation 4/position" = Vector2( 40, 320 )
+nodes/None/node = SubResource( 16 )
+nodes/None/position = Vector2( 70, 190 )
+nodes/OneShot/node = SubResource( 17 )
+nodes/OneShot/position = Vector2( 970, 160 )
+nodes/Transition/node = SubResource( 19 )
+nodes/Transition/position = Vector2( 480, -70 )
+"nodes/Transition 2/node" = SubResource( 18 )
+"nodes/Transition 2/position" = Vector2( 280, 210 )
+nodes/output/position = Vector2( 1150, 150 )
+node_connections = [ "output", 0, "OneShot", "Transition 2", 0, "None", "Transition 2", 1, "Animation 4", "Add2", 0, "Transition", "Add2", 1, "Transition 2", "OneShot", 0, "Add2", "OneShot", 1, "Animation", "Transition", 0, "Animation 2", "Transition", 1, "Animation 3" ]
+
+[sub_resource type="AnimationNodeAnimation" id=21]
+animation = "Attack_end"
+
+[sub_resource type="AnimationNodeAnimation" id=22]
+animation = "Attack_start"
+
+[sub_resource type="AnimationNodeAnimation" id=23]
+animation = "Idle"
+
+[sub_resource type="AnimationNodeAnimation" id=24]
+animation = "Roll"
+
+[sub_resource type="AnimationNodeAnimation" id=25]
+animation = "Run"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=26]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=27]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=28]
 switch_mode = 2
 auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=27]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=28]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=29]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=30]
+switch_mode = 2
 auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=31]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=32]
+switch_mode = 2
 
-[sub_resource type="AnimationNodeStateMachine" id=33]
-states/Attack/node = SubResource( 10 )
-states/Attack/position = Vector2( 265.68, 310.95 )
-states/Attack_charge/node = SubResource( 11 )
-states/Attack_charge/position = Vector2( 653.556, 310.95 )
-states/Attack_charged_full/node = SubResource( 12 )
-states/Attack_charged_full/position = Vector2( 544.556, 394.95 )
-states/Attack_end/node = SubResource( 13 )
-states/Attack_end/position = Vector2( 265.368, 213.45 )
-states/Attack_start/node = SubResource( 14 )
-states/Attack_start/position = Vector2( 454.056, 309.95 )
-states/BlendTree/node = SubResource( 15 )
-states/BlendTree/position = Vector2( -78.444, 116.89 )
-states/Cyclone/node = SubResource( 16 )
-states/Cyclone/position = Vector2( 106.056, 395.575 )
-states/Idle/node = SubResource( 17 )
+[sub_resource type="AnimationNodeStateMachineTransition" id=33]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id=34]
+states/Attack/node = SubResource( 20 )
+states/Attack/position = Vector2( 188.712, 281.961 )
+states/Attack_end/node = SubResource( 21 )
+states/Attack_end/position = Vector2( 187.79, 168.903 )
+states/Attack_start/node = SubResource( 22 )
+states/Attack_start/position = Vector2( 422.305, 284.206 )
+states/Idle/node = SubResource( 23 )
 states/Idle/position = Vector2( 422.211, 169.212 )
-states/Roll/node = SubResource( 18 )
+states/Roll/node = SubResource( 24 )
 states/Roll/position = Vector2( 422.398, 45.45 )
-states/Run/node = SubResource( 19 )
+states/Run/node = SubResource( 25 )
 states/Run/position = Vector2( 602.056, 168.594 )
-transitions = [ "Roll", "Idle", SubResource( 20 ), "Idle", "Roll", SubResource( 21 ), "Idle", "Run", SubResource( 22 ), "Run", "Idle", SubResource( 23 ), "Attack", "Attack_end", SubResource( 24 ), "Attack_end", "Idle", SubResource( 25 ), "Attack_charge", "Attack_start", SubResource( 26 ), "Attack_start", "Attack", SubResource( 27 ), "Attack_charge", "Attack_charged_full", SubResource( 28 ), "Attack_charged_full", "Attack_start", SubResource( 29 ), "Attack_charged_full", "Cyclone", SubResource( 30 ), "Cyclone", "Attack", SubResource( 31 ), "Idle", "Attack_start", SubResource( 32 ) ]
-start_node = "Idle"
-graph_offset = Vector2( -213.944, 153.748 )
+transitions = [ "Roll", "Idle", SubResource( 26 ), "Idle", "Roll", SubResource( 27 ), "Idle", "Run", SubResource( 28 ), "Run", "Idle", SubResource( 29 ), "Attack_end", "Idle", SubResource( 30 ), "Idle", "Attack_start", SubResource( 31 ), "Attack_start", "Attack", SubResource( 32 ), "Attack", "Attack_end", SubResource( 33 ) ]
+start_node = "Attack"
+graph_offset = Vector2( -213.944, 61.9498 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=34]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=35]
 
-[sub_resource type="CapsuleShape" id=35]
+[sub_resource type="CapsuleShape" id=36]
 radius = 0.493648
 height = 0.46643
-
-[sub_resource type="AnimationNodeAnimation" id=36]
-animation = "Attack"
-
-[sub_resource type="AnimationNodeAdd2" id=37]
-
-[sub_resource type="AnimationNodeAnimation" id=38]
-animation = "Roll"
-
-[sub_resource type="AnimationNodeAnimation" id=39]
-animation = "Attack"
-
-[sub_resource type="AnimationNodeBlend2" id=40]
-
-[sub_resource type="AnimationNodeBlendTree" id=41]
-nodes/Add2/node = SubResource( 37 )
-nodes/Add2/position = Vector2( 630, 40 )
-nodes/Animation/node = SubResource( 39 )
-nodes/Animation/position = Vector2( 270, 90 )
-"nodes/Animation 2/node" = SubResource( 38 )
-"nodes/Animation 2/position" = Vector2( 250, 260 )
-nodes/Blend2/node = SubResource( 40 )
-nodes/Blend2/position = Vector2( 650, 230 )
-nodes/output/position = Vector2( 850, 170 )
-node_connections = [ "output", 0, "Blend2", "Blend2", 0, "Animation", "Blend2", 1, "Animation 2" ]
-
-[sub_resource type="AnimationNodeStateMachine" id=42]
-states/Attack/node = SubResource( 36 )
-states/Attack/position = Vector2( 520.5, 158.5 )
-states/BlendTree/node = SubResource( 41 )
-states/BlendTree/position = Vector2( 745.5, 134 )
-start_node = "Attack"
-
-[sub_resource type="AnimationNodeStateMachinePlayback" id=43]
 
 [node name="Player" type="KinematicBody"]
 collision_layer = 2
 collision_mask = 17
 script = ExtResource( 2 )
-weapon_wobble_offset = -0.05
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Attack = SubResource( 1 )
-anims/Attack_charge = SubResource( 2 )
-anims/Attack_charged_full = SubResource( 3 )
-anims/Attack_end = SubResource( 4 )
-anims/Attack_start = SubResource( 5 )
-anims/Cyclone = SubResource( 6 )
-anims/Idle = SubResource( 7 )
-anims/Roll = SubResource( 8 )
-anims/Run = SubResource( 9 )
+"anims/Attack Heavy" = SubResource( 1 )
+"anims/Attack Light" = SubResource( 2 )
+"anims/Attack Medium" = SubResource( 3 )
+"anims/Attack Semilight" = SubResource( 4 )
+anims/Attack_end = SubResource( 5 )
+anims/Attack_start = SubResource( 6 )
+anims/Cyclone = SubResource( 7 )
+anims/Idle = SubResource( 8 )
+anims/Roll = SubResource( 9 )
+anims/Run = SubResource( 10 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 33 )
+tree_root = SubResource( 34 )
 anim_player = NodePath("../AnimationPlayer")
-parameters/playback = SubResource( 34 )
+parameters/playback = SubResource( 35 )
+parameters/Attack/Add2/add_amount = 1.0
+parameters/Attack/OneShot/active = false
+parameters/Attack/Transition/current = 0
+"parameters/Attack/Transition 2/current" = 1
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0.728319, 0 )
-shape = SubResource( 35 )
+shape = SubResource( 36 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 10, 10 )
@@ -341,20 +328,13 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.520166, 0 )
 bones/11/bound_children = [ NodePath("BoneAttachment") ]
 
 [node name="BoneAttachment" type="BoneAttachment" parent="Smurp/Armature/Skeleton" index="1"]
-transform = Transform( 1, 0.000662878, -1.3411e-07, -0.000660002, 0.995709, -0.0925318, -6.12214e-05, 0.0925317, 0.99571, -0.434536, 0.193354, 0.482593 )
+transform = Transform( 0.186791, -0.433777, 0.881446, 0.929899, 0.367457, -0.0162259, -0.316855, 0.822687, 0.472006, -0.423182, 0.349516, 0.168588 )
 bone_name = "sword"
 
 [node name="HitboxPivot" type="Position3D" parent="Smurp/Armature/Skeleton/BoneAttachment"]
 transform = Transform( 1, 0.000654706, -0.000662921, 0.000655304, 0.0118373, 0.999929, 0.000662278, -1.00025, 0.0118329, 0, 0, 5.96046e-08 )
 
 [node name="Weapon" parent="Smurp/Armature/Skeleton/BoneAttachment/HitboxPivot" instance=ExtResource( 77 )]
-transform = Transform( 0.925076, 0, -0.379779, 0, 1, 0, 0.379779, 0, 0.925077, -6.31809e-06, 0.00958222, 0.0913934 )
-
-[node name="AnimationTree" type="AnimationTree" parent="Smurp"]
-tree_root = SubResource( 42 )
-anim_player = NodePath("../AnimationPlayer")
-parameters/playback = SubResource( 43 )
-parameters/BlendTree/Add2/add_amount = 0.5
-parameters/BlendTree/Blend2/blend_amount = 0.5
+transform = Transform( 0.999351, -0.0359714, -0.000726072, 0.0359521, 0.999335, 0.006094, 0.000506996, -0.00612019, 0.999981, -6.31809e-06, 0.00958222, 0.0913934 )
 
 [editable path="Smurp"]
