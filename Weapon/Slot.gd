@@ -1,21 +1,20 @@
-extends StaticBody
+extends Area
 
+export var hoverColor = Color(.8, .1, .1, .8)
+export var normalColor = Color(1, 1, 1, .8)
 
-# Declare member variables here. Examples:
-# var a: int = 2
-# var b: String = "text"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta: float) -> void:
-#	pass
-
+onready var slotMesh = $MeshInstance
 
 func _on_Slot_mouse_entered() -> void:
-	print("mouse enter slot")
-	pass # Replace with function body.
+	slotMesh.get_surface_material(0).albedo_color = hoverColor
+
+
+func _on_Slot_mouse_exited() -> void:
+	slotMesh.get_surface_material(0).albedo_color = normalColor
+
+
+func _on_Slot_input_event(camera: Node, event: InputEvent, click_position: Vector3, click_normal: Vector3, shape_idx: int) -> void:
+	# item drop
+	if event is InputEventMouseButton and not event.is_pressed():
+		# 
+		pass

@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://UI/Crafting/UIWeaponPart.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://default_env.tres" type="Environment" id=3]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+resource_local_to_scene = true
+
+[node name="UIWeaponPart" type="TextureButton"]
+margin_right = 140.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 140, 140 )
+texture_normal = ExtResource( 2 )
+expand = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -69.0
+margin_top = -69.0
+margin_right = 69.0
+margin_bottom = 69.0
+mouse_filter = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_constants/margin_right = 5
+custom_constants/margin_top = 5
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ViewportContainer" type="ViewportContainer" parent="MarginContainer"]
+material = SubResource( 1 )
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 133.0
+margin_bottom = 133.0
+mouse_filter = 2
+stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="MarginContainer/ViewportContainer"]
+size = Vector2( 128, 128 )
+own_world = true
+transparent_bg = true
+handle_input_locally = false
+msaa = 2
+render_target_update_mode = 3
+
+[node name="Camera" type="Camera" parent="MarginContainer/ViewportContainer/Viewport"]
+
+[node name="Weapons" type="Spatial" parent="MarginContainer/ViewportContainer/Viewport"]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0, 0, -0.624 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="MarginContainer/ViewportContainer/Viewport"]
+environment = ExtResource( 3 )
+[connection signal="mouse_entered" from="." to="." method="_on_UIWeaponPart_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_UIWeaponPart_mouse_exited"]
+[connection signal="pressed" from="." to="." method="_on_UIWeaponPart_pressed"]

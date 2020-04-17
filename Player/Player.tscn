@@ -303,7 +303,7 @@ anims/Run = SubResource( 10 )
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 34 )
 anim_player = NodePath("../AnimationPlayer")
-parameters/playback = SubResource( 35 )
+
 parameters/Attack/Add2/add_amount = 1.0
 parameters/Attack/OneShot/active = false
 parameters/Attack/Transition/current = 0
@@ -323,9 +323,6 @@ size = 10.0
 
 [node name="Armature" parent="Smurp" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.520166, 0 )
-
-[node name="Skeleton" parent="Smurp/Armature" index="0"]
-bones/11/bound_children = [ NodePath("BoneAttachment") ]
 
 [node name="BoneAttachment" type="BoneAttachment" parent="Smurp/Armature/Skeleton" index="1"]
 transform = Transform( 0.186791, -0.433777, 0.881446, 0.929899, 0.367457, -0.0162259, -0.316855, 0.822687, 0.472006, -0.423182, 0.349516, 0.168588 )
