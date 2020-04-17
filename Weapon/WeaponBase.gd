@@ -29,6 +29,12 @@ func build_from_components(components):
 		vis.queue_free()
 	
 	# add new
+	var start_pos = Vector3()
 	for comp in components:
-		var wp = comp.get_component()
+		var wp:Spatial = comp.get_component()
+		
+		wp.translate(start_pos)
+		
 		$Visual.add_child(wp.duplicate())
+		if wp.has_node("Next"):
+			start_pos += wp.get_node("Next").transform.origin
