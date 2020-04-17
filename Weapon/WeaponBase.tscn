@@ -14,7 +14,7 @@ script = ExtResource( 3 )
 
 [node name="Hitbox" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.6 )
-input_capture_on_drag = true
+input_ray_pickable = false
 collision_layer = 1
 collision_mask = 9
 script = ExtResource( 2 )
@@ -27,6 +27,5 @@ shape = SubResource( 1 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.166502 )
 
 [node name="Handle" parent="Visual" instance=ExtResource( 5 )]
-[connection signal="input_event" from="Hitbox" to="." method="_on_Hitbox_input_event"]
 
 [editable path="Hitbox"]

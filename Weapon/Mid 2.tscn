@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Mid 2"
@@ -14,6 +14,9 @@ surfaces/0 = {
 "vertex_count": 117
 }
 
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.0896983, 0.225552, 0.257498 )
+
 [node name="Mid 2" type="MeshInstance"]
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0 )
 mesh = SubResource( 1 )
@@ -23,3 +26,7 @@ material/0 = null
 
 [node name="Next" type="Position3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.51 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.83969e-08, 0, -0.254291 )
+shape = SubResource( 2 )

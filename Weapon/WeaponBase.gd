@@ -36,5 +36,8 @@ func build_from_components(components):
 		wp.translate(start_pos)
 		
 		$Visual.add_child(wp.duplicate())
+		$Hitbox.add_child(wp.get_node("CollisionShape").duplicate())
+		
 		if wp.has_node("Next"):
 			start_pos += wp.get_node("Next").transform.origin
+		
