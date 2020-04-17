@@ -210,30 +210,30 @@ auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=23]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=25]
+[sub_resource type="AnimationNodeStateMachineTransition" id=24]
 switch_mode = 2
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=26]
+[sub_resource type="AnimationNodeStateMachineTransition" id=25]
 switch_mode = 2
 auto_advance = true
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=26]
+
 [sub_resource type="AnimationNodeStateMachineTransition" id=27]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=28]
 switch_mode = 2
+auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=29]
-switch_mode = 2
-auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=30]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=31]
 auto_advance = true
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=32]
+[sub_resource type="AnimationNodeStateMachineTransition" id=31]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=44]
+[sub_resource type="AnimationNodeStateMachineTransition" id=32]
 
 [sub_resource type="AnimationNodeStateMachine" id=33]
 states/Attack/node = SubResource( 10 )
@@ -256,7 +256,7 @@ states/Roll/node = SubResource( 18 )
 states/Roll/position = Vector2( 422.398, 45.45 )
 states/Run/node = SubResource( 19 )
 states/Run/position = Vector2( 602.056, 168.594 )
-transitions = [ "Roll", "Idle", SubResource( 20 ), "Idle", "Roll", SubResource( 21 ), "Idle", "Run", SubResource( 22 ), "Run", "Idle", SubResource( 23 ), "Attack", "Attack_end", SubResource( 25 ), "Attack_end", "Idle", SubResource( 26 ), "Attack_charge", "Attack_start", SubResource( 27 ), "Attack_start", "Attack", SubResource( 28 ), "Attack_charge", "Attack_charged_full", SubResource( 29 ), "Attack_charged_full", "Attack_start", SubResource( 30 ), "Attack_charged_full", "Cyclone", SubResource( 31 ), "Cyclone", "Attack", SubResource( 32 ), "Idle", "Attack_start", SubResource( 44 ) ]
+transitions = [ "Roll", "Idle", SubResource( 20 ), "Idle", "Roll", SubResource( 21 ), "Idle", "Run", SubResource( 22 ), "Run", "Idle", SubResource( 23 ), "Attack", "Attack_end", SubResource( 24 ), "Attack_end", "Idle", SubResource( 25 ), "Attack_charge", "Attack_start", SubResource( 26 ), "Attack_start", "Attack", SubResource( 27 ), "Attack_charge", "Attack_charged_full", SubResource( 28 ), "Attack_charged_full", "Attack_start", SubResource( 29 ), "Attack_charged_full", "Cyclone", SubResource( 30 ), "Cyclone", "Attack", SubResource( 31 ), "Idle", "Attack_start", SubResource( 32 ) ]
 start_node = "Idle"
 graph_offset = Vector2( -213.944, 153.748 )
 
@@ -289,7 +289,7 @@ nodes/Animation/position = Vector2( 270, 90 )
 nodes/Blend2/node = SubResource( 40 )
 nodes/Blend2/position = Vector2( 650, 230 )
 nodes/output/position = Vector2( 850, 170 )
-node_connections = [ "Blend2", 0, "Animation", "Blend2", 1, "Animation 2", "output", 0, "Blend2" ]
+node_connections = [ "output", 0, "Blend2", "Blend2", 0, "Animation", "Blend2", 1, "Animation 2" ]
 
 [sub_resource type="AnimationNodeStateMachine" id=42]
 states/Attack/node = SubResource( 36 )
@@ -337,8 +337,11 @@ size = 10.0
 [node name="Armature" parent="Smurp" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.520166, 0 )
 
+[node name="Skeleton" parent="Smurp/Armature" index="0"]
+bones/11/bound_children = [ NodePath("BoneAttachment") ]
+
 [node name="BoneAttachment" type="BoneAttachment" parent="Smurp/Armature/Skeleton" index="1"]
-transform = Transform( 0.994567, 0.0148323, 0.103036, -0.0273767, 0.992223, 0.121425, -0.100433, -0.123586, 0.987238, -0.434536, 0.213577, 0.480955 )
+transform = Transform( 1, 0.000662878, -1.3411e-07, -0.000660002, 0.995709, -0.0925318, -6.12214e-05, 0.0925317, 0.99571, -0.434536, 0.193354, 0.482593 )
 bone_name = "sword"
 
 [node name="HitboxPivot" type="Position3D" parent="Smurp/Armature/Skeleton/BoneAttachment"]
