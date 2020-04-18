@@ -329,9 +329,9 @@ transform = Transform( 1, 0.000662878, -1.3411e-07, -0.000660002, 0.995709, -0.0
 bone_name = "sword"
 
 [node name="HitboxPivot" type="Position3D" parent="Smurp/Armature/Skeleton/BoneAttachment"]
-transform = Transform( 1, 0.000654706, -0.000662921, 0.000655304, 0.0118373, 0.999929, 0.000662278, -1.00025, 0.0118329, 0, 0, 5.96046e-08 )
+transform = Transform( 1, 0, 0, 0, -1.62973e-07, 0.999999, 0, -1.00032, -1.62921e-07, 0, 0, 5.96046e-08 )
 
 [node name="Weapon" parent="Smurp/Armature/Skeleton/BoneAttachment/HitboxPivot" instance=ExtResource( 77 )]
-transform = Transform( 0.999351, -0.0359714, -0.000726072, 0.0359521, 0.999335, 0.006094, 0.000506996, -0.00612019, 0.999981, -6.31809e-06, 0.00958222, 0.0913934 )
+transform = Transform( 0.999397, -0.0346469, -0.000718177, -0.0346285, -0.999382, -0.00609504, -0.000507613, 0.00612011, -0.999982, 5.16474e-05, -0.0778541, 0.233331 )
 
 [editable path="Smurp"]

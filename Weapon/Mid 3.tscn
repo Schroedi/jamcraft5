@@ -17,7 +17,6 @@ surfaces/0 = {
 extents = Vector3( 0.100795, 0.263758, 0.332811 )
 
 [node name="Mid 3" type="MeshInstance"]
-transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0 )
 mesh = SubResource( 1 )
 material/0 = null
 

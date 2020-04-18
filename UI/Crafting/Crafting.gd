@@ -10,6 +10,15 @@ func _ready() -> void:
 	var wp = weapon_part.instance()
 	wp.part_name = "Handle"
 	try_add_item(wp)
+	
+	wp = weapon_part.instance()
+	wp.part_name = "Tip 3"
+	try_add_item(wp)
+	
+	wp = weapon_part.instance()
+	wp.part_name = "Mid 3"
+	try_add_item(wp)
+	
 	call_deferred("popup")
 
 static func rand_array(array): # -> [int, object]

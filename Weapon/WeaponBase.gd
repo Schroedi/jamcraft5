@@ -29,15 +29,21 @@ func build_from_components(components):
 		vis.queue_free()
 	
 	# add new
-	var start_pos = Vector3()
+	var offset = Transform()
 	for comp in components:
-		var wp:Spatial = comp.get_component()
+		var wp:Spatial = comp.get_component().duplicate()
 		
-		wp.translate(start_pos)
+		var collision_shape = wp.get_node("CollisionShape")
+		wp.remove_child(collision_shape)
+		collision_shape.transform *= offset
+		$Hitbox.add_child(collision_shape)
 		
-		$Visual.add_child(wp.duplicate())
-		$Hitbox.add_child(wp.get_node("CollisionShape").duplicate())
+		collision_shape.owner = $Hitbox
+		
+		wp.transform *= offset
+		$Visual.add_child(wp)
+		
 		
 		if wp.has_node("Next"):
-			start_pos += wp.get_node("Next").transform.origin
+			offset *= wp.get_node("Next").transform
 		

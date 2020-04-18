@@ -1,19 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Overlap/Hitbox.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/SwordHitbox.gd" type="Script" id=2]
 [ext_resource path="res://Weapon/WeaponBase.gd" type="Script" id=3]
-[ext_resource path="res://Weapon/Handle.tscn" type="PackedScene" id=5]
-
-[sub_resource type="CapsuleShape" id=1]
-radius = 0.1
-height = 1.40504
 
 [node name="Weapon" type="Spatial"]
 script = ExtResource( 3 )
 
 [node name="Hitbox" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.6 )
 input_ray_pickable = false
 collision_layer = 1
 collision_mask = 9
@@ -21,11 +15,7 @@ script = ExtResource( 2 )
 
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.246035 )
-shape = SubResource( 1 )
 
 [node name="Visual" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.166502 )
-
-[node name="Handle" parent="Visual" instance=ExtResource( 5 )]
 
 [editable path="Hitbox"]
