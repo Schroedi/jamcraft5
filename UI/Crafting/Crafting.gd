@@ -2,8 +2,8 @@ extends Popup
 
 const weapon_part = preload("res://UI/Crafting/UIWeaponPart.tscn")
 
-onready var inv_grid = $PanelContainer/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer
-onready var weapon_slots = $PanelContainer/MarginContainer/VBoxContainer/Weapon
+onready var inv_grid = $Inventory/Inventory/GridContainer
+onready var weapon_slots = $Crafting/Weapon
 
 func _ready() -> void:
 	# start weapon
