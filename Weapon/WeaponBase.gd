@@ -5,7 +5,7 @@ var facing_dir = Vector2.ZERO setget set_facing
 
 func set_facing(dir):
 	facing_dir = dir
-	$Hitbox.knockback_strength = facing_dir * 5
+	$Hitbox.knockback = facing_dir * 5
 
 func start_attack():
 	$Hitbox.monitorable = true

@@ -11,14 +11,13 @@
 [sub_resource type="Theme" id=1]
 default_font = ExtResource( 6 )
 
-[sub_resource type="Theme" id=4]
+[sub_resource type="Theme" id=2]
 
 [node name="Crafting" type="Popup"]
-visible = true
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -895.0
-margin_bottom = -347.0
+margin_right = -1186.0
+margin_bottom = 273.0
 mouse_filter = 2
 script = ExtResource( 2 )
 __meta__ = {
@@ -66,9 +65,9 @@ margin_right = 155.0
 margin_bottom = 953.0
 
 [node name="Button" type="Button" parent="Crafting"]
-margin_left = 338.658
+margin_left = 339.473
 margin_top = 1001.91
-margin_right = 550.658
+margin_right = 551.473
 margin_bottom = 1067.91
 rect_pivot_offset = Vector2( 364.942, -438.057 )
 shortcut_in_tooltip = false
@@ -143,87 +142,95 @@ __meta__ = {
 }
 
 [node name="GridContainer" type="GridContainer" parent="Inventory/Inventory"]
-margin_right = 240.0
+margin_right = 256.0
 margin_bottom = 1440.0
-theme = SubResource( 4 )
+theme = SubResource( 2 )
 custom_constants/vseparation = 0
 custom_constants/hseparation = 0
 columns = 2
 
 [node name="Slot" parent="Inventory/Inventory/GridContainer" instance=ExtResource( 1 )]
+margin_right = 128.0
 
 [node name="Slot2" parent="Inventory/Inventory/GridContainer" instance=ExtResource( 1 )]
-margin_left = 120.0
-margin_right = 240.0
+margin_left = 128.0
+margin_right = 256.0
 
 [node name="Slot3" parent="Inventory/Inventory/GridContainer" instance=ExtResource( 1 )]
 margin_top = 180.0
+margin_right = 128.0
 margin_bottom = 360.0
 
 [node name="Slot4" parent="Inventory/Inventory/GridContainer" instance=ExtResource( 1 )]
-margin_left = 120.0
+margin_left = 128.0
 margin_top = 180.0
-margin_right = 240.0
+margin_right = 256.0
 margin_bottom = 360.0
 
 [node name="Slot5" parent="Inventory/Inventory/GridContainer" instance=ExtResource( 1 )]
 margin_top = 360.0
+margin_right = 128.0
 margin_bottom = 540.0
 
 [node name="Slot6" parent="Inventory/Inventory/GridContainer" instance=ExtResource( 1 )]
-margin_left = 120.0
+margin_left = 128.0
 margin_top = 360.0
-margin_right = 240.0
+margin_right = 256.0
 margin_bottom = 540.0
 
 [node name="Slot7" parent="Inventory/Inventory/GridContainer" instance=ExtResource( 1 )]
 margin_top = 540.0
+margin_right = 128.0
 margin_bottom = 720.0
 
 [node name="Slot8" parent="Inventory/Inventory/GridContainer" instance=ExtResource( 1 )]
-margin_left = 120.0
+margin_left = 128.0
 margin_top = 540.0
-margin_right = 240.0
+margin_right = 256.0
 margin_bottom = 720.0
 
 [node name="Slot9" parent="Inventory/Inventory/GridContainer" instance=ExtResource( 1 )]
 margin_top = 720.0
+margin_right = 128.0
 margin_bottom = 900.0
 
 [node name="Slot10" parent="Inventory/Inventory/GridContainer" instance=ExtResource( 1 )]
-margin_left = 120.0
+margin_left = 128.0
 margin_top = 720.0
-margin_right = 240.0
+margin_right = 256.0
 margin_bottom = 900.0
 
 [node name="Slot11" parent="Inventory/Inventory/GridContainer" instance=ExtResource( 1 )]
 margin_top = 900.0
+margin_right = 128.0
 margin_bottom = 1080.0
 
 [node name="Slot12" parent="Inventory/Inventory/GridContainer" instance=ExtResource( 1 )]
-margin_left = 120.0
+margin_left = 128.0
 margin_top = 900.0
-margin_right = 240.0
+margin_right = 256.0
 margin_bottom = 1080.0
 
 [node name="Slot13" parent="Inventory/Inventory/GridContainer" instance=ExtResource( 1 )]
 margin_top = 1080.0
+margin_right = 128.0
 margin_bottom = 1260.0
 
 [node name="Slot14" parent="Inventory/Inventory/GridContainer" instance=ExtResource( 1 )]
-margin_left = 120.0
+margin_left = 128.0
 margin_top = 1080.0
-margin_right = 240.0
+margin_right = 256.0
 margin_bottom = 1260.0
 
 [node name="Slot15" parent="Inventory/Inventory/GridContainer" instance=ExtResource( 1 )]
 margin_top = 1260.0
+margin_right = 128.0
 margin_bottom = 1440.0
 
 [node name="Slot16" parent="Inventory/Inventory/GridContainer" instance=ExtResource( 1 )]
-margin_left = 120.0
+margin_left = 128.0
 margin_top = 1260.0
-margin_right = 240.0
+margin_right = 256.0
 margin_bottom = 1440.0
 [connection signal="about_to_show" from="." to="." method="_on_Crafting_about_to_show"]
 [connection signal="pressed" from="Crafting/Button" to="." method="_on_Button_pressed"]

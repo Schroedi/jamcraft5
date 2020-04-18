@@ -1,3 +1,3 @@
 extends "res://Overlap/Hitbox.gd"
 
-var knockback_strength = Vector3()
+var knockback = Vector3()
