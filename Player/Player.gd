@@ -15,14 +15,15 @@ var state = MOVE
 var velocity = Vector3.ZERO
 var facing_dir = Vector3.BACK
 
-
-onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
-onready var animationState = animationTree.get("parameters/playback")
+onready var animationPlayer = $Smurp/AnimationPlayer
 onready var weapon = $"Smurp/Armature/Skeleton/BoneAttachment/HitboxPivot/Weapon/"
 onready var Smurp = $Smurp
 
 func _ready():
+	animationPlayer.get_animation("Walk").loop = true
+	animationPlayer.get_animation("Idle").loop = true
+	
 	animationTree.active = true
 	weapon.facing_dir = facing_dir
 	Globals.player_weapon = weapon
@@ -47,36 +48,31 @@ func process_input(delta):
 	input_vector = input_vector.normalized()
 	
 	if input_vector != Vector3.ZERO:
-		facing_dir = input_vector
-		weapon.facing_dir = input_vector
-		
-		animationTree.set("parameters/Idle/blend_position", input_vector)
-		animationTree.set("parameters/Run/blend_position", input_vector)
-		animationTree.set("parameters/Attack/blend_position", input_vector)
-		animationTree.set("parameters/Roll/blend_position", input_vector)
-		
 		# rotate smurp
 		var rotTransform = Smurp.transform.looking_at(-input_vector, Vector3.UP)
 		var thisRotation = Quat(Smurp.transform.basis).slerp(rotTransform.basis, .1)
 		Smurp.transform = Transform(thisRotation,Smurp.transform.origin)
+		facing_dir = thisRotation.xform(-Vector3.FORWARD)
+		weapon.facing_dir = facing_dir
 		
-		#animationState.travel("Run")
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 	else:
-		#animationState.travel("Idle")
 		velocity = velocity.move_toward(Vector3.ZERO, FRICTION * delta)
 	
+	animationTree.set("parameters/WalkIdle/blend_amount", 1-velocity.length())
 	
 	if Input.is_action_just_pressed("roll"):
+		animationTree.set("parameters/RollShot/active", true)
+		$RollTimer.wait_time = animationPlayer.get_animation("Roll").length
+		$RollTimer.start()
 		state = ROLL
 	
 	if Input.is_action_just_pressed("attack"):
-		animationState.travel("Attack")
+		#animationState.travel("Attack")
+		pass
 
 func roll_state(delta):
 	velocity = facing_dir * ROLL_SPEED
-	animationState.travel("Roll")
-	#process_input(delta) # this will not stop the roll as we override the animation state directly
 	move(delta)
 
 func attack_state(delta):
@@ -100,3 +96,6 @@ func attack_animation_finished():
 	weapon.end_attack()
 	print("dmg end")
 
+func _on_RollTimer_timeout() -> void:
+	roll_animation_finished()
+	pass # Replace with function body.
