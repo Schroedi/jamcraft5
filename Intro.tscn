@@ -1409,14 +1409,14 @@ __meta__ = {
 }
 
 [node name="Happy World Images" type="Node2D" parent="."]
-visible = false
-position = Vector2( 1900, 300 )
+position = Vector2( 1876.3, 347.397 )
+scale = Vector2( 1.47397, 1.47397 )
 
 [node name="himmel" type="Sprite" parent="Happy World Images"]
 position = Vector2( 92.4102, -89.6763 )
-scale = Vector2( 1.2, 1.2 )
+scale = Vector2( 1.16218, 1.16218 )
 texture = ExtResource( 15 )
-offset = Vector2( -250, 0 )
+offset = Vector2( -190.754, 0 )
 
 [node name="sonne" type="Sprite" parent="Happy World Images"]
 position = Vector2( 298.115, -498.453 )
@@ -1450,7 +1450,7 @@ scale = Vector2( 0.210414, 0.210414 )
 texture = ExtResource( 8 )
 
 [node name="fels_vordergrund_2" type="Sprite" parent="Happy World Images"]
-position = Vector2( 562.878, 137.858 )
+position = Vector2( 562.878, 162.016 )
 texture = ExtResource( 2 )
 
 [node name="fels_hinten_links" type="Sprite" parent="Happy World Images"]
@@ -1471,7 +1471,7 @@ texture = ExtResource( 3 )
 
 [node name="smurp_arm" type="Sprite" parent="Happy World Images"]
 position = Vector2( -26.3241, -121.112 )
-rotation = 0.0890118
+rotation = 0.199861
 scale = Vector2( 0.70803, 0.800001 )
 texture = ExtResource( 17 )
 
@@ -1486,16 +1486,17 @@ scale = Vector2( 0.231529, 0.231529 )
 texture = ExtResource( 43 )
 
 [node name="fels_vordergrund_rechts" type="Sprite" parent="Happy World Images"]
-position = Vector2( 122.837, 99.336 )
+position = Vector2( 118.895, 157.154 )
 texture = ExtResource( 6 )
 
 [node name="sonnenstrahlen" type="Sprite" parent="Happy World Images"]
-modulate = Color( 1, 1, 1, 0.352941 )
+modulate = Color( 1, 1, 1, 0.523072 )
 position = Vector2( 818.31, 136.153 )
 texture = ExtResource( 12 )
 
 [node name="Blende" type="ColorRect" parent="Happy World Images"]
 visible = false
+modulate = Color( 1, 1, 1, 0 )
 margin_left = -1071.26
 margin_top = -789.771
 margin_right = 1146.74
@@ -1506,6 +1507,7 @@ __meta__ = {
 }
 
 [node name="Dark World Images" type="Node2D" parent="."]
+visible = false
 
 [node name="himmel" type="Sprite" parent="Dark World Images"]
 position = Vector2( 1885.24, 106.178 )
@@ -1709,14 +1711,12 @@ __meta__ = {
 }
 
 [node name="Subtitles" type="Label" parent="Subtitles"]
-modulate = Color( 1, 1, 1, 0 )
 margin_left = 1514.95
 margin_top = 560.363
 margin_right = 2394.95
 margin_bottom = 671.283
 custom_fonts/font = ExtResource( 14 )
-text = "Under the cover of darkness
-they escaped from the evil Nocts."
+text = "Once there were the Smu"
 align = 1
 valign = 1
 autowrap = true
@@ -1738,7 +1738,7 @@ margin_top = 707.0
 margin_right = 2919.0
 margin_bottom = 750.0
 custom_fonts/font = ExtResource( 42 )
-text = "Scene 3 - Kidnapping Parents"
+text = "Scene 0 - Once there were Smu"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
