@@ -34,6 +34,8 @@ onready var weapon = $"Smurp/Armature/Skeleton/BoneAttachment/HitboxPivot/Weapon
 onready var Smurp = $Smurp
 onready var stats = $Stats
 
+onready var start_transform = self.transform
+
 onready var anim_durations = [animationPlayer.get_animation("Attack Light").length,
 animationPlayer.get_animation("Attack Semilight").length,
 animationPlayer.get_animation("Attack Medium").length,
@@ -164,3 +166,11 @@ func _on_Stats_no_health() -> void:
 
 func _on_Pickup_area_entered(area: Area) -> void:
 	emit_signal("pickup", area)
+
+func respawn():
+	# teleport
+	self.transform = start_transform
+	stats.health = stats.max_health
+	stats.dead = false
+	# remove weapon
+	

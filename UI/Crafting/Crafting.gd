@@ -37,6 +37,7 @@ func _ready() -> void:
 	is_weapon_valid()
 	
 	player.connect("pickup", self, "addDrop")
+	player.connect("died", self, "init_weapon")
 	
 	call_deferred("popup")
 	
@@ -55,10 +56,30 @@ func level_test():
 		level_sum += wp.part_power
 	print ("l10: %f" % (level_sum / 100.0))
 
+func init_weapon():
+	for slot in slots:
+		if slot.get_item():
+			slot.get_item().queue_free()
+	yield(get_tree(), "idle_frame")
+	yield(get_tree(), "idle_frame")
+	var wp = weapon_part.instance()
+	wp.part_name = "Handle"
+	wp.part_power = 1
+	slots[0].set_item(wp)
+	
+	wp = weapon_part.instance()
+	wp.part_name = "Tip 1"
+	wp.part_power = 1
+	slots[1].set_item(wp)
+	
+	save_craft()
+
 func _input(ev: InputEvent) -> void:
 	if ev is InputEventMouseButton and ev.button_index == BUTTON_RIGHT:
 		try_add_item(gen_level(1))
-
+	if Input.is_action_just_pressed("item_cheat"):
+		init_weapon()
+	
 func addDrop(drop):
 	# from pickups
 	var level = drop.level

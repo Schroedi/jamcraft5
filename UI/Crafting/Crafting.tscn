@@ -16,7 +16,6 @@ default_font = ExtResource( 6 )
 [sub_resource type="Theme" id=2]
 
 [node name="Crafting" type="Popup"]
-visible = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -1186.0
