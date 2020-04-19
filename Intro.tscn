@@ -40,10 +40,10 @@
 [ext_resource path="res://Intro/BG2/mutter.png" type="Texture" id=38]
 [ext_resource path="res://Intro/BG2/fels_forne_links1.png" type="Texture" id=39]
 [ext_resource path="res://FPSLabel.gd" type="Script" id=40]
-[ext_resource path="res://Music and Sounds/Smurp_Intro.wav" type="AudioStream" id=41]
+[ext_resource path="res://Music and Sounds/Smurp_Intro.ogg" type="AudioStream" id=41]
 [ext_resource path="res://UI/Attack Value.tres" type="DynamicFont" id=42]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
 resource_name = "Scene 0 - Once there were Smu"
 length = 10.0
 tracks/0/type = "value"
@@ -227,7 +227,7 @@ tracks/14/keys = {
 "values": [ "Once there were the Smu", "They lived in peace and harmony" ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=2]
 resource_name = "Scene 1 - Big energy bubbles protected their cities"
 length = 8.0
 tracks/0/type = "value"
@@ -416,8 +416,7 @@ tracks/9/keys = {
 "values": [ "Scene 2 - The Nocts Arrive (sword breaking)" ]
 }
 
-[sub_resource type="Animation" id=1]
-resource_name = "Scene 3 - Kidnapping Parents"
+[sub_resource type="Animation" id=4]
 length = 13.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Subtitles/Subtitles:text")
@@ -480,7 +479,7 @@ tracks/4/keys = {
 "values": [ "Scene 3 - Kidnapping Parents" ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=5]
 resource_name = "Scene 4 - Pompom comes to help"
 length = 11.0
 tracks/0/type = "value"
@@ -545,7 +544,7 @@ tracks/4/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=6]
 resource_name = "Scene 5 - They Escaped in Darkness"
 length = 10.0
 tracks/0/type = "value"
@@ -610,62 +609,62 @@ tracks/4/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=14]
+[sub_resource type="AnimationNodeAnimation" id=7]
 animation = "Scene 0 - Once there were Smu"
 
-[sub_resource type="AnimationNodeAnimation" id=15]
+[sub_resource type="AnimationNodeAnimation" id=8]
 animation = "Scene 1 - Big energy bubbles protected their cities"
 
-[sub_resource type="AnimationNodeAnimation" id=16]
+[sub_resource type="AnimationNodeAnimation" id=9]
 animation = "Scene 2 - The Nocts arrived (sword breaking)"
 
-[sub_resource type="AnimationNodeAnimation" id=17]
+[sub_resource type="AnimationNodeAnimation" id=10]
 animation = "Scene 3 - Kidnapping Parents"
 
-[sub_resource type="AnimationNodeAnimation" id=18]
+[sub_resource type="AnimationNodeAnimation" id=11]
 animation = "Scene 4 - Pompom comes to help"
 
-[sub_resource type="AnimationNodeAnimation" id=19]
+[sub_resource type="AnimationNodeAnimation" id=12]
 animation = "Scene 5 - They Escaped in Darkness"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=20]
+[sub_resource type="AnimationNodeStateMachineTransition" id=13]
 switch_mode = 2
 auto_advance = true
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=21]
+[sub_resource type="AnimationNodeStateMachineTransition" id=14]
 switch_mode = 2
 auto_advance = true
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=22]
+[sub_resource type="AnimationNodeStateMachineTransition" id=15]
 switch_mode = 2
 auto_advance = true
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=23]
+[sub_resource type="AnimationNodeStateMachineTransition" id=16]
 switch_mode = 2
 auto_advance = true
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=24]
+[sub_resource type="AnimationNodeStateMachineTransition" id=17]
 switch_mode = 2
 auto_advance = true
 
-[sub_resource type="AnimationNodeStateMachine" id=9]
-"states/Scene 0 - Once there were Smu/node" = SubResource( 14 )
+[sub_resource type="AnimationNodeStateMachine" id=18]
+"states/Scene 0 - Once there were Smu/node" = SubResource( 7 )
 "states/Scene 0 - Once there were Smu/position" = Vector2( 11, 167.667 )
-"states/Scene 1 - Big energy bubbles protected their cities/node" = SubResource( 15 )
+"states/Scene 1 - Big energy bubbles protected their cities/node" = SubResource( 8 )
 "states/Scene 1 - Big energy bubbles protected their cities/position" = Vector2( 25, 242.333 )
-"states/Scene 2 - The Nocts arrived (sword breaking)/node" = SubResource( 16 )
+"states/Scene 2 - The Nocts arrived (sword breaking)/node" = SubResource( 9 )
 "states/Scene 2 - The Nocts arrived (sword breaking)/position" = Vector2( 64.3334, 315 )
-"states/Scene 3 - Kidnapping Parents/node" = SubResource( 17 )
+"states/Scene 3 - Kidnapping Parents/node" = SubResource( 10 )
 "states/Scene 3 - Kidnapping Parents/position" = Vector2( 63.6706, 381 )
-"states/Scene 4 - Pompom comes to help/node" = SubResource( 18 )
+"states/Scene 4 - Pompom comes to help/node" = SubResource( 11 )
 "states/Scene 4 - Pompom comes to help/position" = Vector2( 65.6705, 448.333 )
-"states/Scene 5 - They Escaped in Darkness/node" = SubResource( 19 )
+"states/Scene 5 - They Escaped in Darkness/node" = SubResource( 12 )
 "states/Scene 5 - They Escaped in Darkness/position" = Vector2( 94.3449, 539.667 )
-transitions = [ "Scene 0 - Once there were Smu", "Scene 1 - Big energy bubbles protected their cities", SubResource( 20 ), "Scene 1 - Big energy bubbles protected their cities", "Scene 2 - The Nocts arrived (sword breaking)", SubResource( 21 ), "Scene 2 - The Nocts arrived (sword breaking)", "Scene 3 - Kidnapping Parents", SubResource( 22 ), "Scene 3 - Kidnapping Parents", "Scene 4 - Pompom comes to help", SubResource( 23 ), "Scene 4 - Pompom comes to help", "Scene 5 - They Escaped in Darkness", SubResource( 24 ) ]
+transitions = [ "Scene 0 - Once there were Smu", "Scene 1 - Big energy bubbles protected their cities", SubResource( 13 ), "Scene 1 - Big energy bubbles protected their cities", "Scene 2 - The Nocts arrived (sword breaking)", SubResource( 14 ), "Scene 2 - The Nocts arrived (sword breaking)", "Scene 3 - Kidnapping Parents", SubResource( 15 ), "Scene 3 - Kidnapping Parents", "Scene 4 - Pompom comes to help", SubResource( 16 ), "Scene 4 - Pompom comes to help", "Scene 5 - They Escaped in Darkness", SubResource( 17 ) ]
 start_node = "Scene 0 - Once there were Smu"
 graph_offset = Vector2( -309.322, 0 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=10]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=19]
 
 [node name="Intro" type="Node2D"]
 position = Vector2( -990.899, 326.205 )
@@ -682,14 +681,15 @@ __meta__ = {
 
 [node name="Happy World Images" type="Node2D" parent="."]
 visible = false
-position = Vector2( 960, 540 )
-scale = Vector2( 3, 3 )
+position = Vector2( 1032.94, 521.378 )
+scale = Vector2( 2.84482, 2.84482 )
 
 [node name="himmel" type="Sprite" parent="Happy World Images"]
+modulate = Color( 1, 1, 1, 0.502954 )
 position = Vector2( 92.4102, -89.6763 )
-scale = Vector2( 1.19917, 1.19917 )
+scale = Vector2( 1.03068, 1.03068 )
 texture = ExtResource( 15 )
-offset = Vector2( -250, 0 )
+offset = Vector2( -230.602, 0 )
 
 [node name="sonne" type="Sprite" parent="Happy World Images"]
 position = Vector2( 298.115, -498.453 )
@@ -723,7 +723,7 @@ scale = Vector2( 0.210414, 0.210414 )
 texture = ExtResource( 8 )
 
 [node name="fels_vordergrund_2" type="Sprite" parent="Happy World Images"]
-position = Vector2( 562.878, 137.858 )
+position = Vector2( 562.878, 145.768 )
 texture = ExtResource( 2 )
 
 [node name="fels_hinten_links" type="Sprite" parent="Happy World Images"]
@@ -759,16 +759,17 @@ scale = Vector2( 0.231529, 0.231529 )
 texture = ExtResource( 9 )
 
 [node name="fels_vordergrund_rechts" type="Sprite" parent="Happy World Images"]
-position = Vector2( 122.837, 99.336 )
+position = Vector2( 121.546, 118.266 )
 texture = ExtResource( 6 )
 
 [node name="sonnenstrahlen" type="Sprite" parent="Happy World Images"]
-modulate = Color( 1, 1, 1, 0.352941 )
+modulate = Color( 1, 1, 1, 0.849987 )
 position = Vector2( 818.31, 136.153 )
 texture = ExtResource( 12 )
 
 [node name="Blende" type="ColorRect" parent="Happy World Images"]
 visible = false
+modulate = Color( 1, 1, 1, 0 )
 margin_left = -1071.26
 margin_top = -789.771
 margin_right = 1146.74
@@ -851,7 +852,7 @@ scale = Vector2( 0.312201, 0.312201 )
 texture = ExtResource( 20 )
 
 [node name="BG_3_07" type="Sprite" parent="Dark World Images"]
-position = Vector2( 503.761, 364.816 )
+position = Vector2( 1339.76, 356.816 )
 scale = Vector2( 0.652819, 0.652819 )
 texture = ExtResource( 37 )
 
@@ -871,12 +872,12 @@ scale = Vector2( 0.216197, 0.216197 )
 texture = ExtResource( 38 )
 
 [node name="monster-schatten" type="Sprite" parent="Dark World Images"]
-position = Vector2( 3222.79, 315.373 )
+position = Vector2( 2642.79, 259.373 )
 scale = Vector2( 0.28987, 0.28987 )
 texture = ExtResource( 33 )
 
 [node name="nebel" type="Sprite" parent="Dark World Images"]
-position = Vector2( 1613.65, 243.648 )
+position = Vector2( 2361.65, 211.648 )
 scale = Vector2( 0.407518, 0.407518 )
 texture = ExtResource( 35 )
 
@@ -892,18 +893,18 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-"anims/Scene 0 - Once there were Smu" = SubResource( 2 )
-"anims/Scene 1 - Big energy bubbles protected their cities" = SubResource( 11 )
+"anims/Scene 0 - Once there were Smu" = SubResource( 1 )
+"anims/Scene 1 - Big energy bubbles protected their cities" = SubResource( 2 )
 "anims/Scene 2 - The Nocts arrived (sword breaking)" = SubResource( 3 )
-"anims/Scene 3 - Kidnapping Parents" = SubResource( 1 )
-"anims/Scene 4 - Pompom comes to help" = SubResource( 12 )
-"anims/Scene 5 - They Escaped in Darkness" = SubResource( 13 )
+"anims/Scene 3 - Kidnapping Parents" = SubResource( 4 )
+"anims/Scene 4 - Pompom comes to help" = SubResource( 5 )
+"anims/Scene 5 - They Escaped in Darkness" = SubResource( 6 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 9 )
+tree_root = SubResource( 18 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource( 10 )
+parameters/playback = SubResource( 19 )
 
 [node name="Subtitles" type="Node2D" parent="."]
 

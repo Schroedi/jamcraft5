@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Smurp_Crafting.ogg-770b455a0af2573543b32ec40ff8f459.oggstr"
+
+[deps]
+
+source_file="res://Music and Sounds/Smurp_Crafting.ogg"
+dest_files=[ "res://.import/Smurp_Crafting.ogg-770b455a0af2573543b32ec40ff8f459.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
