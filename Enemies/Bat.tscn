@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Enemies/Material.material" type="Material" id=1]
+[ext_resource path="res://Materials/Nocts.tres" type="Material" id=1]
 [ext_resource path="res://Enemies/Nocts.glb" type="PackedScene" id=2]
 [ext_resource path="res://Overlap/Hurtbox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Enemies/Bat.gd" type="Script" id=4]
