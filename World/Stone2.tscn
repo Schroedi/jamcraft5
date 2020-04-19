@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://World/stone2.glb" type="PackedScene" id=1]
+[ext_resource path="res://Materials/Stone.tres" type="Material" id=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.846933, 1, 1 )
+
+[node name="Stone" type="StaticBody"]
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( -0.409967, -0.137839, 1.31457, 0.245798, 1.13731, 0.195908, -1.38088, 0.36601, -0.39227, -0.185684, -0.563751, 0.107666 )
+shape = SubResource( 1 )
+
+[node name="stone2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.507568, 0 )
+
+[node name="Stone2 " parent="stone2" index="0"]
+material/0 = ExtResource( 2 )
+
+[editable path="stone2"]
