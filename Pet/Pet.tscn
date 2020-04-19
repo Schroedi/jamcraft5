@@ -29,7 +29,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60926, 0.178354 )
 shape = SubResource( 1 )
 
 [node name="Hurtbox" parent="." instance=ExtResource( 2 )]
-collision_layer = 8
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.66622, 0 )
