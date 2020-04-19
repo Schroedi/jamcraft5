@@ -12,6 +12,8 @@ const ANIM_HEAVY = 3
 
 var curre_attack_type = ANIM_MEDIUMT
 
+var action_queued = MOVE
+
 enum {
 	MOVE,
 	ROLL,
@@ -61,21 +63,17 @@ func process_input(delta):
 	
 	animationTree.set("parameters/WalkIdle/blend_amount", 1-velocity.length())
 	
+	if Input.is_action_just_pressed("roll"):
+		action_queued = ROLL
+	
+	if Input.is_action_just_pressed("attack"):
+		action_queued = ATTACK
 
 
 func _physics_process(delta):
 	match state:
 		MOVE:
 			move_state(delta)
-			if Input.is_action_just_pressed("roll"):
-				animationTree.set("parameters/RollShot/active", true)
-				$RollTimer.wait_time = animationPlayer.get_animation("Roll").length
-				$RollTimer.start()
-				state = ROLL
-			
-			if Input.is_action_just_pressed("attack"):
-				attack_animation_started()
-				state = ATTACK
 		ROLL:
 			roll_state(delta)
 		ATTACK:
@@ -83,6 +81,13 @@ func _physics_process(delta):
 
 func move_state(delta):
 	process_input(delta)
+	match action_queued:
+		ATTACK:
+			attack_animation_started()
+		ROLL:
+			start_roll()
+	action_queued = MOVE
+	
 	move(delta)
 
 func roll_state(delta):
@@ -97,11 +102,18 @@ func attack_state(delta):
 func move(_delta):
 	velocity = move_and_slide_with_snap(velocity, Vector3.DOWN * 100, Vector3.UP, true, 4, PI/2.0)
 
+func start_roll():
+	animationTree.set("parameters/RollShot/active", true)
+	$RollTimer.wait_time = animationPlayer.get_animation("Roll").length
+	$RollTimer.start()
+	state = ROLL
+
 func roll_animation_finished():
 	velocity = velocity * 0.8
 	state = MOVE
 
 func attack_animation_started():
+	state = ATTACK
 	$AttackTimer.wait_time = anim_durations[curre_attack_type]
 	$AttackTimer.start()
 	# set attack type
