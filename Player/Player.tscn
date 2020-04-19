@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Smurp/Smurp.glb" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.gd" type="Script" id=2]
@@ -18,6 +18,18 @@ animation = "Attack Medium"
 [sub_resource type="AnimationNodeAnimation" id=4]
 animation = "Attack Heavy"
 
+[sub_resource type="AnimationNodeAnimation" id=18]
+animation = "Special 1"
+
+[sub_resource type="AnimationNodeAnimation" id=19]
+animation = "Special 2"
+
+[sub_resource type="AnimationNodeAnimation" id=20]
+animation = "Special 3"
+
+[sub_resource type="AnimationNodeAnimation" id=21]
+animation = "Special 4"
+
 [sub_resource type="AnimationNodeAnimation" id=5]
 animation = "Walk"
 
@@ -35,10 +47,6 @@ input_2/auto_advance = false
 input_3/name = "heavy"
 input_3/auto_advance = false
 
-[sub_resource type="AnimationNodeAdd2" id=8]
-filter_enabled = true
-filters = [ "Armature/Skeleton:arm_left", "Armature/Skeleton:arm_right", "Armature/Skeleton:bone", "Armature/Skeleton:hand_left", "Armature/Skeleton:hand_right", "Armature/Skeleton:hip_left", "Armature/Skeleton:hip_right", "Armature/Skeleton:leg_left", "Armature/Skeleton:leg_right", "Armature/Skeleton:shoulder_left", "Armature/Skeleton:shoulder_right", "Armature/Skeleton:sword" ]
-
 [sub_resource type="AnimationNodeBlend2" id=9]
 filter_enabled = true
 filters = [ "Armature/Skeleton:arm_left", "Armature/Skeleton:arm_right", "Armature/Skeleton:bone", "Armature/Skeleton:hand_left", "Armature/Skeleton:hand_right", "Armature/Skeleton:shoulder_left", "Armature/Skeleton:shoulder_right", "Armature/Skeleton:sword" ]
@@ -50,38 +58,65 @@ animation = "Roll"
 
 [sub_resource type="AnimationNodeTimeSeek" id=12]
 
+[sub_resource type="AnimationNodeTimeSeek" id=24]
+
+[sub_resource type="AnimationNodeTransition" id=22]
+input_count = 4
+input_0/name = "s1"
+input_0/auto_advance = false
+input_1/name = "s2"
+input_1/auto_advance = false
+input_2/name = "s3"
+input_2/auto_advance = false
+input_3/name = "s4"
+input_3/auto_advance = false
+
+[sub_resource type="AnimationNodeOneShot" id=23]
+
 [sub_resource type="AnimationNodeBlend2" id=13]
 
 [sub_resource type="AnimationNodeBlendTree" id=14]
-graph_offset = Vector2( -36.1136, 142.546 )
+graph_offset = Vector2( -472, 202.504 )
 nodes/Animation/node = SubResource( 5 )
 nodes/Animation/position = Vector2( -140, 90 )
 "nodes/Animation 2/node" = SubResource( 1 )
 "nodes/Animation 2/position" = Vector2( -150, 200 )
 "nodes/Animation 3/node" = SubResource( 2 )
-"nodes/Animation 3/position" = Vector2( -230, 440 )
+"nodes/Animation 3/position" = Vector2( -380, 390 )
 "nodes/Animation 4/node" = SubResource( 3 )
-"nodes/Animation 4/position" = Vector2( -220, 540 )
+"nodes/Animation 4/position" = Vector2( -370, 490 )
 "nodes/Animation 5/node" = SubResource( 4 )
-"nodes/Animation 5/position" = Vector2( -210, 640 )
+"nodes/Animation 5/position" = Vector2( -360, 590 )
+"nodes/Animation 6/node" = SubResource( 18 )
+"nodes/Animation 6/position" = Vector2( -380, 720 )
+"nodes/Animation 7/node" = SubResource( 19 )
+"nodes/Animation 7/position" = Vector2( -380, 820 )
+"nodes/Animation 8/node" = SubResource( 20 )
+"nodes/Animation 8/position" = Vector2( -380, 920 )
+"nodes/Animation 9/node" = SubResource( 21 )
+"nodes/Animation 9/position" = Vector2( -380, 1020 )
 nodes/Attack/node = SubResource( 7 )
-nodes/Attack/position = Vector2( 0, 390 )
+nodes/Attack/position = Vector2( 0, 380 )
 "nodes/Attack Light/node" = SubResource( 6 )
-"nodes/Attack Light/position" = Vector2( -200, 340 )
-nodes/AttackAdd/node = SubResource( 8 )
-nodes/AttackAdd/position = Vector2( 400, 320 )
+"nodes/Attack Light/position" = Vector2( -350, 290 )
 nodes/AttackBlend/node = SubResource( 9 )
 nodes/AttackBlend/position = Vector2( 370, 120 )
 nodes/Roll/node = SubResource( 10 )
-nodes/Roll/position = Vector2( 570, 450 )
+nodes/Roll/position = Vector2( 740, 470 )
 nodes/RollShot/node = SubResource( 11 )
-nodes/RollShot/position = Vector2( 740, 260 )
+nodes/RollShot/position = Vector2( 960, 260 )
 nodes/Seek/node = SubResource( 12 )
-nodes/Seek/position = Vector2( 190, 360 )
+nodes/Seek/position = Vector2( 200, 400 )
+nodes/SeekSpecial/node = SubResource( 24 )
+nodes/SeekSpecial/position = Vector2( 230, 620 )
+nodes/Special/node = SubResource( 22 )
+nodes/Special/position = Vector2( 30, 680 )
+nodes/SpecialShot/node = SubResource( 23 )
+nodes/SpecialShot/position = Vector2( 630, 260 )
 nodes/WalkIdle/node = SubResource( 13 )
 nodes/WalkIdle/position = Vector2( 60, 110 )
-nodes/output/position = Vector2( 930, 260 )
-node_connections = [ "output", 0, "RollShot", "RollShot", 0, "AttackBlend", "RollShot", 1, "Roll", "Seek", 0, "Attack", "WalkIdle", 0, "Animation", "WalkIdle", 1, "Animation 2", "AttackBlend", 0, "WalkIdle", "AttackBlend", 1, "Seek", "Attack", 0, "Attack Light", "Attack", 1, "Animation 3", "Attack", 2, "Animation 4", "Attack", 3, "Animation 5" ]
+nodes/output/position = Vector2( 1180, 240 )
+node_connections = [ "output", 0, "RollShot", "SpecialShot", 0, "AttackBlend", "SpecialShot", 1, "SeekSpecial", "SeekSpecial", 0, "Special", "WalkIdle", 0, "Animation", "WalkIdle", 1, "Animation 2", "RollShot", 0, "SpecialShot", "RollShot", 1, "Roll", "Seek", 0, "Attack", "AttackBlend", 0, "WalkIdle", "AttackBlend", 1, "Seek", "Special", 0, "Animation 6", "Special", 1, "Animation 7", "Special", 2, "Animation 8", "Special", 3, "Animation 9", "Attack", 0, "Attack Light", "Attack", 1, "Animation 3", "Attack", 2, "Animation 4", "Attack", 3, "Animation 5" ]
 
 [sub_resource type="CapsuleShape" id=15]
 radius = 0.48433
@@ -104,10 +139,12 @@ tree_root = SubResource( 14 )
 anim_player = NodePath("../Smurp/AnimationPlayer")
 active = true
 parameters/Attack/current = 0
-parameters/AttackAdd/add_amount = 1.0
 parameters/AttackBlend/blend_amount = 1.0
 parameters/RollShot/active = false
 parameters/Seek/seek_position = -1.0
+parameters/SeekSpecial/seek_position = -1.0
+parameters/Special/current = 0
+parameters/SpecialShot/active = false
 parameters/WalkIdle/blend_amount = 0.0
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
@@ -125,9 +162,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.211377, 0 )
 
 [node name="Armature" parent="Smurp" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.520166, 0 )
-
-[node name="Skeleton" parent="Smurp/Armature" index="0"]
-bones/11/bound_children = [ NodePath("BoneAttachment") ]
 
 [node name="BoneAttachment" type="BoneAttachment" parent="Smurp/Armature/Skeleton" index="1"]
 transform = Transform( 1, 0.000662878, 7.07805e-08, -0.000660151, 0.995709, -0.0925318, -6.1132e-05, 0.0925318, 0.99571, -0.434536, 0.298196, 0.482593 )
