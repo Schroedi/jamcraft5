@@ -172,5 +172,3 @@ func respawn():
 	self.transform = start_transform
 	stats.health = stats.max_health
 	stats.dead = false
-	# remove weapon
-	
