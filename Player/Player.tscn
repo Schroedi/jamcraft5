@@ -79,7 +79,7 @@ nodes/Seek/position = Vector2( 190, 360 )
 nodes/WalkIdle/node = SubResource( 13 )
 nodes/WalkIdle/position = Vector2( 60, 110 )
 nodes/output/position = Vector2( 930, 260 )
-node_connections = [ "AttackBlend", 0, "WalkIdle", "AttackBlend", 1, "Seek", "output", 0, "RollShot", "RollShot", 0, "AttackBlend", "RollShot", 1, "Roll", "Seek", 0, "Attack", "WalkIdle", 0, "Animation", "WalkIdle", 1, "Animation 2", "Attack", 0, "Attack Light", "Attack", 1, "Animation 3", "Attack", 2, "Animation 4", "Attack", 3, "Animation 5" ]
+node_connections = [ "Attack", 0, "Attack Light", "Attack", 1, "Animation 3", "Attack", 2, "Animation 4", "Attack", 3, "Animation 5", "Seek", 0, "Attack", "RollShot", 0, "AttackBlend", "RollShot", 1, "Roll", "AttackBlend", 0, "WalkIdle", "AttackBlend", 1, "Seek", "WalkIdle", 0, "Animation", "WalkIdle", 1, "Animation 2", "output", 0, "RollShot" ]
 
 [sub_resource type="CapsuleShape" id=15]
 radius = 0.493648
@@ -89,6 +89,7 @@ height = 0.46643
 collision_layer = 2
 collision_mask = 17
 script = ExtResource( 2 )
+ROLL_SPEED = 3.5
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 14 )
@@ -130,8 +131,10 @@ transform = Transform( 1, 0, 0, 0, -1.62973e-07, 0.999999, 0, -1.00032, -1.62921
 transform = Transform( 0.999397, -0.0346469, -0.000718177, -0.0346285, -0.999382, -0.00609504, -0.000507613, 0.00612011, -0.999982, 5.16474e-05, -0.0778541, 0.233331 )
 
 [node name="RollTimer" type="Timer" parent="."]
+one_shot = true
 
 [node name="AttackTimer" type="Timer" parent="."]
+one_shot = true
 [connection signal="timeout" from="RollTimer" to="." method="_on_RollTimer_timeout"]
 [connection signal="timeout" from="AttackTimer" to="." method="_on_AttackTimer_timeout"]
 
