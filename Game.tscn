@@ -173,6 +173,10 @@ material/0 = SubResource( 7 )
 [node name="UILayer" type="CanvasLayer" parent="."]
 
 [node name="MainUI" parent="UILayer" instance=ExtResource( 4 )]
+margin_left = 1.23376
+margin_top = 1.23376
+margin_right = 1.23376
+margin_bottom = 1.23376
 
 [node name="Minimap" type="PanelContainer" parent="."]
 margin_left = 30.3436

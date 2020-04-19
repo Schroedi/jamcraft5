@@ -51,16 +51,20 @@ transform = Transform( -0.000183985, -0.990824, 0.135162, 0.00134884, -0.135162,
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.04785, 0, 3.66113 )
 
 [node name="Napf" parent="napf" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.835938, 0, 0 )
 material/0 = ExtResource( 6 )
 
 [node name="Smurp" parent="." instance=ExtResource( 8 )]
-transform = Transform( 0.119946, 0, -0.99278, 0, 1, 0, 0.99278, 0, 0.119946, 0.428101, -0.00012207, 3.89551 )
+transform = Transform( 0.970771, 0, 0.240008, 0, 1, 0, -0.240008, 0, 0.970771, -0.665588, -0.000610351, 0.917482 )
+
+[node name="AnimationPlayer" parent="Smurp" index="1"]
+autoplay = "Idle"
 
 [node name="pompom" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.23352, 0, 0 )
 
 [node name="Pompom v3 Pompom v3 Body15 " parent="pompom" index="0"]
-transform = Transform( -0.13, -7.33538e-08, 0, 0, 0, -0.13, 7.33538e-08, -0.13, 0, 0, 0, 0 )
+transform = Transform( -0.129891, 0.00531454, 0, 0, 0, -0.13, -0.00531454, -0.129891, 0, 0.315002, 0.000244141, -0.275635 )
 material/0 = ExtResource( 9 )
 
 [node name="Pompom v3 Pompom v3 Body16 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="0"]
@@ -145,14 +149,13 @@ material/0 = ExtResource( 11 )
 material/0 = ExtResource( 9 )
 
 [node name="Pompom v3 Pompom v3 Feeny Rider mini v7 1 Body4 Feeny Rider min" parent="pompom/Pompom v3 Pompom v3 Body15 " index="27"]
-transform = Transform( 0.950587, -0.310461, -2.70173e-14, 0.310461, 0.950587, -8.82383e-15, 2.84217e-14, 0, 1, -44.9907, 5.65652, 6.37959 )
+transform = Transform( -0.684637, -0.728886, 1.94585e-14, 0.728886, -0.684637, -2.07162e-14, 2.84217e-14, 0, 1, -71.5203, -41.1622, 6.77961 )
 material/0 = ExtResource( 12 )
-
-[node name="AnimationPlayer" parent="pompom" index="1"]
-autoplay = "Pompom v3 Pompom v3 Body15 Action"
 
 [editable path="dome"]
 
 [editable path="napf"]
+
+[editable path="Smurp"]
 
 [editable path="pompom"]
