@@ -14,6 +14,10 @@ const ANIM_LIGHT = 0
 const ANIM_SEMILIGHT = 1
 const ANIM_MEDIUMT = 2
 const ANIM_HEAVY = 3
+const ANIM_S1 = 4
+const ANIM_S2 = 5
+const ANIM_S3 = 6
+const ANIM_S4 = 7
 
 var curre_attack_type = ANIM_MEDIUMT
 
@@ -40,7 +44,11 @@ onready var start_transform = self.transform
 onready var anim_durations = [animationPlayer.get_animation("Attack Light").length,
 animationPlayer.get_animation("Attack Semilight").length,
 animationPlayer.get_animation("Attack Medium").length,
-animationPlayer.get_animation("Attack Heavy").length]
+animationPlayer.get_animation("Attack Heavy").length,
+animationPlayer.get_animation("Special 1").length,
+animationPlayer.get_animation("Special 2").length,
+animationPlayer.get_animation("Special 3").length,
+animationPlayer.get_animation("Special 4").length]
 
 
 func _ready():
@@ -76,6 +84,11 @@ func process_input(delta):
 		action_queued = ROLL
 	
 	if Input.is_action_just_pressed("attack"):
+		update_attack_type(false)
+		action_queued = ATTACK
+	
+	if Input.is_action_just_pressed("special"):
+		update_attack_type(true)
 		action_queued = ATTACK
 
 
@@ -114,6 +127,7 @@ func move(_delta):
 	velocity = move_and_slide_with_snap(velocity, Vector3.DOWN * 100, Vector3.UP, true, 4, PI/2.0)
 
 func start_roll():
+	animationTree.set("parameters/SeekRoll/seek_position", 0)
 	animationTree.set("parameters/RollShot/active", true)
 	$RollTimer.wait_time = animationPlayer.get_animation("Roll").length
 	$RollTimer.start()
@@ -123,24 +137,33 @@ func roll_animation_finished():
 	velocity = velocity * 0.8
 	state = MOVE
 
-func update_attack_type():
-	if weapon.weight <= 4:
-		curre_attack_type = ANIM_LIGHT
-	elif weapon.weight > 4 and weapon.weight <= 7:
-		curre_attack_type = ANIM_SEMILIGHT
-	elif weapon.weight > 7 and weapon.weight <= 9:
-		curre_attack_type = ANIM_MEDIUMT
-	elif weapon.weight > 9:
-		curre_attack_type = ANIM_HEAVY
+func update_attack_type(special):
+	if special:
+		# special is 1-4
+		curre_attack_type = weapon.special + 3
+	else:
+		if weapon.weight <= 4:
+			curre_attack_type = ANIM_LIGHT
+		elif weapon.weight > 4 and weapon.weight <= 7:
+			curre_attack_type = ANIM_SEMILIGHT
+		elif weapon.weight > 7 and weapon.weight <= 9:
+			curre_attack_type = ANIM_MEDIUMT
+		elif weapon.weight > 9:
+			curre_attack_type = ANIM_HEAVY
 
 func attack_animation_started():
-	update_attack_type()
 	state = ATTACK
 	$AttackTimer.wait_time = anim_durations[curre_attack_type]
 	$AttackTimer.start()
-	# set attack type
-	animationTree.set("parameters/Attack/current", curre_attack_type)
-	animationTree.set("parameters/Seek/seek_position", 0)
+	if curre_attack_type > 3:
+		# special
+		animationTree.set("parameters/Special/current", curre_attack_type - 4)
+		animationTree.set("parameters/SeekSpecial/seek_position", 0)
+		animationTree.set("parameters/SpecialShot/active", true)
+	else:
+		# set attack type
+		animationTree.set("parameters/Attack/current", curre_attack_type)
+		animationTree.set("parameters/Seek/seek_position", 0)
 	weapon.start_attack()
 
 func attack_animation_finished():
