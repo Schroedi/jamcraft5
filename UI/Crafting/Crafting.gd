@@ -20,7 +20,7 @@ func _ready() -> void:
 	# start weapon
 	var wp = weapon_part.instance()
 	wp.part_name = "Handle"
-	wp.part_power = 4
+	wp.part_power = 1
 	try_add_item(wp)
 	
 	wp = weapon_part.instance()
@@ -76,10 +76,12 @@ func init_weapon():
 	save_craft()
 
 func _input(ev: InputEvent) -> void:
-	if ev is InputEventMouseButton and ev.button_index == BUTTON_RIGHT:
-		try_add_item(gen_level(1))
 	if Input.is_action_just_pressed("item_cheat"):
-		init_weapon()
+		try_add_item(gen_level(1))
+	
+func _unhandled_key_input(event : InputEventKey) -> void:
+	if Input.is_action_just_pressed("inventory"):
+		visible = not visible
 	
 func addDrop(drop):
 	# from pickups
@@ -162,12 +164,12 @@ func is_weapon_valid():
 	
 	if not is_valid:
 		if not first_is_handle:
-			$Error.text = "Start with a handle."
+			$Crafting/Error.text = "Start with a handle."
 		elif not last_is_tip:
-			$Error.text = "Finish with a tip."
+			$Crafting/Error.text = "Finish with a tip."
 		elif not (count_handles == 1 and count_tips == 1):
-			$Error.text = "This won't hold."
-	$Error.visible = not is_valid
+			$Crafting/Error.text = "This won't hold."
+	$Crafting/Error.visible = not is_valid
 	$Crafting/Button.disabled = not is_valid
 	
 	update_stats_ui()
@@ -198,6 +200,7 @@ func save_craft():
 	var plr = get_tree().get_nodes_in_group('player')[0]
 	plr.visible = true
 	plr.get_node('Camera').current = true
+	$Crafting.visible = false
 
 
 func _on_Button_pressed() -> void:
@@ -215,4 +218,5 @@ func _on_Crafting_about_to_show() -> void:
 	get_tree().get_nodes_in_group('player')[0].visible = false
 	get_tree().get_nodes_in_group('pet')[0].visible = false
 	get_tree().get_nodes_in_group('craft_cam')[0].current = true
+	$Crafting.visible = true
 	GSound.start_crafting()

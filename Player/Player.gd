@@ -80,7 +80,7 @@ func process_input(delta):
 
 
 func _physics_process(delta):
-	if stats.dead:
+	if stats.dead or not visible:
 		return
 	match state:
 		MOVE:

@@ -1,8 +1,7 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://World.tscn" type="PackedScene" id=1]
 [ext_resource path="res://PostProcess.gd" type="Script" id=2]
-[ext_resource path="res://FPSLabel.gd" type="Script" id=3]
 [ext_resource path="res://UI/MainUI.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Fog/player_vis.gd" type="Script" id=5]
 [ext_resource path="res://Fog/Fogoise.tres" type="Texture" id=6]
@@ -197,6 +196,3 @@ expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="FpsLabel" type="CanvasLayer" parent="."]
-script = ExtResource( 3 )

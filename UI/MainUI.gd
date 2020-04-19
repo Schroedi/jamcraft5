@@ -29,10 +29,6 @@ func die():
 	$AnimationPlayer.play("die")
 
 
-func _unhandled_key_input(event : InputEventKey) -> void:
-	if event.pressed and event.scancode == KEY_C:
-		$Crafting.popup()
-
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("return_base"):
 		$Container/ButtomRight/ProgressBar.value += delta * 50
