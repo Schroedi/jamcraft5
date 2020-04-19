@@ -23,8 +23,10 @@ onready var playerDetectionZone = $PlayerDetectionZone
 
 func _ready() -> void:
 	animations.get_animation("ArmatureAction").loop = true
-	animations.play("ArmatureAction")
-	animations.seek(randf())
+	animations.get_animation("Actions").loop = true
+	#animations.play("ArmatureAction")
+	$AnimationTree.set("parameters/Seek/seek_position", randf())
+	$AnimationTree.active = true
 
 func _physics_process(delta):
 	knockback = knockback.move_toward(Vector3.ZERO, FRICTION * delta)
@@ -58,6 +60,12 @@ func _physics_process(delta):
 func seek_player():
 	if playerDetectionZone.can_see_player():
 		state = CHASE
+
+func deal_damage():
+	$Hitbox.monitorable = true
+	yield(get_tree(), "idle_frame")
+	$Hitbox.monitorable = false
+	pass
 
 func _on_Hurtbox_area_entered(area):
 	stats.health -= area.damage

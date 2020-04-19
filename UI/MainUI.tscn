@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://UI/HeartUIFull.png" type="Texture" id=1]
 [ext_resource path="res://UI/HeartUIEmpty.png" type="Texture" id=2]
@@ -8,6 +8,78 @@
 [ext_resource path="res://UI/info.png" type="Texture" id=6]
 [ext_resource path="res://UI/Status Counter Font mini.tres" type="DynamicFont" id=7]
 [ext_resource path="res://UI/MainUI.gd" type="Script" id=8]
+[ext_resource path="res://UI/Crafting/Crafting.tscn" type="PackedScene" id=9]
+
+[sub_resource type="Shader" id=1]
+code = "
+shader_type canvas_item;
+
+uniform float desaturation : hint_range(0, 1);
+uniform float brightness: hint_range(0, 1);
+
+void fragment() {
+	vec3 base = texture(SCREEN_TEXTURE, SCREEN_UV).rgb;
+	vec3 desat = vec3(dot(base, vec3(0.299, 0.587, 0.114))) * brightness;
+	//COLOR.rgb = desat;
+	COLOR.rgb = mix(base, desat, desaturation);
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/desaturation = 0.9
+shader_param/brightness = 0.0
+
+[sub_resource type="Animation" id=3]
+resource_name = "die"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Death:material:shader_param/brightness")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Death:material:shader_param/desaturation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.9 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Death:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Death/Label:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
 
 [node name="MainUI" type="MarginContainer"]
 anchor_right = 1.0
@@ -149,3 +221,39 @@ text = "Some Infos"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Crafting" parent="." instance=ExtResource( 9 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+
+[node name="Death" type="ColorRect" parent="."]
+visible = false
+material = SubResource( 2 )
+margin_right = 1920.0
+margin_bottom = 1080.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Death"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "You nearly died. Pompom rescued you and carried you home."
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Death"]
+margin_left = 927.136
+margin_top = 604.003
+margin_right = 996.136
+margin_bottom = 624.003
+text = "Continue"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/die = SubResource( 3 )
