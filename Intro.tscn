@@ -1746,6 +1746,7 @@ script = ExtResource( 40 )
 stream = ExtResource( 41 )
 
 [node name="Scene Count Overlay" type="Label" parent="."]
+visible = false
 self_modulate = Color( 0.0901961, 1, 0, 1 )
 margin_left = 988.0
 margin_top = 707.0
