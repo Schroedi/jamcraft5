@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Smurp_Intro.wav-15029da24c5b42b8e457b2e574d4e36d.sample"
+
+[deps]
+
+source_file="res://Music and Sounds/Smurp_Intro.wav"
+dest_files=[ "res://.import/Smurp_Intro.wav-15029da24c5b42b8e457b2e574d4e36d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

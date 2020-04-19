@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=62 format=2]
 
 [ext_resource path="res://Intro/BG1/fels_wasser.png" type="Texture" id=1]
 [ext_resource path="res://Intro/BG1/fels_vordergrund_2.png" type="Texture" id=2]
@@ -40,135 +40,74 @@
 [ext_resource path="res://Intro/BG2/mutter.png" type="Texture" id=38]
 [ext_resource path="res://Intro/BG2/fels_forne_links1.png" type="Texture" id=39]
 [ext_resource path="res://FPSLabel.gd" type="Script" id=40]
-
-[sub_resource type="Animation" id=1]
-resource_name = "Scene 3"
-length = 6.0
-tracks/0/type = "value"
-tracks/0/path = NodePath("Subtitles/Label:text")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ "Third Sceneee!" ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Scene 2:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Scene 1:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("Scene 3:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 5.9 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("Subtitles/Label:modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0, 0.5, 1, 5, 6 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
+[ext_resource path="res://Music and Sounds/Smurp_Intro.wav" type="AudioStream" id=41]
+[ext_resource path="res://UI/Attack Value.tres" type="DynamicFont" id=42]
 
 [sub_resource type="Animation" id=2]
+resource_name = "Scene 0 - Once there were Smu"
 length = 10.0
 tracks/0/type = "value"
-tracks/0/path = NodePath("Subtitles/Label:text")
+tracks/0/path = NodePath("Happy World Images:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ "The Smus life once in peace and harmony in ower world. Energy bubbles safe there citys." ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Scene 1:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
 "times": PoolRealArray( 0, 9.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Subtitles/Subtitles:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.2, 3.6, 4.8, 5.9, 8.9, 9.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
 tracks/2/type = "value"
-tracks/2/path = NodePath("Subtitles/Label:modulate")
+tracks/2/path = NodePath("Happy World Images/himmel:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
-tracks/2/enabled = true
+tracks/2/enabled = false
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.5, 1, 8.6, 9.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0.0705882 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("Scene 1/himmel:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = false
-tracks/3/keys = {
 "times": PoolRealArray( 0, 0.8, 2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.482353 ), Color( 1, 1, 1, 1 ) ]
 }
-tracks/4/type = "value"
-tracks/4/path = NodePath("Scene 1/himmel:scale")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = false
-tracks/4/keys = {
+tracks/3/type = "value"
+tracks/3/path = NodePath("Happy World Images/himmel:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = false
+tracks/3/keys = {
 "times": PoolRealArray( 0.4, 2.8 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1, 1 ), Vector2( 1.2, 1.2 ) ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("Happy World Images/himmel:offset")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 9.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -250, 0 ), Vector2( 0, 0 ) ]
+}
 tracks/5/type = "value"
-tracks/5/path = NodePath("Scene 1/himmel:offset")
+tracks/5/path = NodePath("Happy World Images:scale")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -177,10 +116,10 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 9.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -250, 0 ), Vector2( 0, 0 ) ]
+"values": [ Vector2( 3, 3 ), Vector2( 1, 1 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Scene 1:scale")
+tracks/6/path = NodePath("Happy World Images:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -189,10 +128,10 @@ tracks/6/keys = {
 "times": PoolRealArray( 0, 9.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 3, 3 ), Vector2( 1, 1 ) ]
+"values": [ Vector2( 960, 540 ), Vector2( 1900, 300 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Scene 1:position")
+tracks/7/path = NodePath("Happy World Images/fels_vordergrund_2:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -201,10 +140,10 @@ tracks/7/keys = {
 "times": PoolRealArray( 0, 9.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 960, 540 ), Vector2( 1900, 300 ) ]
+"values": [ Vector2( 562.878, 137.858 ), Vector2( 562.878, 239.799 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("Scene 1/fels_vordergrund_2:position")
+tracks/8/path = NodePath("Happy World Images/fels_vordergrund_rechts:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -213,74 +152,86 @@ tracks/8/keys = {
 "times": PoolRealArray( 0, 9.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 562.878, 137.858 ), Vector2( 562.878, 239.799 ) ]
+"values": [ Vector2( 122.837, 99.336 ), Vector2( 106.203, 343.309 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("Scene 1/fels_vordergrund_rechts:position")
+tracks/9/path = NodePath("Happy World Images/smurp_arm:rotation_degrees")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0, 9.9 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 122.837, 99.336 ), Vector2( 106.203, 343.309 ) ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath("Scene 1/smurp_arm:rotation_degrees")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/keys = {
 "times": PoolRealArray( 5.5, 8 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ -17.3, 26.1 ]
 }
-tracks/11/type = "value"
-tracks/11/path = NodePath("Scene 1/sonnenstrahlen:modulate")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/keys = {
+tracks/10/type = "value"
+tracks/10/path = NodePath("Happy World Images/sonnenstrahlen:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
 "times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0.352941 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.270588 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.317647 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.384314 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.305882 ), Color( 1, 1, 1, 1 ) ]
 }
-tracks/12/type = "value"
-tracks/12/path = NodePath("Scene 1/Blende:modulate")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/keys = {
+tracks/11/type = "value"
+tracks/11/path = NodePath("Happy World Images/Blende:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
 "times": PoolRealArray( 0, 0.2, 9.4, 9.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
+tracks/12/type = "value"
+tracks/12/path = NodePath("Dark World Images:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 tracks/13/type = "value"
-tracks/13/path = NodePath("Scene 2:visible")
+tracks/13/path = NodePath("Scene Count Overlay:text")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
-tracks/13/enabled = false
+tracks/13/enabled = true
 tracks/13/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [  ]
+"values": [ "Scene 0 - Once there were Smu" ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Subtitles/Subtitles:text")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0.1, 4.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ "Once there were the Smu", "They lived in peace and harmony" ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "Scene2"
-length = 15.0
+[sub_resource type="Animation" id=11]
+resource_name = "Scene 1 - Big energy bubbles protected their cities"
+length = 8.0
 tracks/0/type = "value"
-tracks/0/path = NodePath("Subtitles/Label:text")
+tracks/0/path = NodePath("Scene Count Overlay:text")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -288,11 +239,76 @@ tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ "They never have a reason to fight, till one day there world change forever!" ]
+"update": 1,
+"values": [ "Scene 1 - Big energy bubbles protected their cities" ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Scene 2:visible")
+tracks/1/path = NodePath("Subtitles/Subtitles:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ "big energy bubbles protected their cities, 
+for they never had to fight against any foes" ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Subtitles/Subtitles:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1.4, 5.3, 7.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.0705882 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Dark World Images:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Happy World Images:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Scene 2 - The Nocts arrived (sword breaking)"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Subtitles/Subtitles:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ "Until the Nocts arrived" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Dark World Images:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -304,7 +320,7 @@ tracks/1/keys = {
 "values": [ true, false ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Scene 1:visible")
+tracks/2/path = NodePath("Happy World Images:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -316,19 +332,19 @@ tracks/2/keys = {
 "values": [ false ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Subtitles/Label:modulate")
+tracks/3/path = NodePath("Subtitles/Subtitles:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.5, 1, 4, 10 ),
+"times": PoolRealArray( 0, 0.3, 0.7, 4.6, 5.6 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Scene 2/nebel:position")
+tracks/4/path = NodePath("Dark World Images/nebel:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -340,7 +356,7 @@ tracks/4/keys = {
 "values": [ Vector2( 1613.65, 243.648 ), Vector2( 2361.65, 211.648 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Scene 2/BG_3_07:position")
+tracks/5/path = NodePath("Dark World Images/BG_3_07:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -352,7 +368,7 @@ tracks/5/keys = {
 "values": [ Vector2( 503.761, 364.816 ), Vector2( 1339.76, 356.816 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Scene 2/monster-schatten:position")
+tracks/6/path = NodePath("Dark World Images/monster-schatten:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -364,7 +380,7 @@ tracks/6/keys = {
 "values": [ Vector2( 3222.79, 315.373 ), Vector2( 2642.79, 259.373 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Scene 2/blitze:modulate")
+tracks/7/path = NodePath("Dark World Images/blitze:modulate")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -376,7 +392,7 @@ tracks/7/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("Scene 2/ColorRect:modulate")
+tracks/8/path = NodePath("Dark World Images/ColorRect:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -387,33 +403,267 @@ tracks/8/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
+tracks/9/type = "value"
+tracks/9/path = NodePath("Scene Count Overlay:text")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Scene 2 - The Nocts Arrive (sword breaking)" ]
+}
 
-[sub_resource type="AnimationNodeAnimation" id=4]
-animation = "Scene 3"
+[sub_resource type="Animation" id=1]
+resource_name = "Scene 3 - Kidnapping Parents"
+length = 13.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Subtitles/Subtitles:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 4, 10 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ "The Nocts kidnapped Smurps parents", "He and his little sister ran and hid behind a giant stone", "It all seemed lost" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Dark World Images:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Happy World Images:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Subtitles/Subtitles:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 3.1, 4, 4.7, 7.5, 8.6, 10, 10.6, 12.3, 12.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Scene Count Overlay:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Scene 3 - Kidnapping Parents" ]
+}
 
-[sub_resource type="AnimationNodeAnimation" id=5]
-animation = "Scene1"
+[sub_resource type="Animation" id=12]
+resource_name = "Scene 4 - Pompom comes to help"
+length = 11.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Scene Count Overlay:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Scene 4 - Pompom comes to help" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Subtitles/Subtitles:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ "Suddenly a huge beast came out of nowhere
+to help smurp and his sister" ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Subtitles/Subtitles:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 7.3, 8.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Dark World Images:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Happy World Images:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
-[sub_resource type="AnimationNodeAnimation" id=6]
-animation = "Scene2"
+[sub_resource type="Animation" id=13]
+resource_name = "Scene 5 - They Escaped in Darkness"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Scene Count Overlay:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Scene 5 - They Escaped in Darkness" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Subtitles/Subtitles:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ "Under the cover of darkness
+they escaped from the evil Nocts." ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Subtitles/Subtitles:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 4.4, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Dark World Images:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Happy World Images:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=7]
+[sub_resource type="AnimationNodeAnimation" id=14]
+animation = "Scene 0 - Once there were Smu"
+
+[sub_resource type="AnimationNodeAnimation" id=15]
+animation = "Scene 1 - Big energy bubbles protected their cities"
+
+[sub_resource type="AnimationNodeAnimation" id=16]
+animation = "Scene 2 - The Nocts arrived (sword breaking)"
+
+[sub_resource type="AnimationNodeAnimation" id=17]
+animation = "Scene 3 - Kidnapping Parents"
+
+[sub_resource type="AnimationNodeAnimation" id=18]
+animation = "Scene 4 - Pompom comes to help"
+
+[sub_resource type="AnimationNodeAnimation" id=19]
+animation = "Scene 5 - They Escaped in Darkness"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=20]
 switch_mode = 2
 auto_advance = true
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=8]
+[sub_resource type="AnimationNodeStateMachineTransition" id=21]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=22]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=23]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=24]
 switch_mode = 2
 auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachine" id=9]
-"states/Scene 3/node" = SubResource( 4 )
-"states/Scene 3/position" = Vector2( 613, 105 )
-states/Scene1/node = SubResource( 5 )
-states/Scene1/position = Vector2( 182, 108 )
-states/Scene2/node = SubResource( 6 )
-states/Scene2/position = Vector2( 427, 108 )
-transitions = [ "Scene1", "Scene2", SubResource( 7 ), "Scene2", "Scene 3", SubResource( 8 ) ]
-start_node = "Scene1"
+"states/Scene 0 - Once there were Smu/node" = SubResource( 14 )
+"states/Scene 0 - Once there were Smu/position" = Vector2( 11, 167.667 )
+"states/Scene 1 - Big energy bubbles protected their cities/node" = SubResource( 15 )
+"states/Scene 1 - Big energy bubbles protected their cities/position" = Vector2( 25, 242.333 )
+"states/Scene 2 - The Nocts arrived (sword breaking)/node" = SubResource( 16 )
+"states/Scene 2 - The Nocts arrived (sword breaking)/position" = Vector2( 64.3334, 315 )
+"states/Scene 3 - Kidnapping Parents/node" = SubResource( 17 )
+"states/Scene 3 - Kidnapping Parents/position" = Vector2( 63.6706, 381 )
+"states/Scene 4 - Pompom comes to help/node" = SubResource( 18 )
+"states/Scene 4 - Pompom comes to help/position" = Vector2( 65.6705, 448.333 )
+"states/Scene 5 - They Escaped in Darkness/node" = SubResource( 19 )
+"states/Scene 5 - They Escaped in Darkness/position" = Vector2( 94.3449, 539.667 )
+transitions = [ "Scene 0 - Once there were Smu", "Scene 1 - Big energy bubbles protected their cities", SubResource( 20 ), "Scene 1 - Big energy bubbles protected their cities", "Scene 2 - The Nocts arrived (sword breaking)", SubResource( 21 ), "Scene 2 - The Nocts arrived (sword breaking)", "Scene 3 - Kidnapping Parents", SubResource( 22 ), "Scene 3 - Kidnapping Parents", "Scene 4 - Pompom comes to help", SubResource( 23 ), "Scene 4 - Pompom comes to help", "Scene 5 - They Escaped in Darkness", SubResource( 24 ) ]
+start_node = "Scene 0 - Once there were Smu"
+graph_offset = Vector2( -309.322, 0 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=10]
 
@@ -430,93 +680,94 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Scene 1" type="Node2D" parent="."]
+[node name="Happy World Images" type="Node2D" parent="."]
+visible = false
 position = Vector2( 960, 540 )
 scale = Vector2( 3, 3 )
 
-[node name="himmel" type="Sprite" parent="Scene 1"]
+[node name="himmel" type="Sprite" parent="Happy World Images"]
 position = Vector2( 92.4102, -89.6763 )
-scale = Vector2( 1.2, 1.2 )
+scale = Vector2( 1.19917, 1.19917 )
 texture = ExtResource( 15 )
 offset = Vector2( -250, 0 )
 
-[node name="sonne" type="Sprite" parent="Scene 1"]
+[node name="sonne" type="Sprite" parent="Happy World Images"]
 position = Vector2( 298.115, -498.453 )
 texture = ExtResource( 11 )
 
-[node name="wald_hintergrund" type="Sprite" parent="Scene 1"]
+[node name="wald_hintergrund" type="Sprite" parent="Happy World Images"]
 position = Vector2( 263.316, -253.401 )
 scale = Vector2( 0.684574, 0.597921 )
 texture = ExtResource( 13 )
 
-[node name="thal" type="Sprite" parent="Scene 1"]
+[node name="thal" type="Sprite" parent="Happy World Images"]
 position = Vector2( 286.095, -66.523 )
 texture = ExtResource( 18 )
 
-[node name="fels_wasser" type="Sprite" parent="Scene 1"]
+[node name="fels_wasser" type="Sprite" parent="Happy World Images"]
 position = Vector2( 886.692, -188.872 )
 texture = ExtResource( 1 )
 
-[node name="fels_unten_links" type="Sprite" parent="Scene 1"]
+[node name="fels_unten_links" type="Sprite" parent="Happy World Images"]
 position = Vector2( -387.707, 140.604 )
 texture = ExtResource( 4 )
 
-[node name="fels_forne_links" type="Sprite" parent="Scene 1"]
+[node name="fels_forne_links" type="Sprite" parent="Happy World Images"]
 position = Vector2( -645.093, 358.392 )
 scale = Vector2( 1.04654, 1.06057 )
 texture = ExtResource( 10 )
 
-[node name="mutter" type="Sprite" parent="Scene 1"]
+[node name="mutter" type="Sprite" parent="Happy World Images"]
 position = Vector2( 138.745, -38.4451 )
 scale = Vector2( 0.210414, 0.210414 )
 texture = ExtResource( 8 )
 
-[node name="fels_vordergrund_2" type="Sprite" parent="Scene 1"]
+[node name="fels_vordergrund_2" type="Sprite" parent="Happy World Images"]
 position = Vector2( 562.878, 137.858 )
 texture = ExtResource( 2 )
 
-[node name="fels_hinten_links" type="Sprite" parent="Scene 1"]
+[node name="fels_hinten_links" type="Sprite" parent="Happy World Images"]
 position = Vector2( -687.52, -487.306 )
 texture = ExtResource( 19 )
 
-[node name="fels_links" type="Sprite" parent="Scene 1"]
+[node name="fels_links" type="Sprite" parent="Happy World Images"]
 position = Vector2( -766.716, -306.287 )
 texture = ExtResource( 5 )
 
-[node name="kleiner_fels_links" type="Sprite" parent="Scene 1"]
+[node name="kleiner_fels_links" type="Sprite" parent="Happy World Images"]
 position = Vector2( -619.638, -193.15 )
 texture = ExtResource( 7 )
 
-[node name="baum" type="Sprite" parent="Scene 1"]
+[node name="baum" type="Sprite" parent="Happy World Images"]
 position = Vector2( -331.139, -368.512 )
 texture = ExtResource( 3 )
 
-[node name="smurp_arm" type="Sprite" parent="Scene 1"]
+[node name="smurp_arm" type="Sprite" parent="Happy World Images"]
 position = Vector2( -12.7705, -121.112 )
 rotation = -0.301942
 scale = Vector2( 0.70803, 0.800001 )
 texture = ExtResource( 17 )
 
-[node name="papa_Finny" type="Sprite" parent="Scene 1"]
+[node name="papa_Finny" type="Sprite" parent="Happy World Images"]
 position = Vector2( -146.688, -165.438 )
 scale = Vector2( 0.264403, 0.264403 )
 texture = ExtResource( 16 )
 
-[node name="smurp" type="Sprite" parent="Scene 1"]
+[node name="smurp" type="Sprite" parent="Happy World Images"]
 position = Vector2( -259.297, -33.0872 )
 scale = Vector2( 0.231529, 0.231529 )
 texture = ExtResource( 9 )
 
-[node name="fels_vordergrund_rechts" type="Sprite" parent="Scene 1"]
+[node name="fels_vordergrund_rechts" type="Sprite" parent="Happy World Images"]
 position = Vector2( 122.837, 99.336 )
 texture = ExtResource( 6 )
 
-[node name="sonnenstrahlen" type="Sprite" parent="Scene 1"]
+[node name="sonnenstrahlen" type="Sprite" parent="Happy World Images"]
 modulate = Color( 1, 1, 1, 0.352941 )
 position = Vector2( 818.31, 136.153 )
 texture = ExtResource( 12 )
 
-[node name="Blende" type="ColorRect" parent="Scene 1"]
+[node name="Blende" type="ColorRect" parent="Happy World Images"]
 visible = false
 margin_left = -1071.26
 margin_top = -789.771
@@ -527,110 +778,109 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Scene 2" type="Node2D" parent="."]
-visible = false
+[node name="Dark World Images" type="Node2D" parent="."]
 
-[node name="himmel" type="Sprite" parent="Scene 2"]
+[node name="himmel" type="Sprite" parent="Dark World Images"]
 position = Vector2( 1885.24, 106.178 )
 scale = Vector2( 0.299185, 0.299185 )
 texture = ExtResource( 21 )
 
-[node name="blitze" type="Sprite" parent="Scene 2"]
+[node name="blitze" type="Sprite" parent="Dark World Images"]
 position = Vector2( 1977.23, -182.321 )
 scale = Vector2( 0.355595, 0.355595 )
 texture = ExtResource( 25 )
 
-[node name="baeume_hinten" type="Sprite" parent="Scene 2"]
+[node name="baeume_hinten" type="Sprite" parent="Dark World Images"]
 position = Vector2( 1885.85, -121.184 )
 scale = Vector2( 0.409753, 0.331992 )
 texture = ExtResource( 36 )
 
-[node name="fels_hinten_links" type="Sprite" parent="Scene 2"]
+[node name="fels_hinten_links" type="Sprite" parent="Dark World Images"]
 position = Vector2( 1168.3, -79.367 )
 scale = Vector2( 0.29889, 0.29889 )
 texture = ExtResource( 29 )
 
-[node name="taal" type="Sprite" parent="Scene 2"]
+[node name="taal" type="Sprite" parent="Dark World Images"]
 position = Vector2( 2074.38, 127.031 )
 scale = Vector2( 0.387488, 0.387488 )
 texture = ExtResource( 27 )
 
-[node name="fels+wassre" type="Sprite" parent="Scene 2"]
+[node name="fels+wassre" type="Sprite" parent="Dark World Images"]
 position = Vector2( 2624.87, 93.7761 )
 scale = Vector2( 0.266474, 0.266474 )
 texture = ExtResource( 32 )
 
-[node name="fels_mitte_links" type="Sprite" parent="Scene 2"]
+[node name="fels_mitte_links" type="Sprite" parent="Dark World Images"]
 position = Vector2( 1241.75, 111.835 )
 scale = Vector2( 0.406435, 0.406435 )
 texture = ExtResource( 30 )
 
-[node name="fels_links" type="Sprite" parent="Scene 2"]
+[node name="fels_links" type="Sprite" parent="Dark World Images"]
 position = Vector2( 2075.32, 355.08 )
 scale = Vector2( 0.494513, 0.494513 )
 texture = ExtResource( 24 )
 
-[node name="fels_links_hinten2" type="Sprite" parent="Scene 2"]
+[node name="fels_links_hinten2" type="Sprite" parent="Dark World Images"]
 position = Vector2( 1296.46, 437.305 )
 scale = Vector2( 0.362755, 0.362755 )
 texture = ExtResource( 28 )
 
-[node name="fels_forne_links1" type="Sprite" parent="Scene 2"]
+[node name="fels_forne_links1" type="Sprite" parent="Dark World Images"]
 position = Vector2( 2361.22, 608.834 )
 scale = Vector2( 0.567973, 0.567973 )
 texture = ExtResource( 39 )
 
-[node name="bum" type="Sprite" parent="Scene 2"]
+[node name="bum" type="Sprite" parent="Dark World Images"]
 position = Vector2( 1572.09, 15.4598 )
 scale = Vector2( 0.260086, 0.265548 )
 texture = ExtResource( 34 )
 
-[node name="fels_verstecken" type="Sprite" parent="Scene 2"]
+[node name="fels_verstecken" type="Sprite" parent="Dark World Images"]
 position = Vector2( 1328.99, 256.386 )
 scale = Vector2( 0.413613, 0.413613 )
 texture = ExtResource( 31 )
 
-[node name="fels_forne" type="Sprite" parent="Scene 2"]
+[node name="fels_forne" type="Sprite" parent="Dark World Images"]
 position = Vector2( 2242.86, 683.011 )
 scale = Vector2( 0.313962, 0.313962 )
 texture = ExtResource( 26 )
 
-[node name="fels_vorne" type="Sprite" parent="Scene 2"]
+[node name="fels_vorne" type="Sprite" parent="Dark World Images"]
 position = Vector2( 1174.02, 596.266 )
 scale = Vector2( 0.312201, 0.312201 )
 texture = ExtResource( 20 )
 
-[node name="BG_3_07" type="Sprite" parent="Scene 2"]
+[node name="BG_3_07" type="Sprite" parent="Dark World Images"]
 position = Vector2( 503.761, 364.816 )
 scale = Vector2( 0.652819, 0.652819 )
 texture = ExtResource( 37 )
 
-[node name="papa_Finny" type="Sprite" parent="Scene 2"]
+[node name="papa_Finny" type="Sprite" parent="Dark World Images"]
 position = Vector2( 1944.45, 72.2036 )
 scale = Vector2( 0.21978, 0.21978 )
 texture = ExtResource( 23 )
 
-[node name="smurp" type="Sprite" parent="Scene 2"]
+[node name="smurp" type="Sprite" parent="Dark World Images"]
 position = Vector2( 1833.53, 182.158 )
 scale = Vector2( 0.231527, 0.231527 )
 texture = ExtResource( 22 )
 
-[node name="mutter" type="Sprite" parent="Scene 2"]
+[node name="mutter" type="Sprite" parent="Dark World Images"]
 position = Vector2( 2117.74, 244.815 )
 scale = Vector2( 0.216197, 0.216197 )
 texture = ExtResource( 38 )
 
-[node name="monster-schatten" type="Sprite" parent="Scene 2"]
+[node name="monster-schatten" type="Sprite" parent="Dark World Images"]
 position = Vector2( 3222.79, 315.373 )
 scale = Vector2( 0.28987, 0.28987 )
 texture = ExtResource( 33 )
 
-[node name="nebel" type="Sprite" parent="Scene 2"]
+[node name="nebel" type="Sprite" parent="Dark World Images"]
 position = Vector2( 1613.65, 243.648 )
 scale = Vector2( 0.407518, 0.407518 )
 texture = ExtResource( 35 )
 
-[node name="ColorRect" type="ColorRect" parent="Scene 2"]
+[node name="ColorRect" type="ColorRect" parent="Dark World Images"]
 modulate = Color( 1, 1, 1, 0 )
 margin_left = 928.0
 margin_top = -352.0
@@ -641,13 +891,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Scene 3" type="Node2D" parent="."]
-visible = false
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-"anims/Scene 3" = SubResource( 1 )
-anims/Scene1 = SubResource( 2 )
-anims/Scene2 = SubResource( 3 )
+"anims/Scene 0 - Once there were Smu" = SubResource( 2 )
+"anims/Scene 1 - Big energy bubbles protected their cities" = SubResource( 11 )
+"anims/Scene 2 - The Nocts arrived (sword breaking)" = SubResource( 3 )
+"anims/Scene 3 - Kidnapping Parents" = SubResource( 1 )
+"anims/Scene 4 - Pompom comes to help" = SubResource( 12 )
+"anims/Scene 5 - They Escaped in Darkness" = SubResource( 13 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 9 )
@@ -667,14 +917,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Subtitles"]
+[node name="Subtitles" type="Label" parent="Subtitles"]
 modulate = Color( 1, 1, 1, 0 )
 margin_left = 1514.95
 margin_top = 560.363
 margin_right = 2394.95
 margin_bottom = 671.283
 custom_fonts/font = ExtResource( 14 )
-text = "The Smus life once in peace and harmony in qwer world. Energy bubbles safe there citys."
+text = "Under the cover of darkness
+they escaped from the evil Nocts."
 align = 1
 valign = 1
 autowrap = true
@@ -684,3 +935,20 @@ __meta__ = {
 
 [node name="FpsLabel" type="CanvasLayer" parent="."]
 script = ExtResource( 40 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 41 )
+autoplay = true
+
+[node name="Scene Count Overlay" type="Label" parent="."]
+self_modulate = Color( 0.0901961, 1, 0, 1 )
+margin_left = 988.0
+margin_top = 707.0
+margin_right = 2919.0
+margin_bottom = 750.0
+custom_fonts/font = ExtResource( 42 )
+text = "Scene 5 - They Escaped in Darkness"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
