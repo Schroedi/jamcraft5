@@ -81,7 +81,7 @@ nodes/Seek/position = Vector2( 190, 360 )
 nodes/WalkIdle/node = SubResource( 13 )
 nodes/WalkIdle/position = Vector2( 60, 110 )
 nodes/output/position = Vector2( 930, 260 )
-node_connections = [ "output", 0, "RollShot", "AttackBlend", 0, "WalkIdle", "AttackBlend", 1, "Seek", "RollShot", 0, "AttackBlend", "RollShot", 1, "Roll", "Seek", 0, "Attack", "WalkIdle", 0, "Animation", "WalkIdle", 1, "Animation 2", "Attack", 0, "Attack Light", "Attack", 1, "Animation 3", "Attack", 2, "Animation 4", "Attack", 3, "Animation 5" ]
+node_connections = [ "output", 0, "RollShot", "Attack", 0, "Attack Light", "Attack", 1, "Animation 3", "Attack", 2, "Animation 4", "Attack", 3, "Animation 5", "WalkIdle", 0, "Animation", "WalkIdle", 1, "Animation 2", "AttackBlend", 0, "WalkIdle", "AttackBlend", 1, "Seek", "Seek", 0, "Attack", "RollShot", 0, "AttackBlend", "RollShot", 1, "Roll" ]
 
 [sub_resource type="CapsuleShape" id=15]
 radius = 0.493648

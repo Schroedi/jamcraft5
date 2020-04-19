@@ -19,5 +19,10 @@ func update_health(value):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$Death.visible = false
 	player.connect("life_changed", self, "update_health")
-	pass # Replace with function body.
+	player.connect("died", self, "die")
+
+
+func die():
+	$AnimationPlayer.play("die")

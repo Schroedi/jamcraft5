@@ -6,6 +6,7 @@ export var ROLL_SPEED = 3.0
 export var FRICTION = 5.0
 
 signal life_changed #(float)
+signal died
 
 const ANIM_LIGHT = 0
 const ANIM_SEMILIGHT = 1
@@ -143,5 +144,5 @@ func _on_Hurtbox_area_entered(area: Area) -> void:
 	emit_signal("life_changed", stats.health)
 
 func _on_Stats_no_health() -> void:
-	# TODO: die
+	emit_signal("died")
 	pass # Replace with function body.
