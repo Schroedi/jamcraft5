@@ -46,7 +46,7 @@ func _physics_process(delta):
 		CHASE:
 			var player:Spatial = playerDetectionZone.player
 			if player != null:
-				var direction = player.transform.origin - transform.origin
+				var direction = player.global_transform.origin - global_transform.origin
 				direction.y = 0
 				velocity = velocity.move_toward(direction.normalized() * MAX_SPEED, ACCELERATION * delta)
 			else:

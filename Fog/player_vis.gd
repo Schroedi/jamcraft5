@@ -1,13 +1,13 @@
 extends Sprite
 
-onready var player = get_tree().get_nodes_in_group('player')[0]
+onready var player = get_tree().get_nodes_in_group('pet')[0]
 onready var fog_size = get_parent().size
 
 var last_pos = Vector2()
 
 func _process(_delta: float) -> void:
 	var pos = player.transform.origin
-	pos = Vector2(pos.x, pos.z)
+	pos = Vector2(pos.x, pos.z) * 4
 	
 	# 0,0 to center of texture
 	pos += fog_size / 2.0
