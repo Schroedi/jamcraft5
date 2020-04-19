@@ -14,7 +14,7 @@
 [ext_resource path="res://Materials/Smu Skin.tres" type="Material" id=12]
 
 [sub_resource type="SphereShape" id=1]
-radius = 10.3504
+radius = 7.18884
 
 [node name="Dome" type="StaticBody"]
 
@@ -26,7 +26,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00191243, 1.31946, -0.009765
 material/0 = ExtResource( 4 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10333, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.569425, 0 )
 shape = SubResource( 1 )
 
 [node name="Stones" type="Spatial" parent="."]
