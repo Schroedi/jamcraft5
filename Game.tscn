@@ -69,7 +69,7 @@ shader_param/fog_of_war_texture = SubResource( 2 )
 shader_param/noise_texture = ExtResource( 6 )
 
 [sub_resource type="QuadMesh" id=4]
-size = Vector2( 2048, 2048 )
+size = Vector2( 512, 512 )
 
 [sub_resource type="Shader" id=5]
 code = "shader_type spatial;
@@ -119,7 +119,6 @@ viewport_path = NodePath("FogOfWarViewport")
 
 [sub_resource type="ShaderMaterial" id=7]
 resource_local_to_scene = true
-render_priority = 100
 shader = SubResource( 5 )
 shader_param/camera_offset = null
 shader_param/noise_intensity = null
@@ -142,7 +141,7 @@ render_target_update_mode = 1
 
 [node name="player_vis" type="Sprite" parent="FogOfWarViewport"]
 position = Vector2( 960, 540 )
-scale = Vector2( 0.15, 0.15 )
+scale = Vector2( 1.6, 1.6 )
 texture = ExtResource( 10 )
 script = ExtResource( 5 )
 

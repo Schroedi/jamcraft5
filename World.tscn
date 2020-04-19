@@ -37,7 +37,9 @@ ambient_light_energy = 0.5
 ] instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2346, 0.0135235, 0 )
 
-[node name="Pet" parent="." instance=ExtResource( 7 )]
+[node name="Pet" parent="." groups=[
+"pet",
+] instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.60353, -0.000244141, -5.70055 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
