@@ -108,7 +108,6 @@ __meta__ = {
 }
 
 [node name="CheckItem" type="Timer" parent="."]
-autostart = true
 
 [node name="Inventory" type="Node2D" parent="."]
 
