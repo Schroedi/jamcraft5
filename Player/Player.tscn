@@ -81,10 +81,10 @@ nodes/Seek/position = Vector2( 190, 360 )
 nodes/WalkIdle/node = SubResource( 13 )
 nodes/WalkIdle/position = Vector2( 60, 110 )
 nodes/output/position = Vector2( 930, 260 )
-node_connections = [ "AttackBlend", 0, "WalkIdle", "AttackBlend", 1, "Seek", "Seek", 0, "Attack", "WalkIdle", 0, "Animation", "WalkIdle", 1, "Animation 2", "RollShot", 0, "AttackBlend", "RollShot", 1, "Roll", "Attack", 0, "Attack Light", "Attack", 1, "Animation 3", "Attack", 2, "Animation 4", "Attack", 3, "Animation 5", "output", 0, "RollShot" ]
+node_connections = [ "WalkIdle", 0, "Animation", "WalkIdle", 1, "Animation 2", "Seek", 0, "Attack", "Attack", 0, "Attack Light", "Attack", 1, "Animation 3", "Attack", 2, "Animation 4", "Attack", 3, "Animation 5", "RollShot", 0, "AttackBlend", "RollShot", 1, "Roll", "AttackBlend", 0, "WalkIdle", "AttackBlend", 1, "Seek", "output", 0, "RollShot" ]
 
 [sub_resource type="CapsuleShape" id=15]
-radius = 0.493648
+radius = 0.48433
 height = 0.46643
 
 [sub_resource type="CapsuleShape" id=16]
@@ -111,7 +111,7 @@ parameters/Seek/seek_position = -1.0
 parameters/WalkIdle/blend_amount = 0.0
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0.728319, 0 )
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0.719102, 0 )
 shape = SubResource( 15 )
 
 [node name="Camera" type="Camera" parent="."]

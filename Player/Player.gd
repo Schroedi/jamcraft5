@@ -34,6 +34,8 @@ onready var weapon = $"Smurp/Armature/Skeleton/BoneAttachment/HitboxPivot/Weapon
 onready var Smurp = $Smurp
 onready var stats = $Stats
 
+onready var start_transform = self.transform
+
 onready var anim_durations = [animationPlayer.get_animation("Attack Light").length,
 animationPlayer.get_animation("Attack Semilight").length,
 animationPlayer.get_animation("Attack Medium").length,
@@ -119,7 +121,18 @@ func roll_animation_finished():
 	velocity = velocity * 0.8
 	state = MOVE
 
+func update_attack_type():
+	if weapon.weight <= 4:
+		curre_attack_type = ANIM_LIGHT
+	elif weapon.weight > 4 and weapon.weight <= 7:
+		curre_attack_type = ANIM_SEMILIGHT
+	elif weapon.weight > 7 and weapon.weight <= 9:
+		curre_attack_type = ANIM_MEDIUMT
+	elif weapon.weight > 9:
+		curre_attack_type = ANIM_HEAVY
+
 func attack_animation_started():
+	update_attack_type()
 	state = ATTACK
 	$AttackTimer.wait_time = anim_durations[curre_attack_type]
 	$AttackTimer.start()
@@ -153,3 +166,11 @@ func _on_Stats_no_health() -> void:
 
 func _on_Pickup_area_entered(area: Area) -> void:
 	emit_signal("pickup", area)
+
+func respawn():
+	# teleport
+	self.transform = start_transform
+	stats.health = stats.max_health
+	stats.dead = false
+	# remove weapon
+	

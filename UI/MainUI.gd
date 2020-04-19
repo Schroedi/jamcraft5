@@ -31,3 +31,10 @@ func die():
 func _unhandled_key_input(event : InputEventKey) -> void:
 	if event.pressed and event.scancode == KEY_C:
 		$Crafting.popup()
+
+
+func _on_Revive_pressed() -> void:
+	$Death/Revive.visible = false
+	player.respawn()
+	$AnimationPlayer.play_backwards("die")
+	pass # Replace with function body.
