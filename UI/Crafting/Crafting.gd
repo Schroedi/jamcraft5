@@ -4,6 +4,8 @@ const weapon_part = preload("res://UI/Crafting/UIWeaponPart.tscn")
 
 onready var inv_grid = $Inventory/Inventory/GridContainer
 onready var weapon_slots = $Crafting/Weapon
+onready var slots = [$"Crafting/Weapon/Slot5",$"Crafting/Weapon/Slot4",$"Crafting/Weapon/Slot3",$"Crafting/Weapon/Slot2",$"Crafting/Weapon/Slot"]
+onready var dmgtxt = $"Crafting/Attack"
 
 func _ready() -> void:
 	# start weapon
@@ -45,6 +47,7 @@ func _input(ev: InputEvent) -> void:
 		var wp = weapon_part.instance()
 		var rand_part = rand_array(part_loot_table.duplicate())
 		wp.part_name = rand_part[1]
+		wp.part_power = randi()%4+1
 		try_add_item(wp)
 
 func try_add_item(item):
@@ -62,10 +65,11 @@ func _on_Crafting_about_to_show() -> void:
 func is_weapon_valid():
 	var count_handles = 0
 	var count_tips = 0
-	var first_item = weapon_slots.get_child(0).get_item()
+	var first_item = slots[0].get_item()
 	var first_is_handle = first_item and first_item.part_name.begins_with("Handle")
 	var last_is_tip = false
-	for s in weapon_slots.get_children():
+	var dmg = 0
+	for s in slots:
 		var item = s.get_item()
 		if not item:
 			# skip free slots
@@ -75,6 +79,9 @@ func is_weapon_valid():
 			count_tips += 1
 		if item.part_name.begins_with("Handle"):
 			count_handles += 1
+		if item.part_name.begins_with("Mid"):
+			dmg+=item.part_power
+	dmgtxt.text=str(dmg)
 		
 	return count_handles == 1 and count_tips == 1 and first_is_handle and last_is_tip
 
@@ -85,7 +92,7 @@ func save_craft():
 		return
 	
 	var components = []
-	for s in weapon_slots.get_children():
+	for s in slots:
 		var item = s.get_item()
 		if not item:
 			# skip free slots

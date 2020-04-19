@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "FpsLabel",
 "language": "GDScript",
 "path": "res://FPSLabel.gd"
+}, {
+"base": "MarginContainer",
+"class": "MainUI",
+"language": "GDScript",
+"path": "res://UI/MainUI.gd"
 } ]
 _global_script_class_icons={
-"FpsLabel": ""
+"FpsLabel": "",
+"MainUI": ""
 }
 
 [application]
