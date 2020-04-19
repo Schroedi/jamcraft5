@@ -54,13 +54,17 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.04785, 0, 3.66113 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.835938, 0, 0 )
 material/0 = ExtResource( 6 )
 
-[node name="Smurp" parent="." instance=ExtResource( 8 )]
+[node name="Smurp" parent="." groups=[
+"dome_char",
+] instance=ExtResource( 8 )]
 transform = Transform( 0.970771, 0, 0.240008, 0, 1, 0, -0.240008, 0, 0.970771, -0.665588, -0.000610351, 0.917482 )
 
 [node name="AnimationPlayer" parent="Smurp" index="1"]
 autoplay = "Idle"
 
-[node name="pompom" parent="." instance=ExtResource( 7 )]
+[node name="pompom" parent="." groups=[
+"dome_char",
+] instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.23352, 0, 0 )
 
 [node name="Pompom v3 Pompom v3 Body15 " parent="pompom" index="0"]
@@ -148,7 +152,9 @@ material/0 = ExtResource( 11 )
 [node name="Pompom v3 Pompom v3 Feeny Rider mini v7 1 Body4 Feeny Rider" parent="pompom/Pompom v3 Pompom v3 Body15 " index="26"]
 material/0 = ExtResource( 9 )
 
-[node name="Pompom v3 Pompom v3 Feeny Rider mini v7 1 Body4 Feeny Rider min" parent="pompom/Pompom v3 Pompom v3 Body15 " index="27"]
+[node name="Pompom v3 Pompom v3 Feeny Rider mini v7 1 Body4 Feeny Rider min" parent="pompom/Pompom v3 Pompom v3 Body15 " index="27" groups=[
+"dome_char",
+]]
 transform = Transform( -0.684637, -0.728886, 1.94585e-14, 0.728886, -0.684637, -2.07162e-14, 2.84217e-14, 0, 1, -71.5203, -41.1622, 6.77961 )
 material/0 = ExtResource( 12 )
 

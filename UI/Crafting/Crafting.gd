@@ -190,7 +190,14 @@ func save_craft():
 	Globals.player_weapon.build_from_components(components, dmg, special, weight)
 	hide()
 	GSound.start_explore()
-	pass
+	
+	for c in get_tree().get_nodes_in_group('dome_char'):
+		c.visible = false
+	
+	get_tree().get_nodes_in_group('pet')[0].visible = true
+	var plr = get_tree().get_nodes_in_group('player')[0]
+	plr.visible = true
+	plr.get_node('Camera').current = true
 
 
 func _on_Button_pressed() -> void:
@@ -203,5 +210,9 @@ func _on_CheckItem_timeout() -> void:
 
 
 func _on_Crafting_about_to_show() -> void:
+	for c in get_tree().get_nodes_in_group('dome_char'):
+		c.visible = true
+	get_tree().get_nodes_in_group('player')[0].visible = false
+	get_tree().get_nodes_in_group('pet')[0].visible = false
+	get_tree().get_nodes_in_group('craft_cam')[0].current = true
 	GSound.start_crafting()
-	pass # Replace with function body.
