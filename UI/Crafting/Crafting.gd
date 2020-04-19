@@ -29,6 +29,8 @@ func _ready() -> void:
 	for slot in inv_grid.get_children():
 		slot.connect("changed", self, "is_weapon_valid")
 	
+	is_weapon_valid()
+	
 	call_deferred("popup")
 
 static func rand_array(array): # -> [int, object]

@@ -3,7 +3,6 @@ extends Spatial
 
 var facing_dir = Vector2.ZERO setget set_facing
 
-var damage = 0
 var special = 0
 
 func set_facing(dir):
@@ -23,7 +22,7 @@ func build_from_components(components, p_damage, p_special):
 	for vis in $Visual.get_children():
 		vis.queue_free()
 	
-	damage = p_damage
+	$Hitbox.damage = p_damage
 	special = p_special
 	
 	# add new
