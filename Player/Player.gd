@@ -119,7 +119,18 @@ func roll_animation_finished():
 	velocity = velocity * 0.8
 	state = MOVE
 
+func update_attack_type():
+	if weapon.weight <= 4:
+		curre_attack_type = ANIM_LIGHT
+	elif weapon.weight > 4 and weapon.weight <= 7:
+		curre_attack_type = ANIM_SEMILIGHT
+	elif weapon.weight > 7 and weapon.weight <= 9:
+		curre_attack_type = ANIM_MEDIUMT
+	elif weapon.weight > 9:
+		curre_attack_type = ANIM_HEAVY
+
 func attack_animation_started():
+	update_attack_type()
 	state = ATTACK
 	$AttackTimer.wait_time = anim_durations[curre_attack_type]
 	$AttackTimer.start()

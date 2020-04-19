@@ -4,6 +4,7 @@ extends Spatial
 var facing_dir = Vector2.ZERO setget set_facing
 
 var special = 0
+var weight = 0
 
 func set_facing(dir):
 	facing_dir = dir
@@ -15,7 +16,7 @@ func start_attack():
 func end_attack():
 	$Hitbox.monitorable = false
 
-func build_from_components(components, p_damage, p_special):
+func build_from_components(components, p_damage, p_special, p_weight):
 	# clear first
 	for coll in $Hitbox.get_children():
 		coll.queue_free()
@@ -24,6 +25,7 @@ func build_from_components(components, p_damage, p_special):
 	
 	$Hitbox.damage = p_damage
 	special = p_special
+	weight = p_weight
 	
 	# add new
 	var offset = Transform()

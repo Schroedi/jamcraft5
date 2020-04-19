@@ -19,9 +19,9 @@ static func rand_array(array): # -> [int, object]
 			return [idx, t[1]]
 		idx += 1
 
-const part_loot_table = [[5, "Handle"], [25, "Mid 1"], [15, "Mid 2"], [5, "Mid 3"], [5, "Tip 1"], [3, "Tip 2"], [1, "Tip 3"]]
+const part_loot_table = [[8, "Handle"], [16, "Mid 1"], [8, "Mid 2"], [4, "Mid 3"], [8, "Tip 1"], [4, "Tip 2"], [2, "Tip 3"]]
 
-const power_table = [[200, 1], [70, 2], [30, 3], [5, 4]]
+const power_table = [[40, 1], [20, 2], [10, 3], [1, 4]]
 
 func gen_item():
 	var wp = weapon_part.instance()

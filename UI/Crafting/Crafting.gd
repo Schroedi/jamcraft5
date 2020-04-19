@@ -8,17 +8,19 @@ onready var inv_grid = $Inventory/Inventory/GridContainer
 onready var weapon_slots = $Crafting/Weapon
 onready var slots = [$"Crafting/Weapon/Slot5",$"Crafting/Weapon/Slot4",$"Crafting/Weapon/Slot3",$"Crafting/Weapon/Slot2",$"Crafting/Weapon/Slot"]
 onready var dmgtxt = $"Crafting/Attack"
+onready var attacktxt = $Crafting/Attackspeed
 onready var specialtxt = $"Crafting/Special Attack"
 
 var dmg = 0
 var special = 0
 var slot_count = 0
+var weight = 0
 
 func _ready() -> void:
 	# start weapon
 	var wp = weapon_part.instance()
 	wp.part_name = "Handle"
-	wp.part_power = 1
+	wp.part_power = 4
 	try_add_item(wp)
 	
 	wp = weapon_part.instance()
@@ -91,6 +93,15 @@ func update_stats_ui():
 	for s in weapon_slots.get_children():
 		s.get_node("Blocked").visible = (4 - i > slot_count)
 		i += 1
+	
+	if weight <= 4:
+		attacktxt.text = "Fast"
+	elif weight > 4 and weight <= 7:
+		attacktxt.text = "Normal"
+	elif weight > 7 and weight <= 9:
+		attacktxt.text = "Heavy"
+	elif weight > 9:
+		attacktxt.text = "Brutal"
 
 func is_weapon_valid():
 	var count_handles = 0
@@ -101,6 +112,7 @@ func is_weapon_valid():
 	dmg = 1
 	special = 0
 	slot_count = 0
+	weight = 0
 	var i = 0
 	for s in slots:
 		# handle slot limit
@@ -116,12 +128,13 @@ func is_weapon_valid():
 		if last_is_tip:
 			count_tips += 1
 			special = item.part_power
+			weight += int(item.part_name.right(4))
 		if item.part_name.begins_with("Handle"):
 			count_handles += 1
 			slot_count = item.part_power
 		if item.part_name.begins_with("Mid"):
 			dmg += item.part_power
-		
+			weight += int(item.part_name.right(4))
 	
 	var is_valid = count_handles == 1 and count_tips == 1 and first_is_handle and last_is_tip
 	
@@ -152,7 +165,7 @@ func save_craft():
 			# skip free slots
 			continue
 		components.append(item)
-	Globals.player_weapon.build_from_components(components, dmg, special)
+	Globals.player_weapon.build_from_components(components, dmg, special, weight)
 	hide()
 	pass
 
