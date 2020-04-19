@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Enemies/PlayerDetectionZone.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Overlap/Hurtbox.tscn" type="PackedScene" id=2]
@@ -9,7 +9,6 @@
 [ext_resource path="res://Pet/pompom.glb" type="PackedScene" id=7]
 [ext_resource path="res://Materials/Pomblue.tres" type="Material" id=8]
 [ext_resource path="res://Materials/Pombody.tres" type="Material" id=9]
-[ext_resource path="res://Materials/Feeny Pink.tres" type="Material" id=10]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 1.65913
@@ -127,29 +126,8 @@ material/0 = ExtResource( 3 )
 [node name="Pompom v3 Pompom v3 Body46 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="25"]
 material/0 = ExtResource( 3 )
 
-[node name="Pompom v3 Pompom v3 Feeny Rider mini v7 1 Body4 Feeny Rider min" parent="pompom/Pompom v3 Pompom v3 Body15 " index="26"]
+[node name="Pompom v3 Pompom v3 Feeny Rider mini v7 1 Body4 Feeny Rider min" parent="pompom/Pompom v3 Pompom v3 Body15 " index="27"]
 material/0 = ExtResource( 4 )
-
-[node name="Pompom v3 Pompom v3 Feeny Rider mini v7 1 Body1 Feeny Rider min" parent="pompom/Pompom v3 Pompom v3 Body15 /Pompom v3 Pompom v3 Feeny Rider mini v7 1 Body4 Feeny Rider min" index="0"]
-material/0 = ExtResource( 4 )
-
-[node name="Pompom v3 Pompom v3 Feeny Rider mini v7 1 Body11 Feeny Rider mi" parent="pompom/Pompom v3 Pompom v3 Body15 /Pompom v3 Pompom v3 Feeny Rider mini v7 1 Body4 Feeny Rider min" index="1"]
-material/0 = ExtResource( 10 )
-
-[node name="Pompom v3 Pompom v3 Feeny Rider mini v7 1 Body12 Feeny Rider mi" parent="pompom/Pompom v3 Pompom v3 Body15 /Pompom v3 Pompom v3 Feeny Rider mini v7 1 Body4 Feeny Rider min" index="2"]
-material/0 = ExtResource( 10 )
-
-[node name="Pompom v3 Pompom v3 Feeny Rider mini v7 1 Body14 Feeny Rider mi" parent="pompom/Pompom v3 Pompom v3 Body15 /Pompom v3 Pompom v3 Feeny Rider mini v7 1 Body4 Feeny Rider min" index="3"]
-material/0 = ExtResource( 3 )
-
-[node name="Pompom v3 Pompom v3 Feeny Rider mini v7 1 Body15 Feeny Rider mi" parent="pompom/Pompom v3 Pompom v3 Body15 /Pompom v3 Pompom v3 Feeny Rider mini v7 1 Body4 Feeny Rider min" index="4"]
-material/0 = ExtResource( 3 )
-
-[node name="Pompom v3 Pompom v3 Feeny Rider mini v7 1 Body2 Feeny Rider min" parent="pompom/Pompom v3 Pompom v3 Body15 /Pompom v3 Pompom v3 Feeny Rider mini v7 1 Body4 Feeny Rider min" index="5"]
-material/0 = ExtResource( 4 )
-
-[node name="Pompom v3 Pompom v3 Feeny Rider mini v7 1 Body9 Feeny Rider min" parent="pompom/Pompom v3 Pompom v3 Body15 /Pompom v3 Pompom v3 Feeny Rider mini v7 1 Body4 Feeny Rider min" index="6"]
-material/0 = ExtResource( 10 )
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="no_health" from="Stats" to="." method="_on_Stats_no_health"]
 
