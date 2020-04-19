@@ -12,6 +12,7 @@ onready var specialtxt = $"Crafting/Special Attack"
 
 var dmg = 0
 var special = 0
+var slot_count = 0
 
 func _ready() -> void:
 	# start weapon
@@ -85,6 +86,11 @@ func update_stats_ui():
 		specialtxt.text = Globals.specials[special - 1]
 	else:
 		specialtxt.text = ""
+	
+	var i = 0
+	for s in weapon_slots.get_children():
+		s.get_node("Blocked").visible = (4 - i > slot_count)
+		i += 1
 
 func is_weapon_valid():
 	var count_handles = 0
@@ -94,19 +100,28 @@ func is_weapon_valid():
 	var last_is_tip = false
 	dmg = 1
 	special = 0
+	slot_count = 0
+	var i = 0
 	for s in slots:
+		# handle slot limit
+		if (i > slot_count):
+			break
+		i += 1
+		
 		var item = s.get_item()
 		if not item:
-			# skip free slots
-			continue
+			# end on free slot
+			break
 		last_is_tip = item.part_name.begins_with("Tip")
 		if last_is_tip:
 			count_tips += 1
 			special = item.part_power
 		if item.part_name.begins_with("Handle"):
 			count_handles += 1
+			slot_count = item.part_power
 		if item.part_name.begins_with("Mid"):
 			dmg += item.part_power
+		
 	
 	var is_valid = count_handles == 1 and count_tips == 1 and first_is_handle and last_is_tip
 	
@@ -118,6 +133,7 @@ func is_weapon_valid():
 		elif not (count_handles == 1 and count_tips == 1):
 			$Error.text = "This won't hold."
 	$Error.visible = not is_valid
+	$Crafting/Button.disabled = not is_valid
 	
 	update_stats_ui()
 	
