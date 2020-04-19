@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Loader.gd" type="Script" id=1]
+[ext_resource path="res://Loader_scene.gd" type="Script" id=1]
 [ext_resource path="res://UI/Status Counter Font.tres" type="DynamicFont" id=2]
 
 [node name="Loading" type="Control"]
