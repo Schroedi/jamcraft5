@@ -260,5 +260,6 @@ __meta__ = {
 [node name="Control Key Overlay_Zeichenfläche 1" type="Sprite" parent="."]
 position = Vector2( 1122.75, 814.164 )
 texture = ExtResource( 10 )
+[connection signal="about_to_show" from="." to="." method="_on_Crafting_about_to_show"]
 [connection signal="pressed" from="Crafting/Button" to="." method="_on_Button_pressed"]
 [connection signal="timeout" from="CheckItem" to="." method="_on_CheckItem_timeout"]

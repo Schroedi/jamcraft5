@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Smurp_Intro.ogg-85bc413c8dc374f202ea63ce6e27b19a.ogg
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

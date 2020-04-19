@@ -33,6 +33,14 @@ func _unhandled_key_input(event : InputEventKey) -> void:
 	if event.pressed and event.scancode == KEY_C:
 		$Crafting.popup()
 
+func _process(delta: float) -> void:
+	if Input.is_action_pressed("return_base"):
+		$Container/ButtomRight/ProgressBar.value += delta * 50
+		if $Container/ButtomRight/ProgressBar.value >= $Container/ButtomRight/ProgressBar.max_value:
+			player.respawn()
+			pet.respawn()
+	else:
+		$Container/ButtomRight/ProgressBar.value = 0
 
 func _on_Revive_pressed() -> void:
 	$Death/Revive.visible = false

@@ -8,6 +8,7 @@ export var FRICTION = 5.0
 signal life_changed #(float)
 signal died
 signal pickup #(Drop)
+signal crafting
 
 const ANIM_LIGHT = 0
 const ANIM_SEMILIGHT = 1
@@ -49,6 +50,7 @@ func _ready():
 	animationTree.active = true
 	weapon.facing_dir = facing_dir
 	Globals.player_weapon = weapon
+	GSound.start_crafting()
 
 func process_input(delta):
 	var input_vector = Vector3.ZERO
@@ -172,3 +174,4 @@ func respawn():
 	self.transform = start_transform
 	stats.health = stats.max_health
 	stats.dead = false
+	emit_signal("crafting")
