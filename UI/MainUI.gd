@@ -1,15 +1,13 @@
 extends MarginContainer
 class_name MainUI
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+const heart_full = preload("res://UI/HeartUIFull.png")
+const heart_empty = preload("res://UI/HeartUIEmpty.png")
+const heart_half = preload("res://UI/HeartUIHalf.png")
 
 onready var healthbar = $"Container/UpperLeft/HBoxContainer"
-var heart_full = preload("res://UI/HeartUIFull.png")
-var heart_empty = preload("res://UI/HeartUIEmpty.png")
-var heart_half = preload("res://UI/HeartUIHalf.png")
-			
+onready var player = get_tree().get_nodes_in_group('player')[0]
+
 func update_health(value):
 	for i in healthbar.get_child_count():
 		if value > i * 2 + 1:
@@ -21,9 +19,5 @@ func update_health(value):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	player.connect("life_changed", self, "update_health")
 	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass

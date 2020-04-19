@@ -49,8 +49,8 @@ func _physics_process(delta):
 
 	velocity = move_and_slide_with_snap(velocity, Vector3.DOWN * 100, Vector3.UP, true, 4, PI/2.0)
 	# rotate smurp
-	if velocity != Vector3.ZERO:
-		var facing = Vector3(velocity.x, 0, velocity.z).normalized()
+	var facing = Vector3(velocity.x, 0, velocity.z).normalized()
+	if not velocity.is_equal_approx(Vector3.ZERO):
 		var rotTransform = $Nocts.transform.looking_at(-facing, Vector3.UP)
 		var thisRotation = Quat($Nocts.transform.basis).slerp(rotTransform.basis, .1)
 		$Nocts.transform = Transform(thisRotation, $Nocts.transform.origin)

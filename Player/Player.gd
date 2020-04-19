@@ -5,6 +5,8 @@ export var MAX_SPEED = 2.0
 export var ROLL_SPEED = 3.0
 export var FRICTION = 5.0
 
+signal life_changed #(float)
+
 const ANIM_LIGHT = 0
 const ANIM_SEMILIGHT = 1
 const ANIM_MEDIUMT = 2
@@ -28,6 +30,7 @@ onready var animationTree = $AnimationTree
 onready var animationPlayer = $Smurp/AnimationPlayer
 onready var weapon = $"Smurp/Armature/Skeleton/BoneAttachment/HitboxPivot/Weapon/"
 onready var Smurp = $Smurp
+onready var stats = $Stats
 
 onready var anim_durations = [animationPlayer.get_animation("Attack Light").length,
 animationPlayer.get_animation("Attack Semilight").length,
@@ -132,3 +135,13 @@ func _on_RollTimer_timeout() -> void:
 
 func _on_AttackTimer_timeout() -> void:
 	attack_animation_finished()
+
+func _on_Hurtbox_area_entered(area: Area) -> void:
+	# TODO: inv. timer
+	stats.health -= area.damage
+	
+	emit_signal("life_changed", stats.health)
+
+func _on_Stats_no_health() -> void:
+	# TODO: die
+	pass # Replace with function body.
