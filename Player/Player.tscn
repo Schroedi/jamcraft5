@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Smurp/Smurp.glb" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.gd" type="Script" id=2]
@@ -34,19 +34,24 @@ input_3/name = "heavy"
 input_3/auto_advance = false
 
 [sub_resource type="AnimationNodeAdd2" id=8]
-filters = [ "Armature/Skeleton:shoulder_left", "Armature/Skeleton:shoulder_right" ]
+filter_enabled = true
+filters = [ "Armature/Skeleton:arm_left", "Armature/Skeleton:arm_right", "Armature/Skeleton:bone", "Armature/Skeleton:hand_left", "Armature/Skeleton:hand_right", "Armature/Skeleton:hip_left", "Armature/Skeleton:hip_right", "Armature/Skeleton:leg_left", "Armature/Skeleton:leg_right", "Armature/Skeleton:shoulder_left", "Armature/Skeleton:shoulder_right", "Armature/Skeleton:sword" ]
 
-[sub_resource type="AnimationNodeAnimation" id=9]
+[sub_resource type="AnimationNodeBlend2" id=9]
+filter_enabled = true
+filters = [ "Armature/Skeleton:arm_left", "Armature/Skeleton:arm_right", "Armature/Skeleton:bone", "Armature/Skeleton:hand_left", "Armature/Skeleton:hand_right", "Armature/Skeleton:shoulder_left", "Armature/Skeleton:shoulder_right", "Armature/Skeleton:sword" ]
+
+[sub_resource type="AnimationNodeAnimation" id=10]
 animation = "Roll"
 
-[sub_resource type="AnimationNodeOneShot" id=10]
+[sub_resource type="AnimationNodeOneShot" id=11]
 
-[sub_resource type="AnimationNodeTimeSeek" id=14]
+[sub_resource type="AnimationNodeTimeSeek" id=12]
 
-[sub_resource type="AnimationNodeBlend2" id=11]
+[sub_resource type="AnimationNodeBlend2" id=13]
 
-[sub_resource type="AnimationNodeBlendTree" id=12]
-graph_offset = Vector2( -268.685, 134.746 )
+[sub_resource type="AnimationNodeBlendTree" id=14]
+graph_offset = Vector2( -36.1136, 142.546 )
 nodes/Animation/node = SubResource( 5 )
 nodes/Animation/position = Vector2( -140, 90 )
 "nodes/Animation 2/node" = SubResource( 1 )
@@ -62,19 +67,21 @@ nodes/Attack/position = Vector2( 0, 390 )
 "nodes/Attack Light/node" = SubResource( 6 )
 "nodes/Attack Light/position" = Vector2( -200, 340 )
 nodes/AttackAdd/node = SubResource( 8 )
-nodes/AttackAdd/position = Vector2( 350, 290 )
-nodes/Roll/node = SubResource( 9 )
+nodes/AttackAdd/position = Vector2( 400, 320 )
+nodes/AttackBlend/node = SubResource( 9 )
+nodes/AttackBlend/position = Vector2( 370, 120 )
+nodes/Roll/node = SubResource( 10 )
 nodes/Roll/position = Vector2( 570, 450 )
-nodes/RollShot/node = SubResource( 10 )
+nodes/RollShot/node = SubResource( 11 )
 nodes/RollShot/position = Vector2( 740, 260 )
-nodes/Seek/node = SubResource( 14 )
+nodes/Seek/node = SubResource( 12 )
 nodes/Seek/position = Vector2( 190, 360 )
-nodes/WalkIdle/node = SubResource( 11 )
+nodes/WalkIdle/node = SubResource( 13 )
 nodes/WalkIdle/position = Vector2( 60, 110 )
 nodes/output/position = Vector2( 930, 260 )
-node_connections = [ "RollShot", 0, "AttackAdd", "RollShot", 1, "Roll", "Attack", 0, "Attack Light", "Attack", 1, "Animation 3", "Attack", 2, "Animation 4", "Attack", 3, "Animation 5", "AttackAdd", 0, "WalkIdle", "AttackAdd", 1, "Seek", "WalkIdle", 0, "Animation", "WalkIdle", 1, "Animation 2", "Seek", 0, "Attack", "output", 0, "RollShot" ]
+node_connections = [ "AttackBlend", 0, "WalkIdle", "AttackBlend", 1, "Seek", "output", 0, "RollShot", "RollShot", 0, "AttackBlend", "RollShot", 1, "Roll", "Seek", 0, "Attack", "WalkIdle", 0, "Animation", "WalkIdle", 1, "Animation 2", "Attack", 0, "Attack Light", "Attack", 1, "Animation 3", "Attack", 2, "Animation 4", "Attack", 3, "Animation 5" ]
 
-[sub_resource type="CapsuleShape" id=13]
+[sub_resource type="CapsuleShape" id=15]
 radius = 0.493648
 height = 0.46643
 
@@ -84,18 +91,19 @@ collision_mask = 17
 script = ExtResource( 2 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 12 )
+tree_root = SubResource( 14 )
 anim_player = NodePath("../Smurp/AnimationPlayer")
 active = true
 parameters/Attack/current = 0
 parameters/AttackAdd/add_amount = 1.0
+parameters/AttackBlend/blend_amount = 1.0
 parameters/RollShot/active = false
 parameters/Seek/seek_position = -1.0
 parameters/WalkIdle/blend_amount = 0.0
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0.728319, 0 )
-shape = SubResource( 13 )
+shape = SubResource( 15 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 10, 10 )
@@ -108,8 +116,11 @@ size = 10.0
 [node name="Armature" parent="Smurp" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.520166, 0 )
 
+[node name="Skeleton" parent="Smurp/Armature" index="0"]
+bones/11/bound_children = [ NodePath("BoneAttachment") ]
+
 [node name="BoneAttachment" type="BoneAttachment" parent="Smurp/Armature/Skeleton" index="1"]
-transform = Transform( 1, 0.000662878, 7.07805e-08, -0.000660151, 0.995709, -0.0925318, -6.1132e-05, 0.0925318, 0.99571, -0.434536, 0.193354, 0.482593 )
+transform = Transform( 1, 0.000662878, 7.07805e-08, -0.000660151, 0.995709, -0.0925318, -6.1132e-05, 0.0925318, 0.99571, -0.434536, 0.298196, 0.482593 )
 bone_name = "sword"
 
 [node name="HitboxPivot" type="Position3D" parent="Smurp/Armature/Skeleton/BoneAttachment"]
