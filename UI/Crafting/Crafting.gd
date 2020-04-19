@@ -20,7 +20,7 @@ func _ready() -> void:
 	# start weapon
 	var wp = weapon_part.instance()
 	wp.part_name = "Handle"
-	wp.part_power = 4
+	wp.part_power = 1
 	try_add_item(wp)
 	
 	wp = weapon_part.instance()
@@ -76,10 +76,8 @@ func init_weapon():
 	save_craft()
 
 func _input(ev: InputEvent) -> void:
-	if ev is InputEventMouseButton and ev.button_index == BUTTON_RIGHT:
-		try_add_item(gen_level(1))
 	if Input.is_action_just_pressed("item_cheat"):
-		init_weapon()
+		try_add_item(gen_level(1))
 	
 func addDrop(drop):
 	# from pickups
