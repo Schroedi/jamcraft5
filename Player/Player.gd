@@ -49,6 +49,7 @@ func _ready():
 	animationTree.active = true
 	weapon.facing_dir = facing_dir
 	Globals.player_weapon = weapon
+	GSound.start_crafting()
 
 func process_input(delta):
 	var input_vector = Vector3.ZERO

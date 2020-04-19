@@ -188,6 +188,7 @@ func save_craft():
 		components.append(item)
 	Globals.player_weapon.build_from_components(components, dmg, special, weight)
 	hide()
+	GSound.start_explore()
 	pass
 
 
@@ -197,4 +198,9 @@ func _on_Button_pressed() -> void:
 
 func _on_CheckItem_timeout() -> void:
 	print("is weapon valid: " + str(is_weapon_valid()))
+	pass # Replace with function body.
+
+
+func _on_Crafting_about_to_show() -> void:
+	GSound.start_crafting()
 	pass # Replace with function body.

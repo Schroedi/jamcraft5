@@ -5,7 +5,7 @@
 [ext_resource path="res://GSound.gd" type="Script" id=3]
 [ext_resource path="res://Music and Sounds/Smurp_Intro.ogg" type="AudioStream" id=4]
 
-[node name="Node" type="Node"]
+[node name="GSound" type="Node"]
 script = ExtResource( 3 )
 
 [node name="Intro" type="AudioStreamPlayer" parent="."]
@@ -13,6 +13,15 @@ stream = ExtResource( 4 )
 
 [node name="Explore" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
+volume_db = -80.0
+autoplay = true
 
 [node name="Crafting" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
+volume_db = -80.0
+autoplay = true
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Tween2" type="Tween" parent="."]
+[connection signal="finished" from="Intro" to="." method="_on_Intro_finished"]
