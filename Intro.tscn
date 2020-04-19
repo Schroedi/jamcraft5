@@ -1102,7 +1102,7 @@ tracks/7/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0.296524, 0.296524 ), Vector2( 0.37696, 0.37696 ) ]
+"values": [ Vector2( 0.594, 0.594 ), Vector2( 0.754, 0.754 ) ]
 }
 tracks/8/type = "value"
 tracks/8/path = NodePath("Dark World Images/pompom:position")
@@ -1308,10 +1308,34 @@ tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 1, 10 ),
+"times": PoolRealArray( 0, 10 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 13.5542, 254.308 ), Vector2( 3600, 254.308 ) ]
+"values": [ Vector2( 1500, 254.308 ), Vector2( 2500, 254.308 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Pompom_Fliegt/pompom_rettet_smurp+feeny:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 4.6, 10 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 4.0, -3.0, 2.0 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Pompom_Fliegt/pompom_rettet_smurp+feeny:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 1.9, 7.8, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
 [sub_resource type="AnimationNodeAnimation" id=7]
@@ -1386,13 +1410,13 @@ __meta__ = {
 
 [node name="Happy World Images" type="Node2D" parent="."]
 visible = false
-position = Vector2( 1300, 700 )
-scale = Vector2( 3, 3 )
+position = Vector2( 1900, 300 )
 
 [node name="himmel" type="Sprite" parent="Happy World Images"]
 position = Vector2( 92.4102, -89.6763 )
 scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 15 )
+offset = Vector2( -250, 0 )
 
 [node name="sonne" type="Sprite" parent="Happy World Images"]
 position = Vector2( 298.115, -498.453 )
@@ -1426,7 +1450,7 @@ scale = Vector2( 0.210414, 0.210414 )
 texture = ExtResource( 8 )
 
 [node name="fels_vordergrund_2" type="Sprite" parent="Happy World Images"]
-position = Vector2( 562.878, 239.799 )
+position = Vector2( 562.878, 137.858 )
 texture = ExtResource( 2 )
 
 [node name="fels_hinten_links" type="Sprite" parent="Happy World Images"]
@@ -1446,8 +1470,8 @@ position = Vector2( -331.139, -368.512 )
 texture = ExtResource( 3 )
 
 [node name="smurp_arm" type="Sprite" parent="Happy World Images"]
-position = Vector2( -12.7705, -121.112 )
-rotation = 0.55676
+position = Vector2( -26.3241, -121.112 )
+rotation = 0.0890118
 scale = Vector2( 0.70803, 0.800001 )
 texture = ExtResource( 17 )
 
@@ -1462,10 +1486,11 @@ scale = Vector2( 0.231529, 0.231529 )
 texture = ExtResource( 43 )
 
 [node name="fels_vordergrund_rechts" type="Sprite" parent="Happy World Images"]
-position = Vector2( 106.203, 343.309 )
+position = Vector2( 122.837, 99.336 )
 texture = ExtResource( 6 )
 
 [node name="sonnenstrahlen" type="Sprite" parent="Happy World Images"]
+modulate = Color( 1, 1, 1, 0.352941 )
 position = Vector2( 818.31, 136.153 )
 texture = ExtResource( 12 )
 
@@ -1484,12 +1509,11 @@ __meta__ = {
 
 [node name="himmel" type="Sprite" parent="Dark World Images"]
 position = Vector2( 1885.24, 106.178 )
-scale = Vector2( 0.299185, 0.299185 )
+scale = Vector2( 0.598, 0.598 )
 texture = ExtResource( 21 )
 
 [node name="blitze" type="Sprite" parent="Dark World Images"]
 position = Vector2( 1977.23, -182.321 )
-scale = Vector2( 0.355595, 0.355595 )
 texture = ExtResource( 25 )
 
 [node name="baeume_hinten" type="Sprite" parent="Dark World Images"]
@@ -1509,7 +1533,7 @@ texture = ExtResource( 27 )
 
 [node name="fels+wassre" type="Sprite" parent="Dark World Images"]
 position = Vector2( 2624.87, 93.7761 )
-scale = Vector2( 0.266474, 0.266474 )
+scale = Vector2( 0.532, 0.532 )
 texture = ExtResource( 32 )
 
 [node name="fels_mitte_links" type="Sprite" parent="Dark World Images"]
@@ -1524,12 +1548,12 @@ texture = ExtResource( 24 )
 
 [node name="fels_links_hinten2" type="Sprite" parent="Dark World Images"]
 position = Vector2( 1296.46, 437.305 )
-scale = Vector2( 0.362755, 0.362755 )
+scale = Vector2( 0.726, 0.726 )
 texture = ExtResource( 28 )
 
 [node name="fels_forne_links1" type="Sprite" parent="Dark World Images"]
 position = Vector2( 2361.22, 608.834 )
-scale = Vector2( 0.567973, 0.567973 )
+scale = Vector2( 1.136, 1.136 )
 texture = ExtResource( 39 )
 
 [node name="bum" type="Sprite" parent="Dark World Images"]
@@ -1538,6 +1562,7 @@ scale = Vector2( 0.260086, 0.265548 )
 texture = ExtResource( 34 )
 
 [node name="Smurp_Finny" type="Sprite" parent="Dark World Images"]
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 1252.22, 150.795 )
 scale = Vector2( 0.395225, 0.395225 )
 texture = ExtResource( 49 )
@@ -1549,7 +1574,7 @@ texture = ExtResource( 31 )
 
 [node name="fels_forne" type="Sprite" parent="Dark World Images"]
 position = Vector2( 2242.86, 683.011 )
-scale = Vector2( 0.313962, 0.313962 )
+scale = Vector2( 0.628, 0.628 )
 texture = ExtResource( 26 )
 
 [node name="fels_vorne" type="Sprite" parent="Dark World Images"]
@@ -1558,18 +1583,17 @@ scale = Vector2( 0.312201, 0.312201 )
 texture = ExtResource( 20 )
 
 [node name="BG_3_07" type="Sprite" parent="Dark World Images"]
-position = Vector2( 571.76, 372.816 )
+position = Vector2( 725.36, 369.616 )
 scale = Vector2( 0.652819, 0.652819 )
 texture = ExtResource( 37 )
 
 [node name="eltern_gefangen" type="Sprite" parent="Dark World Images"]
-visible = false
-position = Vector2( 2486.57, -662.112 )
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 2232.53, -104.284 )
 scale = Vector2( 0.533573, 0.533573 )
 texture = ExtResource( 47 )
 
 [node name="papa_Finny" type="Sprite" parent="Dark World Images"]
-modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 1944.45, 72.2036 )
 scale = Vector2( 0.21978, 0.21978 )
 texture = ExtResource( 23 )
@@ -1587,7 +1611,6 @@ scale = Vector2( 0.220044, 0.220044 )
 texture = ExtResource( 9 )
 
 [node name="smurp_schwert_zerbricht" type="Sprite" parent="Dark World Images"]
-modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 1829.5, 132.448 )
 scale = Vector2( 0.222871, 0.222871 )
 texture = ExtResource( 44 )
@@ -1600,40 +1623,43 @@ scale = Vector2( 0.222871, 0.222871 )
 texture = ExtResource( 45 )
 
 [node name="Schwertspitze" type="Sprite" parent="Dark World Images"]
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 1676.83, 1321.89 )
 rotation = 2.19562
 texture = ExtResource( 46 )
 
 [node name="mutter" type="Sprite" parent="Dark World Images"]
-modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 2117.74, 244.815 )
 scale = Vector2( 0.216197, 0.216197 )
 texture = ExtResource( 38 )
 
 [node name="pompom" type="Sprite" parent="Dark World Images"]
-position = Vector2( 1661.9, 90.8989 )
-scale = Vector2( 0.37696, 0.37696 )
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 1661.9, 317.899 )
+scale = Vector2( 0.296524, 0.296524 )
 texture = ExtResource( 50 )
 
 [node name="monster-schatten" type="Sprite" parent="Dark World Images"]
-position = Vector2( 3214.79, 263.373 )
+position = Vector2( 3100.39, 262.573 )
 scale = Vector2( 0.28987, 0.28987 )
 texture = ExtResource( 33 )
 
 [node name="nebel" type="Sprite" parent="Dark World Images"]
-position = Vector2( 2361.65, 211.648 )
-scale = Vector2( 0.407518, 0.407518 )
+position = Vector2( 1613.65, 243.648 )
+scale = Vector2( 1.632, 1.632 )
 texture = ExtResource( 35 )
 
 [node name="klaue" type="Sprite" parent="Dark World Images"]
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 2101.79, 302.64 )
-scale = Vector2( 0.339628, 0.339628 )
+scale = Vector2( 1.36, 1.36 )
 texture = ExtResource( 22 )
 
 [node name="monster_links" type="Sprite" parent="Dark World Images"]
-position = Vector2( 2616.53, 1680.24 )
-scale = Vector2( 0.576557, 0.576557 )
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 2475.57, 1505.84 )
+scale = Vector2( 1.154, 1.154 )
 texture = ExtResource( 48 )
 
 [node name="ColorRect" type="ColorRect" parent="Dark World Images"]
@@ -1651,8 +1677,9 @@ __meta__ = {
 
 [node name="pompom_rettet_smurp+feeny" type="Sprite" parent="Pompom_Fliegt"]
 visible = false
-position = Vector2( 3600, 254.308 )
-scale = Vector2( 0.384785, 0.384785 )
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 2500, 254.308 )
+rotation = 0.0349066
 texture = ExtResource( 51 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -1711,7 +1738,7 @@ margin_top = 707.0
 margin_right = 2919.0
 margin_bottom = 750.0
 custom_fonts/font = ExtResource( 42 )
-text = "Scene 4 - Pompom comes to help"
+text = "Scene 3 - Kidnapping Parents"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
