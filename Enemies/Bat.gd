@@ -2,9 +2,9 @@ extends KinematicBody
 
 const EnemyDeathEffect = preload("res://Effects/EnemyDeathEffect.tscn")
 
-export var ACCELERATION = 300
-export var MAX_SPEED = 50
-export var FRICTION = 200
+export var ACCELERATION = 3.0
+export var MAX_SPEED = 2
+export var FRICTION = 2.0
 
 enum {
 	IDLE,
@@ -17,9 +17,14 @@ var knockback = Vector3.ZERO
 
 var state = CHASE
 
-onready var sprite = $AnimatedSprite
+onready var animations = $Nocts/AnimationPlayer
 onready var stats = $Stats
 onready var playerDetectionZone = $PlayerDetectionZone
+
+func _ready() -> void:
+	animations.get_animation("ArmatureAction").loop = true
+	animations.play("ArmatureAction")
+	animations.seek(randf())
 
 func _physics_process(delta):
 	knockback = knockback.move_toward(Vector3.ZERO, FRICTION * delta)
@@ -41,9 +46,14 @@ func _physics_process(delta):
 				velocity = velocity.move_toward(direction.normalized() * MAX_SPEED, ACCELERATION * delta)
 			else:
 				state = IDLE
-			sprite.flip_h = velocity.x < 0
 
 	velocity = move_and_slide_with_snap(velocity, Vector3.DOWN * 100, Vector3.UP, true, 4, PI/2.0)
+	# rotate smurp
+	if velocity != Vector3.ZERO:
+		var facing = Vector3(velocity.x, 0, velocity.z).normalized()
+		var rotTransform = $Nocts.transform.looking_at(-facing, Vector3.UP)
+		var thisRotation = Quat($Nocts.transform.basis).slerp(rotTransform.basis, .1)
+		$Nocts.transform = Transform(thisRotation, $Nocts.transform.origin)
 
 func seek_player():
 	if playerDetectionZone.can_see_player():

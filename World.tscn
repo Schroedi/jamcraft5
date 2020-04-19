@@ -116,53 +116,76 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.04369, 0.148597, 5.98977 )
 
 [node name="Bat" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1102, 0.0204264, 0.826481 )
+ACCELERATION = 3.0
+FRICTION = 2.0
 
-[node name="AnimatedSprite" parent="Bat" index="0"]
-frame = 0
-
-[node name="Stats" parent="Bat" index="3"]
+[node name="Stats" parent="Bat" index="1"]
 max_health = 100
 
 [node name="Swarm" type="Spatial" parent="."]
 
 [node name="Bat2" parent="Swarm" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.65793, 0.0204264, -3.39025 )
+ACCELERATION = 3.0
+FRICTION = 2.0
 
 [node name="Bat3" parent="Swarm" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.70636, 0.0204264, -3.39025 )
+ACCELERATION = 3.0
+FRICTION = 2.0
 
 [node name="Bat4" parent="Swarm" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3023, 0.0204264, -3.39025 )
+ACCELERATION = 3.0
+FRICTION = 2.0
 
 [node name="Bat5" parent="Swarm" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.88217, 0.0204264, -4.53874 )
+ACCELERATION = 3.0
+FRICTION = 2.0
 
 [node name="Bat6" parent="Swarm" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.67404, 0.0204264, -4.53874 )
+ACCELERATION = 3.0
+FRICTION = 2.0
 
 [node name="Bat7" parent="Swarm" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.70252, 0.0204264, -4.53874 )
+ACCELERATION = 3.0
+FRICTION = 2.0
 
 [node name="Swarm2" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6129, 0, 0 )
 
 [node name="Bat2" parent="Swarm2" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.65793, 0.0204264, -3.39025 )
+ACCELERATION = 3.0
+FRICTION = 2.0
 
 [node name="Bat3" parent="Swarm2" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.70636, 0.0204264, -3.39025 )
+ACCELERATION = 3.0
+FRICTION = 2.0
 
 [node name="Bat4" parent="Swarm2" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3023, 0.0204264, -3.39025 )
+ACCELERATION = 3.0
+FRICTION = 2.0
 
 [node name="Bat5" parent="Swarm2" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.88217, 0.0204264, -4.53874 )
+ACCELERATION = 3.0
+FRICTION = 2.0
 
 [node name="Bat6" parent="Swarm2" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.67404, 0.0204264, -4.53874 )
+ACCELERATION = 3.0
+FRICTION = 2.0
 
 [node name="Bat7" parent="Swarm2" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.70252, 0.0204264, -4.53874 )
+ACCELERATION = 3.0
+FRICTION = 2.0
 
 [node name="StaticBody2" type="StaticBody" parent="."]
 transform = Transform( 0.546599, -0.837395, 0, 0.837395, 0.546599, 0, 0, 0, 1, -6.07407, -0.322172, 0.990052 )

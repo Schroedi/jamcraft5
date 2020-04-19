@@ -1,114 +1,57 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Enemies/Bat.png" type="Texture" id=1]
-[ext_resource path="res://Shadows/SmallShadow.png" type="Texture" id=2]
+[ext_resource path="res://Enemies/Material.material" type="Material" id=1]
+[ext_resource path="res://Enemies/Nocts.glb" type="PackedScene" id=2]
 [ext_resource path="res://Overlap/Hurtbox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Enemies/Bat.gd" type="Script" id=4]
 [ext_resource path="res://Stats.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Enemies/PlayerDetectionZone.tscn" type="PackedScene" id=6]
 
-[sub_resource type="AtlasTexture" id=1]
-atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 16, 24 )
+[sub_resource type="CapsuleShape" id=1]
+radius = 0.520858
+height = 1.92658
 
-[sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 1 )
-region = Rect2( 16, 0, 16, 24 )
-
-[sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 1 )
-region = Rect2( 32, 0, 16, 24 )
-
-[sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 1 )
-region = Rect2( 48, 0, 16, 24 )
-
-[sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 1 )
-region = Rect2( 64, 0, 16, 24 )
-
-[sub_resource type="SpriteFrames" id=6]
-animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
-"loop": true,
-"name": "Fly",
-"speed": 10.0
-} ]
-
-[sub_resource type="CapsuleShape" id=7]
-radius = 0.231635
-height = 1.06484
-
-[sub_resource type="SphereShape" id=8]
+[sub_resource type="SphereShape" id=2]
 radius = 5.0
 
-[sub_resource type="CapsuleShape" id=13]
-radius = 0.217559
-height = 1.31012
-
-[sub_resource type="SpatialMaterial" id=11]
-vertex_color_use_as_albedo = true
-
-[sub_resource type="QuadMesh" id=10]
-size = Vector2( 0.1, 0.1 )
-
-[sub_resource type="Gradient" id=12]
-offsets = PoolRealArray( 0.00896861, 0.524664, 1 )
-colors = PoolColorArray( 1, 0.443763, 0.725744, 1, 0.826678, 0.70571, 0.204556, 1, 0.106339, 0.740901, 1, 1 )
+[sub_resource type="CapsuleShape" id=3]
+radius = 0.515098
+height = 1.99722
 
 [node name="Bat" type="KinematicBody"]
 collision_layer = 16
-collision_mask = 3
+collision_mask = 19
 script = ExtResource( 4 )
-ACCELERATION = 1
-MAX_SPEED = 2
-FRICTION = 5
-
-[node name="AnimatedSprite" type="AnimatedSprite3D" parent="."]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.0862018, 0 )
-double_sided = false
-frames = SubResource( 6 )
-animation = "Fly"
-frame = 1
-playing = true
-
-[node name="ShadowSprite" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 0, 0 )
-double_sided = false
-texture = ExtResource( 2 )
 
 [node name="Hurtbox" parent="." instance=ExtResource( 3 )]
 collision_layer = 8
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
-transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0.763757, 0 )
-shape = SubResource( 7 )
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 1.48052, 0 )
+shape = SubResource( 1 )
 
 [node name="Stats" parent="." instance=ExtResource( 5 )]
-max_health = 5
+max_health = 10
 
 [node name="PlayerDetectionZone" parent="." instance=ExtResource( 6 )]
 
 [node name="CollisionShape2D" parent="PlayerDetectionZone" index="0"]
-shape = SubResource( 8 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0.865025, 0 )
-shape = SubResource( 13 )
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 1.51008, 0 )
+shape = SubResource( 3 )
 
-[node name="CPUParticles" type="CPUParticles" parent="."]
-material_override = SubResource( 11 )
-cast_shadow = 0
-local_coords = false
-mesh = SubResource( 10 )
-gravity = Vector3( 0, 0, 0 )
-angle_random = 0.68
-scale_amount = 0.5
-scale_amount_random = 1.0
-color_ramp = SubResource( 12 )
+[node name="Nocts" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.10943, 0 )
+
+[node name="Alien" parent="Nocts/Armature/Skeleton" index="0"]
+material/0 = ExtResource( 1 )
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="no_health" from="Stats" to="." method="_on_Stats_no_health"]
 
 [editable path="Hurtbox"]
 
 [editable path="PlayerDetectionZone"]
+
+[editable path="Nocts"]
