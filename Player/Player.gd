@@ -8,6 +8,7 @@ export var FRICTION = 5.0
 signal life_changed #(float)
 signal died
 signal pickup #(Drop)
+signal crafting
 
 const ANIM_LIGHT = 0
 const ANIM_SEMILIGHT = 1
@@ -173,3 +174,4 @@ func respawn():
 	self.transform = start_transform
 	stats.health = stats.max_health
 	stats.dead = false
+	emit_signal("crafting")

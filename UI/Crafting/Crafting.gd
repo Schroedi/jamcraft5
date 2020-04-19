@@ -38,6 +38,7 @@ func _ready() -> void:
 	
 	player.connect("pickup", self, "addDrop")
 	player.connect("died", self, "init_weapon")
+	player.connect("crafting", self, "popup")
 	
 	call_deferred("popup")
 	
