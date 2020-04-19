@@ -29,7 +29,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 1 ),
+"times": PoolRealArray( 1.9 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -48,9 +48,9 @@ animation = "Actions"
 [sub_resource type="AnimationNodeAnimation" id=8]
 animation = "ArmatureAction"
 
-[sub_resource type="AnimationNodeTimeSeek" id=10]
+[sub_resource type="AnimationNodeTimeSeek" id=9]
 
-[sub_resource type="AnimationNodeBlendTree" id=9]
+[sub_resource type="AnimationNodeBlendTree" id=10]
 graph_offset = Vector2( 0, -15.7805 )
 nodes/Add2/node = SubResource( 6 )
 nodes/Add2/position = Vector2( 420, 130 )
@@ -58,10 +58,10 @@ nodes/Animation/node = SubResource( 8 )
 nodes/Animation/position = Vector2( 196.5, 98 )
 "nodes/Animation 2/node" = SubResource( 7 )
 "nodes/Animation 2/position" = Vector2( 190, 220 )
-nodes/Seek/node = SubResource( 10 )
+nodes/Seek/node = SubResource( 9 )
 nodes/Seek/position = Vector2( 680, 150 )
 nodes/output/position = Vector2( 910, 130 )
-node_connections = [ "output", 0, "Seek", "Seek", 0, "Add2", "Add2", 0, "Animation", "Add2", 1, "Animation 2" ]
+node_connections = [ "Seek", 0, "Add2", "Add2", 0, "Animation", "Add2", 1, "Animation 2", "output", 0, "Seek" ]
 
 [node name="Bat" type="KinematicBody"]
 collision_layer = 16
@@ -104,7 +104,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.33575, 0.280122 )
 shape = SubResource( 5 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 9 )
+tree_root = SubResource( 10 )
 anim_player = NodePath("../Nocts/AnimationPlayer")
 parameters/Add2/add_amount = 1.0
 parameters/Seek/seek_position = 0.0

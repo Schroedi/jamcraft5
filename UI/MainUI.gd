@@ -26,3 +26,8 @@ func _ready():
 
 func die():
 	$AnimationPlayer.play("die")
+
+
+func _unhandled_key_input(event : InputEventKey) -> void:
+	if event.pressed and event.scancode == KEY_C:
+		$Crafting.popup()
