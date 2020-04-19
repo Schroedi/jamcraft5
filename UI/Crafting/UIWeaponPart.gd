@@ -5,7 +5,7 @@ onready var weapon_model = $"MarginContainer/ViewportContainer/Viewport/Weapons"
 onready var camera = $"MarginContainer/ViewportContainer/Viewport/Camera"
 
 export var part_name: String
-export var part_power: int
+export var part_power: int = 0
 # part_power: 1-4 for slots, attack damage or special move ID
 
 const parts = {"Handle": preload("res://Weapon/Handle.tscn"),
@@ -42,6 +42,7 @@ onready var XOffset = {"Handle": 0.25,
 
 onready var HandleSlots = [$"Overlay/Attributes/Handle/HBoxContainer2/1",$"Overlay/Attributes/Handle/HBoxContainer2/2",$"Overlay/Attributes/Handle/HBoxContainer2/3",$"Overlay/Attributes/Handle/HBoxContainer2/4"]
 onready var DamageMid = [$"Overlay/Attributes/Mid/HBoxContainer/1",$"Overlay/Attributes/Mid/HBoxContainer/2",$"Overlay/Attributes/Mid/HBoxContainer/3",$"Overlay/Attributes/Mid/HBoxContainer/4"]
+onready var SpetialName = $Overlay/Attributes/Tip/Label
 
 func set_part_name(v):
 	part_name = v
@@ -59,7 +60,7 @@ func set_part_name(v):
 		if part_power>=i+1:
 			HandleSlots[i].visible = true
 			DamageMid[i].visible = true
-	
+	SpetialName.text = Globals.specials[part_power - 1]
 
 func _ready() -> void:
 	set_part_name(part_name)
