@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Smurp/Smurp.glb" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.gd" type="Script" id=2]
@@ -91,6 +91,8 @@ height = 0.46643
 radius = 0.5
 height = 0.47
 
+[sub_resource type="SphereShape" id=17]
+
 [node name="Player" type="KinematicBody"]
 collision_layer = 2
 collision_mask = 17
@@ -119,6 +121,7 @@ current = true
 size = 10.0
 
 [node name="Smurp" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.211377, 0 )
 
 [node name="Armature" parent="Smurp" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.520166, 0 )
@@ -148,10 +151,18 @@ shape = SubResource( 16 )
 
 [node name="Stats" parent="." instance=ExtResource( 4 )]
 max_health = 5
+
+[node name="Pickup" type="Area" parent="."]
+collision_mask = 33
+
+[node name="CollisionShape" type="CollisionShape" parent="Pickup"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.649933, 0 )
+shape = SubResource( 17 )
 [connection signal="timeout" from="RollTimer" to="." method="_on_RollTimer_timeout"]
 [connection signal="timeout" from="AttackTimer" to="." method="_on_AttackTimer_timeout"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="no_health" from="Stats" to="." method="_on_Stats_no_health"]
+[connection signal="area_entered" from="Pickup" to="." method="_on_Pickup_area_entered"]
 
 [editable path="Smurp"]
 

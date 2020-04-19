@@ -2,6 +2,8 @@ extends Popup
 
 const weapon_part = preload("res://UI/Crafting/UIWeaponPart.tscn")
 
+onready var player = get_tree().get_nodes_in_group('player')[0]
+
 onready var inv_grid = $Inventory/Inventory/GridContainer
 onready var weapon_slots = $Crafting/Weapon
 onready var slots = [$"Crafting/Weapon/Slot5",$"Crafting/Weapon/Slot4",$"Crafting/Weapon/Slot3",$"Crafting/Weapon/Slot2",$"Crafting/Weapon/Slot"]
@@ -31,36 +33,46 @@ func _ready() -> void:
 	
 	is_weapon_valid()
 	
+	player.connect("pickup", self, "addDrop")
+	
 	call_deferred("popup")
+	
+	#level_test()
 
-static func rand_array(array): # -> [int, object]
-	# arrays must be [weight, value]
-	# returns [idx, object]
-	var sum_of_weights = 0
-	for t in array:
-		sum_of_weights += t[0]
-   
-	var x = randf() * sum_of_weights
-   
-	var cumulative_weight = 0
-	var idx = 0
-	for t in array:
-		cumulative_weight += t[0]
-		if x < cumulative_weight:
-			return [idx, t[1]]
-		idx += 1
-
-const part_loot_table = [[1, "Handle"], [25, "Mid 1"], [15, "Mid 2"], [5, "Mid 3"], [5, "Tip 1"], [3, "Tip 2"], [1, "Tip 3"]]
+func level_test():
+	var level_sum = 0
+	for i in 100:
+		var wp = gen_level(1)
+		level_sum += wp.part_power
+	print ("l1: %f" % (level_sum / 100.0))
+	
+	level_sum = 0
+	for i in 100:
+		var wp = gen_level(10)
+		level_sum += wp.part_power
+	print ("l10: %f" % (level_sum / 100.0))
 
 func _input(ev: InputEvent) -> void:
 	if ev is InputEventMouseButton and ev.button_index == BUTTON_RIGHT:
-		var wp = weapon_part.instance()
-		var rand_part = rand_array(part_loot_table.duplicate())
-		wp.part_name = rand_part[1]
-		wp.part_power = randi()%4+1
-		try_add_item(wp)
+		try_add_item(gen_level(1))
+
+func addDrop(drop):
+	# from pickups
+	var level = drop.level
+	var best = gen_level(level)
+	if try_add_item(best):
+		drop.picked()
+
+func gen_level(level):
+	var best = GPartGen.gen_item()
+	for i in level - 1:
+		var item = GPartGen.gen_item()
+		if item.part_power > best.part_power:
+			best = item
+	return best
 
 func try_add_item(item):
+	print("try add: %d" % item.part_power)
 	for slot in inv_grid.get_children():
 		if slot.is_free():
 			slot.set_item(item)
