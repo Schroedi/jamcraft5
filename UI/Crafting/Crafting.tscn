@@ -28,6 +28,7 @@ __meta__ = {
 }
 
 [node name="Crafting" type="Node2D" parent="."]
+visible = false
 
 [node name="Sword Window" type="Sprite" parent="Crafting"]
 position = Vector2( 470, 540 )
@@ -128,6 +129,18 @@ margin_bottom = 238.621
 custom_fonts/font = ExtResource( 8 )
 text = "
 "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Error" type="Label" parent="Crafting"]
+margin_left = 338.438
+margin_top = 961.887
+margin_right = 577.438
+margin_bottom = 1002.89
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.843137, 0, 0, 1 )
+text = "You need 1 tip."
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -243,18 +256,6 @@ margin_left = 120.0
 margin_top = 1260.0
 margin_right = 240.0
 margin_bottom = 1440.0
-
-[node name="Error" type="Label" parent="."]
-margin_left = 338.438
-margin_top = 961.887
-margin_right = 577.438
-margin_bottom = 1002.89
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 0.843137, 0, 0, 1 )
-text = "You need 1 tip."
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Control Key Overlay_Zeichenfläche 1" type="Sprite" parent="."]
 position = Vector2( 1122.75, 814.164 )
