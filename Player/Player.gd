@@ -7,6 +7,7 @@ export var FRICTION = 5.0
 
 signal life_changed #(float)
 signal died
+signal pickup #(Drop)
 
 const ANIM_LIGHT = 0
 const ANIM_SEMILIGHT = 1
@@ -75,6 +76,8 @@ func process_input(delta):
 
 
 func _physics_process(delta):
+	if stats.dead:
+		return
 	match state:
 		MOVE:
 			move_state(delta)
@@ -146,3 +149,7 @@ func _on_Hurtbox_area_entered(area: Area) -> void:
 func _on_Stats_no_health() -> void:
 	emit_signal("died")
 	pass # Replace with function body.
+
+
+func _on_Pickup_area_entered(area: Area) -> void:
+	emit_signal("pickup", area)

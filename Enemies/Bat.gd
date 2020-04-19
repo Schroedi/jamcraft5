@@ -1,10 +1,13 @@
 extends KinematicBody
 
 const EnemyDeathEffect = preload("res://Effects/EnemyDeathEffect.tscn")
+const Drop = preload("res://Weapon/Drop.tscn")
 
 export var ACCELERATION = 3.0
 export var MAX_SPEED = 2
 export var FRICTION = 2.0
+
+export(int, 10) var drop_level = 1
 
 enum {
 	IDLE,
@@ -72,7 +75,14 @@ func _on_Hurtbox_area_entered(area):
 	knockback = area.knockback
 
 func _on_Stats_no_health():
+	if drop_level > 0:
+		var drop = Drop.instance()
+		drop.transform = transform
+		drop.level = drop_level
+		get_parent().add_child(drop)
+	
+	
 	queue_free()
 	var enemyDeathEffect = EnemyDeathEffect.instance()
 	get_parent().add_child(enemyDeathEffect)
-	#enemyDeathEffect.global_position = global_position
+	#enemyDeathEffect.transform = transform
