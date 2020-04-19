@@ -75,6 +75,8 @@ func process_input(delta):
 
 
 func _physics_process(delta):
+	if stats.dead:
+		return
 	match state:
 		MOVE:
 			move_state(delta)
