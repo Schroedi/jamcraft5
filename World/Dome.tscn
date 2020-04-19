@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://World/Stone2.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Stone.tscn" type="PackedScene" id=2]
@@ -6,6 +6,12 @@
 [ext_resource path="res://Materials/Energy Field.tres" type="Material" id=4]
 [ext_resource path="res://World/napf.glb" type="PackedScene" id=5]
 [ext_resource path="res://Materials/Plastic.tres" type="Material" id=6]
+[ext_resource path="res://Pet/pompom.glb" type="PackedScene" id=7]
+[ext_resource path="res://Smurp/Smurp.glb" type="PackedScene" id=8]
+[ext_resource path="res://Materials/Pombody.tres" type="Material" id=9]
+[ext_resource path="res://Materials/Pomblue.tres" type="Material" id=10]
+[ext_resource path="res://Materials/Spike.tres" type="Material" id=11]
+[ext_resource path="res://Materials/Smu Skin.tres" type="Material" id=12]
 
 [sub_resource type="SphereShape" id=1]
 radius = 10.3504
@@ -13,6 +19,7 @@ radius = 10.3504
 [node name="Dome" type="StaticBody"]
 
 [node name="dome" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.716477, 0, 0, 0, 0.716477, 0, 0, 0, 0.716477, 0.00512695, 0.0124512, -0.00830078 )
 
 [node name="Energyfield" parent="dome" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00191243, 1.31946, -0.00976563 )
@@ -26,25 +33,126 @@ shape = SubResource( 1 )
 transform = Transform( -0.135162, 0.990823, 0, -0.990823, -0.135162, 0, 0, 0, 1, -6.15344, 0, 6.99487 )
 
 [node name="Stone" parent="Stones" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15575, 1.02073, -1.02942 )
 
 [node name="Stone2" parent="Stones" instance=ExtResource( 1 )]
-transform = Transform( 0.984276, 0.11527, -0.133845, 0.11527, 0.155001, 0.981167, 0.133845, -0.981167, 0.139277, -2.10287, 13.88, -0.80957 )
+transform = Transform( 0.984276, 0.11527, -0.133845, 0.11527, 0.155001, 0.981167, 0.133845, -0.981167, 0.139277, -1.62626, 10.3861, -3.88843 )
 
 [node name="Stone3" parent="Stones" instance=ExtResource( 1 )]
-transform = Transform( 0.129247, -0.991604, 0.00415123, -0.00136818, 0.0040082, 0.999992, -0.991612, -0.129252, -0.000838609, -0.521149, -3.89832, -6.99756 )
+transform = Transform( -0.0190806, -0.996028, 0.086981, 0.471497, -0.0856795, -0.877696, 0.881662, 0.0242649, 0.471258, -2.04937, 7.83643, -7.19653 )
 
 [node name="Stone4" parent="Stones" instance=ExtResource( 2 )]
-transform = Transform( -0.135162, -0.990824, 8.70356e-09, 0.990824, -0.135162, -9.27595e-10, 5.82077e-10, -1.3446e-08, 1, -1.74211, 12.7708, 3.27148 )
+transform = Transform( -0.135162, -0.990824, 8.70356e-09, 0.990824, -0.135162, -9.27595e-10, 5.82077e-10, -1.3446e-08, 1, -0.629596, 4.61537, 1.81079 )
 
 [node name="Stone5" parent="Stones" instance=ExtResource( 2 )]
-transform = Transform( -0.000183985, -0.990824, 0.135162, 0.00134884, -0.135162, -0.990823, 0.999999, 4.46851e-08, 0.00136132, 0.546061, -4.00296, -0.186279 )
+transform = Transform( -0.000183985, -0.990824, 0.135162, 0.00134884, -0.135162, -0.990823, 0.999999, 4.46851e-08, 0.00136132, -0.692029, 5.07301, -11.8488 )
 
 [node name="napf" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.0321, 0, 3.66113 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.04785, 0, 3.66113 )
 
 [node name="Napf" parent="napf" index="0"]
 material/0 = ExtResource( 6 )
 
+[node name="Smurp" parent="." instance=ExtResource( 8 )]
+transform = Transform( 0.119946, 0, -0.99278, 0, 1, 0, 0.99278, 0, 0.119946, 0.428101, -0.00012207, 3.89551 )
+
+[node name="pompom" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.23352, 0, 0 )
+
+[node name="Pompom v3 Pompom v3 Body15 " parent="pompom" index="0"]
+transform = Transform( -0.13, -7.33538e-08, 0, 0, 0, -0.13, 7.33538e-08, -0.13, 0, 0, 0, 0 )
+material/0 = ExtResource( 9 )
+
+[node name="Pompom v3 Pompom v3 Body16 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="0"]
+material/0 = ExtResource( 10 )
+
+[node name="Pompom v3 Pompom v3 Body21 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="1"]
+material/0 = ExtResource( 11 )
+
+[node name="Pompom v3 Pompom v3 Body22 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="2"]
+material/0 = ExtResource( 11 )
+
+[node name="Pompom v3 Pompom v3 Body23 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="3"]
+material/0 = ExtResource( 11 )
+
+[node name="Pompom v3 Pompom v3 Body24 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="4"]
+material/0 = ExtResource( 11 )
+
+[node name="Pompom v3 Pompom v3 Body25 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="5"]
+material/0 = ExtResource( 11 )
+
+[node name="Pompom v3 Pompom v3 Body27 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="6"]
+material/0 = ExtResource( 11 )
+
+[node name="Pompom v3 Pompom v3 Body28 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="7"]
+material/0 = ExtResource( 11 )
+
+[node name="Pompom v3 Pompom v3 Body29 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="8"]
+material/0 = ExtResource( 11 )
+
+[node name="Pompom v3 Pompom v3 Body30 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="9"]
+material/0 = ExtResource( 11 )
+
+[node name="Pompom v3 Pompom v3 Body31 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="10"]
+material/0 = ExtResource( 11 )
+
+[node name="Pompom v3 Pompom v3 Body32 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="11"]
+material/0 = ExtResource( 11 )
+
+[node name="Pompom v3 Pompom v3 Body33 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="12"]
+material/0 = ExtResource( 11 )
+
+[node name="Pompom v3 Pompom v3 Body34 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="13"]
+material/0 = ExtResource( 11 )
+
+[node name="Pompom v3 Pompom v3 Body35 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="14"]
+material/0 = ExtResource( 11 )
+
+[node name="Pompom v3 Pompom v3 Body36 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="15"]
+material/0 = ExtResource( 11 )
+
+[node name="Pompom v3 Pompom v3 Body37 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="16"]
+material/0 = ExtResource( 11 )
+
+[node name="Pompom v3 Pompom v3 Body38 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="17"]
+material/0 = ExtResource( 11 )
+
+[node name="Pompom v3 Pompom v3 Body39 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="18"]
+material/0 = ExtResource( 11 )
+
+[node name="Pompom v3 Pompom v3 Body40 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="19"]
+material/0 = ExtResource( 11 )
+
+[node name="Pompom v3 Pompom v3 Body41 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="20"]
+material/0 = ExtResource( 11 )
+
+[node name="Pompom v3 Pompom v3 Body42 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="21"]
+material/0 = ExtResource( 11 )
+
+[node name="Pompom v3 Pompom v3 Body43 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="22"]
+material/0 = ExtResource( 11 )
+
+[node name="Pompom v3 Pompom v3 Body44 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="23"]
+material/0 = ExtResource( 11 )
+
+[node name="Pompom v3 Pompom v3 Body45 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="24"]
+material/0 = ExtResource( 11 )
+
+[node name="Pompom v3 Pompom v3 Body46 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="25"]
+material/0 = ExtResource( 11 )
+
+[node name="Pompom v3 Pompom v3 Feeny Rider mini v7 1 Body4 Feeny Rider" parent="pompom/Pompom v3 Pompom v3 Body15 " index="26"]
+material/0 = ExtResource( 9 )
+
+[node name="Pompom v3 Pompom v3 Feeny Rider mini v7 1 Body4 Feeny Rider min" parent="pompom/Pompom v3 Pompom v3 Body15 " index="27"]
+transform = Transform( 0.950587, -0.310461, -2.70173e-14, 0.310461, 0.950587, -8.82383e-15, 2.84217e-14, 0, 1, -44.9907, 5.65652, 6.37959 )
+material/0 = ExtResource( 12 )
+
+[node name="AnimationPlayer" parent="pompom" index="1"]
+autoplay = "Pompom v3 Pompom v3 Body15 Action"
+
 [editable path="dome"]
 
 [editable path="napf"]
+
+[editable path="pompom"]
