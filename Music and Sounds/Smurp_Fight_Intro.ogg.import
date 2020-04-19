@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Smurp_Fight_Intro.ogg-3c696f056f05a58810d150663e5d3f91.oggstr"
+
+[deps]
+
+source_file="res://Music and Sounds/Smurp_Fight_Intro.ogg"
+dest_files=[ "res://.import/Smurp_Fight_Intro.ogg-3c696f056f05a58810d150663e5d3f91.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

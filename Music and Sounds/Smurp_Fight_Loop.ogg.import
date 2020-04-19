@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Smurp_Fight_Loop.ogg-e868376ed31d27a32e65683f936aa076.oggstr"
+
+[deps]
+
+source_file="res://Music and Sounds/Smurp_Fight_Loop.ogg"
+dest_files=[ "res://.import/Smurp_Fight_Loop.ogg-e868376ed31d27a32e65683f936aa076.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
