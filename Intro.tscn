@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=2]
+[gd_scene load_steps=71 format=2]
 
 [ext_resource path="res://Intro/BG1/fels_wasser.png" type="Texture" id=1]
 [ext_resource path="res://Intro/BG1/fels_vordergrund_2.png" type="Texture" id=2]
@@ -39,7 +39,6 @@
 [ext_resource path="res://Intro/BG2/BG_3_07.png" type="Texture" id=37]
 [ext_resource path="res://Intro/BG2/mutter.png" type="Texture" id=38]
 [ext_resource path="res://Intro/BG2/fels_forne_links1.png" type="Texture" id=39]
-[ext_resource path="res://FPSLabel.gd" type="Script" id=40]
 [ext_resource path="res://Music and Sounds/Smurp_Intro.ogg" type="AudioStream" id=41]
 [ext_resource path="res://UI/Attack Value.tres" type="DynamicFont" id=42]
 [ext_resource path="res://smurp_von_seite.png" type="Texture" id=43]
@@ -1738,9 +1737,6 @@ autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="FpsLabel" type="CanvasLayer" parent="."]
-script = ExtResource( 40 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 41 )
