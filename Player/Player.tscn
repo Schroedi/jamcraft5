@@ -111,7 +111,7 @@ parameters/Seek/seek_position = -1.0
 parameters/WalkIdle/blend_amount = 0.0
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0.728319, 0 )
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0.719102, 0 )
 shape = SubResource( 15 )
 
 [node name="Camera" type="Camera" parent="."]
