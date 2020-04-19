@@ -21,6 +21,8 @@ onready var playerDetectionZone = $PlayerDetectionZone
 onready var player = get_tree().get_nodes_in_group("player")[0]
 onready var animations = $pompom/AnimationPlayer
 
+onready var start_transform = self.transform
+
 func _ready() -> void:
 	animations.get_animation("Pompom v3 Pompom v3 Body15 Action").loop = true
 	animations.play("Pompom v3 Pompom v3 Body15 Action")
@@ -58,4 +60,10 @@ func _on_Hurtbox_area_entered(area):
 	stats.health -= area.damage
 
 func _on_Stats_no_health():
-	queue_free()
+	pass
+
+func respawn():
+	# teleport
+	self.transform = start_transform
+	stats.health = stats.max_health
+	stats.dead = false

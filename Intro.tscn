@@ -1338,6 +1338,20 @@ tracks/10/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
+tracks/11/type = "method"
+tracks/11/path = NodePath(".")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 9.9 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "start_game"
+} ]
+}
 
 [sub_resource type="AnimationNodeAnimation" id=7]
 animation = "Scene 0 - Once there were Smu"
@@ -1697,7 +1711,6 @@ texture = ExtResource( 51 )
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 18 )
 anim_player = NodePath("../AnimationPlayer")
-active = true
 parameters/playback = SubResource( 19 )
 
 [node name="Subtitles" type="Node2D" parent="."]
@@ -1731,7 +1744,6 @@ script = ExtResource( 40 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 41 )
-autoplay = true
 
 [node name="Scene Count Overlay" type="Label" parent="."]
 self_modulate = Color( 0.0901961, 1, 0, 1 )

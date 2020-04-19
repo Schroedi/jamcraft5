@@ -35,6 +35,8 @@ config/icon="res://icon.png"
 
 Globals="*res://Globals.gd"
 GPartGen="*res://Weapon/GPartGen.gd"
+Loader="*res://Loader.gd"
+GSound="*res://GSound.tscn"
 
 [display]
 

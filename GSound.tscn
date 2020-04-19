@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Music and Sounds/Smurp_Crafting.ogg" type="AudioStream" id=1]
+[ext_resource path="res://Music and Sounds/Smurp_Explore.ogg" type="AudioStream" id=2]
+[ext_resource path="res://GSound.gd" type="Script" id=3]
+[ext_resource path="res://Music and Sounds/Smurp_Intro.ogg" type="AudioStream" id=4]
+
+[node name="Node" type="Node"]
+script = ExtResource( 3 )
+
+[node name="Intro" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="Explore" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+
+[node name="Crafting" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )

@@ -7,6 +7,7 @@ const heart_half = preload("res://UI/HeartUIHalf.png")
 
 onready var healthbar = $"Container/UpperLeft/HBoxContainer"
 onready var player = get_tree().get_nodes_in_group('player')[0]
+onready var pet = get_tree().get_nodes_in_group('pet')[0]
 
 func update_health(value):
 	for i in healthbar.get_child_count():
@@ -36,5 +37,5 @@ func _unhandled_key_input(event : InputEventKey) -> void:
 func _on_Revive_pressed() -> void:
 	$Death/Revive.visible = false
 	player.respawn()
+	pet.respawn()
 	$AnimationPlayer.play_backwards("die")
-	pass # Replace with function body.
