@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://World/Stone2.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Stone.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Pet/pompom.glb" type="PackedScene" id=7]
 [ext_resource path="res://Smurp/Smurp.glb" type="PackedScene" id=8]
 [ext_resource path="res://Feeny/Feeny.glb" type="PackedScene" id=9]
+[ext_resource path="res://Pet/GlowSphere.tscn" type="PackedScene" id=10]
 
 [sub_resource type="SphereShape" id=1]
 radius = 7.18884
@@ -62,7 +63,9 @@ transform = Transform( 0.295725, 0, -0.955273, 0, 1, 0, 0.955273, 0, 0.295725, -
 [node name="AnimationPlayer" parent="Smurp" index="1"]
 autoplay = "Idle"
 
-[node name="pompom" parent="." instance=ExtResource( 7 )]
+[node name="pompom" parent="." groups=[
+"dome_char",
+] instance=ExtResource( 7 )]
 transform = Transform( 0.989242, 0, 0.14629, 0, 1, 0, -0.14629, 0, 0.989242, -3.78281, 0, -0.227783 )
 
 [node name="Pompom v3 Pompom v3 Feeny Rider mini v7 1 Body4 Feeny Rider min" parent="pompom/Pompom v3 Pompom v3 Body15 " index="25"]
@@ -74,7 +77,11 @@ light_color = Color( 0.0745098, 0.823529, 0.823529, 1 )
 shadow_enabled = true
 omni_range = 11.0
 
-[node name="Feeny" parent="." instance=ExtResource( 9 )]
+[node name="GlowSphere" parent="pompom/Pompom v3 Pompom v3 Body15 " index="27" instance=ExtResource( 10 )]
+
+[node name="Feeny" parent="." groups=[
+"dome_char",
+] instance=ExtResource( 9 )]
 transform = Transform( 0.482351, -0.0468714, -0.874722, 0.0553124, 0.998204, -0.022987, 0.87423, -0.0372952, 0.484078, 2.04885, 1.64502, 4.26389 )
 
 [editable path="dome"]

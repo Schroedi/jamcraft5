@@ -1,8 +1,8 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Enemies/PlayerDetectionZone.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Overlap/Hurtbox.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Pet/GlowMatPet.tres" type="Material" id=3]
+[ext_resource path="res://Pet/GlowSphere.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Pet/Pet.gd" type="Script" id=5]
 [ext_resource path="res://Stats.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Pet/pompom.glb" type="PackedScene" id=7]
@@ -16,10 +16,6 @@ radius = 1.65825
 
 [sub_resource type="CapsuleShape" id=3]
 radius = 4.45769
-
-[sub_resource type="SphereMesh" id=4]
-radius = 2.072
-height = 4.269
 
 [node name="Pet" type="KinematicBody"]
 script = ExtResource( 5 )
@@ -56,10 +52,7 @@ light_bake_mode = 0
 shadow_enabled = true
 omni_range = 36.0
 
-[node name="MeshInstance" type="MeshInstance" parent="pompom/Pompom v3 Pompom v3 Body15 " index="27"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0230664, -25.9279, -18.4254 )
-mesh = SubResource( 4 )
-material/0 = ExtResource( 3 )
+[node name="GlowSphere" parent="pompom/Pompom v3 Pompom v3 Body15 " index="27" instance=ExtResource( 3 )]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="no_health" from="Stats" to="." method="_on_Stats_no_health"]
 

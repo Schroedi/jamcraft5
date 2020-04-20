@@ -75,11 +75,11 @@ func init_weapon():
 	
 	save_craft()
 
-func _input(ev: InputEvent) -> void:
+func _input(_ev: InputEvent) -> void:
 	if Input.is_action_just_pressed("item_cheat"):
 		try_add_item(gen_level(1))
 	
-func _unhandled_key_input(event : InputEventKey) -> void:
+func _unhandled_key_input(_event : InputEventKey) -> void:
 	if Input.is_action_just_pressed("inventory"):
 		visible = not visible
 	

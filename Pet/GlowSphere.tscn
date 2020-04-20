@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Pet/GlowMatPet.tres" type="Material" id=1]
+
+[sub_resource type="SphereMesh" id=4]
+radius = 2.072
+height = 4.269
+
+[node name="GlowSphere" type="MeshInstance"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0230664, -25.9279, -18.4254 )
+mesh = SubResource( 4 )
+material/0 = ExtResource( 1 )
