@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Enemies/PlayerDetectionZone.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Overlap/Hurtbox.tscn" type="PackedScene" id=2]
@@ -15,6 +15,22 @@ radius = 1.65825
 
 [sub_resource type="CapsuleShape" id=3]
 radius = 4.45769
+
+[sub_resource type="SphereMesh" id=4]
+radius = 2.072
+height = 4.269
+
+[sub_resource type="SpatialMaterial" id=5]
+flags_transparent = true
+flags_vertex_lighting = true
+params_blend_mode = 1
+params_depth_draw_mode = 2
+albedo_color = Color( 0, 0, 0, 1 )
+emission_enabled = true
+emission = Color( 0.0745098, 0.823529, 0.823529, 1 )
+emission_energy = 6.44
+emission_operator = 0
+emission_on_uv2 = false
 
 [node name="Pet" type="KinematicBody"]
 script = ExtResource( 5 )
@@ -42,6 +58,19 @@ shape = SubResource( 3 )
 
 [node name="Pompom v3 Pompom v3 Body15 " parent="pompom" index="1"]
 transform = Transform( -0.13, -7.33538e-08, 0, 0, 0, -0.13, 7.33538e-08, -0.13, 0, 0, 0, 0 )
+
+[node name="OmniLight" type="OmniLight" parent="pompom/Pompom v3 Pompom v3 Body15 " index="26"]
+transform = Transform( -7.69231, 0, 4.34046e-06, -4.34046e-06, 0, -7.69231, 0, -7.69231, 0, 1.50088e-05, -26.5992, -15.4429 )
+light_color = Color( 0.0745098, 0.823529, 0.823529, 1 )
+light_energy = 0.45
+light_bake_mode = 0
+shadow_enabled = true
+omni_range = 36.0
+
+[node name="MeshInstance" type="MeshInstance" parent="pompom/Pompom v3 Pompom v3 Body15 " index="27"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0230664, -25.9279, -18.4254 )
+mesh = SubResource( 4 )
+material/0 = SubResource( 5 )
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="no_health" from="Stats" to="." method="_on_Stats_no_health"]
 

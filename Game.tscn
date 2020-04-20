@@ -161,6 +161,8 @@ size = Vector2( 1920, 1080 )
 handle_input_locally = false
 msaa = 2
 render_target_update_mode = 3
+shadow_atlas_size = 4096
+shadow_atlas_quad_0 = 1
 
 [node name="World" parent="GameWorld/Viewport" instance=ExtResource( 1 )]
 

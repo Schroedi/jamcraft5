@@ -157,6 +157,8 @@ inventory={
 [rendering]
 
 quality/driver/driver_name="GLES2"
+quality/reflections/texture_array_reflections=false
+quality/reflections/high_quality_ggx=false
 quality/depth_prepass/enable=false
 environment/default_clear_color=Color( 0.745098, 0.54902, 0.827451, 1 )
 quality/filters/msaa=1

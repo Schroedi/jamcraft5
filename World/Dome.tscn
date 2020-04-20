@@ -68,6 +68,12 @@ transform = Transform( 0.989242, 0, 0.14629, 0, 1, 0, -0.14629, 0, 0.989242, -3.
 [node name="Pompom v3 Pompom v3 Feeny Rider mini v7 1 Body4 Feeny Rider min" parent="pompom/Pompom v3 Pompom v3 Body15 " index="25"]
 visible = false
 
+[node name="OmniLight" type="OmniLight" parent="pompom/Pompom v3 Pompom v3 Body15 " index="26"]
+transform = Transform( 7.69231, 9.53674e-07, -1.40332e-12, -9.53674e-07, 7.69231, -4.26326e-13, 2.73559e-13, -1.98952e-13, 7.69231, -0.0543289, -25.8662, -15.4296 )
+light_color = Color( 0.0745098, 0.823529, 0.823529, 1 )
+shadow_enabled = true
+omni_range = 11.0
+
 [node name="Feeny" parent="." instance=ExtResource( 9 )]
 transform = Transform( 0.482351, -0.0468714, -0.874722, 0.0553124, 0.998204, -0.022987, 0.87423, -0.0372952, 0.484078, 2.04885, 1.64502, 4.26389 )
 
