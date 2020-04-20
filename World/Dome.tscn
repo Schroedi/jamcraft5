@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://World/Stone2.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Stone.tscn" type="PackedScene" id=2]
@@ -8,10 +8,7 @@
 [ext_resource path="res://Materials/Plastic.tres" type="Material" id=6]
 [ext_resource path="res://Pet/pompom.glb" type="PackedScene" id=7]
 [ext_resource path="res://Smurp/Smurp.glb" type="PackedScene" id=8]
-[ext_resource path="res://Materials/Pombody.tres" type="Material" id=9]
-[ext_resource path="res://Materials/Pomblue.tres" type="Material" id=10]
-[ext_resource path="res://Materials/Spike.tres" type="Material" id=11]
-[ext_resource path="res://Materials/Smu Skin.tres" type="Material" id=12]
+[ext_resource path="res://Feeny/Feeny.glb" type="PackedScene" id=9]
 
 [sub_resource type="SphereShape" id=1]
 radius = 7.18884
@@ -36,10 +33,10 @@ transform = Transform( -0.135162, 0.990823, 0, -0.990823, -0.135162, 0, 0, 0, 1,
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15575, 1.02073, -1.02942 )
 
 [node name="Stone2" parent="Stones" instance=ExtResource( 1 )]
-transform = Transform( 0.984276, 0.11527, -0.133845, 0.11527, 0.155001, 0.981167, 0.133845, -0.981167, 0.139277, -1.62626, 10.3861, -3.88843 )
+transform = Transform( 0.972872, 0.198871, 0.118203, 0.198871, -0.457849, -0.866502, -0.118203, 0.866502, -0.484978, -1.405, 8.76416, -9.51612 )
 
 [node name="Stone3" parent="Stones" instance=ExtResource( 1 )]
-transform = Transform( -0.0190806, -0.996028, 0.086981, 0.471497, -0.0856795, -0.877696, 0.881662, 0.0242649, 0.471258, -2.04937, 7.83643, -7.19653 )
+transform = Transform( 0.0689264, -0.992524, 0.100731, -0.17365, -0.111366, -0.978491, 0.982393, 0.0499525, -0.180027, -2.09733, 8.18801, -2.72507 )
 
 [node name="Stone4" parent="Stones" instance=ExtResource( 2 )]
 transform = Transform( -0.135162, -0.990824, 8.70356e-09, 0.990824, -0.135162, -9.27595e-10, 5.82077e-10, -1.3446e-08, 1, -0.629596, 4.61537, 1.81079 )
@@ -59,104 +56,20 @@ material/0 = ExtResource( 6 )
 ] instance=ExtResource( 8 )]
 transform = Transform( 0.970771, 0, 0.240008, 0, 1, 0, -0.240008, 0, 0.970771, -0.665588, -0.000610351, 0.917482 )
 
+[node name="Smurp v53 Smurp v53 Antenne Rechts Smurp v53" parent="Smurp/Armature/Skeleton" index="0"]
+transform = Transform( 0.295725, 0, -0.955273, 0, 1, 0, 0.955273, 0, 0.295725, -0.849547, 0, 0.333939 )
+
 [node name="AnimationPlayer" parent="Smurp" index="1"]
 autoplay = "Idle"
 
-[node name="pompom" parent="." groups=[
-"dome_char",
-] instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.23352, 0, 0 )
+[node name="pompom" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.989242, 0, 0.14629, 0, 1, 0, -0.14629, 0, 0.989242, -3.78281, 0, -0.227783 )
 
-[node name="Pompom v3 Pompom v3 Body15 " parent="pompom" index="0"]
-transform = Transform( -0.129891, 0.00531454, 0, 0, 0, -0.13, -0.00531454, -0.129891, 0, 0.315002, 0.000244141, -0.275635 )
-material/0 = ExtResource( 9 )
+[node name="Pompom v3 Pompom v3 Feeny Rider mini v7 1 Body4 Feeny Rider min" parent="pompom/Pompom v3 Pompom v3 Body15 " index="25"]
+visible = false
 
-[node name="Pompom v3 Pompom v3 Body16 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="0"]
-material/0 = ExtResource( 10 )
-
-[node name="Pompom v3 Pompom v3 Body21 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="1"]
-material/0 = ExtResource( 11 )
-
-[node name="Pompom v3 Pompom v3 Body22 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="2"]
-material/0 = ExtResource( 11 )
-
-[node name="Pompom v3 Pompom v3 Body23 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="3"]
-material/0 = ExtResource( 11 )
-
-[node name="Pompom v3 Pompom v3 Body24 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="4"]
-material/0 = ExtResource( 11 )
-
-[node name="Pompom v3 Pompom v3 Body25 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="5"]
-material/0 = ExtResource( 11 )
-
-[node name="Pompom v3 Pompom v3 Body27 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="6"]
-material/0 = ExtResource( 11 )
-
-[node name="Pompom v3 Pompom v3 Body28 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="7"]
-material/0 = ExtResource( 11 )
-
-[node name="Pompom v3 Pompom v3 Body29 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="8"]
-material/0 = ExtResource( 11 )
-
-[node name="Pompom v3 Pompom v3 Body30 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="9"]
-material/0 = ExtResource( 11 )
-
-[node name="Pompom v3 Pompom v3 Body31 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="10"]
-material/0 = ExtResource( 11 )
-
-[node name="Pompom v3 Pompom v3 Body32 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="11"]
-material/0 = ExtResource( 11 )
-
-[node name="Pompom v3 Pompom v3 Body33 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="12"]
-material/0 = ExtResource( 11 )
-
-[node name="Pompom v3 Pompom v3 Body34 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="13"]
-material/0 = ExtResource( 11 )
-
-[node name="Pompom v3 Pompom v3 Body35 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="14"]
-material/0 = ExtResource( 11 )
-
-[node name="Pompom v3 Pompom v3 Body36 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="15"]
-material/0 = ExtResource( 11 )
-
-[node name="Pompom v3 Pompom v3 Body37 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="16"]
-material/0 = ExtResource( 11 )
-
-[node name="Pompom v3 Pompom v3 Body38 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="17"]
-material/0 = ExtResource( 11 )
-
-[node name="Pompom v3 Pompom v3 Body39 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="18"]
-material/0 = ExtResource( 11 )
-
-[node name="Pompom v3 Pompom v3 Body40 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="19"]
-material/0 = ExtResource( 11 )
-
-[node name="Pompom v3 Pompom v3 Body41 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="20"]
-material/0 = ExtResource( 11 )
-
-[node name="Pompom v3 Pompom v3 Body42 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="21"]
-material/0 = ExtResource( 11 )
-
-[node name="Pompom v3 Pompom v3 Body43 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="22"]
-material/0 = ExtResource( 11 )
-
-[node name="Pompom v3 Pompom v3 Body44 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="23"]
-material/0 = ExtResource( 11 )
-
-[node name="Pompom v3 Pompom v3 Body45 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="24"]
-material/0 = ExtResource( 11 )
-
-[node name="Pompom v3 Pompom v3 Body46 " parent="pompom/Pompom v3 Pompom v3 Body15 " index="25"]
-material/0 = ExtResource( 11 )
-
-[node name="Pompom v3 Pompom v3 Feeny Rider mini v7 1 Body4 Feeny Rider" parent="pompom/Pompom v3 Pompom v3 Body15 " index="26"]
-material/0 = ExtResource( 9 )
-
-[node name="Pompom v3 Pompom v3 Feeny Rider mini v7 1 Body4 Feeny Rider min" parent="pompom/Pompom v3 Pompom v3 Body15 " index="27" groups=[
-"dome_char",
-]]
-transform = Transform( -0.684637, -0.728886, 1.94585e-14, 0.728886, -0.684637, -2.07162e-14, 2.84217e-14, 0, 1, -71.5203, -41.1622, 6.77961 )
-material/0 = ExtResource( 12 )
+[node name="Feeny" parent="." instance=ExtResource( 9 )]
+transform = Transform( 0.482351, -0.0468714, -0.874722, 0.0553124, 0.998204, -0.022987, 0.87423, -0.0372952, 0.484078, 2.04885, 1.64502, 4.26389 )
 
 [editable path="dome"]
 
