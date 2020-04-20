@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Shards/Shard_Mesh.tres" type="ArrayMesh" id=1]
+
+[sub_resource type="SpatialMaterial" id=6]
+flags_transparent = true
+flags_do_not_receive_shadows = true
+params_blend_mode = 1
+albedo_color = Color( 1, 1, 1, 0.584314 )
+emission_enabled = true
+emission = Color( 0.0745098, 0.823529, 0.823529, 1 )
+emission_energy = 0.33
+emission_operator = 0
+emission_on_uv2 = false
+
+[sub_resource type="CapsuleShape" id=7]
+radius = 0.421478
+height = 3.54685
+
+[node name="Shard" type="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17.7269 )
+
+[node name="Shard" type="MeshInstance" parent="."]
+transform = Transform( 0.3, 0, 0, 0, 0.271515, -0.127592, 0, 0.127592, 0.271515, 1.6107, -5.21346, 3.07299 )
+cast_shadow = 0
+mesh = ExtResource( 1 )
+material/0 = SubResource( 6 )
+
+[node name="SpotLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0323497, 2.69173, 0.248196 )
+light_color = Color( 0.0745098, 0.823529, 0.823529, 1 )
+light_energy = 1.99
+light_specular = 0.0
+shadow_enabled = true
+shadow_bias = 0.2
+omni_range = 10.2
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.59033, 0.217468 )
+shape = SubResource( 7 )
