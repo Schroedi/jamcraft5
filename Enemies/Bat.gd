@@ -18,7 +18,7 @@ enum {
 var velocity = Vector3.ZERO
 var knockback = Vector3.ZERO
 
-var state = CHASE
+var state = IDLE
 
 onready var animations = $Nocts/AnimationPlayer
 onready var stats = $Stats
@@ -51,6 +51,7 @@ func _physics_process(delta):
 				velocity = velocity.move_toward(direction.normalized() * MAX_SPEED, ACCELERATION * delta)
 			else:
 				state = IDLE
+				GSound.fighting -= 1
 
 	velocity = move_and_slide_with_snap(velocity, Vector3.DOWN * 100, Vector3.UP, true, 4, PI/2.0)
 	# rotate smurp
@@ -62,6 +63,7 @@ func _physics_process(delta):
 
 func seek_player():
 	if playerDetectionZone.can_see_player():
+		GSound.fighting += 1
 		state = CHASE
 
 func deal_damage():

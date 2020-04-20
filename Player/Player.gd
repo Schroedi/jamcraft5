@@ -186,6 +186,7 @@ func _on_Hurtbox_area_entered(area: Area) -> void:
 
 func _on_Stats_no_health() -> void:
 	emit_signal("died")
+	GSound.fighting = 0
 	pass # Replace with function body.
 
 
