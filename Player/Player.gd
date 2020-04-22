@@ -197,5 +197,6 @@ func respawn():
 	# teleport
 	self.transform = start_transform
 	stats.health = stats.max_health
+	emit_signal("life_changed", stats.health)
 	stats.dead = false
 	emit_signal("crafting")
