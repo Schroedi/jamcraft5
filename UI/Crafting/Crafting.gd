@@ -17,6 +17,8 @@ var slot_count = 0
 var weight = 0
 
 func _ready() -> void:
+	$Inventory/feedbin.visible = false
+	
 	# start weapon
 	var wp = weapon_part.instance()
 	wp.part_name = "Handle"
@@ -80,8 +82,9 @@ func _input(_ev: InputEvent) -> void:
 		try_add_item(gen_level(1))
 	
 func _unhandled_key_input(_event : InputEventKey) -> void:
-	if Input.is_action_just_pressed("inventory"):
+	if Input.is_action_just_pressed("inventory") and Globals.was_outside:
 		visible = not visible
+		
 	
 func addDrop(drop):
 	# from pickups
@@ -205,6 +208,8 @@ func save_craft():
 
 func _on_Button_pressed() -> void:
 	save_craft()
+	Globals.was_outside = true
+	$Inventory/feedbin.visible = true
 
 
 func _on_CheckItem_timeout() -> void:

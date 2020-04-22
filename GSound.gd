@@ -1,7 +1,7 @@
 extends Node
 
 
-onready var intro = $Intro
+onready var intro:AudioStreamPlayer = $Intro
 
 onready var tween_out = get_node("Tween")
 onready var tween_in = get_node("Tween")
