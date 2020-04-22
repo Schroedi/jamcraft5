@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://UI/Crafting/Slot.tscn" type="PackedScene" id=1]
 [ext_resource path="res://UI/Crafting/Crafting.gd" type="Script" id=2]
@@ -12,18 +12,250 @@
 [ext_resource path="res://UI/Control Key Overlay_Zeichenfläche 1.png" type="Texture" id=10]
 [ext_resource path="res://UI/feedbin.png" type="Texture" id=11]
 [ext_resource path="res://UI/Crafting/feedbin.gd" type="Script" id=12]
+[ext_resource path="res://UI/Crafting/Empty.png" type="Texture" id=13]
 
 [sub_resource type="Theme" id=1]
 default_font = ExtResource( 6 )
 
 [sub_resource type="Theme" id=2]
 
+[sub_resource type="Animation" id=3]
+resource_name = "Step1"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Step1/Slot:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.921569, 0, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Step1/Slot2:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.921569, 0, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Step1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Step2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Step3:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "Step2"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Step2:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Step2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.921569, 0, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Step1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Step3"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Step2:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Step3:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Step3:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.921569, 0, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Step1:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "fin"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Step1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Step2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Step3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=5]
+animation = "Step1"
+
+[sub_resource type="AnimationNodeAnimation" id=14]
+animation = "Step2"
+
+[sub_resource type="AnimationNodeAnimation" id=6]
+animation = "Step3"
+
+[sub_resource type="AnimationNodeAnimation" id=11]
+animation = "fin"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=12]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=15]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=16]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id=8]
+states/Step1/node = SubResource( 5 )
+states/Step1/position = Vector2( 126.5, -34.1669 )
+states/Step2/node = SubResource( 14 )
+states/Step2/position = Vector2( 303.5, -33.0838 )
+states/Step3/node = SubResource( 6 )
+states/Step3/position = Vector2( 477, -33.6254 )
+states/fin/node = SubResource( 11 )
+states/fin/position = Vector2( 644, -34.3335 )
+transitions = [ "Step3", "fin", SubResource( 12 ), "Step1", "Step2", SubResource( 15 ), "Step2", "Step3", SubResource( 16 ) ]
+start_node = "Step1"
+end_node = "fin"
+graph_offset = Vector2( 0, -126.084 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=9]
+
 [node name="Crafting" type="Popup"]
 visible = true
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -1186.0
-margin_bottom = 273.0
 mouse_filter = 2
 script = ExtResource( 2 )
 __meta__ = {
@@ -148,6 +380,7 @@ __meta__ = {
 }
 
 [node name="CheckItem" type="Timer" parent="."]
+autostart = true
 
 [node name="Inventory" type="Node2D" parent="."]
 
@@ -270,6 +503,115 @@ script = ExtResource( 12 )
 [node name="Control Key Overlay_Zeichenfläche 1" type="Sprite" parent="."]
 position = Vector2( 1122.75, 814.164 )
 texture = ExtResource( 10 )
+
+[node name="Tut1" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Step1" type="Control" parent="Tut1"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot" type="TextureRect" parent="Tut1/Step1"]
+margin_left = 20.3345
+margin_top = 12.9108
+margin_right = 140.334
+margin_bottom = 192.911
+rect_min_size = Vector2( 120, 180 )
+mouse_filter = 2
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot2" type="TextureRect" parent="Tut1/Step1"]
+margin_left = 341.05
+margin_top = 772.796
+margin_right = 461.05
+margin_bottom = 952.796
+rect_min_size = Vector2( 120, 180 )
+mouse_filter = 2
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Step2" type="Control" parent="Tut1"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot3" type="TextureRect" parent="Tut1/Step2"]
+self_modulate = Color( 0.923766, 0.0280106, 1, 1 )
+margin_left = 139.83
+margin_top = 12.5541
+margin_right = 259.83
+margin_bottom = 192.554
+rect_min_size = Vector2( 120, 180 )
+mouse_filter = 2
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot4" type="TextureRect" parent="Tut1/Step2"]
+self_modulate = Color( 0.923766, 0.0280106, 1, 1 )
+margin_left = 340.696
+margin_top = 588.713
+margin_right = 460.696
+margin_bottom = 768.713
+rect_min_size = Vector2( 120, 180 )
+mouse_filter = 2
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Step3" type="Control" parent="Tut1"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CraftBtn" type="TextureRect" parent="Tut1/Step3"]
+margin_left = 322.647
+margin_top = 1069.58
+margin_right = 393.647
+margin_bottom = 1313.58
+rect_rotation = -89.9999
+mouse_filter = 2
+texture = ExtResource( 13 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Tut1"]
+autoplay = "Step1"
+anims/Step1 = SubResource( 3 )
+anims/Step2 = SubResource( 13 )
+anims/Step3 = SubResource( 4 )
+anims/fin = SubResource( 10 )
+
+[node name="AnimationTree" type="AnimationTree" parent="Tut1"]
+tree_root = SubResource( 8 )
+anim_player = NodePath("../AnimationPlayer")
+parameters/playback = SubResource( 9 )
 [connection signal="about_to_show" from="." to="." method="_on_Crafting_about_to_show"]
+[connection signal="changed" from="Crafting/Weapon/Slot4" to="." method="_on_Slot4_changed"]
+[connection signal="changed" from="Crafting/Weapon/Slot5" to="." method="_on_Slot5_changed"]
 [connection signal="pressed" from="Crafting/Button" to="." method="_on_Button_pressed"]
 [connection signal="timeout" from="CheckItem" to="." method="_on_CheckItem_timeout"]

@@ -18,7 +18,7 @@ var weight = 0
 
 func _ready() -> void:
 	$Inventory/feedbin.visible = false
-	
+	$Tut1/AnimationTree.active = true
 	# start weapon
 	var wp = weapon_part.instance()
 	wp.part_name = "Handle"
@@ -40,9 +40,9 @@ func _ready() -> void:
 	
 	player.connect("pickup", self, "addDrop")
 	player.connect("died", self, "init_weapon")
-	player.connect("crafting", self, "popup")
+	player.connect("crafting", self, "show")
 	
-	call_deferred("popup")
+	call_deferred("show")
 	
 	#level_test()
 
@@ -210,12 +210,19 @@ func _on_Button_pressed() -> void:
 	save_craft()
 	Globals.was_outside = true
 	$Inventory/feedbin.visible = true
+	$Tut1.visible = false
+	$Tut1/AnimationTree["parameters/playback"].travel("fin")
+	$Tut1/AnimationTree.active = false
 
 
 func _on_CheckItem_timeout() -> void:
 	print("is weapon valid: " + str(is_weapon_valid()))
+	
 	pass # Replace with function body.
 
+func show():
+	_on_Crafting_about_to_show()
+	.show()
 
 func _on_Crafting_about_to_show() -> void:
 	for c in get_tree().get_nodes_in_group('dome_char'):
@@ -225,3 +232,15 @@ func _on_Crafting_about_to_show() -> void:
 	get_tree().get_nodes_in_group('craft_cam')[0].current = true
 	$Crafting.visible = true
 	GSound.start_crafting()
+
+
+func _on_Slot5_changed() -> void:
+	# handle dropped
+	if $Tut1.visible:
+		$Tut1/AnimationTree["parameters/playback"].travel("Step2")
+
+
+func _on_Slot4_changed() -> void:
+	# tip dropped
+	if $Tut1.visible:
+		$Tut1/AnimationTree["parameters/playback"].travel("Step3")
