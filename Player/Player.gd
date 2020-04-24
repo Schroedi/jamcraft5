@@ -181,7 +181,7 @@ func _on_AttackTimer_timeout() -> void:
 func _on_Hurtbox_area_entered(area: Area) -> void:
 	# TODO: inv. timer
 	stats.health -= area.damage
-	
+	$Effects.play("Hit")
 	emit_signal("life_changed", stats.health)
 
 func _on_Stats_no_health() -> void:

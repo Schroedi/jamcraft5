@@ -1,8 +1,8 @@
-extends AnimatedSprite
+extends Spatial
 
 func _ready():
-	connect("animation_finished", self, "_on_animation_finished")
-	play("Animate")
+	$AnimationPlayer.connect("animation_finished", self, "_on_animation_finished")
+	$AnimationPlayer.play("Hit")
 
 func _on_animation_finished():
 	queue_free()

@@ -1,9 +1,11 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Smurp/Smurp.glb" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.gd" type="Script" id=2]
 [ext_resource path="res://Overlap/Hurtbox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Stats.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Smurp/Smurp Albedo.png" type="Texture" id=5]
+[ext_resource path="res://Smurp/Smurp Roughness.png" type="Texture" id=6]
 [ext_resource path="res://Weapon/WeaponBase.tscn" type="PackedScene" id=77]
 
 [sub_resource type="AnimationNodeAnimation" id=1]
@@ -120,17 +122,42 @@ nodes/SpecialShot/position = Vector2( 630, 260 )
 nodes/WalkIdle/node = SubResource( 20 )
 nodes/WalkIdle/position = Vector2( 60, 110 )
 nodes/output/position = Vector2( 1180, 240 )
-node_connections = [ "Seek", 0, "Attack", "SpecialShot", 0, "AttackBlend", "SpecialShot", 1, "SeekSpecial", "AttackBlend", 0, "WalkIdle", "AttackBlend", 1, "Seek", "SeekSpecial", 0, "Special", "WalkIdle", 0, "Animation", "WalkIdle", 1, "Animation 2", "Special", 0, "Animation 6", "Special", 1, "Animation 7", "Special", 2, "Animation 8", "Special", 3, "Animation 9", "RollShot", 0, "SpecialShot", "RollShot", 1, "SeekRoll", "Attack", 0, "Attack Light", "Attack", 1, "Animation 3", "Attack", 2, "Animation 4", "Attack", 3, "Animation 5", "SeekRoll", 0, "Roll", "output", 0, "RollShot" ]
+node_connections = [ "SeekRoll", 0, "Roll", "Attack", 0, "Attack Light", "Attack", 1, "Animation 3", "Attack", 2, "Animation 4", "Attack", 3, "Animation 5", "SeekSpecial", 0, "Special", "Special", 0, "Animation 6", "Special", 1, "Animation 7", "Special", 2, "Animation 8", "Special", 3, "Animation 9", "WalkIdle", 0, "Animation", "WalkIdle", 1, "Animation 2", "RollShot", 0, "SpecialShot", "RollShot", 1, "SeekRoll", "SpecialShot", 0, "AttackBlend", "SpecialShot", 1, "SeekSpecial", "AttackBlend", 0, "WalkIdle", "AttackBlend", 1, "Seek", "Seek", 0, "Attack", "output", 0, "RollShot" ]
 
 [sub_resource type="CapsuleShape" id=22]
 radius = 0.48433
 height = 0.46643
 
-[sub_resource type="CapsuleShape" id=23]
+[sub_resource type="SpatialMaterial" id=23]
+albedo_texture = ExtResource( 5 )
+roughness_texture = ExtResource( 6 )
+emission_enabled = true
+emission = Color( 0, 0, 0, 1 )
+emission_energy = 1.0
+emission_operator = 0
+emission_on_uv2 = false
+
+[sub_resource type="CapsuleShape" id=24]
 radius = 0.5
 height = 0.47
 
-[sub_resource type="SphereShape" id=24]
+[sub_resource type="SphereShape" id=25]
+
+[sub_resource type="Animation" id=26]
+resource_name = "Hit"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Smurp/Armature/Skeleton/Smurp v53 Smurp v53 Antenne Rechts Smurp v53:material_override:emission")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0.654902, 0.172549, 0.172549, 1 ), Color( 0, 0, 0, 1 ) ]
+}
 
 [node name="Player" type="KinematicBody"]
 collision_layer = 2
@@ -168,6 +195,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.211377, 0 )
 [node name="Armature" parent="Smurp" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.520166, 0 )
 
+[node name="Smurp v53 Smurp v53 Antenne Rechts Smurp v53" parent="Smurp/Armature/Skeleton" index="0"]
+material_override = SubResource( 23 )
+
 [node name="BoneAttachment" type="BoneAttachment" parent="Smurp/Armature/Skeleton" index="1"]
 transform = Transform( 1, 0.000662878, 7.07805e-08, -0.000660151, 0.995709, -0.0925318, -6.1132e-05, 0.0925318, 0.99571, -0.434536, 0.298196, 0.482593 )
 bone_name = "sword"
@@ -189,7 +219,7 @@ collision_layer = 4
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0.72, 0 )
-shape = SubResource( 23 )
+shape = SubResource( 24 )
 
 [node name="Stats" parent="." instance=ExtResource( 4 )]
 max_health = 8
@@ -199,7 +229,10 @@ collision_mask = 33
 
 [node name="CollisionShape" type="CollisionShape" parent="Pickup"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.649933, 0 )
-shape = SubResource( 24 )
+shape = SubResource( 25 )
+
+[node name="Effects" type="AnimationPlayer" parent="."]
+anims/Hit = SubResource( 26 )
 [connection signal="timeout" from="RollTimer" to="." method="_on_RollTimer_timeout"]
 [connection signal="timeout" from="AttackTimer" to="." method="_on_AttackTimer_timeout"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]

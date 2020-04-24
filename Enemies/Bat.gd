@@ -1,6 +1,5 @@
 extends KinematicBody
 
-const EnemyDeathEffect = preload("res://Effects/EnemyDeathEffect.tscn")
 const Drop = preload("res://Weapon/Drop.tscn")
 
 export var ACCELERATION = 3.0
@@ -75,6 +74,7 @@ func deal_damage():
 func _on_Hurtbox_area_entered(area):
 	stats.health -= area.damage
 	knockback = area.knockback
+	$Effects.play("Hit")
 
 func _on_Stats_no_health():
 	if drop_level > 0:
@@ -83,8 +83,4 @@ func _on_Stats_no_health():
 		drop.level = drop_level
 		get_parent().add_child(drop)
 	
-	
 	queue_free()
-	var enemyDeathEffect = EnemyDeathEffect.instance()
-	get_parent().add_child(enemyDeathEffect)
-	#enemyDeathEffect.transform = transform

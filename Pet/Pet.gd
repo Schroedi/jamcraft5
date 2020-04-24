@@ -1,7 +1,5 @@
 extends KinematicBody
 
-const EnemyDeathEffect = preload("res://Effects/EnemyDeathEffect.tscn")
-
 export var ACCELERATION = 3.0
 export var MAX_SPEED = 2.5
 export var FRICTION = 1.0

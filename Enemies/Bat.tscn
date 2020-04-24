@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Materials/Nocts.tres" type="Material" id=1]
 [ext_resource path="res://Enemies/Nocts.glb" type="PackedScene" id=2]
@@ -61,7 +61,35 @@ nodes/Animation/position = Vector2( 196.5, 98 )
 nodes/Seek/node = SubResource( 9 )
 nodes/Seek/position = Vector2( 680, 150 )
 nodes/output/position = Vector2( 910, 130 )
-node_connections = [ "Seek", 0, "Add2", "Add2", 0, "Animation", "Add2", 1, "Animation 2", "output", 0, "Seek" ]
+node_connections = [ "Add2", 0, "Animation", "Add2", 1, "Animation 2", "Seek", 0, "Add2", "output", 0, "Seek" ]
+
+[sub_resource type="Animation" id=11]
+resource_name = "Hit"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Nocts/Armature/Skeleton/Alien:material/0:albedo_color")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0.054902, 0.0196078, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0.054902, 0.0196078, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Nocts/Armature/Skeleton/Alien:material/0:emission")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0.662745, 0.662745, 0.662745, 1 ), Color( 0, 0, 0, 1 ) ]
+}
 
 [node name="Bat" type="KinematicBody"]
 collision_layer = 16
@@ -108,6 +136,9 @@ tree_root = SubResource( 10 )
 anim_player = NodePath("../Nocts/AnimationPlayer")
 parameters/Add2/add_amount = 1.0
 parameters/Seek/seek_position = 0.0
+
+[node name="Effects" type="AnimationPlayer" parent="."]
+anims/Hit = SubResource( 11 )
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="no_health" from="Stats" to="." method="_on_Stats_no_health"]
 
