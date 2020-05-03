@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://World/Tree.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Pet/Pet.tscn" type="PackedScene" id=7]
 [ext_resource path="res://World/Stone2.tscn" type="PackedScene" id=8]
 [ext_resource path="res://World/Dome.tscn" type="PackedScene" id=9]
+[ext_resource path="res://World/World Scenes/Gameworld 1 Mountain.tscn" type="PackedScene" id=10]
 [ext_resource path="res://World/BG_grob/BG3.png" type="Texture" id=14]
 
 [sub_resource type="BoxShape" id=1]
@@ -474,6 +475,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.11201, 0.0204264, -7.25627 
 [node name="Bat" parent="Enemies" instance=ExtResource( 5 )]
 
 [node name="Dome" parent="." instance=ExtResource( 9 )]
+
+[node name="Gameworld 1 Mountain" parent="." instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8486, -0.266483, 0 )
 
 [editable path="Player"]
 
