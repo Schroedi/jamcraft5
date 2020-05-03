@@ -9,6 +9,12 @@
 [node name="Mountains" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.412659, 0 )
 
+[node name="Plane" parent="Mountains" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00512695, -0.0140381, 0.0168457 )
+
+[node name="plane" parent="Mountains" index="1"]
+visible = false
+
 [node name="Stone" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.41064, 0 )
 
